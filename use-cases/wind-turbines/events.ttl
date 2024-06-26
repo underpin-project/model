@@ -1,0 +1,72 @@
+@prefix :      <http://example.org/vocab/> .
+@prefix qudt:  <http://qudt.org/schema/qudt/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix puml:  <http://plantuml.com/ontology#> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix unit:  <http://qudt.org/vocab/unit/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+
+
+<dsd-events> a qb:DataStructureDefinition ;
+             qb:component <attr/event> ,
+             <attr/timeStart> ,
+             <attr/timeEnd> ,
+             <measure/power> ,
+             <measure/windSpeed> ,
+             <measure/genSpeed>
+.
+
+<dataset/events/WTG1> a qb:Dataset ;
+    qb:structure <dsd-events> ;
+    sosa:hasFeatureOfInterest <turbine/WTG1> ;
+.
+
+<dim/power> a qb:MeasureProperty ;
+     rdfs:label "Power (kW)" ;
+     sdmx-attribute:unitMeasure  unit:KiloW ;
+     qudt:hasQuantityKind        quantitykind:Power ;
+.
+
+<dim/windSpeed> a qb:MeasureProperty ;
+      rdfs:label "Wind Speed (m/s)" ;
+      sdmx-attribute:unitMeasure  unit:M-PER-SEC ;
+      qudt:hasQuantityKind        quantitykind:Speed ;
+.
+
+<dim/genSpeed>  a qb:MeasureProperty ;
+      rdfs:label "Wind Speed (m/s)" ;
+      sdmx-attribute:unitMeasure  unit:REV-PER-MIN ;
+      qudt:hasQuantityKind        quantitykind:AngularVelocity;
+.
+
+<attr/event> a qb:AttributeProperty ;
+        rdfs:label "Event" ;
+        qb:codeList <codelist/events> ;
+.
+
+<codelist/events> a skos:Collection ;
+                  skos:prefLabel "Events" ;
+.
+
+<codelist/events/EVENT_014> a skos:Concept ;
+    skos:prefLabel  "Generator Overspeed First Threshold" ;
+    <category> "Multiple" ;
+    <eventType> "Safety Critical fault" ;
+.
+
+<observation/EVENT_014/2024-03-03T16:57:59> a qb:Observation ;
+        <attr/timeStart> "2024-03-03T16:57:59"^^xsd:dateTime ;
+        <attr/timeEnd>   "2024-03-03T16:57:59"^^xsd:dateTime ;
+        <measure/power>  -6.024287 ;
+        <measure/windSpeed> 12.2468 ;
+        <measure/genSpeed> 1821.088 ;
+.
+
