@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Wind Energy Sensor Data",
+  "description": "This dataset contains wind speed, direction, and other meteorological data collected from wind energy sensors installed at various locations.",
+  "identifier": "wind-energy-sensor-data-2024",
+  "keywords": ["wind energy", "sensor data", "meteorological data", "renewable energy"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "National Renewable Energy Laboratory (NREL)",
+    "url": "https://www.nrel.gov/"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "CSV",
+      "contentUrl": "https://data.nrel.gov/system/files/wind-energy-sensor-data.csv",
+      "description": "Download the wind energy sensor data in CSV format."
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "JSON",
+      "contentUrl": "https://data.nrel.gov/system/files/wind-energy-sensor-data.json",
+      "description": "Download the wind energy sensor data in JSON format."
+    },
+  ],
+  "accessURL": "https://data.nrel.gov/sparql",
+  "temporalCoverage": "2023-01-01/2023-12-31",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.7392",
+      "longitude": "-104.9903"
+    },
+    "name": "Various Locations, EU"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "support@underpin.com"
+  },
+  "dateModified": "2024-07-12",
+  "datePublished": "2024-01-15",
+  "creator": {
+    "@type": "Organization",
+    "name": "National Renewable Energy Laboratory (NREL)"
+  },
+  "conformsTo": {
+    "@type": "CreativeWork",
+    "name": "ISO 19115-1:2014",
+    "url": "https://www.iso.org/standard/53798.html"
+  },
+  "issued": "2024-01-15",
+  "provenance": {
+    "@type": "Provenance",
+    "description": "Data collected by NREL from January 2023 to December 2023."
+  },
+  "datasetTimeInterval": {
+    "@type": "TimeInterval",
+    "startDate": "2023-01-01",
+    "endDate": "2023-12-31"
+  },
+  "spatialResolution": {
+    "@type": "QuantitativeValue",
+    "value": "10",
+    "unitCode": "KMT"
+  },
+  "hasPart": {
+    "@type": "Dataset",
+    "name": "Wind Speed Data",
+    "description": "Subset of the dataset focusing on wind speed measurements."
+  }
+}

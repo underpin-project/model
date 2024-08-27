@@ -1,0 +1,80 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.nrel.gov/dataset/wind-energy-sensor-data-2024>
+  a dcat:Dataset ;
+  dct:title "Wind Energy Sensor Data" ;
+  dct:description "This dataset contains wind speed, direction, and other meteorological data collected from wind energy sensors installed at various locations." ;
+  dct:identifier "wind-energy-sensor-data-2024" ;
+  dcat:keyword "wind energy", "sensor data", "meteorological data", "renewable energy" ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:publisher [
+    a foaf:Organization ;
+    foaf:name "National Renewable Energy Laboratory (NREL)" ;
+    foaf:homepage <https://www.nrel.gov/>
+  ] ;
+  dcat:distribution [
+    a dcat:Distribution ;
+    dct:format "CSV" ;
+    dcat:downloadURL <https://data.nrel.gov/system/files/wind-energy-sensor-data.csv> ;
+    dct:description "Download the wind energy sensor data in CSV format."
+  ],
+  [
+    a dcat:Distribution ;
+    dct:format "JSON" ;
+    dcat:downloadURL <https://data.nrel.gov/system/files/wind-energy-sensor-data.json> ;
+    dct:description "Download the wind energy sensor data in JSON format."
+  ] ;
+  dcat:accessURL <https://data.nrel.gov/sparql> ;
+  dct:temporal [
+    a dct:PeriodOfTime ;
+    schema:startDate "2023-01-01"^^xsd:date ;
+    schema:endDate "2023-12-31"^^xsd:date
+  ] ;
+  dct:spatial [
+    a dct:Location ;
+    schema:geo [
+      a schema:GeoCoordinates ;
+      schema:latitude "39.7392"^^xsd:float ;
+      schema:longitude "-104.9903"^^xsd:float
+    ] ;
+    schema:name "Various Locations, EU"
+  ] ;
+  dcat:contactPoint [
+    a schema:ContactPoint ;
+    schema:contactType "Customer Support" ;
+    schema:email "support@underpin.com"
+  ] ;
+  dct:modified "2024-07-12"^^xsd:date ;
+  dct:issued "2024-01-15"^^xsd:date ;
+  dct:creator [
+    a foaf:Organization ;
+    foaf:name "National Renewable Energy Laboratory (NREL)"
+  ] ;
+  dct:conformsTo [
+    a dct:Standard ;
+    dct:title "ISO 19115-1:2014" ;
+    dct:identifier <https://www.iso.org/standard/53798.html>
+  ] ;
+  dct:provenance [
+    a dct:ProvenanceStatement ;
+    rdfs:comment "Data collected by NREL from January 2023 to December 2023."
+  ] ;
+  schema:temporalCoverage [
+    a schema:TimeInterval ;
+    schema:startDate "2023-01-01"^^xsd:date ;
+    schema:endDate "2023-12-31"^^xsd:date
+  ] ;
+  dcat:spatialResolution [
+    a schema:QuantitativeValue ;
+    schema:value "10"^^xsd:float ;
+    schema:unitCode "KMT"
+  ] ;
+  dct:hasPart [
+    a dcat:Dataset ;
+    dct:title "Wind Speed Data" ;
+    dct:description "Subset of the dataset focusing on wind speed measurements."
+  ] .
