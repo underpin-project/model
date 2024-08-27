@@ -28,7 +28,7 @@ Overview:
 - The `Observation` carries all project-specific measurements (`MeasureProperty`),
   and a standard timestamp prop `timePeriod` (which is `DimensionProperty`)
 - The `Dataset` holds observations having the same structure,
-  and points
+  and points to what is being observed (`hasFeatureOfInterest`)
 - The `DataStructureDefinition` defines what props are expected in each observation
 - Each `MeasureProperty` specifies what it is (`QuantityKind`)
   and what `unitMeasure` it uses (`Unit`),
