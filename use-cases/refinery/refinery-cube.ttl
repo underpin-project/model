@@ -1,0 +1,98 @@
+
+<equipment/K-3201_A/KM-3201_A>
+  rdf:type    ex:Equipment ;
+  rdfs:label  "Equipment" .
+
+<observation/2023-07-24T16:00:00>
+  rdf:type                  qb:Observation ;
+  qb:dataset                <dataset>;
+  sdmx-dimension:timePeriod "2023-07-24T16:00:00"^^xsd:dateTime;
+  ex:75PI808.pv             10.07249165 ;
+  ex:75TI822.pv             67.17042542 .
+
+<dataset>
+  a                           qb:Dataset;
+  qb:structure                <dsd>;
+  sosa:hasFeatureOfInterest   <equipment/K-3201_A/KM-3201_A>.
+
+<dsd>
+  a qb:DataStructureDefinition ;
+  qb:component ex:75PI808.pv , ex:75TI822.pv, sdmx-dimension:timePeriod.
+
+ex:75TI822.pv
+  rdf:type                    qb:MeasureProperty ;
+  rdfs:label                  "STEAM TURBINE NG 40/32 THRUST BEARING TEMPERATURE" ;
+  puml:up                     <observation/2023-07-24T16:00:00> , <equipment/K-3201_A/KM-3201_A> ;
+  sdmx-attribute:unitMeasure  unit:DEG_C ;
+  qudt:hasQuantityKind        qk:Temperature.
+
+ex:75PI808.pv
+  rdf:type                    qb:MeasureProperty ;
+  rdfs:label                  "LUBE OIL MAIN PUMP DELIVERY PRESSURE" ;
+  puml:up                     <observation/2023-07-24T16:00:00> , <equipment/K-3201_A/KM-3201_A> ;
+  sdmx-attribute:unitMeasure  unit:KiloGM_F-PER-CentiM2 ;
+  qudt:hasQuantityKind        qk:VaporPressure .
+
+sdmx-dimension:timePeriod
+  a          qb:DimensionProperty, rdf:Property ;
+  qb:concept sdmx-concept:timePeriod ;
+  rdfs:label "Time Period"@en .
+    
+qk:Temperature
+  rdf:type             qudt:QuantityKind ;
+  rdfs:label           "Temperature"@en ;
+  rdfs:seeAlso         qk:ThermodynamicTemperature ;
+  dct:description      "Temperature is a physical property of matter..."^^rdf:HTML ;
+  qudt:applicableUnit  unit:DEG_C .
+
+unit:KiloGM_F-PER-CentiM2
+  rdf:type                     qudt:Unit ;
+  rdfs:label                   "Kilogram Force per Square Centimetre"@en;
+  dct:description              "A unit for 'Force Per Area'..."^^qudt:LatexString ;
+  qudt:conversionMultiplier    98066.5 ;
+  qudt:conversionMultiplierSN  9.80665E4 ;
+  qudt:expression              "$kgf/cm^{2}$"^^qudt:LatexString ;
+  qudt:hasDimensionVector      qkdv:A0E0L-1I0M1H0T-2D0 ;
+  qudt:hasQuantityKind         qk:VaporPressure , qk:ForcePerArea ;
+  qudt:iec61360Code            "0112/2///62720#UAA633" ;
+  qudt:ucumCode                "kgf.cm-2"^^qudt:UCUMcs ;
+  qudt:uneceCommonCode         "E42" .
+
+qk:VaporPressure
+  rdf:type                 qudt:QuantityKind ;
+  rdfs:label               "Vapor Pressure"@en ;
+  dct:description          "Pressure exerted by a substance vapor..."^^rdf:HTML ;
+  qudt:applicableUnit      unit:KiloGM_F-PER-CentiM2 ;
+  qudt:hasDimensionVector  qkdv:A0E0L-1I0M1H0T-2D0 ;
+  skos:broader             qk:Pressure .
+
+unit:DEG_C
+   rdf:type                     qudt:Unit , qudt:DerivedUnit ;
+   rdfs:label                   "degree Celsius"@en ;
+   dct:description              "Celsius, also known as centigrade..."^^qudt:LatexString ;
+   qudt:conversionMultiplier    1.0 ;
+   qudt:conversionMultiplierSN  1.0E0 ;
+   qudt:conversionOffset        273.15 ;
+   qudt:conversionOffsetSN      2.7315E2 ;
+   qudt:expression              "$degC$"^^qudt:LatexString ;
+   qudt:hasQuantityKind         qk:Temperature ;
+   qudt:iec61360Code            "0112/2///62720#UAA033" ;
+   qudt:latexDefinition         "$\\,^{\\circ}{C}$"^^qudt:LatexString ;
+   qudt:omUnit                  <http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius> ;
+   qudt:symbol                  "°C" ;
+   qudt:ucumCode                "Cel"^^qudt:UCUMcs ;
+   qudt:uneceCommonCode         "CEL" ;
+   skos:altLabel                "degree-centigrade" .
+
+qk:ForcePerArea
+  a qudt:QuantityKind ;
+  qudt:applicableUnit unit:KiloGM_F-PER-CentiM2 ;
+  qudt:baseUnitDimensions "M/L \\cdot T^2" ;
+  qudt:baseUnitDimensions "kg/m \\cdot s^2" ;
+  qudt:hasDimensionVector qkdv:A0E0L-1I0M1H0T-2D0 ;
+  qudt:informativeReference "http://www.thefreedictionary.com/force+per+unit+area"^^xsd:anyURI ;
+  qudt:outOfScope true ;
+  qudt:plainTextDescription "The force applied to a unit area of surface..." ;
+  qudt:symbol "p" ;
+  qudt:url "http://en.wikipedia.org/wiki/Pressure"^^xsd:anyURI ;
+  rdfs:label "Force Per Area"@en .
