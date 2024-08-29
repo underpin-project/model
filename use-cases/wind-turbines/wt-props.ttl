@@ -1,0 +1,38 @@
+﻿un:System_Name a owl:DatatypeProperty, qb:DimensionProperty; rdfs:label "System Name"@en;
+  rdfs:range xsd:string; .
+un:Time_Stamp a owl:DatatypeProperty, qb:DimensionProperty; rdfs:label "Time Stamp"@en;
+  rdfs:range xsd:dateTime; .
+un:Generator_Bearing2_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Generator Bearing2 Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Generator"; un:part "Bearing"; un:partQualifier "2"; un:qualifier "average".
+un:Generator_Bearing_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Generator Bearing Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Generator"; un:part "Bearing"; un:qualifier "average".
+un:Gear_Bearing_TemperatureHSGeneratorEnd_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Bearing TemperatureHSGeneratorEnd Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Bearing"; un:partQualifier "HSGeneratorEnd"; un:qualifier "average".
+un:Gear_Bearing_TemperatureHSMiddle_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Bearing TemperatureHSMiddle Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Bearing"; un:partQualifier "HSMiddle"; un:qualifier "average".
+un:Gear_Bearing_TemperatureHSRotorEnd_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Bearing TemperatureHSRotorEnd Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Bearing"; un:partQualifier "HSRotorEnd"; un:qualifier "average".
+un:Gear_Bearing_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Bearing Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Bearing"; un:qualifier "average".
+un:Gear_Oil_TemperatureBasis_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Oil TemperatureBasis Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Oil"; un:partQualifier "Basis"; un:qualifier "average".
+un:Gear_Oil_TemperatureLevel1_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Oil TemperatureLevel1 Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Oil"; un:partQualifier "Level1"; un:qualifier "average".
+un:Gear_Oil_TemperatureLevel2_3_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Oil TemperatureLevel2_3 Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Oil"; un:partQualifier "Level2_3"; un:qualifier "average".
+un:Gear_Oil_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Gear Oil Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "Gear"; un:part "Oil"; un:qualifier "average".
+un:Ambient_WindSpeed_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Ambient WindSpeed Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:M-PER-SEC; qudt:hasQuantityKind qk:LinearVelocity; sosa:hasFeatureOfInterest "Wind"; un:qualifier "average".
+un:Ambient_WindSpeed_Max a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Ambient WindSpeed Max."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:M-PER-SEC; qudt:hasQuantityKind qk:LinearVelocity; sosa:hasFeatureOfInterest "Wind"; un:qualifier "maximum".
+un:Ambient_WindSpeed_Min a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Ambient WindSpeed Min."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:M-PER-SEC; qudt:hasQuantityKind qk:LinearVelocity; sosa:hasFeatureOfInterest "Wind"; un:qualifier "minimim".
+un:HVTrafo_Phase1_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "HVTrafo Phase1 Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "HVTrafo"; un:part "Phase"; un:partQualifier "1"; un:qualifier "average".
+un:HVTrafo_Phase2_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "HVTrafo Phase2 Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "HVTrafo"; un:part "Phase"; un:partQualifier "2"; un:qualifier "average".
+un:HVTrafo_Phase3_Temp_Avg a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "HVTrafo Phase3 Temp. Avg."@en;
+  rdfs:range xsd:decimal; qudt:unit unit:DEG_C; qudt:hasQuantityKind qk:Temperature; sosa:hasFeatureOfInterest "HVTrafo"; un:part "Phase"; un:partQualifier "3"; un:qualifier "average".
+un:Total_Active_power a owl:DatatypeProperty, qb:MeasureProperty; rdfs:label "Total Active power"@en;
+  rdfs:range xsd:decimal; qudt:unit unit:KiloW; qudt:hasQuantityKind qk:ActivePower; sosa:hasFeatureOfInterest "Generator".

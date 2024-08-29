@@ -45,14 +45,14 @@ ex:power a qb:MeasureProperty, owl:DatatypeProperty;
   rdfs:range xsd:decimal;
   rdfs:label "Power (kW)" ;
   sdmx-attribute:unitMeasure  unit:KiloW ;
-  qudt:hasQuantityKind        qk:Power ;
+  qudt:hasQuantityKind        qk:ActivePower ;
 .
 
 ex:windSpeed a qb:MeasureProperty, owl:DatatypeProperty;
   rdfs:range xsd:decimal ;
   rdfs:label "Wind Speed (m/s)" ;
   sdmx-attribute:unitMeasure  unit:M-PER-SEC ;
-  qudt:hasQuantityKind        qk:Speed ;
+  qudt:hasQuantityKind        qk:LinearVelocity ;
 .
 
 ex:genSpeed a qb:MeasureProperty, owl:DatatypeProperty;

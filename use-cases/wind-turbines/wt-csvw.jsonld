@@ -1,0 +1,35 @@
+﻿{
+  "@context": [
+    "http://www.w3.org/ns/csvw", {
+      "@language": "en",
+      "un": "https://dataspace.underpinproject.eu/ontology/"
+    }],
+  "tables": [{
+    "url": "https://dataspace.underpinproject.eu/csv/wind-farm/sensor-data-01/WF2/WTG03/2023-01-01",
+    "tableSchema": {
+      "aboutUrl": "#{Time_Stamp}",
+      "propertyUrl": "un:{_name}",
+      "columns": [
+        {"titles": "System Name",                                 "name": "System_Name",                                "datatype": "string"},
+        {"titles": "Time Stamp",                                  "name": "Time_Stamp",                                 "datatype": {"base": "dateTime", "format": "M/d/yyyy HH:mm:ss"}},
+        {"titles": "Generator Bearing2 Temp. Avg.",               "name": "Generator_Bearing2_Temp_Avg",                "datatype": "decimal"},
+        {"titles": "Generator Bearing Temp. Avg.",                "name": "Generator_Bearing_Temp_Avg",                 "datatype": "decimal"},
+        {"titles": "Gear Bearing TemperatureHSGeneratorEnd Avg.", "name": "Gear_Bearing_TemperatureHSGeneratorEnd_Avg", "datatype": "decimal"},
+        {"titles": "Gear Bearing TemperatureHSMiddle Avg.",       "name": "Gear_Bearing_TemperatureHSMiddle_Avg",       "datatype": "decimal"},
+        {"titles": "Gear Bearing TemperatureHSRotorEnd Avg.",     "name": "Gear_Bearing_TemperatureHSRotorEnd_Avg",     "datatype": "decimal"},
+        {"titles": "Gear Bearing Temp. Avg.",                     "name": "Gear_Bearing_Temp_Avg",                      "datatype": "decimal"},
+        {"titles": "Gear Oil TemperatureBasis Avg.",              "name": "Gear_Oil_TemperatureBasis_Avg",              "datatype": "decimal"},
+        {"titles": "Gear Oil TemperatureLevel1 Avg.",             "name": "Gear_Oil_TemperatureLevel1_Avg",             "datatype": "decimal"},
+        {"titles": "Gear Oil TemperatureLevel2_3 Avg.",           "name": "Gear_Oil_TemperatureLevel2_3_Avg",           "datatype": "decimal"},
+        {"titles": "Gear Oil Temp. Avg.",                         "name": "Gear_Oil_Temp_Avg",                          "datatype": "decimal"},
+        {"titles": "Ambient WindSpeed Avg.",                      "name": "Ambient_WindSpeed_Avg",                      "datatype": "decimal"},
+        {"titles": "Ambient WindSpeed Max.",                      "name": "Ambient_WindSpeed_Max",                      "datatype": "decimal"},
+        {"titles": "Ambient WindSpeed Min.",                      "name": "Ambient_WindSpeed_Min",                      "datatype": "decimal"},
+        {"titles": "HVTrafo Phase1 Temp. Avg.",                   "name": "HVTrafo_Phase1_Temp_Avg",                    "datatype": "decimal"},
+        {"titles": "HVTrafo Phase2 Temp. Avg.",                   "name": "HVTrafo_Phase2_Temp_Avg",                    "datatype": "decimal"},
+        {"titles": "HVTrafo Phase3 Temp. Avg.",                   "name": "HVTrafo_Phase3_Temp_Avg",                    "datatype": "decimal"},
+        {"titles": "Total Active power",                          "name": "Total_Active_power",                         "datatype": "decimal"}
+      ]
+    }
+  }]
+}
