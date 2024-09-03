@@ -17,7 +17,9 @@ Resources (all W3C specs are Editor's Draft 02 November 2022 unless otherwise in
 
 ### Important Columns
 
-We describe the important (yellow) columns in [Data importance.xlsx](https://docs.google.com/spreadsheets/d/1bcJzVmA8zkub2kN7XCoMX-AQ1JCvMlgK/edit?usp=drive_link&ouid=104921038219224672281&rtpof=true&sd=true)
+We describe the important (yellow) columns in [Data importance.xlsx](https://docs.google.com/spreadsheets/d/1bcJzVmA8zkub2kN7XCoMX-AQ1JCvMlgK/edit?usp=drive_link&ouid=104921038219224672281&rtpof=true&sd=true).
+
+Note: These columns match the ones in [2019 datasets for Wind farm 1](https://motoroil.sharepoint.com/sites/UNDERPIN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FUNDERPIN%2FShared%20Documents%2FGeneral%2F2%2E%20WPs%2FWP4%2DUse%2Dcases%2FUse%20cases%2FWind%20farms%2FWind%20farms%20data%2FWind%20Farm%201%2F2019&viewid=9be63ea5%2D3b2d%2D4125%2Dbeac%2De58cee047b09). Most or all columns are also present in [2018 datasets for Wind farm 1](https://motoroil.sharepoint.com/sites/UNDERPIN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FUNDERPIN%2FShared%20Documents%2FGeneral%2F2%2E%20WPs%2FWP4%2DUse%2Dcases%2FUse%20cases%2FWind%20farms%2FWind%20farms%20data%2FWind%20Farm%201%2F2018&viewid=9be63ea5%2D3b2d%2D4125%2Dbeac%2De58cee047b09), but **in different order**.
 - We assume that the dataspace will serve CSVs with columns named in the same way
 - Not all columns need to be described semantically: only the important columns, and only these are ingested to a time-series database
 - The "yellow" columns included a column number in parentheses, which is not present in the data so we moved it to the col `n`
