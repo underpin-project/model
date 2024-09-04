@@ -119,7 +119,7 @@ It consists of blank nodes, whose types are left implicit (they are `csvw:Table,
 @prefix un:   <https://dataspace.underpinproject.eu/ontology/> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-[ csvw:table
+[] csvw:table [
   csvw:url "https://dataspace.underpinproject.eu/csv/wind-farm/sensor-data-01/WF2/WTG03/2023-01-01"^^xsd:anyURI;
   [ csvw:tableSchema
     [ csvw:aboutUrl     "#{Time_Stamp}"^^csvw:uriTemplate ;
@@ -129,7 +129,7 @@ It consists of blank nodes, whose types are left implicit (they are `csvw:Table,
         [ csvw:title "Time Stamp"@en                   ; csvw:name "Time_Stamp"                 ; csvw:datatype  [ csvw:base "dateTime"; csvw:format "M/d/yyyy HH:mm:ss"] ]
         [ csvw:title "Generator Bearing2 Temp. Avg."@en; csvw:name "Generator_Bearing2_Temp_Avg"; csvw:datatype  xsd:decimal                                              ]
      )
-] .
+]] .
 ```
 
 ### UNDERPIN Property Definitions
