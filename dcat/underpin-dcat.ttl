@@ -30,8 +30,8 @@
   dcat:accessURL <https://data.more.gr/sparql> ;
   dcat:temporal [
       a dcat:PeriodOfTime ;
-      dcterms:start "2023-01-01"^^xsd:date ;
-      dcterms:end "2023-12-31"^^xsd:date
+      dcterms:start "2024-01-01"^^xsd:date ;
+      dcterms:end "2024-04-01"^^xsd:date
     ] ;
   dcterms:spatial [
       a schema:Place ;
@@ -51,5 +51,5 @@
       dcat:conformsToUrl <https://www.iso.org/standard/53798.html>
     ] ;
   dcterms:issued "2024-01-15"^^xsd:date ;
-  dcterms:provenance "Data collected by Motor Oil Renewable Energy (MORE) from January 2023 to December 2023." ;
+  dcterms:provenance "Data collected by Motor Oil Renewable Energy (MORE) from January 2024 to April 2024." ;
   dcat:documentation <https://data.more.gr/documentation/wind-energy-sensor-data-fields> .
