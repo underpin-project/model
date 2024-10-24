@@ -3,6 +3,24 @@
 This model describes a semantic mapping for some wind turbine data sources.
 Links to sample data are on google drive.
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Wind Farm Data Model](#wind-farm-data-model)
+    - [Sensor Data as CSVW](#sensor-data-as-csvw)
+        - [Important Columns](#important-columns)
+        - [CSVW Manifest](#csvw-manifest)
+        - [UNDERPIN Property Definitions](#underpin-property-definitions)
+        - [CSV and CSVW Manifest URLs (Locations)](#csv-and-csvw-manifest-urls-locations)
+    - [Alert Events as Cube](#alert-events-as-cube)
+        - [Cube Model](#cube-model)
+        - [Cube Fixes](#cube-fixes)
+        - [Cube Questions](#cube-questions)
+    - [Sensor Data](#sensor-data)
+
+<!-- markdown-toc end -->
+
+
 ## Sensor Data as CSVW
 CSW on the Web (CSVW) is a W3C standard for describing CSV sheets in a machine-readable way.
 
@@ -26,27 +44,27 @@ Note: These columns match the ones in [2019 datasets for Wind farm 1](https://mo
 - We also describe two "global" columns (the first two), not present in that "yellow" sheet but present eg in [WF2_WTG03 - Row Data.xlsx](https://docs.google.com/spreadsheets/d/15ynrLexf3nYb8E_8esOBCr9WTx2D2VbS/edit)
 - The `unit` was not mentioned in the yellow columns, but we guessed it from
 
-|   n | column                                      | quantity, unit or example  | comment                                                                                            |
-|-----|---------------------------------------------|----------------------------|----------------------------------------------------------------------------------------------------|
-|     | System Name                                 | "WTG-03"                   | Filled only in the first row, and mentions only the generator but not the farm, i.e. is incomplete |
-|     | Time Stamp                                  | "1/1/2023 12:00:00 AM"     | Not in XSD (*) format                                                                              |
-|   1 | Generator Bearing2 Temp. Avg.               | qk:Temperature, unit:DEG_C |                                                                                                    |
-|   2 | Generator Bearing Temp. Avg.                | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  13 | Gear Bearing TemperatureHSGeneratorEnd Avg. | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  14 | Gear Bearing TemperatureHSMiddle Avg.       | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  15 | Gear Bearing TemperatureHSRotorEnd Avg.     | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  18 | Gear Bearing Temp. Avg.                     | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  19 | Gear Oil TemperatureBasis Avg.              | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  20 | Gear Oil TemperatureLevel1 Avg.             | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  21 | Gear Oil TemperatureLevel2_3 Avg.           | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  22 | Gear Oil Temp. Avg.                         | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  33 | Ambient WindSpeed Avg.                      | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  34 | Ambient WindSpeed Max.                      | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  35 | Ambient WindSpeed Min.                      | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  88 | HVTrafo Phase1 Temp. Avg.                   | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  89 | HVTrafo Phase2 Temp. Avg.                   | qk:Temperature, unit:DEG_C |                                                                                                    |
-|  90 | HVTrafo Phase3 Temp. Avg.                   | qk:Temperature, unit:DEG_C |                                                                                                    |
-| 126 | Total Active power                          | qk:ActivePower, unit:KiloW |                                                                                                    |
+|   n | column                                      | quantity, unit or example         | comment                                                                                            |
+|-----|---------------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------|
+|     | System Name                                 | "WTG-03"                          | Filled only in the first row, and mentions only the generator but not the farm, i.e. is incomplete |
+|     | Time Stamp                                  | "1/1/2023 12:00:00 AM"            | Not in XSD (*) format                                                                              |
+|   1 | Generator Bearing2 Temp. Avg.               | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|   2 | Generator Bearing Temp. Avg.                | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  13 | Gear Bearing TemperatureHSGeneratorEnd Avg. | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  14 | Gear Bearing TemperatureHSMiddle Avg.       | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  15 | Gear Bearing TemperatureHSRotorEnd Avg.     | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  18 | Gear Bearing Temp. Avg.                     | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  19 | Gear Oil TemperatureBasis Avg.              | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  20 | Gear Oil TemperatureLevel1 Avg.             | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  21 | Gear Oil TemperatureLevel2_3 Avg.           | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  22 | Gear Oil Temp. Avg.                         | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  33 | Ambient WindSpeed Avg.                      | qk:LinearVelocity, unit:M_PER_SEC |                                                                                                    |
+|  34 | Ambient WindSpeed Max.                      | qk:LinearVelocity, unit:M_PER_SEC |                                                                                                    |
+|  35 | Ambient WindSpeed Min.                      | qk:LinearVelocity, unit:M_PER_SEC |                                                                                                    |
+|  88 | HVTrafo Phase1 Temp. Avg.                   | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  89 | HVTrafo Phase2 Temp. Avg.                   | qk:Temperature, unit:DEG_C        |                                                                                                    |
+|  90 | HVTrafo Phase3 Temp. Avg.                   | qk:Temperature, unit:DEG_C        |                                                                                                    |
+| 126 | Total Active power                          | qk:ActivePower, unit:KiloW        |                                                                                                    |
 
 (*) To specify the dateTime format, we use this:
 `"datatype": {"base": "dateTime", "format": "M/d/yyyy HH:mm:ss"}`.
