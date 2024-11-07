@@ -1,0 +1,52 @@
+PREFIX dcat:       <https://www.w3.org/ns/dcat/>
+PREFIX dcat-ext:   <https://semantic.sovity.io/dcat-ext#>
+PREFIX dcat-right: <http://www.w3.org/ns/dcat#>
+PREFIX dcat-wrong: <https://www.w3.org/ns/dcat/>
+PREFIX dct:        <https://purl.org/dc/terms/>
+PREFIX dct-right:  <http://purl.org/dc/terms/>
+PREFIX dct-wrong:  <https://purl.org/dc/terms/>
+PREFIX dspace:     <https://w3id.org/dspace/v0.8/>
+PREFIX edc:        <https://w3id.org/edc/v0.0.1/ns/>
+PREFIX foaf:       <http://xmlns.com/foaf/0.1/>
+PREFIX odrl:       <http://www.w3.org/ns/odrl/2/>
+
+<file:///d:/Onto/proj/underpin/model/dcat/e8deda0e-08ca-4d9d-b268-ce3975fd452e>
+        a                      dcat:DataService;
+        dct-wrong:endpointUrl  "http://edc:11003/api/dsp";
+        dct-wrong:terms        "connector" .
+
+<file:///d:/Onto/proj/underpin/model/dcat/dataspace-catalog-realistic.jsonld>
+        a                odrl:Set;
+        odrl:permission  [ odrl:action  [ odrl:type  "USE" ];
+                           odrl:target  "12345"
+                         ];
+        odrl:target      "12345" .
+
+<file:///d:/Onto/proj/underpin/model/dcat/6920fc77-ea4e-49ae-8f73-035f72311b99>
+        a                  dcat:Catalog;
+        edc:participantId  "my-edc";
+        dcat:dataset       <file:///d:/Onto/proj/underpin/model/dcat/12345>;
+        dcat:service       <file:///d:/Onto/proj/underpin/model/dcat/e8deda0e-08ca-4d9d-b268-ce3975fd452e> .
+
+<file:///d:/Onto/proj/underpin/model/dcat/12345>
+        a                       dcat:Dataset;
+        dct-right:creator       [ foaf:name  "My Org" ];
+        dct-right:description   "my test document";
+        dct-right:language      "https://w3id.org/idsa/code/EN";
+        dct-right:license       "https://creativecommons.org/licenses/by/4.0/";
+        dct-right:publisher     [ foaf:homepage  "https://myorg.com/" ];
+        dct-right:title         "test-document";
+        dcat-right:keyword      "keyword1" , "keyword2";
+        dcat-right:landingPage  "https://mydepartment.myorg.com/my-offer";
+        dcat-right:mediaType    "text/plain";
+        dcat-right:version      "1.0";
+        odrl:hasPolicy          <file:///d:/Onto/proj/underpin/model/dcat/dataspace-catalog-realistic.jsonld>;
+        dcat-ext:httpDatasourceHintsProxyBody
+                "false";
+        dcat-ext:httpDatasourceHintsProxyMethod
+                "false";
+        dcat-ext:httpDatasourceHintsProxyPath
+                "false";
+        dcat-ext:httpDatasourceHintsProxyQueryParams
+                "false";
+        edc:id                  "12345" .

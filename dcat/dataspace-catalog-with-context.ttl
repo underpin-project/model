@@ -1,0 +1,41 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX edc:  <https://w3id.org/edc/v0.0.1/ns/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+
+<https://dataspace.underpinproject.eu/bcca61be-e82e-4da6-bfec-9716a56cef35>
+        a                  dcat:Dataset;
+        dcat:distribution  [ a                   dcat:Distribution;
+                             dct:format          <https://dataspace.underpinproject.eu/HttpData>;
+                             dcat:accessService  "5e839777-d93e-4785-8972-1005f51cf367"
+                           ];
+        odrl:hasPolicy     <OGU0ZTMzMGMtODQ2ZS00ZWMxLThmOGQtNWQxNWM0NmI2NmY4:YmNjYTYxYmUtZTgyZS00ZGE2LWJmZWMtOTcxNmE1NmNlZjM1:NDY2ZTZhMmEtNjQ1Yy00ZGQ0LWFlZDktMjdjNGJkZTU4MDNj>;
+        edc:description    "description";
+        edc:id             "bcca61be-e82e-4da6-bfec-9716a56cef35" .
+
+<https://dataspace.underpinproject.eu/7df65569-8c59-4013-b1c0-fa14f6641bf2>
+        a                  dcat:Catalog;
+        dcat:dataset       <https://dataspace.underpinproject.eu/bcca61be-e82e-4da6-bfec-9716a56cef35>;
+        dcat:service       <https://dataspace.underpinproject.eu/5e839777-d93e-4785-8972-1005f51cf367>;
+        edc:participantId  "urn:connector:provider" .
+
+<https://dataspace.underpinproject.eu/5e839777-d93e-4785-8972-1005f51cf367>
+        a                dcat:DataService;
+        dct:endpointUrl  "http://localhost:16806/protocol";
+        dct:terms        "connector" .
+
+<OGU0ZTMzMGMtODQ2ZS00ZWMxLThmOGQtNWQxNWM0NmI2NmY4:YmNjYTYxYmUtZTgyZS00ZGE2LWJmZWMtOTcxNmE1NmNlZjM1:NDY2ZTZhMmEtNjQ1Yy00ZGQ0LWFlZDktMjdjNGJkZTU4MDNj>
+        a                odrl:Set;
+        odrl:permission  [ odrl:action      [ odrl:type  "http://www.w3.org/ns/odrl/2/use" ];
+                           odrl:constraint  [ odrl:and  [ odrl:leftOperand   edc:inForceDate;
+                                                          odrl:operator      odrl:lteq;
+                                                          odrl:rightOperand  "2023-07-12T07:19:58.585601395Z"
+                                                        ];
+                                              odrl:and  [ odrl:leftOperand   edc:inForceDate;
+                                                          odrl:operator      odrl:gteq;
+                                                          odrl:rightOperand  "2023-07-07T07:19:58.585601395Z"
+                                                        ]
+                                            ];
+                           odrl:target      <https://dataspace.underpinproject.eu/bcca61be-e82e-4da6-bfec-9716a56cef35>
+                         ];
+        odrl:target      <https://dataspace.underpinproject.eu/bcca61be-e82e-4da6-bfec-9716a56cef35> .

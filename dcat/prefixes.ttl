@@ -1,0 +1,9 @@
+@prefix dcat-right: <http://www.w3.org/ns/dcat#> .
+@prefix dcat-wrong: <https://www.w3.org/ns/dcat/> .
+@prefix dct-right:  <http://purl.org/dc/terms/> .
+@prefix dct-wrong:  <https://purl.org/dc/terms/> .
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+@prefix odrl:       <http://www.w3.org/ns/odrl/2/> .
+
+@prefix edc:        <https://w3id.org/edc/v0.0.1/ns/> .
+@prefix dcat-ext:   <https://semantic.sovity.io/dcat-ext#> .

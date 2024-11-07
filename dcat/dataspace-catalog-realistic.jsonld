@@ -1,0 +1,58 @@
+{
+    "@id": "6920fc77-ea4e-49ae-8f73-035f72311b99",
+    "@type": "dcat:Catalog",
+    "dcat:dataset": {
+        "@id": "12345",
+        "@type": "dcat:Dataset",
+        "odrl:hasPolicy": {
+            "@id": "Y29udHJhY3RkZWZpbml0aW9uLTE=:MTIzNDU=:MDE5MzAxNWEtYTk0NC03N2RlLTgzYzYtODA5MmVkYzE0ODE3",
+            "@type": "odrl:Set",
+            "odrl:permission": {
+                "odrl:target": "12345",
+                "odrl:action": {
+                    "odrl:type": "USE"
+                }
+            },
+            "odrl:prohibition": [],
+            "odrl:obligation": [],
+            "odrl:target": "12345"
+        },
+        "dcat:distribution": [],
+        "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by/4.0/",
+        "http://www.w3.org/ns/dcat#keyword": [
+            "keyword1",
+            "keyword2"
+        ],
+        "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyBody": "false",
+        "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyPath": "false",
+        "http://purl.org/dc/terms/language": "https://w3id.org/idsa/code/EN",
+        "http://purl.org/dc/terms/description": "my test document",
+        "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyMethod": "false",
+        "http://purl.org/dc/terms/publisher": {
+            "http://xmlns.com/foaf/0.1/homepage": "https://myorg.com/"
+        },
+        "http://www.w3.org/ns/dcat#version": "1.0",
+        "http://purl.org/dc/terms/creator": {
+            "http://xmlns.com/foaf/0.1/name": "My Org"
+        },
+        "http://www.w3.org/ns/dcat#landingPage": "https://mydepartment.myorg.com/my-offer",
+        "http://purl.org/dc/terms/title": "test-document",
+        "http://www.w3.org/ns/dcat#mediaType": "text/plain",
+        "edc:id": "12345",
+        "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyQueryParams": "false"
+    },
+    "dcat:service": {
+        "@id": "e8deda0e-08ca-4d9d-b268-ce3975fd452e",
+        "@type": "dcat:DataService",
+        "dct:terms": "connector",
+        "dct:endpointUrl": "http://edc:11003/api/dsp"
+    },
+    "edc:participantId": "my-edc",
+    "@context": {
+        "dct": "https://purl.org/dc/terms/",
+        "edc": "https://w3id.org/edc/v0.0.1/ns/",
+        "dcat": "https://www.w3.org/ns/dcat/",
+        "odrl": "http://www.w3.org/ns/odrl/2/",
+        "dspace": "https://w3id.org/dspace/v0.8/"
+    }
+}
