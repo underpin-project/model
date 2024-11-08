@@ -512,7 +512,9 @@ The real response has even more problems than the canned response:
   - The [odrl.jsonld](https://www.w3.org/ns/odrl.jsonld) context doesn't define such term.
     It aliases `"type": "@type"` but that means `rdf:type` and not `odrl:type`
   - None of the "action" examples show such "type" subnode
-- Uses a plain string "USE" as the value. But the [odrl.jsonld](https://www.w3.org/ns/odrl.jsonld) context specifies that it's a URL (`@vocab` means that by default it's resolved in the vocabulary namespace):
+- Uses a plain string "USE" as the value. But:
+  - The [IDSA Contract JSON schema](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2024-1/negotiation/message/schema/contract-schema.json#/definitions/Action) uses prefixed URLs, and one of the allowed values is `"odrl:use"`
+  - The [odrl.jsonld](https://www.w3.org/ns/odrl.jsonld) context specifies that it's a URL (`@vocab` means that by default it's resolved in the vocabulary namespace):
 ```json
 "action": {
   "@type": "@vocab",
