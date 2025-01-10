@@ -16,22 +16,12 @@ Links to sample data are on google drive.
         - [Cube Model](#cube-model)
         - [Cube Fixes](#cube-fixes)
         - [Cube Questions](#cube-questions)
-    - [Sensor Data](#sensor-data)
+    - [Raw Data](#raw-data)
 
 <!-- markdown-toc end -->
 
 
 ## Sensor Data as CSVW
-CSW on the Web (CSVW) is a W3C standard for describing CSV sheets in a machine-readable way.
-
-Resources (all W3C specs are Editor's Draft 02 November 2022 unless otherwise indicated):
-- https://csvw.org/: This site explains CSVW and suggests tools one can use for working with it
-- https://w3c.github.io/csvw/primer: CSV on the Web: A Primer
-- https://w3c.github.io/csvw/metadata/: Metadata Vocabulary for Tabular Data
-- https://www.rfc-editor.org/rfc/rfc6570: URL Templates as used in CSVW
-- https://w3c.github.io/csvw/syntax/: Model for Tabular Data and Metadata on the Web
-- https://w3c.github.io/csvw/csv2rdf/: Generating RDF from Tabular Data on the Web
-- https://w3c.github.io/csvw/ns/: CSVW Namespace Vocabulary Terms (06 June 2017)
 
 ### Important Columns
 
@@ -321,7 +311,7 @@ Clarifications and fixes needed:
 - Turn `subject, category, severity, problem` into thesauri rather than strings
 - What is "Opened Safety Chain"? Appears in many events
 
-## Sensor Data
+## Raw Data
 [WF1_WGT01 - Row Data_Logs.xlsx](https://docs.google.com/spreadsheets/d/1bKZlcDIDZLF6biRiPdkgMAIKOaVn1PuO/) contains data from one turbine
 - sheet `data` has raw time series data from 132 sensors
 - sheet `logs` has log entries

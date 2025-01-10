@@ -1,0 +1,170 @@
+@base           <https://dataspace.underpinproject.eu/>.
+@prefix un:     <https://dataspace.underpinproject.eu/ontology/>.
+@prefix schema: <http://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit:   <http://qudt.org/vocab/unit/> .
+@prefix qk:     <http://qudt.org/vocab/quantitykind/> .
+@prefix qkdv:   <http://qudt.org/vocab/dimensionvector/> .
+
+# Ontology
+
+un: a owl:Ontology;
+  rdfs:label "UNDERPIN ontology"; 
+  # TODO describe used ontologies and taxonomies
+.
+
+# Properties
+
+un:originalMetadata a owl:ObjectProperty;
+  rdfs:isDefinedBy un: ;
+  rdfs:label "original metadata";
+  rdfs:comment "Envelope for original metadata in a dataspace Catalog Response".
+
+un:qualifier a owl:ObjectProperty;
+  rdfs:label "qualifier";
+  rdfs:domain csvw:Column;
+  rdfs:range skos:Concept;
+  rdfs:comment "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining".
+
+un:alarmLowThreshold a owl:DatatypeProperty;
+  rdfs:label "alarm Low Threshold";
+  rdfs:domain csvw:Column;
+  rdfs:range xsd:decimal.
+
+un:alarmHighThreshold a owl:DatatypeProperty;
+  rdfs:label "alarm High Threshold";
+  rdfs:domain csvw:Column;
+  rdfs:range xsd:decimal.
+
+un:tripLowThreshold a owl:DatatypeProperty;
+  rdfs:label "trip Low Threshold";
+  rdfs:domain csvw:Column;
+  rdfs:range xsd:decimal.
+
+un:tripHighThreshold a owl:DatatypeProperty;
+  rdfs:label "trip High Threshold";
+  rdfs:domain csvw:Column;
+  rdfs:range xsd:decimal.
+
+un:influxDatatype a owl:DatatypeProperty;
+  rdfs:label "Influx datatype";
+  rdfs:comment "Datatype for Influx CSV table annotation";
+  skos:scopeNote "We use one of: dateTime:<format>; double; string, tag; ignore (if csvw:suppressOutput is true)";
+  rdfs:seeAlso <https://docs.influxdata.com/influxdb/v2/reference/syntax/annotated-csv/#data-types>;
+  rdfs:domain csvw:Column;
+  rdfs:range xsd:string.
+
+# un:dateTime a owl:DatatypeProperty, qb:DimensionProperty;
+#   rdfs:label "Date-time";
+#   rdfs:range xsd:string;
+#   qb:concept sdmx-concept:timePeriod.
+
+# un:machineCode a owl:DatatypeProperty, qb:DimensionProperty;
+#   rdfs:label "Machine code";
+#   rdfs:comment "Machine tag, eg of a wind turbine, compressor, etc";
+#   rdfs:range xsd:string;
+#   qb:concept sdmx-concept:refArea.
+
+# Thesauri
+
+## Dataset type
+<type> a skos:ConceptScheme; skos:prefLabel "Dataset type".
+<type/input>  a skos:Concept; skos:inScheme <type>; skos:prefLabel "Input dataset".
+<type/result> a skos:Concept; skos:inScheme <type>; skos:prefLabel "Result dataset".
+<type/csv>    a skos:Concept; skos:inScheme <type>; skos:prefLabel "CSV dataset".
+<type/influx> a skos:Concept; skos:inScheme <type>; skos:prefLabel "Influx dataset".
+
+## Statistical qualifier
+<qualifier> a skos:ConceptScheme; skos:prefLabel "Qualifier"; skos:altLabel "Statistical qualifier", "Value qualifier", "Aggregation rule"; skos:definition "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining".
+<qualifier/5th_percentile>     a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "5th Percentile".
+<qualifier/95th_percentile>    a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "95th Percentile".
+<qualifier/Absolute>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Absolute".
+<qualifier/Accumulated>        a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Accumulated".
+<qualifier/Anomaly>            a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Anomaly"; skos:definition "Event (anomaly): boolean (presence) or type (eg alarm, trip)".
+<qualifier/Average>            a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Average".
+<qualifier/Demand>             a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Demand"; skos:definition "Consumption of a machine or component".
+<qualifier/Differential>       a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Differential".
+<qualifier/Estimate>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Estimate".
+<qualifier/Latest>             a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Latest".
+<qualifier/Limit>              a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Limit".
+<qualifier/Maximum>            a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Maximum".
+<qualifier/Minimum>            a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Minimum".
+<qualifier/Possible>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Possible".
+<qualifier/Predicted>          a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Predicted"; skos:definition "Predicted (forecasted) value".
+<qualifier/Relative>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Relative".
+<qualifier/Residual>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Residual"; skos:definition "If prediction is outside of the confidence interval (lower/upper bound: 0.05-0.95 percentile), then the difference between predicted value and the respective bound.".
+<qualifier/Runtime>            a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Run time"; skos:example "Hour Counters Grid Ok Average", "Hour Counters Grid On Average", "Grid ok hours", "Grid on hours".
+<qualifier/Setpoint>           a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Setpoint"; skos:definition "Established target value".
+<qualifier/StandardDeviation>  a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Standard Deviation".
+<qualifier/Total>              a skos:Concept; skos:inScheme <qualifier>; skos:prefLabel "Total".
+
+## Anomaly type
+<anomaly> a skos:ConceptScheme; skos:prefLabel "Anomaly type".
+<anomaly/alarm> a skos:Concept; skos:inScheme <anomaly>; skos:prefLabel "Alarm"; skos:description "An alarm is raised because sensor reading was beyond alarm threshold".
+<anomaly/trip>  a skos:Concept; skos:inScheme <anomaly>; skos:prefLabel "Trip"; skos:description "A trip is raised because sensor reading was beyond trip threshold".
+
+# Quantity Kinds and Units (selection from QUDT)
+<quantityKind> a skos:ConceptScheme; skos:prefLabel "Quantity Kind"; skos:scopeNote "Only those used in UNDERPIN".
+<unit>         a skos:ConceptScheme; skos:prefLabel "Unit";          skos:scopeNote "Only those used in UNDERPIN".
+
+qk:ActivePower          a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:W                    . unit:W                    a skos:Concept; skos:inScheme <unit>.
+qk:Angle                a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:DEG                  . unit:DEG                  a skos:Concept; skos:inScheme <unit>.
+qk:AngularAcceleration  a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:REV-PER-MIN-SEC      . unit:REV-PER-MIN-SEC      a skos:Concept; skos:inScheme <unit>.
+qk:AngularVelocity      a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:REV-PER-MIN          . unit:REV-PER-MIN          a skos:Concept; skos:inScheme <unit>.
+qk:Capacitance          a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:FARAD                . unit:FARAD                a skos:Concept; skos:inScheme <unit>.
+qk:Displacement         a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:MilliM               . unit:MilliM               a skos:Concept; skos:inScheme <unit>.
+qk:Distance             a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:MicroM               . unit:MicroM               a skos:Concept; skos:inScheme <unit>.
+qk:ElectricCurrent      a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:A                    . unit:A                    a skos:Concept; skos:inScheme <unit>.
+qk:Frequency            a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:HZ                   . unit:HZ                   a skos:Concept; skos:inScheme <unit>.
+qk:Inductance           a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:H                    . unit:H                    a skos:Concept; skos:inScheme <unit>.
+qk:LinearVelocity       a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:M-PER-SEC            . unit:M-PER-SEC            a skos:Concept; skos:inScheme <unit>.
+qk:MassFlowRate         a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:KiloGM-PER-HR        . unit:KiloGM-PER-HR        a skos:Concept; skos:inScheme <unit>.
+qk:Power                a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:W                    . unit:W                    a skos:Concept; skos:inScheme <unit>.
+qk:Power                a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:KiloW                . unit:KiloW                a skos:Concept; skos:inScheme <unit>.
+qk:PowerFactor          a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:UNITLESS             . unit:UNITLESS             a skos:Concept; skos:inScheme <unit>.
+qk:Pressure             a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:KiloGM_F-PER-CentiM2 . unit:KiloGM_F-PER-CentiM2 a skos:Concept; skos:inScheme <unit>.
+qk:ReactivePower        a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:V-A_Reactive         . unit:V-A_Reactive         a skos:Concept; skos:inScheme <unit>.
+qk:Temperature          a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:DEG_C                . unit:DEG_C                a skos:Concept; skos:inScheme <unit>.
+qk:Time                 a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:HR                   . unit:HR                   a skos:Concept; skos:inScheme <unit>.
+qk:Torque               a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:KiloN-M              . unit:KiloN-M              a skos:Concept; skos:inScheme <unit>.
+qk:Voltage              a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:V                    . unit:V                    a skos:Concept; skos:inScheme <unit>.
+
+## Newly defined units
+
+# https://github.com/qudt/qudt-public-repo/issues/1094
+unit:REV-PER-MIN-SEC
+  a qudt:Unit ;
+  dct:description "Revolution per Minute per Second is a unit for Angular Acceleration (sometimes called Change of RPM, crpm)"^^qudt:LatexString ;
+  qudt:conversionMultiplier 376.9911186 ;
+  qudt:conversionMultiplierSN 3.769911186E2 ;
+  qudt:hasDimensionVector qkdv:A0E0L0I0M0H0T-2D0 ;
+  qudt:hasQuantityKind qk:AngularAcceleration ;
+  qudt:symbol "rev/min/s" ;
+  qudt:ucumCode "{#}.min-1.s-1"^^qudt:UCUMcs ;
+  rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ;
+  rdfs:label "Revolution per Minute per Second"@en ;
+.
+
+# Organizations
+<org/MOH> a schema:Organization;
+  schema:name "Motor Oil (MOH)";
+  schema:url <https://www.moh.gr/en/company/>;
+  edc:participantId "BPNLY3SEIW".
+
+<org/MORE> a schema:Organization ;
+  schema:name "Motor Oil Renewable Energy (MORE)";
+  schema:url <https://www.moh.gr/en/company/subsidiaries-affiliates/more-en/>;
+  edc:participantId "TODO".
+
+<org/AIT> a schema:Organization ;
+  schema:name "AIT Austrian Institute Of Technology";
+  schema:url <https://www.ait.ac.at/en/>;
+  edc:participantId "TODO".
+
+<org/SPH> a schema:Organization ;
+  schema:name "SpaceHellas";
+  schema:url <https://www.space.gr/>;
+  edc:participantId "TODO".

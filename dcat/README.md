@@ -19,8 +19,14 @@ title: DCAT JSON for Underpin
 <!-- markdown-toc end -->
 
 # DCAT Info
-[DCAT 3](https://www.w3.org/TR/vocab-dcat-3/) is the prevalent ontology for dataset metadata.
-It (in the guise of DCAT-AP) is the foundation of European open data (https://data.europa.eu) and many other initiatives including Dataspaces.
+The W3C [Dataset Catalog (DCAT) ontology](https://www.w3.org/TR/vocab-dcat-3/) is the prevalent ontology for dataset metadata.
+It is well established: it is mature (has been in development since 2014 and the current version is 3) 
+and is the foundation of numerous data portals and other data sharing initiatives, 
+in particular the [European Data Portal](https://data.europa.eu/en). 
+Various DCAT profiles have been created: 
+for EU datasets (DCAT-AP), statistics ([StatDCAT-AP](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe)), geospatial ([GeoDCAT-AP](https://semiceu.github.io/GeoDCAT-AP/drafts/latest/)), life sciences ([HCLS Dataset](https://www.w3.org/TR/hcls-dataset/)), national (DE, NO, DK, SE, IT), 
+Dataspaces, etc. 
+
 DCAT information can be presented in many forms including RDF accessible via SPARQL endpoints, embedded in HTML pages as HTML-RDFa, or serialized as RDF/XML, N3, Turtle, JSON-LD.
 
 Properties explanation:

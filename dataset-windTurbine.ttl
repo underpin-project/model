@@ -1,0 +1,27 @@
+<dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19>
+  a dcat:Dataset ;
+  dcat:distribution <dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/distribution>;
+  dcat:keyword "wind turbine", "sensor data", "temperature", "bearing", "wind", "linear velocity" ;
+  dct:conformsTo ;
+  dct:creator <org/MORE>;
+  dct:description "Slice of detailed sensor readings from wind turbines" ;
+  dct:identifier "f05ee033-b6cd-4c05-80ae-c5ed61ddbd19" ;
+  dct:issued "2024-01-15"^^xsd:date.
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:modified "2024-07-12"^^xsd:date ;
+  dct:spatial "WTG01";
+  dct:temporal <dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/temporal>;
+  dct:title "Windfarm Sensor Data slice" ;
+  dct:type <type/input>, <type/csv>;
+  edc:id "f05ee033-b6cd-4c05-80ae-c5ed61ddbd19".
+
+<dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/temporal> a dct:PeriodOfTime.
+  dcat:startDate "2024-01-01"^^xsd:date ;
+  dcat:endDate "2024-01-31"^^xsd:date.
+
+<dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/distribution> a dcat:Distribution ;
+  dct:format "text/csv";
+  dcat:accessService <dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/service>.
+
+<dataset/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19/service> a dcat:DataService;
+  dcat:endpointURL <https://file.dataspace.underpinproject.eu/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19>.

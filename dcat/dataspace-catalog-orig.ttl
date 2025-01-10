@@ -19,6 +19,7 @@ PREFIX odrl:   <http://www.w3.org/ns/odrl/2/>
                            odrl:target      "bcca61be-e82e-4da6-bfec-9716a56cef35"
                          ];
         odrl:target      "bcca61be-e82e-4da6-bfec-9716a56cef35" .
+
 <file:///D:/Onto/proj/underpin/model/dcat/5e839777-d93e-4785-8972-1005f51cf367>
         a                dcat:DataService;
         dct:endpointUrl  "http://localhost:16806/protocol";

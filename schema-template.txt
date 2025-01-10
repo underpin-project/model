@@ -1,0 +1,30 @@
+# GRAPH <graph/schema/$ID>
+
+## SHEET $SHEET
+
+<schema/$ID> a csvw:Schema;
+  dct:title "$NAME table schema";
+  csvw:column <schema/$ID/(n)>.
+
+<schema/$ID/(n)> a csvw:Column, sosa:ObservableProperty;
+  csvw:title "(title)";
+  dct:identifier "(n)"^^xsd:integer;
+  csvw:name "(name)";
+  un:influxDatatype "(influxDatatype)";
+  csvw:suppressOutput "(suppressOutput)"^^xsd:boolean;
+  csvw:datatype <schema/$ID/(n)/(dtBase)>, "(datatype)";
+  sosa:hasFeatureOfInterest <feature/URLIFY(SPLIT(features))>;
+  un:qualifier <qualifier/SPLIT(statisticalQualifiers)>;
+  qudt:hasQuantityKind qk:\\(quantityKind\\);
+  qudt:hasUnit unit:\\(unit\\);
+  rdfs:comment "(comment)".
+
+<feature/URLIFY(SPLIT(features))> a skos:Concept, sosa:FeatureOfInterest;
+  skos:inScheme <feature>;
+  skos:prefLabel "SPLIT(features)".
+
+<schema/$ID/(n)/(dtBase)> a csvw:Datatype;
+  csvw:base "(dtBase)";
+  csvw:format "(format)".
+
+$EXTRA

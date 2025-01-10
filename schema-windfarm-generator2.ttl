@@ -1,0 +1,30 @@
+# GRAPH <graph/schema/windfarm-generator2>
+
+## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=2142433981#gid=2142433981
+
+<schema/windfarm-generator2> a csvw:Schema;
+  dct:title "Windfarm Generator Case 2 table schema";
+  csvw:column <schema/windfarm-generator2/(n)>.
+
+<schema/windfarm-generator2/(n)> a csvw:Column, sosa:ObservableProperty;
+  csvw:title "(title)";
+  dct:identifier "(n)"^^xsd:integer;
+  csvw:name "(name)";
+  un:influxDatatype "(influxDatatype)";
+  csvw:suppressOutput "(suppressOutput)"^^xsd:boolean;
+  csvw:datatype <schema/windfarm-generator2/(n)/(dtBase)>, "(datatype)";
+  sosa:hasFeatureOfInterest <feature/URLIFY(SPLIT(features))>;
+  un:qualifier <qualifier/SPLIT(statisticalQualifiers)>;
+  qudt:hasQuantityKind qk:\(quantityKind\);
+  qudt:hasUnit unit:\(unit\);
+  rdfs:comment "(comment)".
+
+<feature/URLIFY(SPLIT(features))> a skos:Concept, sosa:FeatureOfInterest;
+  skos:inScheme <feature>;
+  skos:prefLabel "SPLIT(features)".
+
+<schema/windfarm-generator2/(n)/(dtBase)> a csvw:Datatype;
+  csvw:base "(dtBase)";
+  csvw:format "(format)".
+
+

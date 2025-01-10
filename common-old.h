@@ -1,0 +1,5 @@
+﻿#define IFBOUND(x,y)        bind(if(bound(x),y,?UNDEF) as x##_IFBOUND)
+#define IFBOUND_ELSE(x,y,z) bind(if(bound(x),y,z) as x##_IFBOUND_ELSE)
+#define DATATYPE(x,y)       IFBOUND(?format,<x>)
+#define DATATYPE_ELSE(x,y)  IFBOUND_ELSE(?format,<x>,XSD(y))
+#define XSD(x)              bind(iri(concat(str(xsd:),x)) as x##_XSD)

@@ -1,0 +1,30 @@
+# GRAPH <graph/schema/refinery-result-anomaly>
+
+## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=699616734#gid=699616734
+
+<schema/refinery-result-anomaly> a csvw:Schema;
+  dct:title "Refinery Prediction Results: Anomalies table schema";
+  csvw:column <schema/refinery-result-anomaly/(n)>.
+
+<schema/refinery-result-anomaly/(n)> a csvw:Column, sosa:ObservableProperty;
+  csvw:title "(title)";
+  dct:identifier "(n)"^^xsd:integer;
+  csvw:name "(name)";
+  un:influxDatatype "(influxDatatype)";
+  csvw:suppressOutput "(suppressOutput)"^^xsd:boolean;
+  csvw:datatype <schema/refinery-result-anomaly/(n)/(dtBase)>, "(datatype)";
+  sosa:hasFeatureOfInterest <feature/URLIFY(SPLIT(features))>;
+  un:qualifier <qualifier/SPLIT(statisticalQualifiers)>;
+  qudt:hasQuantityKind qk:\(quantityKind\);
+  qudt:hasUnit unit:\(unit\);
+  rdfs:comment "(comment)".
+
+<feature/URLIFY(SPLIT(features))> a skos:Concept, sosa:FeatureOfInterest;
+  skos:inScheme <feature>;
+  skos:prefLabel "SPLIT(features)".
+
+<schema/refinery-result-anomaly/(n)/(dtBase)> a csvw:Datatype;
+  csvw:base "(dtBase)";
+  csvw:format "(format)".
+
+
