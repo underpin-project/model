@@ -549,6 +549,7 @@ Additional notes:
   - "Each distribution must have at least one DataService which specifies where the distribution is obtained. Specifically, a DataService specifies the endpoint for initiating a Contract Negotiation and Transfer Process":
     Although DCAT allows the simple property `dcat:downloadURL`, 
     we use a `DataService` with `dcat:endpointURL` even for CSV datasets
+
 TODO: decide the structure of `DataService` and what props to use (`dcat, un` and/or `edc` namespaces):
 - The model shows `edc` props that belong to `edc:DataAddress` not `dcat:DataService`
 - `edc:DataAddress` is a hidden class that includes some secrets and should not be exposed
