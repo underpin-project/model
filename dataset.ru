@@ -52,14 +52,7 @@ insert {graph ?graph_dataset_dataset_URL {
     dcat:endDate ?endDate_xsd_date.
   ?dataset_dataset_distribution_URL a dcat:Distribution ;
     dct:format ?format;
-    dcat:accessService ?dataset_dataset_service_URL.
-  ?dataset_dataset_service_URL a dcat:DataService;
-    ## TODO: revise all of this: these are props of edc:DataAddress not dcat:DataService; the EDC class is hidden.
-    ## And decide how to do it for Influx
-    edc:type ?type3;
-    edc:bucketName ?participantId;
-    edc:keyName ?dataset;
-    dcat:endpointURL ?https_service_dataspace_underpinproject_eu_dataset_URL.
+    edc:type ?type3.
 }}
 where {
   service <http://localhost:7333/repositories/ontorefine:dataset> {
@@ -95,7 +88,5 @@ where {
     bind(iri(concat("dataset/",?derivedFrom)) as ?dataset_derivedFrom_URL)
     bind(strdt(?startDate,xsd:date) as ?startDate_xsd_date)
     bind(strdt(?endDate,xsd:date) as ?endDate_xsd_date)
-    bind(iri(concat("dataset/",?dataset,"/service")) as ?dataset_dataset_service_URL)
-    bind(iri(concat("https://service.dataspace.underpinproject.eu/",?dataset)) as ?https_service_dataspace_underpinproject_eu_dataset_URL)
   }
 };

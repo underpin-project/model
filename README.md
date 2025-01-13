@@ -30,7 +30,9 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
         - [UNDERPIN Units and Quantity Kinds](#underpin-units-and-quantity-kinds)
         - [UNDERPIN Features of Interest](#underpin-features-of-interest)
     - [Dataset Model](#dataset-model)
+        - [Dataset After Ingestion](#dataset-after-ingestion)
     - [Table Schema Model](#table-schema-model)
+        - [Using LLM for Column Descriptions](#using-llm-for-column-descriptions)
 - [UNDERPIN Facets](#underpin-facets)
 
 <!-- markdown-toc end -->
@@ -561,18 +563,21 @@ Its columns and their mapping are described below.
 
 Additional notes:
 - We use only named subsidiary nodes (no blank nodes) to make it easier to debug and update the data
-- `dcat:distribution`: [DSP section 1.1.2 Distributions](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/catalog/catalog.protocol#id-1.1.2-distributions) states
+- `dcat:Distribution`: [DSP section 1.1.2 Distributions](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/catalog/catalog.protocol#id-1.1.2-distributions) states
   - "A Dataset may contain 0..N Distributions".
     However, EDC restricts to a single Distribution per Dataset, and we comply with this restriction
-  - "Each distribution must have at least one DataService which specifies where the distribution is obtained. Specifically, a DataService specifies the endpoint for initiating a Contract Negotiation and Transfer Process":
-    Although DCAT allows the simple property `dcat:downloadURL`, 
-    we use a `DataService` with `dcat:endpointURL` even for CSV datasets
+  - "Each distribution must have at least one DataService which specifies where the distribution is obtained. 
+    Specifically, a DataService specifies the endpoint for initiating a Contract Negotiation and Transfer Process":
+    Although DCAT allows the simple property `dcat:downloadURL`, EDC always uses a `DataService`: see next section.
 
-TODO: decide the structure of `DataService` and what props to use (`dcat, un` and/or `edc` namespaces):
-- The model shows `edc` props that belong to `edc:DataAddress` not `dcat:DataService`
-- `edc:DataAddress` is a hidden class that includes some secrets and should not be exposed
-- What props we need for Influx (hopefully `bucketName, keyName` will work here as well)
-- `dcat:endpointURL` may be unable to carry all addressing info (and is superfluous anyway)
+### Dataset After Ingestion
+After a dataset is ingested in the dataspace, two extra nodes obtain:
+- `dcat:DataService` with `dcat:endpointURL` specifying the endpoint for initiating a Contract Negotiation and Transfer Process
+- `edc:DataAddress` with addressing props `bucketName, keyName` 
+  that are used for both serving files (MinIO "AmazonS3") and timeseries queries (Influx)
+  - This is a hidden class that includes some secrets, revealed after Contract Signing.
+
+![](dataset-extra.png)
 
 ## Table Schema Model
 
@@ -585,7 +590,9 @@ Notes about classes/nodes:
 - `csvw:Schema` describes a whole dataset (each `dcat:Dataset` is connected to one schema)
   - `dct:title` serves to allow selection of an appropriate schema on CSV ingest
 - `csvw:Column` describes a column. It's also declared `sosa:ObservableProperty`
-- `csvw:Datatype`
+- `csvw:Datatype` describes the column datatype with fields `base` (eg `double` or `dateTime`, specified as a string) and `format`
+  - If the format is standard XSD, then a string value like `double` should be used
+
 
 Notes about attributes:
 - `dct:identifier` is the column sequence number. This is used when creating Influx [annotations](https://docs.influxdata.com/influxdb/v2/reference/syntax/annotated-csv/) and [extended annotations](https://docs.influxdata.com/influxdb/v2/reference/syntax/annotated-csv/extended/)
@@ -629,7 +636,42 @@ If a prediction is outside these thresholds, then an anomaly event or flag is re
 - `un:tripLowThreshold`
 - `un:tripHighThreshold`
 
+### Using LLM for Column Descriptions
+
+Column names were like this,
+which has two major defects resulting in multiple column names for columns that mean the same thing:
+```
+WTG01_Generator RPM Max. (1)
+```
+- The tag (wind turbine generator ID) is prepended (it is also in the name of the excel worksheet, and the resulting CSV file name)
+- A sequential number is appended. But older version of the same datasets used a different column order!
+
+We used a command like this to clean up the header and make the filename better:
+```
+sed '1s/WTG01_//g; 1s/ ([^)]*)//g' "WF1_WTG01-Row data '20.csv" > windfarm-WF1-WTG01-2020.csv 
+```
+
+We also used LLM to explicate column descriptions, with a prompt like this:
+```
+Given a list of column names like this:
+
+Ambient WindSpeed Avg. (1)
+Generator RPM Avg. (8)
+Grid InverterPhase1 Temp. Avg. (45)
+Grid Production PossibleCapacitive Max. (47)
+
+Explicate it to characteristics like this:
+
+| title (raw name)                             | no | name (cleaned)                              | feature              | statistical qualifier | QUDT quantityKind | QUDT unit |
+|----------------------------------------------|----|---------------------------------------------|----------------------|-----------------------|-------------------|-----------|
+| Ambient WindSpeed Avg. (1)                   |  1 | Ambient Wind Speed Average                  | Wind Speed           | Average               | LinearVelocity    | M-PER-SEC |
+| Generator RPM Avg. (8)                       |  8 | Generator rotational speed                  | Generator            | LinearVelocity        | REV-PER-SEC       |           |
+| Grid InverterPhase1 Temp. Avg. (45)          | 45 | Grid Inverter Phase1 Average Temperature    | Grid Inverter,Phase1 | Average               | Temperature       | DEG-C     |
+| Grid Production PossibleCapacitive Max. (47) | 47 | Grid Production Possible Capacitive Maximum | Grid Production      | Maximum               |                   |           |
+```
+
 # UNDERPIN Facets
+
 UNDERPIN offers a Semantic Faceted search that allows the user to find datasets of interest using the following methods:
 - Faceted search.
   - Some facet values are collected at the DCAT (dataset) level

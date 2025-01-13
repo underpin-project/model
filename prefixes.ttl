@@ -22,7 +22,6 @@
 @prefix xsd:          <http://www.w3.org/2001/XMLSchema#>.
 
 ### rdfpuml instructions
-dcat:endpointURL     a puml:InlineProperty.
 dct:creator          a puml:InlineProperty.
 dct:license          a puml:InlineProperty.
 dct:publisher        a puml:InlineProperty.
@@ -32,11 +31,12 @@ qudt:hasUnit         a puml:InlineProperty.
 skos:inScheme        a puml:InlineProperty.
 un:qualifier         a puml:InlineProperty.
 
-dcat:DataService  puml:stereotype "(S,lightgreen)".
-dcat:Dataset      puml:stereotype "(D,lightgreen)".
-dcat:Distribution puml:stereotype "(d,lightgreen)".
-dct:PeriodOfTime  puml:stereotype "(T,lightblue)".
-csvw:Schema       puml:stereotype "(S,pink)".
 csvw:Column       puml:stereotype "(C,pink)".
 csvw:Datatype     puml:stereotype "(D,pink)".
+csvw:Schema       puml:stereotype "(S,pink)".
+dcat:DataService  puml:stereotype "(S,red)".
+dcat:Dataset      puml:stereotype "(D,lightgreen)".
+dcat:Distribution puml:stereotype "(D,lightgreen)".
+dct:PeriodOfTime  puml:stereotype "(T,lightblue)".
+edc:DataAddress   puml:stereotype "(A,red)".
 skos:Concept      puml:stereotype "(C,yellow)".

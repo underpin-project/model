@@ -1,0 +1,9 @@
+
+<dataset/(dataset)/distribution> dcat:accessService <dataset/(dataset)/service>.
+
+<dataset/(dataset)/service> a dcat:DataService;
+  dcat:endpointURL <dataset/(dataset)/address>.
+
+<dataset/(dataset)/address> a edc:DataAddress;
+  edc:bucketName "(participantId)";
+  edc:keyName "(dataset)".

@@ -1,7 +1,10 @@
 ﻿SCHEMA = schema-windfarm.ttl schema-windfarm-generator2.ttl schema-windfarm-result.ttl schema-refinery.ttl schema-refinery-result-anomaly.ttl
-UPDATES = $(patsubst %.ttl,%.ru,$(SCHEMA) dataset.ttl)
+UPDATES = $(patsubst %.ttl, %.ru, $(SCHEMA) dataset.ttl)
 
-all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png
+all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-extra.png
+
+dataset-extra.ttl: dataset.ttl dataset-extra.txt
+	cat $^ > $@
 
 prefixes.rq: prefixes.ttl
 	perl -pe 'm{###} and last; s{^@}{}; s{ *\.$$}{}' $^ > $@
