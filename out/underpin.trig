@@ -1,4 +1,5 @@
 @base           <https://dataspace.underpinproject.eu/>.
+@prefix edc:    <https://w3id.org/edc/v0.0.1/ns/>.
 @prefix un:     <https://dataspace.underpinproject.eu/ontology/>.
 @prefix schema: <http://schema.org/> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
