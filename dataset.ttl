@@ -1,0 +1,38 @@
+# GRAPH <graph/dataset/(dataset)>
+
+## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1341812003#gid=1341812003
+
+<dataset/(dataset)>
+  a dcat:Dataset, dcat:\(type\) ;
+  dct:title "(title)" ;
+  dct:identifier "(dataset)" ;
+  edc:id "(dataset)";
+  dct:type <type/(type1)>, <type/(type2)>;
+  dcat:keyword "SPLIT(keywords)";
+  dct:conformsTo <schema/(schema)>;
+  dct:creator <org/(org)>;
+  dct:publisher <org/(org)>;
+  edc:participantId "(participantId)";
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dct:spatial "(tag)";
+  dct:temporal <dataset/(dataset)/temporal>;
+  ## dct:accrualPeriodicity "(accrual)"^^xsd:duration;
+  dcat:distribution <dataset/(dataset)/distribution>;
+  dcat:inSeries <dataset/(inSeries)>;
+  prov:wasDerivedFrom <dataset/(derivedFrom)>.
+
+<dataset/(dataset)/temporal> a dct:PeriodOfTime;
+  dcat:startDate "(startDate)"^^xsd:date ;
+  dcat:endDate "(endDate)"^^xsd:date.
+
+<dataset/(dataset)/distribution> a dcat:Distribution ;
+  dct:format "(format)";
+  dcat:accessService <dataset/(dataset)/service>.
+
+<dataset/(dataset)/service> a dcat:DataService;
+  ## TODO: revise all of this: these are props of edc:DataAddress not dcat:DataService; the EDC class is hidden.
+  ## And decide how to do it for Influx
+  edc:type "(type3)";
+  edc:bucketName "(participantId)";
+  edc:keyName "(dataset)";
+  dcat:endpointURL <https://service.dataspace.underpinproject.eu/(dataset)>.

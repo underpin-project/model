@@ -30,6 +30,7 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
         - [UNDERPIN Features of Interest](#underpin-features-of-interest)
     - [Dataset Model](#dataset-model)
     - [Table Schema Model](#table-schema-model)
+- [UNDERPIN Facets](#underpin-facets)
 
 <!-- markdown-toc end -->
 
@@ -100,7 +101,7 @@ Dataspaces, etc.
 This [Figure 1](https://www.w3.org/TR/vocab-dcat-3/#fig-dcat-all-attributes) from the DCAT spec is an overview,
 showing the classes of resources that can be members of a Catalog, and the relationships between them.
 
-![](https://www.w3.org/TR/vocab-dcat-3/images/dcat-all-attributes.svg)
+![](dcat-all-attributes.svg)
 
 ## CSVW
 CSW on the Web (CSVW) is a W3C standard for describing CSV sheets in a machine-readable way.
@@ -346,20 +347,20 @@ This section describes:
   The section will evolve significantly in this regard
 - What are the identifiers, URLs and other "addressing information" of various objects.
   We store such info as semantic metadata.
-  
+
 We use 3 stores and describe the data organization mechanisms they have
 (TODO add references):
 - File store: implemented as Minio/S3, keeps CSV files (individual datasets):
   - Bucket: file space with distinct access control.
     Each dataspace participant has its own bucket.
-  - Object: file. 
-    Each dataset is 
+  - Object: file.
+    Each dataset is
     - The name could be hierarchical (a subfolder hierarchy), but we don't use this
 - Time-series database: implemented using Influx
   - Bucket: distinct access control and disposition policies.
     A dataspace participant may have one bucket.
   - Measurement: a table with homogeneous structure.
-    Each 
+    Each
 - Semantic repository: implemented using GraphDB
 
 # UNDERPIN Data Model
@@ -379,7 +380,8 @@ Its semantic model is structured at roughly these levels:
   - `dcat:DataService`: details how to access CSV or Influx
   - `dct:type`: describes the kind of dataset (input vs result, and CSV vs Influx)
   - `prov:wasDerivedFrom`: provenance link from result to input
-  - `prov:wasRevisionOf`: provenance link from Influx dataset to CSV dataset
+  - `dcat:inSeries`: Link from CSV slices to Influx dataset
+  - (Superfluous: `prov:wasRevisionOf`: link from Influx dataset to CSV dataset)
 - CSVW: dataset-specific column descriptions
   - `csvw:Table`: CSV table. Could attach this as a secondary type to the `Dataset` node
   - `csvw:Dialect` (optional): describes details such as number of initial rows or columns to skip
@@ -491,25 +493,67 @@ We use several queries:
 Features of interest are collected from all `csvw:Columns` of the various `csvw:Schemas`
 
 ## Dataset Model
-Let's start by showing a windfarm CSV dataset and its column descriptions.
-This is a montly slice of sensor data:
 
-![](dataset-windTurbine.png)
+The [datasets sheet](https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1341812003#gid=1341812003) includes a detailed description of all datasets.
+Its columns and their mapping are described below.
 
-Notes:
+- `org`: URL pointing to a pre-registered `schema:Organization` eg `<org/MOH>`.
+  Mapped to `dct:creator, dct:publisher`. This deviates from DSP which uses a string (mere name)
+- `participantId`: dataspace participant id, eg "BPNLY3SEIW". 
+  Mapped to `edc:participantId`
+- `title`: detailed name/description, eg 
+  "Wind turbine WF1-WTG01 sensor data for 2022 as csv" or
+  "Refinery compressor sensor data for 2022 as influx".
+  String without lang tag.
+  Mapped to `dct:title` (`dct:description` is not used)
+- `dataset`: identifier (eg "refinery-compressor-2022-influx"). Mapped to
+  - `edc:id` (used by EDC) and `dct:identifier` (specified in DCAT and DSP)
+  - Dataset node URL (eg `<dataset/refinery-compressor-2022-influx>`)
+  - Named graph (eg `<graph/dataset/refinery-compressor-2022-influx>`)
+  - Distribution node URL (eg `<dataset/refinery-compressor-2022-influx/distribution>`)
+  - DataService node URL (eg `<dataset/refinery-compressor-2022-influx/service>`)
+  - Temporal coverage node URL (eg `<dataset/refinery-compressor-2022-influx/temporal>`)
+- `type`:  Additional `rdf:type` for Influx datasets (namely `dcat:DatasetSeries`).
+  Each also has `dcat:Dataset`
+- `type1`: "input" or "output". Mapped to `dct:type`
+- `type2`: "csv" or "influx". Mapped to `dct:type`
+- `type3`: service type: "AmazonS3" or "Influx". Mapped to `edc:type`
+- `format`: distribution MIME type: "text/csv" or "application/x-influx". Mapped to `dct:format`
+  - Important: `type, type2, type3, format` must be in sync with each other!
+- `inSeries`: link from CSV (eg `<dataset/refinery-compressor-result-2022.csv>`)
+   to Influx (eg `<dataset/refinery-compressor-result-2022-influx>`)
+- `derivedFrom`: link from result (eg `<dataset/refinery-compressor-result-2022-12.csv>`)
+   to input (eg `<dataset/refinery-compressor-2022-12.csv>`)
+- `tag`: machine or component that apply to the whole dataset (eg "WF1-WTG01").
+  Mapped to `dct:spatial`
+- `schema`: `csvw:Schema` to use for the dataset (see next version).
+  Eg both `<dataset/refinery-compressor-2022-01.csv` and `<dataset/refinery-compressor-result-2022-12.csv>`
+  (and any other month of those series) use `<schema/refinery>`
+- `yearMonth`: temporal scope, eg "2022" or "2022-01"/
+  Used as part of the dataset identifier.
+- `startDate, endDate`: precise temporal scope as dates in XSD format. 
+  Mapped to a subsidiary node `dct:temporal` with `dcat:startDate, endDate`
+- `keywords`: a couple keywords entered at the dataset level (eg "Refinery,Compressor").
+  Split on comma and mapped to `dcat:keyword` as individual values.
+  More keywords are collected from the features of interest of each column.
+
+This is a model for semantic dataset description, operating on the above table:
+
+![](dataset.png)
+
+Additional notes:
 - We use only named subsidiary nodes (no blank nodes) to make it easier to debug and update the data
 - `dcat:distribution`: [DSP section 1.1.2 Distributions](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/catalog/catalog.protocol#id-1.1.2-distributions) states
   - "A Dataset may contain 0..N Distributions".
     However, EDC restricts to a single Distribution per Dataset, and we comply with this restriction
   - "Each distribution must have at least one DataService which specifies where the distribution is obtained. Specifically, a DataService specifies the endpoint for initiating a Contract Negotiation and Transfer Process":
-    Although DCAT allows the simple property `dcat:downloadURL`, we use a `DataService` even for CSV datasets
-  - TODO: decide the structure of `dcat:endpointURL` depending on what file store is deployed.
-    `<https://file.dataspace.underpinproject.eu/f05ee033-b6cd-4c05-80ae-c5ed61ddbd19>` is an example
-- `dcat:keyword` includes 2 entered at the dataset level, plus more collected from features of interest
-- `dct:creator` is a URL pointing to a pre-registered `schema:Organization`. This deviates from DSP which specifies a string (mere name)
-- `dct:temporal` is a subsidiary node with start/end dates populated from the `un:dateTime` column
-- `dct:title, dct:description` are mere strings without lang tag
-- `edc:id` (used by EDC) is duplicated from `dct:identifier` (specified in DCAT and DSP)
+    Although DCAT allows the simple property `dcat:downloadURL`, 
+    we use a `DataService` with `dcat:endpointURL` even for CSV datasets
+TODO: decide the structure of `DataService` and what props to use (`dcat, un` and/or `edc` namespaces):
+- The model shows `edc` props that belong to `edc:DataAddress` not `dcat:DataService`
+- `edc:DataAddress` is a hidden class that includes some secrets and should not be exposed
+- What props we need for Influx (hopefully `bucketName, keyName` will work here as well)
+- `dcat:endpointURL` may be unable to carry all addressing info (and is superfluous anyway)
 
 ## Table Schema Model
 
@@ -559,8 +603,31 @@ Timezone: "-0700" "-07:00" "-07" "-070000" "-07:00:00"
   We use one of: `dateTime:<format>; double; string, tag; ignore` (if `csvw:suppressOutput` is true),
   i.e. it is derived from the CSVW attributes
 
-These are used only for refinery sensors, and represent anomaly thresholds (alarm and trip):
+These are used only for refinery sensors, and represent anomaly (alarm and trip) thresholds.
+If a prediction is outside these thresholds, then an anomaly event or flag is recorded.
 - `un:alarmLowThreshold`
 - `un:alarmHighThreshold`
 - `un:tripLowThreshold`
 - `un:tripHighThreshold`
+
+# UNDERPIN Facets
+UNDERPIN offers a Semantic Faceted search that allows the user to find datasets of interest using the following methods:
+- Faceted search.
+  - Some facet values are collected at the DCAT (dataset) level
+  - Some facet values are collected at the CSVW (column) level but propagated to the DCAT level
+- Keyword search. All facet labels contribute values to DCAT (dataset) keywords
+- Full-text search on descriptive textual information collected at both levels.
+  This has much wider scope but lower precision than keywords
+
+Facets:
+- Publisher:
+- Temporal Coverage:
+
+TODO
+
+[update-collect-keywords.ru](update-collect-keywords.ru) collects all facet labels to `dcat:keyword`:
+- at the `dcat:Dataset` level:
+  - `dct:type|dct:spatial`
+- at the `csvw:Column` level (`dct:conformsTo/csvw:column`):
+  - `un:qualifier|sosa:isObservedBy`
+  - `skos:prefLabel` of `qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`
