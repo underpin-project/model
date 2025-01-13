@@ -22,6 +22,7 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
     - [SSN/SOSA](#ssnsosa)
     - [Wind Turbine Ontologies](#wind-turbine-ontologies)
 - [UNDERPIN Data Organization](#underpin-data-organization)
+    - [UNDERPIN Semantic Data Loading](#underpin-semantic-data-loading)
 - [UNDERPIN Data Model](#underpin-data-model)
     - [UNDERPIN Prefixes](#underpin-prefixes)
     - [UNDERPIN Thesauri](#underpin-thesauri)
@@ -360,8 +361,27 @@ We use 3 stores and describe the data organization mechanisms they have
   - Bucket: distinct access control and disposition policies.
     A dataspace participant may have one bucket.
   - Measurement: a table with homogeneous structure.
-    Each
+    Each dataset is loaded in a distinct measurement.
 - Semantic repository: implemented using GraphDB
+
+## UNDERPIN Semantic Data Loading
+
+UNDERPIN metadata consists of the following files in folder [out](out):
+- `underpin.trig`: ontology and thesauri, in `<graph/ontology-and-thesauri>`
+  - Load [reference-ontologies](reference-ontologies) `quantity-kinds.ttl, units.ttl` to `<graph/reference-ontologies>`
+- `dataset.trig`: DCAT dataset descriptions as per [Dataset Model](#dataset-model), each in a separate `<graph/dataset/(dataset)`
+- `schema.trig`: CSVW schemas as per [Table Schema Model](#table-schema-model), each in a separate  `<graph/schema/(schema)`
+
+After loading the data, run the following updates:
+- [update-add-prefLabel.ru](update-add-prefLabel.ru) for `qudt:Unit` and `qudt:QuantityKind`, adds `skos:prefLabel` derived from `rdfs:label@en`
+- [update-collect-feature-definitions.ru](update-collect-feature-definitions.ru): centralizes feature definitions coming from various schemas into the single `<graph/ontology-and-thesauri>`.
+  Many features are used across several different schemas: this update eliminates duplicate statements (eg `skos:prefLabel`) living in different graphs.
+- [update-collect-keywords.ru](update-collect-keywords.ru): collects labels of interest (features and a few more facets)  to `dcat:keyword`:
+  - at the `dcat:Dataset` level:
+    - `dct:type|dct:spatial`
+  - at the `csvw:Column` level (`dct:conformsTo/csvw:column`):
+    - `un:qualifier|sosa:isObservedBy`
+    - `skos:prefLabel` of `qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`
 
 # UNDERPIN Data Model
 UNDERPIN deals with:
@@ -486,8 +506,6 @@ The current list is as follows:
 | `qk:Time`                | `unit:HR`                   |                                                                |
 | `qk:Voltage`             | `unit:V`                    |                                                                |
 
-We use several queries:
-- [update-add-prefLabel.ru](update-add-prefLabel.ru) Adds skos:prefLabel from rdfs:label@en, for qudt:Unit and qudt:QuantityKind
 
 ### UNDERPIN Features of Interest
 Features of interest are collected from all `csvw:Columns` of the various `csvw:Schemas`
@@ -625,10 +643,3 @@ Facets:
 - Temporal Coverage:
 
 TODO
-
-[update-collect-keywords.ru](update-collect-keywords.ru) collects all facet labels to `dcat:keyword`:
-- at the `dcat:Dataset` level:
-  - `dct:type|dct:spatial`
-- at the `csvw:Column` level (`dct:conformsTo/csvw:column`):
-  - `un:qualifier|sosa:isObservedBy`
-  - `skos:prefLabel` of `qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`

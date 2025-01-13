@@ -9,6 +9,8 @@
 @prefix qk:     <http://qudt.org/vocab/quantitykind/> .
 @prefix qkdv:   <http://qudt.org/vocab/dimensionvector/> .
 
+graph <graph/ontology-and-thesauri> {
+
 # Ontology
 
 un: a owl:Ontology;
@@ -168,3 +170,5 @@ unit:REV-PER-MIN-SEC
   schema:name "SpaceHellas";
   schema:url <https://www.space.gr/>;
   edc:participantId "TODO".
+
+}
