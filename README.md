@@ -537,7 +537,7 @@ Its columns and their mapping are described below.
   Split on comma and mapped to `dcat:keyword` as individual values.
   More keywords are collected from the features of interest of each column.
 
-This is a model for semantic dataset description, operating on the above table:
+[dataset.ttl](dataset.ttl) is a model for semantic dataset description, operating on the above table:
 
 ![](dataset.png)
 
