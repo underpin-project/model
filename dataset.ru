@@ -81,6 +81,7 @@ where {
     bind(?c_format as ?format)
     bind(?c_type3 as ?type3)
     bind(iri(concat("dataset/",?dataset)) as ?dataset_dataset_URL)
+    bind(?c_type as ?type)
     bind(iri(concat(str(dcat:),?type)) as ?dcat_type_URL)
     bind(iri(concat("type/",?type1)) as ?type_type1_URL)
     bind(iri(concat("type/",?type2)) as ?type_type2_URL)

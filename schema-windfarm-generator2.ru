@@ -73,7 +73,9 @@ where {
     bind(iri(concat("feature/",?features_SPLIT_URLIFY)) as ?feature_features_SPLIT_URLIFY_URL)
     ?statisticalQualifiers_SPLIT spif:split (?statisticalQualifiers ", ?").
     bind(iri(concat("qualifier/",?statisticalQualifiers_SPLIT)) as ?qualifier_statisticalQualifiers_SPLIT_URL)
+    bind(?c_quantityKind as ?quantityKind)
     bind(iri(concat(str(qk:),?quantityKind)) as ?qk_quantityKind_URL)
+    bind(?c_unit as ?unit)
     bind(iri(concat(str(unit:),?unit)) as ?unit_unit_URL)
   }
 };
