@@ -33,7 +33,7 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
         - [Dataset After Ingestion](#dataset-after-ingestion)
     - [Table Schema Model](#table-schema-model)
         - [Using LLM for Column Descriptions](#using-llm-for-column-descriptions)
-- [UNDERPIN Facets](#underpin-facets)
+- [UNDERPIN Semantic Search](#underpin-semantic-search)
 
 <!-- markdown-toc end -->
 
@@ -670,9 +670,9 @@ Explicate it to characteristics like this:
 | Grid Production PossibleCapacitive Max. (47) | 47 | Grid Production Possible Capacitive Maximum | Grid Production      | Maximum               |                   |           |
 ```
 
-# UNDERPIN Facets
+# UNDERPIN Semantic Search
 
-UNDERPIN offers a Semantic Faceted search that allows the user to find datasets of interest using the following methods:
+UNDERPIN offers a Semantic Search that allows the user to find datasets of interest using the following methods:
 - Faceted search. Facet values are collected at:
   - DCAT (dataset) level
   - CSVW (column) level but propagated to the DCAT level
@@ -680,8 +680,14 @@ UNDERPIN offers a Semantic Faceted search that allows the user to find datasets 
 - Full-text search on descriptive textual information collected at both levels.
   This has much wider scope but lower precision than keywords
 
+Extracted values (starting from `dcat:Dataset`):
+- List view (short):
+  - Dataset dct:identifier (dct:title) by dct:publisher/schema:name
+- Display view (full; each bullet on new line but not a new bullet)
+  - Dataset dct:identifier (dct:title) by dct:publisher/schema:name
+  - conforming to schema dct:conformsTo/dct:title
 - Facets:
-  - Publisher:
+  - Publisher: 
   - Start:
 - Keywords: `dcat:keyword`
 - Full-text:

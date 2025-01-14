@@ -1,14 +1,15 @@
 @base           <https://dataspace.underpinproject.eu/>.
-@prefix edc:    <https://w3id.org/edc/v0.0.1/ns/>.
 @prefix un:     <https://dataspace.underpinproject.eu/ontology/>.
-@prefix schema: <http://schema.org/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix csvw:   <http://www.w3.org/ns/csvw#> .
+@prefix edc:    <https://w3id.org/edc/v0.0.1/ns/>.
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix unit:   <http://qudt.org/vocab/unit/> .
 @prefix qk:     <http://qudt.org/vocab/quantitykind/> .
 @prefix qkdv:   <http://qudt.org/vocab/dimensionvector/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit:   <http://qudt.org/vocab/unit/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 graph <graph/ontology-and-thesauri> {
 
@@ -109,9 +110,13 @@ un:influxDatatype a owl:DatatypeProperty;
 <anomaly/alarm> a skos:Concept; skos:inScheme <anomaly>; skos:prefLabel "Alarm"; skos:description "An alarm is raised because sensor reading was beyond alarm threshold".
 <anomaly/trip>  a skos:Concept; skos:inScheme <anomaly>; skos:prefLabel "Trip"; skos:description "A trip is raised because sensor reading was beyond trip threshold".
 
-# Quantity Kinds and Units (selection from QUDT)
-<quantityKind> a skos:ConceptScheme; skos:prefLabel "Quantity Kind"; skos:scopeNote "Only those used in UNDERPIN".
-<unit>         a skos:ConceptScheme; skos:prefLabel "Unit";          skos:scopeNote "Only those used in UNDERPIN".
+## Features and Tags. These are oopulated "inline" in dataset metadata, then centralized with update-collect-feature-definitions.ru
+<tag>     a skos:ConceptScheme; dct:title "Tags";     dct:description "Concepts representing individual machines or components".
+<feature> a skos:ConceptScheme; dct:title "Features"; dct:description "Concepts representing features of interest: parts, part qualifiers, aspects, etc".
+
+## Quantity Kinds and Units (selection from QUDT)
+<quantityKind> a skos:ConceptScheme; dct:title "Quantity Kind"; dct:description "Only those used in UNDERPIN".
+<unit>         a skos:ConceptScheme; dct:title "Unit";          dct:description "Only those used in UNDERPIN".
 
 qk:ActivePower          a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:W                    . unit:W                    a skos:Concept; skos:inScheme <unit>.
 qk:Angle                a skos:Concept; skos:inScheme <quantityKind>; skos:related unit:DEG                  . unit:DEG                  a skos:Concept; skos:inScheme <unit>.
