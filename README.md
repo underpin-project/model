@@ -380,10 +380,10 @@ After loading the data, run the following updates:
   Many features are used across several different schemas: this update eliminates duplicate statements (eg `skos:prefLabel`) living in different graphs.
 - [update-collect-keywords.ru](update-collect-keywords.ru): collects labels of interest (features and a few more facets)  to `dcat:keyword`:
   - at the `dcat:Dataset` level:
-    - `dct:type|dct:spatial`
+    - `dct:spatial`
+    - `skos:prefLabel` of `dct:type`
   - at the `csvw:Column` level (`dct:conformsTo/csvw:column`):
-    - `un:qualifier|sosa:isObservedBy`
-    - `skos:prefLabel` of `qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`
+    - `skos:prefLabel` of `un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`
 
 # UNDERPIN Data Model
 UNDERPIN deals with:
@@ -673,15 +673,15 @@ Explicate it to characteristics like this:
 # UNDERPIN Facets
 
 UNDERPIN offers a Semantic Faceted search that allows the user to find datasets of interest using the following methods:
-- Faceted search.
-  - Some facet values are collected at the DCAT (dataset) level
-  - Some facet values are collected at the CSVW (column) level but propagated to the DCAT level
-- Keyword search. All facet labels contribute values to DCAT (dataset) keywords
+- Faceted search. Facet values are collected at:
+  - DCAT (dataset) level
+  - CSVW (column) level but propagated to the DCAT level
+- Keyword search. All facet labels contribute values to `dcat:keyword` (at dataset level) 
 - Full-text search on descriptive textual information collected at both levels.
   This has much wider scope but lower precision than keywords
 
-Facets:
-- Publisher:
-- Temporal Coverage:
-
-TODO
+- Facets:
+  - Publisher:
+  - Start:
+- Keywords: `dcat:keyword`
+- Full-text:

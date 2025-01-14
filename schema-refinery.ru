@@ -50,7 +50,6 @@ insert {graph ?graph_schema_refinery_URL {
     csvw:base ?dtBase;
     csvw:format ?format.
   ?schema_refinery_n_URL
-    sosa:isObservedBy ?sensor;
     sosa:hasFeatureOfInterest ?tag_refinery_compressor_tag_URLIFY_URL;
     un:alarmLowThreshold ?alarmLowThreshold_xsd_decimal;
     un:alarmHighThreshold ?alarmHighThreshold_xsd_decimal;
@@ -75,7 +74,6 @@ where {
     bind(?c_statisticalQualifiers as ?statisticalQualifiers)
     bind(?c_comment as ?comment)
     bind(?c_format as ?format)
-    bind(?c_sensor as ?sensor)
     bind(?c_tag as ?tag)
     bind(?c_alarmLowThreshold as ?alarmLowThreshold)
     bind(?c_alarmHighThreshold as ?alarmHighThreshold)

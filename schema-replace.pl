@@ -4,7 +4,6 @@ use warnings;
 
 our $refinery_extra = << 'EOF';
 <schema/$ID/(n)>
-  sosa:isObservedBy "(sensor)";
   sosa:hasFeatureOfInterest <tag/refinery-compressor/URLIFY(tag)>;
   un:alarmLowThreshold  "(alarmLowThreshold)"^^xsd:decimal;
   un:alarmHighThreshold "(alarmHighThreshold)"^^xsd:decimal;
