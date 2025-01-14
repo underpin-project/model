@@ -9,6 +9,6 @@ prefix sosa: <http://www.w3.org/ns/sosa/>
 insert {graph ?g {?x dcat:keyword ?label}}
 where {
   graph ?g {?x a dcat:Dataset}
-  {?x dct:type|dct:spatial ?label} union
-  {?x dct:conformsTo/csvw:column/(un:qualifier|sosa:isObservedBy|(qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest)/skos:prefLabel) ?label}
+  {?x dct:spatial|dct:type/skos:prefLabel ?label} union
+  {?x dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest)/skos:prefLabel ?label}
 };
