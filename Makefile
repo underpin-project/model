@@ -18,4 +18,4 @@ $(SCHEMA): schema-replace.pl schema-template.txt
 	rm $*.puml
 
 %.ru: %.ttl common.h prefixes.rq
-	perl -S rdf2sparql.pl -e http://localhost:7333/repositories/ontorefine:$* $*.ttl | cat common.h prefixes.rq - | cpp -P -C -nostdinc - > $@
+	perl -S rdf2sparql.pl -e http://localhost:7333/repositories/ontorefine:data $*.ttl | cat common.h prefixes.rq - | cpp -P -C -nostdinc - > $@

@@ -22,7 +22,7 @@ prefix unit: <http://qudt.org/vocab/unit/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 delete {graph ?graph_schema_windfarm_result_URL {?_s_ ?_p_ ?_o_}}
 where {
-  service <http://localhost:7333/repositories/ontorefine:schema-windfarm-result> {
+  service <http://localhost:7333/repositories/ontorefine:data> {
     bind(iri(concat("graph/schema/windfarm-result")) as ?graph_schema_windfarm_result_URL)
   }
   graph ?graph_schema_windfarm_result_URL {?_s_ ?_p_ ?_o_}};
@@ -51,7 +51,7 @@ insert {graph ?graph_schema_windfarm_result_URL {
     csvw:format ?format.
 }}
 where {
-  service <http://localhost:7333/repositories/ontorefine:schema-windfarm-result> {
+  service <http://localhost:7333/repositories/ontorefine:data> {
     bind(iri(concat("graph/schema/windfarm-result")) as ?graph_schema_windfarm_result_URL)
     bind(?c_n as ?n)
     bind(?c_title as ?title)

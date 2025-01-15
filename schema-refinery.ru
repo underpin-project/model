@@ -22,7 +22,7 @@ prefix unit: <http://qudt.org/vocab/unit/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 delete {graph ?graph_schema_refinery_URL {?_s_ ?_p_ ?_o_}}
 where {
-  service <http://localhost:7333/repositories/ontorefine:schema-refinery> {
+  service <http://localhost:7333/repositories/ontorefine:data> {
     bind(iri(concat("graph/schema/refinery")) as ?graph_schema_refinery_URL)
   }
   graph ?graph_schema_refinery_URL {?_s_ ?_p_ ?_o_}};
@@ -61,7 +61,7 @@ insert {graph ?graph_schema_refinery_URL {
     skos:description ?Refinery_compressor_tag.
 }}
 where {
-  service <http://localhost:7333/repositories/ontorefine:schema-refinery> {
+  service <http://localhost:7333/repositories/ontorefine:data> {
     bind(iri(concat("graph/schema/refinery")) as ?graph_schema_refinery_URL)
     bind(?c_n as ?n)
     bind(?c_title as ?title)
