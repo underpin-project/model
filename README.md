@@ -720,3 +720,22 @@ Here are the fields:
   - Fields to use are shown in backticks
   - Multivalued fields should be sorted alphabetically
   - Fields outlined with `_` are hyperlinks: when clicked, they run a search for that facet value
+
+Nested sub-objects:
+- It is important to keep the column charateristics `Features/Tags, Qualifiers, Quantity, Unit` correlated, 
+  not flattened to 4 lists at the dataset level
+- Eg if the user selects `Quantity=Temperature`, the `Unit` facet should show only `degrees Celsius`
+- A typical dataset has many columns that have 
+  all kinds of sensor readings (eg temperature, pressure, angular velocity, etc) 
+  about all kinds of features (eg generator, wind, gearbox, bearing, etc)
+- `Keywords` collects all these characteristics in a flat list. 
+  - If you check them about a dataset (eg `<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv>`), you see a gazillion things:
+  - `Absolute, Accumulated, Active Power, Alarm, Ambient, Angle, Average, Bearing, Blades, Busbar, CSV dataset, Capacitance, Controller, Cooling Water, Degree, Estimate, Gearbox, Generator, Grid, High Voltage Transformer, Hour, Input dataset, Inverter, Latest, Limit, Linear Velocity, Maximum, Minimum, Nacelle, Oil, Parameter, Phase1, Phase2, Phase3, Pitch, Possible, Production, Relative, Revolution per Minute, Rotor, Run time, Service, Setpoint, Shaft, Slip Ring, Spinner, Standard Deviation, System Logs, Temperature, Total, Turbine, Unitless, Volt Ampere Reactive, Voltage, Voltage Control Processor, WF1-WTG01, Wind, Yaw, ampere, angular velocity, degree Celsius, electric current, farad, frequency, henry, hertz, inductance, metre per second, power, power factor, reactive power, time, volt, watt`
+- But for the specific facets we need these things to be correlated
+- IMHO the only way to achieve this is by using nested sub-objects. See documentation:
+  - GraphDB Elastic Connector: [nested objects](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#nested-objects).
+    [objectfields](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#elasticsearch-graphdb-connector-objectfields): describes the difference between `native:object` and `native:nested` (we need the latter)
+  - Elastic: [Nested field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html), [Nested aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-nested-aggregation.html)
+- ChatGPT explains well nested fields and how to make nested facets:
+  - With chatgpt@ontotext.com: see middle of [this conversation](https://chatgpt.com/c/67861e13-ec68-800b-ab03-953e41001962)
+  - Anyone: see second part of [this shared chat](https://chatgpt.com/share/6786a3ea-1a58-800b-867f-de0bff5bf092)
