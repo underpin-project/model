@@ -676,18 +676,66 @@ UNDERPIN offers a Semantic Search that allows the user to find datasets of inter
 - Faceted search. Facet values are collected at:
   - DCAT (dataset) level
   - CSVW (column) level but propagated to the DCAT level
-- Keyword search. All facet labels contribute values to `dcat:keyword` (at dataset level) 
+- Keyword search, collected from all facet labels at both levels.
 - Full-text search on descriptive textual information collected at both levels.
   This has much wider scope but lower precision than keywords
 
-Extracted values (starting from `dcat:Dataset`):
-- List view (short):
-  - Dataset dct:identifier (dct:title) by dct:publisher/schema:name
-- Display view (full; each bullet on new line but not a new bullet)
-  - Dataset dct:identifier (dct:title) by dct:publisher/schema:name
-  - conforming to schema dct:conformsTo/dct:title
+We want to extract (index) the following fields. Notes:
+- All RDF property paths start from `dcat:Dataset`
+- `*` are multivalued fields. 
+- `**` are multivalued with duplicates. 
+  However, Elastic uniquifies facet values on indexing:
+  "[Terms Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html): A multi-bucket value source based aggregation 
+  where buckets are dynamically built - one per **unique value**".
+
+Here are the fields:
 - Facets:
-  - Publisher: 
-  - Start:
-- Keywords: `dcat:keyword`
-- Full-text:
+  - Publisher: `dct:publisher/schema:name`
+  - Types: `dct:type/skos:prefLabel`*
+  - Start: `dct:temporal/dcat:startDate`, bucketed to month (TODO or year?)
+  - End: `dct:temporal/dcat:endDate`, bucketed the same way
+  - GlobalTag: `dct:spatial`
+  - Schema: `dct:conformsTo/dct:title`
+  - Keywords: `dcat:keyword|dct:spatial|(dct:type|dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest))/skos:prefLabel`**
+  - Features/Tags: `dct:conformsTo/csvw:column/sosa:hasFeatureOfInterest/skos:prefLabel`**
+  - Qualifiers: `dct:conformsTo/csvw:column/un:qualifier/skos:prefLabel`**
+  - Quantity:  `dct:conformsTo/csvw:column/qudt:hasQuantityKind/skos:prefLabel`
+  - Unit:  `dct:conformsTo/csvw:column/qudt:hasUnit/skos:prefLabel`
+- Individual fields:
+  - Id `dct:identifier`
+  - Title: `dct:title`
+  - License: `dct:license`
+- Full-text: `Id Title Publisher Types Start End GlobalTag Schema Keywords`
+- Views
+  - List view (short):
+    - Dataset "`Id`" (`Title`) by `_Publisher_`
+  - Display view (full):
+    - Dataset "`Id`" (`Title`) by `_Publisher_`
+      type `_Types_`*,
+      start `Start`, end `End`,
+      covering `_Tag_`
+      conforming to schema `_Schema_`,
+      license `License`.
+      `_Keywords_*`
+  - Fields to use are shown in backticks
+  - Multivalued fields should be sorted alphabetically
+  - Fields outlined with `_` are hyperlinks: when clicked, they run a search for that facet value
+
+Nested sub-objects:
+- It is important to keep the column charateristics `Features/Tags, Qualifiers, Quantity, Unit` correlated, 
+  not flattened to 4 lists at the dataset level
+- Eg if the user selects `Quantity=Temperature`, the `Unit` facet should show only `degrees Celsius`
+- A typical dataset has many columns that have 
+  all kinds of sensor readings (eg temperature, pressure, angular velocity, etc) 
+  about all kinds of features (eg generator, wind, gearbox, bearing, etc)
+- `Keywords` collects all these characteristics in a flat list. 
+  - If you check them about a dataset (eg `<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv>`), you see a gazillion things:
+  - `Absolute, Accumulated, Active Power, Alarm, Ambient, Angle, Average, Bearing, Blades, Busbar, CSV dataset, Capacitance, Controller, Cooling Water, Degree, Estimate, Gearbox, Generator, Grid, High Voltage Transformer, Hour, Input dataset, Inverter, Latest, Limit, Linear Velocity, Maximum, Minimum, Nacelle, Oil, Parameter, Phase1, Phase2, Phase3, Pitch, Possible, Production, Relative, Revolution per Minute, Rotor, Run time, Service, Setpoint, Shaft, Slip Ring, Spinner, Standard Deviation, System Logs, Temperature, Total, Turbine, Unitless, Volt Ampere Reactive, Voltage, Voltage Control Processor, WF1-WTG01, Wind, Yaw, ampere, angular velocity, degree Celsius, electric current, farad, frequency, henry, hertz, inductance, metre per second, power, power factor, reactive power, time, volt, watt`
+- But for the specific facets we need these things to be correlated
+- IMHO the only way to achieve this is by using nested sub-objects. See documentation:
+  - GraphDB Elastic Connector: [nested objects](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#nested-objects).
+    [objectfields](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#elasticsearch-graphdb-connector-objectfields): describes the difference between `native:object` and `native:nested` (we need the latter)
+  - Elastic: [Nested field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html), [Nested aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-nested-aggregation.html)
+- ChatGPT explains well nested fields and how to make nested facets:
+  - With chatgpt@ontotext.com: see middle of [this conversation](https://chatgpt.com/c/67861e13-ec68-800b-ab03-953e41001962)
+  - Anyone: see second part of [this shared chat](https://chatgpt.com/share/6786a3ea-1a58-800b-867f-de0bff5bf092)
