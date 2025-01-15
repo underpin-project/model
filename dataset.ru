@@ -22,11 +22,14 @@ prefix unit: <http://qudt.org/vocab/unit/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 delete {graph ?graph_dataset_dataset_URL {?_s_ ?_p_ ?_o_}}
 where {
-  service <http://localhost:7333/repositories/ontorefine:data> {
-    bind(?c_dataset as ?dataset)
-    bind(iri(concat("graph/dataset/",?dataset)) as ?graph_dataset_dataset_URL)
-  }
-  graph ?graph_dataset_dataset_URL {?_s_ ?_p_ ?_o_}};
+    {select ?graph_dataset_dataset_URL {
+       service <http://localhost:7333/repositories/ontorefine:data> {
+         bind(?c_dataset as ?dataset)
+         bind(iri(concat("graph/dataset/",?dataset)) as ?graph_dataset_dataset_URL)
+       }
+    }}
+    graph ?graph_dataset_dataset_URL {?_s_ ?_p_ ?_o_}
+};
 insert {graph ?graph_dataset_dataset_URL {
   ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1341812003#gid=1341812003
   ?dataset_dataset_URL
