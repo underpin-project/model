@@ -5,7 +5,7 @@ INSERT DATA {
 {
    "elasticsearchBasicAuthPassword" : "$secret",
    "elasticsearchBasicAuthUser" : "write",
-   "elasticsearchNode" : "https://elastic.dataspace.underpinproject.eu/",
+   "elasticsearchNode" : "https://elastic.dataspace.underpinproject.eu",
    "fields" : [
       {
          "analyzed" : false,

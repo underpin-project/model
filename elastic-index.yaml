@@ -1,4 +1,4 @@
-elasticsearchNode: https://elastic.dataspace.underpinproject.eu/
+elasticsearchNode: https://elastic.dataspace.underpinproject.eu
 elasticsearchBasicAuthUser: write
 elasticsearchBasicAuthPassword: $secret
 
@@ -30,7 +30,7 @@ fields:
     propertyChain: dct:conformsTo/dct:title
     analyzed: false
   - fieldName: text
-    propertyChain: >-     
+    propertyChain: >-
       dct:identifier |
       dct:title |
       dct:publisher/schema:name |
@@ -71,4 +71,3 @@ fields:
     - fieldName: unit
       propertyChain: qudt:hasUnit/skos:prefLabel
       analyzed: false
-
