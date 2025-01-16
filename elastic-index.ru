@@ -1,7 +1,7 @@
 PREFIX elastic:      <http://www.ontotext.com/connectors/elasticsearch#>
 PREFIX elastic-inst: <http://www.ontotext.com/connectors/elasticsearch/instance#>
 INSERT DATA {
-  es-inst:index es:createConnector '''
+  elastic-inst:datasets elastic:createConnector '''
 {
    "elasticsearchBasicAuthPassword" : "$secret",
    "elasticsearchBasicAuthUser" : "write",
@@ -130,12 +130,14 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$2",
          "propertyChain" : [
             "http://purl.org/dc/terms/title"
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$3",
          "propertyChain" : [
             "http://purl.org/dc/terms/publisher",
@@ -143,6 +145,7 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$4",
          "propertyChain" : [
             "http://purl.org/dc/terms/type",
@@ -150,6 +153,7 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$5",
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",
@@ -157,6 +161,7 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$6",
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",
@@ -164,12 +169,14 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$7",
          "propertyChain" : [
             "http://purl.org/dc/terms/spatial"
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$8",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
@@ -177,6 +184,7 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : true,
          "fieldName" : "text$9",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
@@ -185,6 +193,8 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$2",
          "propertyChain" : [
             "http://purl.org/dc/terms/type",
@@ -192,12 +202,16 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$3",
          "propertyChain" : [
             "http://purl.org/dc/terms/spatial"
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$4",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
@@ -207,6 +221,8 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$5",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
@@ -216,6 +232,8 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$6",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
@@ -225,6 +243,8 @@ INSERT DATA {
          ]
       },
       {
+         "analyzed" : false,
+         "array" : true,
          "fieldName" : "keywords$7",
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",

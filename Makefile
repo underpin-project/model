@@ -22,4 +22,4 @@ $(SCHEMA): schema-replace.pl schema-template.txt
 
 # TODO: this leaves a word "$secret": replace with actual password, but don't commit to github
 elastic-index.ru: elastic-index.yaml
-	perl -S index-yaml-json-sparql.pl $^ > $@
+	perl -S index-yaml-json-sparql.pl --index=datasets $^ > $@

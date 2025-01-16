@@ -737,7 +737,7 @@ Nested sub-objects:
 The connector is defined in a convenient shorthand YAML notation: [elastic-index.yaml](elastic-index.yaml).
 Then it is converted to a SPARQL Update with JSON as required by GraphDB by using the [index-yaml-json-sparql](https://github.com/VladimirAlexiev/index-yaml-json-sparql) tool:
 ```
-perl -S index-yaml-json-sparql.pl elastic-index.yaml > elastic-index.ru
+perl -S index-yaml-json-sparql.pl --index=datasets elastic-index.yaml > elastic-index.ru
 ```
 Note that [elastic-index.ru](elastic-index.ru) has a word `$secret` instead of the actual Elastic password.
 The tool has option `--secret=<password>` but I don't know how to add it without divulging it in this public repo.
