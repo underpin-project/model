@@ -734,7 +734,7 @@ Nested sub-objects:
   - With chatgpt@ontotext.com: see middle of [this conversation](https://chatgpt.com/c/67861e13-ec68-800b-ab03-953e41001962)
   - Anyone: see second part of [this shared chat](https://chatgpt.com/share/6786a3ea-1a58-800b-867f-de0bff5bf092)
 
-The connector is defined in a convenient shorthand YAML notation: [elastic-connector.yaml](elastic-connector.yaml).
+The connector is defined in a convenient shorthand YAML notation: [elastic-index.yaml](elastic-index.yaml).
 Then it is converted to a SPARQL Update with JSON as required by GraphDB by using the [index-yaml-json-sparql](https://github.com/VladimirAlexiev/index-yaml-json-sparql) tool:
 ```
 perl -S index-yaml-json-sparql.pl elastic-index.yaml > elastic-index.ru
