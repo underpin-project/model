@@ -34,6 +34,7 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
     - [Table Schema Model](#table-schema-model)
         - [Using LLM for Column Descriptions](#using-llm-for-column-descriptions)
 - [UNDERPIN Semantic Search](#underpin-semantic-search)
+    - [Semantic Search UI](#semantic-search-ui)
 
 <!-- markdown-toc end -->
 
@@ -681,54 +682,47 @@ UNDERPIN offers a Semantic Search that allows the user to find datasets of inter
   This has much wider scope but lower precision than keywords
 
 We want to extract (index) the following fields. Notes:
-- All RDF property paths start from `dcat:Dataset`
 - `*` are multivalued fields. 
 - `**` are multivalued with duplicates. 
   However, Elastic uniquifies facet values on indexing:
   "[Terms Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html): A multi-bucket value source based aggregation 
   where buckets are dynamically built - one per **unique value**".
+- Fields are defined using the RDF property, and some use [SPARQL Property Paths](https://www.w3.org/TR/sparql11-query/#propertypaths)
+  - All property paths start from `dcat:Dataset`
+  - Sequence is shown as `/` and implemented as array in `propertyChain` (see [Creation parameters](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#list-of-creation-parameters))
+  - Disjunction is shown as `|` and implemented as [Multiple property chains per field](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#elasticsearch-graphdb-connector-multiple-chains)
+- Elastic fields show the label to be used, followed by the field name in parentheses (all fields are in lowercase)
+- Some fields reuse already defined fields (eg `keywords` uses RDF prop `dcat:keyword` and then reuses `tag, types` etc etc. 
+  Unfortunately [Copy fields](https://graphdb.ontotext.com/documentation/10.8/elasticsearch-graphdb-connector.html#copy-fields) can only reuse "**single element** in the property chain" so we can't use it with complex paths.
 
 Here are the fields:
 - Facets:
-  - Publisher: `dct:publisher/schema:name`
-  - Types: `dct:type/skos:prefLabel`*
-  - Start: `dct:temporal/dcat:startDate`, bucketed to month (TODO or year?)
-  - End: `dct:temporal/dcat:endDate`, bucketed the same way
-  - GlobalTag: `dct:spatial`
-  - Schema: `dct:conformsTo/dct:title`
-  - Keywords: `dcat:keyword|dct:spatial|(dct:type|dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest))/skos:prefLabel`**
-  - Features/Tags: `dct:conformsTo/csvw:column/sosa:hasFeatureOfInterest/skos:prefLabel`**
-  - Qualifiers: `dct:conformsTo/csvw:column/un:qualifier/skos:prefLabel`**
-  - Quantity:  `dct:conformsTo/csvw:column/qudt:hasQuantityKind/skos:prefLabel`
-  - Unit:  `dct:conformsTo/csvw:column/qudt:hasUnit/skos:prefLabel`
+  - Publisher (`publisher`): `dct:publisher/schema:name`
+  - Types (`types`): `dct:type/skos:prefLabel`*
+  - Start (`startDate`): `dct:temporal/dcat:startDate`, bucketed to month (TODO or year?)
+  - End (`endDate`): `dct:temporal/dcat:endDate`, bucketed the same way
+  - Global Tag (`tag`): `dct:spatial`
+  - Schema (`schema`): `dct:conformsTo/dct:title`
+  - Columns (nested object, not visible) (`columns`): `schema/csvw:column`
+    - Features/Tags (`features`): `sosa:hasFeatureOfInterest/skos:prefLabel`**
+    - Qualifiers (`qualifiers`): `un:qualifier/skos:prefLabel`**
+    - Quantity (`quantity`):  `qudt:hasQuantityKind/skos:prefLabel`
+    - Unit (`unit`): `qudt:hasUnit/skos:prefLabel`
+  - Keywords (`keywords`): `dcat:keyword|tag|types|features|qualifiers|quantity|unit`**
 - Individual fields:
-  - Id `dct:identifier`
-  - Title: `dct:title`
-  - License: `dct:license`
-- Full-text: `Id Title Publisher Types Start End GlobalTag Schema Keywords`
-- Views
-  - List view (short):
-    - Dataset "`Id`" (`Title`) by `_Publisher_`
-  - Display view (full):
-    - Dataset "`Id`" (`Title`) by `_Publisher_`
-      type `_Types_`*,
-      start `Start`, end `End`,
-      covering `_Tag_`
-      conforming to schema `_Schema_`,
-      license `License`.
-      `_Keywords_*`
-  - Fields to use are shown in backticks
-  - Multivalued fields should be sorted alphabetically
-  - Fields outlined with `_` are hyperlinks: when clicked, they run a search for that facet value
+  - (builtin) `_id`: URL. This is automatically populated by GraphDB
+  - Id (`id`): `dct:identifier`
+  - Title (`title`): `dct:title`
+- Full-text (`text`): `id|title|publisher|types|startDate|endDate|tag|schema|dct:conformsTo/csvw:column/dct:title`
 
 Nested sub-objects:
-- It is important to keep the column charateristics `Features/Tags, Qualifiers, Quantity, Unit` correlated, 
+- It is important to keep the column charateristics `features, qualifiers, quantity, unit` correlated, 
   not flattened to 4 lists at the dataset level
-- Eg if the user selects `Quantity=Temperature`, the `Unit` facet should show only `degrees Celsius`
+- Eg if the user selects `quantity=Temperature`, the `unit` facet should show only `degrees Celsius`
 - A typical dataset has many columns that have 
   all kinds of sensor readings (eg temperature, pressure, angular velocity, etc) 
   about all kinds of features (eg generator, wind, gearbox, bearing, etc)
-- `Keywords` collects all these characteristics in a flat list. 
+- `keywords` collects all these characteristics in a flat list. 
   - If you check them about a dataset (eg `<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv>`), you see a gazillion things:
   - `Absolute, Accumulated, Active Power, Alarm, Ambient, Angle, Average, Bearing, Blades, Busbar, CSV dataset, Capacitance, Controller, Cooling Water, Degree, Estimate, Gearbox, Generator, Grid, High Voltage Transformer, Hour, Input dataset, Inverter, Latest, Limit, Linear Velocity, Maximum, Minimum, Nacelle, Oil, Parameter, Phase1, Phase2, Phase3, Pitch, Possible, Production, Relative, Revolution per Minute, Rotor, Run time, Service, Setpoint, Shaft, Slip Ring, Spinner, Standard Deviation, System Logs, Temperature, Total, Turbine, Unitless, Volt Ampere Reactive, Voltage, Voltage Control Processor, WF1-WTG01, Wind, Yaw, ampere, angular velocity, degree Celsius, electric current, farad, frequency, henry, hertz, inductance, metre per second, power, power factor, reactive power, time, volt, watt`
 - But for the specific facets we need these things to be correlated
@@ -739,3 +733,45 @@ Nested sub-objects:
 - ChatGPT explains well nested fields and how to make nested facets:
   - With chatgpt@ontotext.com: see middle of [this conversation](https://chatgpt.com/c/67861e13-ec68-800b-ab03-953e41001962)
   - Anyone: see second part of [this shared chat](https://chatgpt.com/share/6786a3ea-1a58-800b-867f-de0bff5bf092)
+
+The connector is defined in a convenient shorthand YAML notation: [elastic-index.yaml](elastic-index.yaml).
+Then it is converted to a SPARQL Update with JSON as required by GraphDB by using the [index-yaml-json-sparql](https://github.com/VladimirAlexiev/index-yaml-json-sparql) tool:
+```
+perl -S index-yaml-json-sparql.pl --index=datasets elastic-index.yaml > elastic-index.ru
+```
+Note that [elastic-index.ru](elastic-index.ru) has a word `$secret` instead of the actual Elastic password.
+The tool has option `--secret=<password>` but I don't know how to add it without divulging it in this public repo.
+
+## Semantic Search UI
+Search:
+- Top line: full text search on `text`
+- Facets: on the left side
+  - Clicking on a facet adds it as a search criterion
+  - Selected facets are shown below the top line and have `x` to remove them from the search
+  - The initial screen shows all facet counts and the first page of results (with no restriction and no sorting; so essentially random)
+- (Optional) A field `keyword` for search with auto-completion (even better if there is autocompletion on every faceted field)
+
+Results:
+- Paginated with page size 10
+- Uses the List view for results (see below)
+- View fields outlined with `_` are hyperlinks, styled to look like buttons. When clicked, they run a search for that facet value
+- If a text search is used, show hit highlighting
+
+Views:
+- Fields to use are shown in backticks
+- Each bullet represents a new line (but we don't want bullets in the actual display)
+- (Optional) Multivalued fields should be sorted alphabetically (I don't know how to do this)
+- The short `id` is a hyperlink that uses the full `_id` and leads to the Full view of the dataset
+
+We want two views:
+- List view (short):
+  - Dataset `[id](_id)` (`title`) by `_publisher_`
+  - `_keywords_*`
+- Display view (full): 
+  - Dataset `id` (`title`) by `_publisher_`
+  - type `_types_`*,
+  - start `start`, end `end`,
+    covering `_tag_`
+    conforming to schema `_schema_`,
+  - `_keywords_*`
+
