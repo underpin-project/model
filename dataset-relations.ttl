@@ -1,0 +1,19 @@
+<dataset/refinery-2022-01.csv> a dcat:Dataset;
+  dct:type <type/input>, <type/csv>;
+  dcat:inSeries <dataset/refinery-influx>.
+
+<dataset/refinery-influx> a dcat:Dataset, dcat:DatasetSeries;
+ dct:type <type/input>, <type/influx>.
+
+<dataset/refinery-result-2022-01.csv> a dcat:Dataset;
+  dct:type <type/result>, <type/csv>;
+  prov:wasDerivedFrom <dataset/refinery-2022-01.csv>;
+  dcat:inSeries <dataset/refinery-result-influx>.
+
+<dataset/refinery-result-influx> a dcat:Dataset, dcat:DatasetSeries;
+  dct:type <type/result>, <type/influx>;
+  prov:wasDerivedFrom <dataset/refinery-influx>.
+
+### rdfpuml instructions
+
+prov:wasDerivedFrom puml:arrow puml:left.

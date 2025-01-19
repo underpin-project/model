@@ -31,6 +31,7 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
         - [UNDERPIN Features of Interest](#underpin-features-of-interest)
     - [Dataset Model](#dataset-model)
         - [Dataset After Ingestion](#dataset-after-ingestion)
+        - [Dataset Relations](#dataset-relations)
     - [Table Schema Model](#table-schema-model)
         - [Using LLM for Column Descriptions](#using-llm-for-column-descriptions)
 - [UNDERPIN Semantic Search](#underpin-semantic-search)
@@ -579,6 +580,12 @@ After a dataset is ingested in the dataspace, two extra nodes obtain:
   - This is a hidden class that includes some secrets, revealed after Contract Signing.
 
 ![](dataset-extra.png)
+
+### Dataset Relations
+
+This illustrates relations between datasets, as already explained above:
+
+![](dataset-relations.png)
 
 ## Table Schema Model
 
