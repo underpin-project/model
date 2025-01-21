@@ -1,0 +1,504 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix csw: <http://semantic-web.at/ontologies/csw.owl#> .
+@prefix ctag: <http://commontag.org/ns#> .
+@prefix opencyc: <http://sw.opencyc.org/concept/> .
+@prefix freebase: <http://rdf.freebase.com/ns/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tags: <http://www.holygoat.co.uk/owl/redwood/0.1/tags/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cyc: <http://sw.cyc.com/concept/> .
+@prefix cycAnnot: <http://sw.cyc.com/CycAnnotations_v1#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+
+<https://underpin.poolparty.biz/VocabularyHub/thesaurus> {
+  <http://qudt.org/vocab/quantitykind/ActivePower> a skos:Concept;
+    skos:prefLabel "ActivePower"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/W> .
+  
+  <http://qudt.org/vocab/quantitykind/Angle> a skos:Concept;
+    skos:prefLabel "Angle"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/DEG> .
+  
+  <http://qudt.org/vocab/quantitykind/AngularAcceleration> a skos:Concept;
+    skos:prefLabel "AngularAcceleration"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/REV-PER-MIN-SEC> .
+  
+  <http://qudt.org/vocab/quantitykind/AngularVelocity> a skos:Concept;
+    skos:prefLabel "AngularVelocity"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/REV-PER-MIN> .
+  
+  <http://qudt.org/vocab/quantitykind/Capacitance> a skos:Concept;
+    skos:prefLabel "Capacitance"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/FARAD> .
+  
+  <http://qudt.org/vocab/quantitykind/Displacement> a skos:Concept;
+    skos:prefLabel "Displacement"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/MilliM> .
+  
+  <http://qudt.org/vocab/quantitykind/Distance> a skos:Concept;
+    skos:prefLabel "Distance"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/MicroM> .
+  
+  <http://qudt.org/vocab/quantitykind/ElectricCurrent> a skos:Concept;
+    skos:prefLabel "ElectricCurrent"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/A> .
+  
+  <http://qudt.org/vocab/quantitykind/Frequency> a skos:Concept;
+    skos:prefLabel "Frequency"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/HZ> .
+  
+  <http://qudt.org/vocab/quantitykind/Inductance> a skos:Concept;
+    skos:prefLabel "Inductance"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/H> .
+  
+  <http://qudt.org/vocab/quantitykind/LinearVelocity> a skos:Concept;
+    skos:prefLabel "LinearVelocity"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/M-PER-SEC> .
+  
+  <http://qudt.org/vocab/quantitykind/MassFlowRate> a skos:Concept;
+    skos:prefLabel "MassFlowRate"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/KiloGM-PER-HR> .
+  
+  <http://qudt.org/vocab/quantitykind/Power> a skos:Concept;
+    skos:prefLabel "Power"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/KiloW> .
+  
+  <http://qudt.org/vocab/quantitykind/PowerFactor> a skos:Concept;
+    skos:prefLabel "PowerFactor"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/UNITLESS> .
+  
+  <http://qudt.org/vocab/quantitykind/Pressure> a skos:Concept;
+    skos:prefLabel "Pressure"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/KiloGM_F-PER-CentiM2> .
+  
+  <http://qudt.org/vocab/quantitykind/ReactivePower> a skos:Concept;
+    skos:prefLabel "ReactivePower"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/V-A_Reactive> .
+  
+  <http://qudt.org/vocab/quantitykind/Temperature> a skos:Concept;
+    skos:prefLabel "Temperature"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/DEG_C> .
+  
+  <http://qudt.org/vocab/quantitykind/Time> a skos:Concept;
+    skos:prefLabel "Time"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/HR> .
+  
+  <http://qudt.org/vocab/quantitykind/Torque> a skos:Concept;
+    skos:prefLabel "Torque"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/KiloN-M> .
+  
+  <http://qudt.org/vocab/quantitykind/Voltage> a skos:Concept;
+    skos:prefLabel "Voltage"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:inScheme <https://dataspace.underpinproject.eu/quantityKind>;
+    skos:related <http://qudt.org/vocab/unit/V> .
+  
+  <http://qudt.org/vocab/unit/A> a skos:Concept;
+    skos:prefLabel "A"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/DEG> a skos:Concept;
+    skos:prefLabel "DEG"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/DEG_C> a skos:Concept;
+    skos:prefLabel "DEG_C"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/FARAD> a skos:Concept;
+    skos:prefLabel "FARAD"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/H> a skos:Concept;
+    skos:prefLabel "H"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/HR> a skos:Concept;
+    skos:prefLabel "HR"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/HZ> a skos:Concept;
+    skos:prefLabel "HZ"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/KiloGM-PER-HR> a skos:Concept;
+    skos:prefLabel "KiloGM-PER-HR"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/KiloGM_F-PER-CentiM2> a skos:Concept;
+    skos:prefLabel "KiloGM_F-PER-CentiM2"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/KiloN-M> a skos:Concept;
+    skos:prefLabel "KiloN-M"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/KiloW> a skos:Concept;
+    skos:prefLabel "KiloW"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/M-PER-SEC> a skos:Concept;
+    skos:prefLabel "M-PER-SEC"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/MicroM> a skos:Concept;
+    skos:prefLabel "MicroM"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/MilliM> a skos:Concept;
+    skos:prefLabel "MilliM"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/REV-PER-MIN> a skos:Concept;
+    skos:prefLabel "REV-PER-MIN"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/REV-PER-MIN-SEC> a skos:Concept, <http://qudt.org/2.1/schema/qudtUnit>;
+    rdfs:label "Revolution per Minute per Second"@en;
+    rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit>;
+    skos:prefLabel "REV-PER-MIN-SEC"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    dcterms:description "Revolution per Minute per Second is a unit for Angular Acceleration (sometimes called Change of RPM, crpm)"^^<http://qudt.org/2.1/schema/qudtLatexString>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit>;
+    <http://qudt.org/2.1/schema/qudtconversionMultiplier> 376.9911186;
+    <http://qudt.org/2.1/schema/qudtconversionMultiplierSN> 3.769911186E2;
+    <http://qudt.org/2.1/schema/qudthasDimensionVector> <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T-2D0>;
+    <http://qudt.org/2.1/schema/qudthasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularAcceleration>;
+    <http://qudt.org/2.1/schema/qudtsymbol> "rev/min/s";
+    <http://qudt.org/2.1/schema/qudtucumCode> "{#}.min-1.s-1"^^<http://qudt.org/2.1/schema/qudtUCUMcs> .
+  
+  <http://qudt.org/vocab/unit/UNITLESS> a skos:Concept;
+    skos:prefLabel "UNITLESS"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/V> a skos:Concept;
+    skos:prefLabel "V"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/V-A_Reactive> a skos:Concept;
+    skos:prefLabel "V-A_Reactive"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <http://qudt.org/vocab/unit/W> a skos:Concept;
+    skos:prefLabel "W"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/unit>;
+    skos:inScheme <https://dataspace.underpinproject.eu/unit> .
+  
+  <https://dataspace.underpinproject.eu/anomaly> a skos:ConceptScheme;
+    dcterms:title "Anomaly type"@en;
+    skos:hasTopConcept <https://dataspace.underpinproject.eu/anomaly/alarm>, <https://dataspace.underpinproject.eu/anomaly/trip>;
+    dcterms:modified "2025-01-21T18:52:12.613Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/anomaly/alarm> a skos:Concept;
+    skos:prefLabel "Alarm"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/anomaly>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/anomaly>;
+    skos:description "An alarm is raised because sensor reading was beyond alarm threshold";
+    dcterms:modified "2025-01-21T18:52:04.207Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/anomaly/trip> a skos:Concept;
+    skos:prefLabel "Trip"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/anomaly>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/anomaly>;
+    skos:description "A trip is raised because sensor reading was beyond trip threshold";
+    dcterms:modified "2025-01-21T18:52:13.283Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/feature> a skos:ConceptScheme;
+    dcterms:title "Features"@en;
+    dcterms:description "Concepts representing features of interest: parts, part qualifiers, aspects, etc" .
+  
+  <https://dataspace.underpinproject.eu/org> a skos:ConceptScheme;
+    dcterms:title "Organizations"@en;
+    skos:hasTopConcept <https://dataspace.underpinproject.eu/org/MOH>, <https://dataspace.underpinproject.eu/org/MORE>,
+      <https://dataspace.underpinproject.eu/org/AIT>, <https://dataspace.underpinproject.eu/org/SPH> .
+  
+  <https://dataspace.underpinproject.eu/org/AIT> a skos:Concept, <http://schema.org/Organization>;
+    skos:prefLabel "AIT Austrian Institute Of Technology"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/org>;
+    skos:inScheme <https://dataspace.underpinproject.eu/org>;
+    <http://schema.org/name> "AIT Austrian Institute Of Technology";
+    <http://schema.org/url> <https://www.ait.ac.at/en/>;
+    <https://w3id.org/edc/v0.0.1/ns/participantId> "TODO" .
+  
+  <https://dataspace.underpinproject.eu/org/MOH> a skos:Concept, <http://schema.org/Organization>;
+    skos:prefLabel "Motor Oil (MOH)"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/org>;
+    skos:inScheme <https://dataspace.underpinproject.eu/org>;
+    <http://schema.org/name> "Motor Oil (MOH)";
+    <http://schema.org/url> <https://www.moh.gr/en/company/>;
+    <https://w3id.org/edc/v0.0.1/ns/participantId> "BPNLY3SEIW" .
+  
+  <https://dataspace.underpinproject.eu/org/MORE> a skos:Concept, <http://schema.org/Organization>;
+    skos:prefLabel "Motor Oil Renewable Energy (MORE)"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/org>;
+    skos:inScheme <https://dataspace.underpinproject.eu/org>;
+    <http://schema.org/name> "Motor Oil Renewable Energy (MORE)";
+    <http://schema.org/url> <https://www.moh.gr/en/company/subsidiaries-affiliates/more-en/>;
+    <https://w3id.org/edc/v0.0.1/ns/participantId> "TODO" .
+  
+  <https://dataspace.underpinproject.eu/org/SPH> a skos:Concept, <http://schema.org/Organization>;
+    skos:prefLabel "SpaceHellas"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/org>;
+    skos:inScheme <https://dataspace.underpinproject.eu/org>;
+    <http://schema.org/name> "SpaceHellas";
+    <http://schema.org/url> <https://www.space.gr/>;
+    <https://w3id.org/edc/v0.0.1/ns/participantId> "TODO" .
+  
+  <https://dataspace.underpinproject.eu/qualifier> a skos:ConceptScheme;
+    dcterms:title "Qualifier"@en;
+    skos:hasTopConcept <https://dataspace.underpinproject.eu/qualifier/5th_percentile>,
+      <https://dataspace.underpinproject.eu/qualifier/95th_percentile>, <https://dataspace.underpinproject.eu/qualifier/Absolute>,
+      <https://dataspace.underpinproject.eu/qualifier/Accumulated>, <https://dataspace.underpinproject.eu/qualifier/Anomaly>,
+      <https://dataspace.underpinproject.eu/qualifier/Average>, <https://dataspace.underpinproject.eu/qualifier/Demand>,
+      <https://dataspace.underpinproject.eu/qualifier/Differential>, <https://dataspace.underpinproject.eu/qualifier/Estimate>,
+      <https://dataspace.underpinproject.eu/qualifier/Latest>, <https://dataspace.underpinproject.eu/qualifier/Limit>,
+      <https://dataspace.underpinproject.eu/qualifier/Maximum>, <https://dataspace.underpinproject.eu/qualifier/Minimum>,
+      <https://dataspace.underpinproject.eu/qualifier/Possible>, <https://dataspace.underpinproject.eu/qualifier/Predicted>,
+      <https://dataspace.underpinproject.eu/qualifier/Relative>, <https://dataspace.underpinproject.eu/qualifier/Residual>,
+      <https://dataspace.underpinproject.eu/qualifier/Runtime>, <https://dataspace.underpinproject.eu/qualifier/Setpoint>,
+      <https://dataspace.underpinproject.eu/qualifier/StandardDeviation>, <https://dataspace.underpinproject.eu/qualifier/Total>;
+    skos:definition "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining";
+    skos:altLabel "Statistical qualifier"@en, "Value qualifier"@en, "Aggregation rule"@en;
+    dcterms:modified "2025-01-21T18:52:13.196Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/qualifier/5th_percentile> a skos:Concept;
+    skos:prefLabel "5th Percentile"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/95th_percentile> a skos:Concept;
+    skos:prefLabel "95th Percentile"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Absolute> a skos:Concept;
+    skos:prefLabel "Absolute"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Accumulated> a skos:Concept;
+    skos:prefLabel "Accumulated"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Anomaly> a skos:Concept;
+    skos:prefLabel "Anomaly"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:definition "Event (anomaly): boolean (presence) or type (eg alarm, trip)";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Average> a skos:Concept;
+    skos:prefLabel "Average"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Demand> a skos:Concept;
+    skos:prefLabel "Demand"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:definition "Consumption of a machine or component";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Differential> a skos:Concept;
+    skos:prefLabel "Differential"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Estimate> a skos:Concept;
+    skos:prefLabel "Estimate"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Latest> a skos:Concept;
+    skos:prefLabel "Latest"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Limit> a skos:Concept;
+    skos:prefLabel "Limit"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Maximum> a skos:Concept;
+    skos:prefLabel "Maximum"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Minimum> a skos:Concept;
+    skos:prefLabel "Minimum"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Possible> a skos:Concept;
+    skos:prefLabel "Possible"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Predicted> a skos:Concept;
+    skos:prefLabel "Predicted"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:definition "Predicted (forecasted) value";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Relative> a skos:Concept;
+    skos:prefLabel "Relative"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Residual> a skos:Concept;
+    skos:prefLabel "Residual"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:definition "If prediction is outside of the confidence interval (lower/upper bound: 0.05-0.95 percentile), then the difference between predicted value and the respective bound.";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Runtime> a skos:Concept;
+    skos:prefLabel "Run time"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:example "Hour Counters Grid Ok Average", "Hour Counters Grid On Average", "Grid ok hours",
+      "Grid on hours";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Setpoint> a skos:Concept;
+    skos:prefLabel "Setpoint"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:definition "Established target value";
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/StandardDeviation> a skos:Concept;
+    skos:prefLabel "Standard Deviation"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/qualifier/Total> a skos:Concept;
+    skos:prefLabel "Total"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/qualifier>;
+    skos:inScheme <https://dataspace.underpinproject.eu/qualifier> .
+  
+  <https://dataspace.underpinproject.eu/quantityKind> a skos:ConceptScheme;
+    dcterms:title "Quantity Kind"@en;
+    skos:hasTopConcept <http://qudt.org/vocab/quantitykind/ActivePower>, <http://qudt.org/vocab/quantitykind/Angle>,
+      <http://qudt.org/vocab/quantitykind/AngularAcceleration>, <http://qudt.org/vocab/quantitykind/AngularVelocity>,
+      <http://qudt.org/vocab/quantitykind/Capacitance>, <http://qudt.org/vocab/quantitykind/Displacement>,
+      <http://qudt.org/vocab/quantitykind/Distance>, <http://qudt.org/vocab/quantitykind/ElectricCurrent>,
+      <http://qudt.org/vocab/quantitykind/Frequency>, <http://qudt.org/vocab/quantitykind/Inductance>,
+      <http://qudt.org/vocab/quantitykind/LinearVelocity>, <http://qudt.org/vocab/quantitykind/MassFlowRate>,
+      <http://qudt.org/vocab/quantitykind/Power>, <http://qudt.org/vocab/quantitykind/PowerFactor>,
+      <http://qudt.org/vocab/quantitykind/Pressure>, <http://qudt.org/vocab/quantitykind/ReactivePower>,
+      <http://qudt.org/vocab/quantitykind/Temperature>, <http://qudt.org/vocab/quantitykind/Time>,
+      <http://qudt.org/vocab/quantitykind/Torque>, <http://qudt.org/vocab/quantitykind/Voltage>;
+    dcterms:description "Only those used in UNDERPIN" .
+  
+  <https://dataspace.underpinproject.eu/tag> a skos:ConceptScheme;
+    dcterms:title "Tags"@en;
+    dcterms:description "Concepts representing individual machines or components";
+    dcterms:modified "2025-01-21T18:50:52.310Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/type> a skos:ConceptScheme;
+    dcterms:title "Dataset type"@en;
+    skos:hasTopConcept <https://dataspace.underpinproject.eu/type/input>, <https://dataspace.underpinproject.eu/type/result>,
+      <https://dataspace.underpinproject.eu/type/csv>, <https://dataspace.underpinproject.eu/type/influx>;
+    dcterms:modified "2025-01-21T18:50:51.715Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/type/csv> a skos:Concept;
+    skos:prefLabel "CSV dataset"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/type>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/type>;
+    dcterms:modified "2025-01-21T18:50:29.551Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/type/influx> a skos:Concept;
+    skos:prefLabel "Influx dataset"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/type>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/type>;
+    dcterms:modified "2025-01-21T18:50:39.510Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/type/input> a skos:Concept;
+    skos:prefLabel "Input dataset"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/type>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/type>;
+    dcterms:modified "2025-01-21T18:50:46.282Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/type/result> a skos:Concept;
+    skos:prefLabel "Result dataset"@en;
+    skos:topConceptOf <https://dataspace.underpinproject.eu/type>;
+    dcterms:contributor <https://underpin.poolparty.biz/user/e48584e5-4404-4c07-b273-207648933677>;
+    skos:inScheme <https://dataspace.underpinproject.eu/type>;
+    dcterms:modified "2025-01-21T18:50:52.399Z"^^xsd:dateTime .
+  
+  <https://dataspace.underpinproject.eu/unit> a skos:ConceptScheme;
+    dcterms:title "Unit"@en;
+    skos:hasTopConcept <http://qudt.org/vocab/unit/W>, <http://qudt.org/vocab/unit/DEG>,
+      <http://qudt.org/vocab/unit/REV-PER-MIN-SEC>, <http://qudt.org/vocab/unit/REV-PER-MIN>,
+      <http://qudt.org/vocab/unit/FARAD>, <http://qudt.org/vocab/unit/MilliM>, <http://qudt.org/vocab/unit/MicroM>,
+      <http://qudt.org/vocab/unit/A>, <http://qudt.org/vocab/unit/HZ>, <http://qudt.org/vocab/unit/H>,
+      <http://qudt.org/vocab/unit/M-PER-SEC>, <http://qudt.org/vocab/unit/KiloGM-PER-HR>,
+      <http://qudt.org/vocab/unit/KiloW>, <http://qudt.org/vocab/unit/UNITLESS>, <http://qudt.org/vocab/unit/KiloGM_F-PER-CentiM2>,
+      <http://qudt.org/vocab/unit/V-A_Reactive>, <http://qudt.org/vocab/unit/DEG_C>, <http://qudt.org/vocab/unit/HR>,
+      <http://qudt.org/vocab/unit/KiloN-M>, <http://qudt.org/vocab/unit/V>;
+    dcterms:description "Only those used in UNDERPIN" .
+}
