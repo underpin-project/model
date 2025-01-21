@@ -1,0 +1,19 @@
+# Show all details about a schema
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+select ?n ?type 
+  (group_concat(?feat; separator=", ") as ?features)
+  (group_concat(?qual; separator=", ") as ?qualifiers)
+  ?quantity ?unit
+{
+   <https://dataspace.underpinproject.eu/schema/windfarm> dct:title ?schemaTitle; csvw:column ?col.
+   ?col dct:identifier ?n; un:influxDatatype ?type
+   optional {?col sosa:hasFeatureOfInterest/skos:prefLabel ?feat}
+   optional {?col un:qualifier/skos:prefLabel ?qual}
+   optional {?col qudt:hasQuantityKind/skos:prefLabel ?quantity}
+   optional {?col qudt:hasUnit/skos:prefLabel ?unit}
+} group by ?n ?type ?quantity ?unit order by ?n
