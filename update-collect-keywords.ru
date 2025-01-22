@@ -9,5 +9,5 @@ prefix sosa: <http://www.w3.org/ns/sosa/>
 insert {graph ?g {?x dcat:keyword ?keyword}}
 where {
   graph ?g {?x a dcat:Dataset}
-  ?x dct:spatial|(dct:type|dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest))/skos:prefkeyword ?keyword
+  ?x dct:spatial|(dct:type|dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest))/skos:prefLabel ?keyword
 };
