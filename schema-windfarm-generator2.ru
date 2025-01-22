@@ -22,9 +22,9 @@ prefix unit: <http://qudt.org/vocab/unit/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 delete {graph ?graph_schema_windfarm_generator2_URL {?_s_ ?_p_ ?_o_}}
 where {
-  service <http://localhost:7333/repositories/ontorefine:data> {
+  {select * { service <http://localhost:7333/repositories/ontorefine:data> {
     bind(iri(concat("graph/schema/windfarm-generator2")) as ?graph_schema_windfarm_generator2_URL)
-  }
+  }}}
   graph ?graph_schema_windfarm_generator2_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_windfarm_generator2_URL {
   ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=2142433981#gid=2142433981
