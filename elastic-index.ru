@@ -79,7 +79,7 @@ INSERT DATA {
       {
          "analyzed" : false,
          "array" : true,
-         "fieldName" : "keywords$1",
+         "fieldName" : "keywords",
          "propertyChain" : [
             "http://www.w3.org/ns/dcat#keyword"
          ]
@@ -190,67 +190,6 @@ INSERT DATA {
             "http://purl.org/dc/terms/conformsTo",
             "http://www.w3.org/ns/csvw#column",
             "http://purl.org/dc/terms/title"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$2",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/type",
-            "http://www.w3.org/2004/02/skos/core#prefLabel"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$3",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/spatial"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$4",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/conformsTo",
-            "http://www.w3.org/ns/csvw#column",
-            "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-            "http://www.w3.org/2004/02/skos/core#prefLabel"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$5",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/conformsTo",
-            "http://www.w3.org/ns/csvw#column",
-            "https://dataspace.underpinproject.eu/ontology/qualifier",
-            "http://www.w3.org/2004/02/skos/core#prefLabel"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$6",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/conformsTo",
-            "http://www.w3.org/ns/csvw#column",
-            "http://qudt.org/schema/qudt/hasQuantityKind",
-            "http://www.w3.org/2004/02/skos/core#prefLabel"
-         ]
-      },
-      {
-         "analyzed" : false,
-         "array" : true,
-         "fieldName" : "keywords$7",
-         "propertyChain" : [
-            "http://purl.org/dc/terms/conformsTo",
-            "http://www.w3.org/ns/csvw#column",
-            "http://qudt.org/schema/qudt/hasUnit",
-            "http://www.w3.org/2004/02/skos/core#prefLabel"
          ]
       }
    ],
