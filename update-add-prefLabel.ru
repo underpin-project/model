@@ -1,4 +1,4 @@
-﻿# Adds skos:prefLabel from rdfs:label@en, for qudt:Unit and qudt:QuantityKind
+# Adds skos:prefLabel from rdfs:label@en, for qudt:Unit and qudt:QuantityKind
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix qudt: <http://qudt.org/schema/qudt/>
