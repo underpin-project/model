@@ -42,14 +42,13 @@ fields:
       dct:conformsTo/csvw:column/dct:title
     analyzed: true
   - fieldName: keywords
-    propertyChain: >-
-      dcat:keyword |
-      dct:type/skos:prefLabel |
-      dct:spatial |
-      dct:conformsTo/csvw:column/sosa:hasFeatureOfInterest/skos:prefLabel |
-      dct:conformsTo/csvw:column/un:qualifier/skos:prefLabel |
-      dct:conformsTo/csvw:column/qudt:hasQuantityKind/skos:prefLabel |
-      dct:conformsTo/csvw:column/qudt:hasUnit/skos:prefLabel
+    propertyChain: dcat:keyword # now collected in RDF, no need for these paths:
+      # | dct:type/skos:prefLabel |
+      # dct:spatial |
+      # dct:conformsTo/csvw:column/sosa:hasFeatureOfInterest/skos:prefLabel |
+      # dct:conformsTo/csvw:column/un:qualifier/skos:prefLabel |
+      # dct:conformsTo/csvw:column/qudt:hasQuantityKind/skos:prefLabel |
+      # dct:conformsTo/csvw:column/qudt:hasUnit/skos:prefLabel
     array: true
     analyzed: false
   - fieldName: column
