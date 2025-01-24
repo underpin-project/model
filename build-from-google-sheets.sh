@@ -13,6 +13,7 @@ SHEETS=(
     ["schema-refinery"]="870089929"
     ["schema-refinery-result-anomaly"]="699616734"
     ["schema-windfarm"]="1189930306"
+    ["schema-windfarm-ait"]="769197706"
     ["schema-windfarm-generator2"]="2142433981"
     ["schema-windfarm-result"]="1862782183"
     ["dataset"]="1341812003"
@@ -30,48 +31,48 @@ for SHEET_NAME in "${!SHEETS[@]}"; do
     GID="${SHEETS[$SHEET_NAME]}"
     OUTPUT_FILE="$OUTPUT_DIR/${SHEET_NAME}.csv"
 
-    echo "Downloading $SHEET_NAME to $OUTPUT_FILE..."
+    echo "... Downloading $SHEET_NAME to $OUTPUT_FILE..."
 
     curl -L "https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${GID}" -o "$OUTPUT_FILE"
 
     if [ $? -eq 0 ]; then
-        echo "Downloaded $SHEET_NAME successfully."
+        echo "... Downloaded $SHEET_NAME successfully."
          # Load the CSV into OntoRefine
-                echo "Loading $SHEET_NAME into OntoRefine..."
+                echo "... Loading $SHEET_NAME into OntoRefine..."
 
                 $ONTOREFINE_CLI create -u "$ONTOREFINE_URL" -n "$SHEET_NAME" -a "data" "$OUTPUT_FILE"
                 if [ $? -eq 0 ]; then
-                    echo "$SHEET_NAME loaded into OntoRefine successfully."
+                    echo "... $SHEET_NAME loaded into OntoRefine successfully."
          # Send query to GraphDB
                     QUERY_NAME="${SHEET_NAME}.ru"
-                    echo "Sending query to GraphDB with name $QUERY_NAME..."
+                    echo "... Sending query to GraphDB with name $QUERY_NAME..."
 
                     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/sparql-update" \
                                     --data-binary "@$QUERY_NAME" \
                                     "$GDB_URL")
                     if [ "$HTTP_CODE" -eq 204 ]; then
-                            echo "Query $QUERY_NAME executed successfully."
+                            echo "... Query $QUERY_NAME executed successfully."
 
                             # Delete the OntoRefine project
-                            echo "Deleting OntoRefine project $SHEET_NAME..."
+                            echo "... Deleting OntoRefine project $SHEET_NAME..."
                             $ONTOREFINE_CLI delete -u "$ONTOREFINE_URL" "data"
 
                             if [ $? -eq 0 ]; then
-                                echo "OR project deleted successfully."
+                                echo "... OR project deleted successfully."
                             else
-                                echo "Failed to delete OR project"
+                                echo "FAILED to delete OR project"
                                 break
                             fi
                         else
-                            echo "Failed to execute query $QUERY_NAME on GraphDB. CODE $HTTP_CODE"
+                            echo "FAILED to execute query $QUERY_NAME on GraphDB. CODE $HTTP_CODE"
                             break
                         fi
                 else
-                    echo "Failed to load $SHEET_NAME into OntoRefine."
+                    echo "FAILED to load $SHEET_NAME into OntoRefine."
                     break
                 fi
     else
-        echo "Failed to download $SHEET_NAME."
+        echo "FAILED to download $SHEET_NAME."
         break
     fi
 done
@@ -79,14 +80,14 @@ done
 # Execute all update-* queries ending with .ru
 for QUERY_FILE in update-*.ru; do
     if [ -f "$QUERY_FILE" ]; then
-        echo "Executing query $QUERY_FILE on GraphDB..."
+        echo "... Executing query $QUERY_FILE on GraphDB..."
         HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/sparql-update" \
                         --data-binary "@$QUERY_FILE" \
                         "$GDB_URL")
         if [ "$HTTP_CODE" -eq 204 ]; then
-            echo "Query $QUERY_FILE executed successfully."
+            echo "... Query $QUERY_FILE executed successfully."
         else
-            echo "Failed to execute query $QUERY_FILE on GraphDB. HTTP CODE $HTTP_CODE"
+            echo "FAILED to execute query $QUERY_FILE on GraphDB. HTTP CODE $HTTP_CODE"
             break
         fi
     fi
@@ -99,9 +100,9 @@ if [ $? -eq 0 ]; then
   cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/dataspace.trig
   zip -j "out/dataspace.zip" "out/dataspace.trig"
 
-  echo "Done! Exporting GDB repository!"
+  echo "... Done! Exporting GDB repository!"
 else
-  echo "Cant download data!"
+  echo "FAILED to download data!"
 fi
 
 echo "DONE ALL"
