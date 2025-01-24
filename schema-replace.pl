@@ -27,6 +27,11 @@ our %PARAM =
     NAME  => "Windfarm Generator Case 2",
     EXTRA => ""},
 
+   "windfarm-ait" =>
+   {SHEET => "https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1189930306#gid=769197706",
+    NAME => "Windfarm AIT",
+    EXTRA => ""},
+
    "refinery" =>
    {SHEET => "https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=870089929#gid=870089929",
     NAME  => "Refinery compressor",

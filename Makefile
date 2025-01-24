@@ -1,4 +1,4 @@
-﻿SCHEMA = schema-windfarm.ttl schema-windfarm-generator2.ttl schema-windfarm-result.ttl schema-refinery.ttl schema-refinery-result-anomaly.ttl
+﻿SCHEMA = schema-windfarm.ttl schema-windfarm-generator2.ttl schema-windfarm-ait.ttl schema-windfarm-result.ttl schema-refinery.ttl schema-refinery-result-anomaly.ttl
 UPDATES = $(patsubst %.ttl, %.ru, $(SCHEMA) dataset.ttl)
 
 all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png elastic-index.ru # elastic-index-noArray.ru
