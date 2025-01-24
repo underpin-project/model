@@ -39,7 +39,6 @@ INSERT DATA {
          ]
       },
       {
-         "analyzed" : false,
          "fieldName" : "startDate",
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",
@@ -47,7 +46,6 @@ INSERT DATA {
          ]
       },
       {
-         "analyzed" : false,
          "fieldName" : "endDate",
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",

@@ -19,10 +19,8 @@ fields:
     analyzed: false
   - fieldName: startDate
     propertyChain: dct:temporal/dcat:startDate
-    analyzed: false
   - fieldName: endDate
     propertyChain: dct:temporal/dcat:endDate
-    analyzed: false
   - fieldName: tag
     propertyChain: dct:spatial
     analyzed: false
