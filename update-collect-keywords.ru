@@ -1,4 +1,4 @@
-﻿prefix un:   <https://dataspace.underpinproject.eu/ontology/>
+prefix un:   <https://dataspace.underpinproject.eu/ontology/>
 prefix csvw: <http://www.w3.org/ns/csvw#>
 prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix dct:  <http://purl.org/dc/terms/>
