@@ -276,6 +276,9 @@ We get an error (see below), and this data ([dataspace-catalog-orig.ttl](dataspa
                            ] .
 ```
 There are numerous problems in the RDF data due to JSON-LD problems described in the next section.
+Most of them are highlighted in red in the figure below:
+
+![](dataspace-catalog-orig-with-redline.png)
 
 ## Canned Response Problems
 There are various defects in the EDC/Sovity canned response:
