@@ -27,7 +27,6 @@ where {
   }}}
   graph ?graph_schema_windfarm_result_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_windfarm_result_URL {
-  ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1862782183#gid=1862782183
   <schema/windfarm-result> a csvw:Schema;
     dct:title "Windfarm Prediction Results table schema";
     csvw:column ?schema_windfarm_result_n_URL.

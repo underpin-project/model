@@ -1,7 +1,5 @@
 # GRAPH <graph/schema/refinery-result-anomaly>
 
-## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=699616734#gid=699616734
-
 <schema/refinery-result-anomaly> a csvw:Schema;
   dct:title "Refinery Prediction Results: Anomalies table schema";
   csvw:column <schema/refinery-result-anomaly/(n)>.
@@ -26,5 +24,4 @@
 <schema/refinery-result-anomaly/(n)/(dtBase)> a csvw:Datatype;
   csvw:base "(dtBase)";
   csvw:format "(format)".
-
 

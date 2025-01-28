@@ -27,7 +27,6 @@ where {
   }}}
   graph ?graph_schema_refinery_result_anomaly_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_refinery_result_anomaly_URL {
-  ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=699616734#gid=699616734
   <schema/refinery-result-anomaly> a csvw:Schema;
     dct:title "Refinery Prediction Results: Anomalies table schema";
     csvw:column ?schema_refinery_result_anomaly_n_URL.

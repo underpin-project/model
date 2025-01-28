@@ -1,7 +1,5 @@
 # GRAPH <graph/schema/windfarm-ait>
 
-## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1189930306#gid=769197706
-
 <schema/windfarm-ait> a csvw:Schema;
   dct:title "Windfarm AIT table schema";
   csvw:column <schema/windfarm-ait/(n)>.
@@ -26,5 +24,4 @@
 <schema/windfarm-ait/(n)/(dtBase)> a csvw:Datatype;
   csvw:base "(dtBase)";
   csvw:format "(format)".
-
 

@@ -27,7 +27,6 @@ where {
   }}}
   graph ?graph_schema_windfarm_ait_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_windfarm_ait_URL {
-  ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1189930306#gid=769197706
   <schema/windfarm-ait> a csvw:Schema;
     dct:title "Windfarm AIT table schema";
     csvw:column ?schema_windfarm_ait_n_URL.

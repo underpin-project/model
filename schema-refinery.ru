@@ -27,7 +27,6 @@ where {
   }}}
   graph ?graph_schema_refinery_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_refinery_URL {
-  ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=870089929#gid=870089929
   <schema/refinery> a csvw:Schema;
     dct:title "Refinery compressor table schema";
     csvw:column ?schema_refinery_n_URL.
@@ -58,7 +57,7 @@ insert {graph ?graph_schema_refinery_URL {
   ?tag_refinery_compressor_tag_URLIFY_URL a skos:Concept, sosa:FeatureOfInterest;
     skos:inScheme <tag>;
     skos:prefLabel ?tag;
-    skos:description ?Refinery_compressor_tag.
+    skos:definition ?Refinery_compressor_tag.
 }}
 where {
   service <http://localhost:7333/repositories/ontorefine:data> {

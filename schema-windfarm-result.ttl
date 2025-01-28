@@ -1,7 +1,5 @@
 # GRAPH <graph/schema/windfarm-result>
 
-## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=1862782183#gid=1862782183
-
 <schema/windfarm-result> a csvw:Schema;
   dct:title "Windfarm Prediction Results table schema";
   csvw:column <schema/windfarm-result/(n)>.
@@ -26,5 +24,4 @@
 <schema/windfarm-result/(n)/(dtBase)> a csvw:Datatype;
   csvw:base "(dtBase)";
   csvw:format "(format)".
-
 

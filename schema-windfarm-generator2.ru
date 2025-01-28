@@ -27,7 +27,6 @@ where {
   }}}
   graph ?graph_schema_windfarm_generator2_URL {?_s_ ?_p_ ?_o_}};
 insert {graph ?graph_schema_windfarm_generator2_URL {
-  ## SHEET https://docs.google.com/spreadsheets/d/1wnnq20RinFOLhFjg-QiOcYo9XsisZ3ZaPwzq2G5_ogU/edit?gid=2142433981#gid=2142433981
   <schema/windfarm-generator2> a csvw:Schema;
     dct:title "Windfarm Generator Case 2 table schema";
     csvw:column ?schema_windfarm_generator2_n_URL.

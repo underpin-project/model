@@ -1,0 +1,11 @@
+<schema/$ID/(n)>
+  sosa:hasFeatureOfInterest <tag/refinery-compressor/URLIFY(tag)>;
+  un:alarmLowThreshold  "(alarmLowThreshold)"^^xsd:decimal;
+  un:alarmHighThreshold "(alarmHighThreshold)"^^xsd:decimal;
+  un:tripLowThreshold   "(tripLowThreshold)"^^xsd:decimal;
+  un:tripHighThreshold  "(tripHighThreshold)"^^xsd:decimal.
+
+<tag/refinery-compressor/URLIFY(tag)> a skos:Concept, sosa:FeatureOfInterest;
+  skos:inScheme <tag>;
+  skos:prefLabel "(tag)";
+  skos:definition "Refinery compressor (tag)".
