@@ -181,23 +181,33 @@ unit:REV-PER-MIN-SEC
 .
 
 # Organizations
-<org/MOH> a schema:Organization;
-  schema:name "Motor Oil (MOH)"@en;
-  schema:url <https://www.moh.gr/en/company/>;
-  edc:participantId "BPNLY3SEIW".
-
-<org/MORE> a schema:Organization ;
-  schema:name "Motor Oil Renewable Energy (MORE)"@en;
-  schema:url <https://www.moh.gr/en/company/subsidiaries-affiliates/more-en/>;
-  edc:participantId "BPNL512R1Q".
+<org/> a schema:Organization ;
+  schema:name "Semantic Web Company GmbH (SWC)"@en;
+  schema:url <https://semantic-web.com/>;
+  edc:participantId "BPNLJ3NRCO".
 
 <org/AIT> a schema:Organization ;
   schema:name "AIT Austrian Institute Of Technology"@en;
   schema:url <https://www.ait.ac.at/en/>;
   edc:participantId "BPNLY38WC4".
 
+<org/ARC> a schema:Organization ;
+  schema:name "Athena Research Center (ARC)"@en;
+  schema:url <https://www.athenarc.gr/en/home>;
+  edc:participantId "BPNL0C3QGE".
+
+<org/MOH> a schema:Organization;
+  schema:name "Motor Oil Hellas (MOH)"@en;
+  schema:url <https://www.moh.gr/en/company/>;
+  edc:participantId "BPNLY3SEIW".
+
+<org/MORE> a schema:Organization ;
+  schema:name "Motor Oil Renewable Energy S.A. (MORE)"@en;
+  schema:url <https://www.moh.gr/en/company/subsidiaries-affiliates/more-en/>;
+  edc:participantId "BPNL512R1Q".
+
 <org/SPH> a schema:Organization ;
-  schema:name "SpaceHellas"@en;
+  schema:name "Space Hellas (SPH)"@en;
   schema:url <https://www.space.gr/>;
   edc:participantId "BPNLRIN7QO".
 
