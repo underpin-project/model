@@ -181,11 +181,6 @@ unit:REV-PER-MIN-SEC
 .
 
 # Organizations
-<org/> a schema:Organization ;
-  schema:name "Semantic Web Company GmbH (SWC)"@en;
-  schema:url <https://semantic-web.com/>;
-  edc:participantId "BPNLJ3NRCO".
-
 <org/AIT> a schema:Organization ;
   schema:name "AIT Austrian Institute Of Technology"@en;
   schema:url <https://www.ait.ac.at/en/>;
@@ -210,5 +205,10 @@ unit:REV-PER-MIN-SEC
   schema:name "Space Hellas (SPH)"@en;
   schema:url <https://www.space.gr/>;
   edc:participantId "BPNLRIN7QO".
+
+<org/SWC> a schema:Organization ;
+  schema:name "Semantic Web Company GmbH (SWC)"@en;
+  schema:url <https://semantic-web.com/>;
+  edc:participantId "BPNLJ3NRCO".
 
 }
