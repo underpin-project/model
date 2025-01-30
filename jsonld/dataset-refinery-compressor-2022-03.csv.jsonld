@@ -1,0 +1,16 @@
+Error: ENOENT: no such file or directory, open 'd:\Onto\proj\underpin\dataset-refinery-compressor-2022-03.csv-expanded.jsonld'
+    at async open (node:internal/fs/promises:637:25)
+    at async Object.readFile (node:internal/fs/promises:1246:14)
+    at async _requestFile (file:///C:/Users/Vladimir%20Alexiev/AppData/Roaming/npm/node_modules/jsonld-cli/node_modules/jsonld-request/lib/index.js:286:20)
+    at async documentLoader (file:///C:/Users/Vladimir%20Alexiev/AppData/Roaming/npm/node_modules/jsonld-cli/bin/jsonld.js:217:23)
+    at async jsonld.get (C:\Users\Vladimir Alexiev\AppData\Roaming\npm\node_modules\jsonld-cli\node_modules\jsonld\lib\jsonld.js:887:21)
+    at async jsonld.expand (C:\Users\Vladimir Alexiev\AppData\Roaming\npm\node_modules\jsonld-cli\node_modules\jsonld\lib\jsonld.js:300:23)
+    at async jsonld.compact (C:\Users\Vladimir Alexiev\AppData\Roaming\npm\node_modules\jsonld-cli\node_modules\jsonld\lib\jsonld.js:172:16)
+    at async Command.compact (file:///C:/Users/Vladimir%20Alexiev/AppData/Roaming/npm/node_modules/jsonld-cli/bin/jsonld.js:325:20)
+    at async Command.parseAsync (C:\Users\Vladimir Alexiev\AppData\Roaming\npm\node_modules\jsonld-cli\node_modules\commander\lib\command.js:936:5)
+Error: {
+  errno: [33m-4058[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'd:\\Onto\\proj\\underpin\\dataset-refinery-compressor-2022-03.csv-expanded.jsonld'[39m
+}

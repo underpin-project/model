@@ -1,0 +1,132 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <http://www.w3.org/ns/prov#> .
+@prefix duv: <https://www.w3.org/TR/vocab-duv#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix prefix: <http://qudt.org/vocab/prefix/> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix elastic-inst: <http://www.ontotext.com/connectors/elasticsearch/instance#> .
+@prefix ns1: <http://qudt.org/vocab/type/> .
+@prefix rif: <http://www.w3.org/2007/rif#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix qkdv: <http://qudt.org/vocab/dimensionvector/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix as: <https://www.w3.org/ns/activitystreams#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix sdo: <http://schema.org/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix soqk: <http://qudt.org/vocab/soqk/> .
+@prefix wdr: <http://www.w3.org/2007/05/powder#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix puml: <http://plantuml.com/ontology#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix si-quantity: <https://si-digital-framework.org/SI/quantities/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix elastic: <http://www.ontotext.com/connectors/elasticsearch#> .
+@prefix ctag: <http://commontag.org/ns#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix constant: <http://qudt.org/vocab/constant/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix mc: <http://www.linkedmodel.org/owl/schema/core#> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sou: <http://qudt.org/vocab/sou/> .
+@prefix un: <https://dataspace.underpinproject.eu/ontology/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix wrds: <http://www.w3.org/2007/05/powder-s#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix edc: <https://w3id.org/edc/v0.0.1/ns/> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix reliatax: <https://www.ieawindtask43.org/ontoforge/reliawind-taxonomy-wt-components/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix si-unit: <https://si-digital-framework.org/SI/units/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix og: <http://ogp.me/ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix ical: <http://www.w3.org/2002/12/cal/icaltzd#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/distribution>
+  a dcat:Distribution;
+  dcterms:format "text/csv" .
+
+<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv> a dcat:Dataset;
+  dcterms:title "Wind turbine WF1-WTG01 sensor data for 2020 as csv";
+  dcterms:creator <https://dataspace.underpinproject.eu/org/MORE>;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:publisher <https://dataspace.underpinproject.eu/org/MORE>;
+  dcat:distribution <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/distribution>;
+  dcat:inSeries <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-2020-influx>;
+  dcat:keyword "Spinner", "Parameter", "Nacelle", "System Logs", "Turbine", "Yaw", "Oil",
+    "Voltage Control Processor", "Phase3", "Alarm", "Production", "Cooling Water", "Rotor",
+    "Wind", "Generator", "Phase1", "Slip Ring", "Controller", "Inverter", "Shaft", "Bearing",
+    "Ambient", "Grid", "High Voltage Transformer", "Pitch", "Busbar", "Service", "Blades",
+    "Phase2", "Gearbox", "WF1-WTG01", "Wind Farm", "Wind Turbine", "Relative", "Total",
+    "Latest", "Accumulated", "Maximum", "Setpoint", "Standard Deviation", "Input dataset",
+    "Estimate", "CSV dataset", "Possible", "Absolute", "Run time", "Limit", "Average",
+    "Minimum", "Unitless", "watt", "Degree", "Revolution per Minute", "degree Celsius",
+    "metre per second", "Hour", "farad", "ampere", "volt", "hertz", "henry", "Volt Ampere Reactive",
+    "Active Power", "Angle", "angular velocity", "electric current", "Voltage", "time",
+    "Temperature", "Capacitance", "power", "frequency", "inductance", "Linear Velocity",
+    "power factor", "reactive power";
+  edc:participantId "BPNL512R1Q";
+  dcterms:conformsTo <https://dataspace.underpinproject.eu/schema/windfarm>;
+  dcterms:identifier "windfarm-WF1-WTG01-2020.csv";
+  dcterms:type <https://dataspace.underpinproject.eu/type/csv>, <https://dataspace.underpinproject.eu/type/input>;
+  dcterms:spatial "WF1-WTG01";
+  dcterms:temporal <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal>;
+  edc:id "windfarm-WF1-WTG01-2020.csv" .
+
+<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal>
+  a dcterms:PeriodOfTime;
+  dcat:endDate "2022-12-31"^^xsd:date;
+  dcat:startDate "2022-01-01"^^xsd:date .

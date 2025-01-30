@@ -1,0 +1,340 @@
+[
+    {
+        "@id": "https://dataspace.underpinproject.eu/graph/dataset/windfarm-WF1-WTG01-2020.csv",
+        "@graph": [
+            {
+                "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/distribution",
+                "@type": [
+                    "http://www.w3.org/ns/dcat#Distribution"
+                ],
+                "http://purl.org/dc/terms/format": [
+                    {
+                        "@value": "text/csv"
+                    }
+                ]
+            },
+            {
+                "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv",
+                "@type": [
+                    "http://www.w3.org/ns/dcat#Dataset"
+                ],
+                "http://purl.org/dc/terms/title": [
+                    {
+                        "@value": "Wind turbine WF1-WTG01 sensor data for 2020 as csv"
+                    }
+                ],
+                "http://purl.org/dc/terms/creator": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/org/MORE"
+                    }
+                ],
+                "http://purl.org/dc/terms/license": [
+                    {
+                        "@id": "https://creativecommons.org/licenses/by/4.0/"
+                    }
+                ],
+                "http://purl.org/dc/terms/publisher": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/org/MORE"
+                    }
+                ],
+                "http://www.w3.org/ns/dcat#distribution": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/distribution"
+                    }
+                ],
+                "http://www.w3.org/ns/dcat#inSeries": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-2020-influx"
+                    }
+                ],
+                "http://www.w3.org/ns/dcat#keyword": [
+                    {
+                        "@value": "Spinner"
+                    },
+                    {
+                        "@value": "Parameter"
+                    },
+                    {
+                        "@value": "Nacelle"
+                    },
+                    {
+                        "@value": "System Logs"
+                    },
+                    {
+                        "@value": "Turbine"
+                    },
+                    {
+                        "@value": "Yaw"
+                    },
+                    {
+                        "@value": "Oil"
+                    },
+                    {
+                        "@value": "Voltage Control Processor"
+                    },
+                    {
+                        "@value": "Phase3"
+                    },
+                    {
+                        "@value": "Alarm"
+                    },
+                    {
+                        "@value": "Production"
+                    },
+                    {
+                        "@value": "Cooling Water"
+                    },
+                    {
+                        "@value": "Rotor"
+                    },
+                    {
+                        "@value": "Wind"
+                    },
+                    {
+                        "@value": "Generator"
+                    },
+                    {
+                        "@value": "Phase1"
+                    },
+                    {
+                        "@value": "Slip Ring"
+                    },
+                    {
+                        "@value": "Controller"
+                    },
+                    {
+                        "@value": "Inverter"
+                    },
+                    {
+                        "@value": "Shaft"
+                    },
+                    {
+                        "@value": "Bearing"
+                    },
+                    {
+                        "@value": "Ambient"
+                    },
+                    {
+                        "@value": "Grid"
+                    },
+                    {
+                        "@value": "High Voltage Transformer"
+                    },
+                    {
+                        "@value": "Pitch"
+                    },
+                    {
+                        "@value": "Busbar"
+                    },
+                    {
+                        "@value": "Service"
+                    },
+                    {
+                        "@value": "Blades"
+                    },
+                    {
+                        "@value": "Phase2"
+                    },
+                    {
+                        "@value": "Gearbox"
+                    },
+                    {
+                        "@value": "WF1-WTG01"
+                    },
+                    {
+                        "@value": "Wind Farm"
+                    },
+                    {
+                        "@value": "Wind Turbine"
+                    },
+                    {
+                        "@value": "Relative"
+                    },
+                    {
+                        "@value": "Total"
+                    },
+                    {
+                        "@value": "Latest"
+                    },
+                    {
+                        "@value": "Accumulated"
+                    },
+                    {
+                        "@value": "Maximum"
+                    },
+                    {
+                        "@value": "Setpoint"
+                    },
+                    {
+                        "@value": "Standard Deviation"
+                    },
+                    {
+                        "@value": "Input dataset"
+                    },
+                    {
+                        "@value": "Estimate"
+                    },
+                    {
+                        "@value": "CSV dataset"
+                    },
+                    {
+                        "@value": "Possible"
+                    },
+                    {
+                        "@value": "Absolute"
+                    },
+                    {
+                        "@value": "Run time"
+                    },
+                    {
+                        "@value": "Limit"
+                    },
+                    {
+                        "@value": "Average"
+                    },
+                    {
+                        "@value": "Minimum"
+                    },
+                    {
+                        "@value": "Unitless"
+                    },
+                    {
+                        "@value": "watt"
+                    },
+                    {
+                        "@value": "Degree"
+                    },
+                    {
+                        "@value": "Revolution per Minute"
+                    },
+                    {
+                        "@value": "degree Celsius"
+                    },
+                    {
+                        "@value": "metre per second"
+                    },
+                    {
+                        "@value": "Hour"
+                    },
+                    {
+                        "@value": "farad"
+                    },
+                    {
+                        "@value": "ampere"
+                    },
+                    {
+                        "@value": "volt"
+                    },
+                    {
+                        "@value": "hertz"
+                    },
+                    {
+                        "@value": "henry"
+                    },
+                    {
+                        "@value": "Volt Ampere Reactive"
+                    },
+                    {
+                        "@value": "Active Power"
+                    },
+                    {
+                        "@value": "Angle"
+                    },
+                    {
+                        "@value": "angular velocity"
+                    },
+                    {
+                        "@value": "electric current"
+                    },
+                    {
+                        "@value": "Voltage"
+                    },
+                    {
+                        "@value": "time"
+                    },
+                    {
+                        "@value": "Temperature"
+                    },
+                    {
+                        "@value": "Capacitance"
+                    },
+                    {
+                        "@value": "power"
+                    },
+                    {
+                        "@value": "frequency"
+                    },
+                    {
+                        "@value": "inductance"
+                    },
+                    {
+                        "@value": "Linear Velocity"
+                    },
+                    {
+                        "@value": "power factor"
+                    },
+                    {
+                        "@value": "reactive power"
+                    }
+                ],
+                "https://w3id.org/edc/v0.0.1/ns/participantId": [
+                    {
+                        "@value": "BPNL512R1Q"
+                    }
+                ],
+                "http://purl.org/dc/terms/conformsTo": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/schema/windfarm"
+                    }
+                ],
+                "http://purl.org/dc/terms/identifier": [
+                    {
+                        "@value": "windfarm-WF1-WTG01-2020.csv"
+                    }
+                ],
+                "http://purl.org/dc/terms/type": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/type/csv"
+                    },
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/type/input"
+                    }
+                ],
+                "http://purl.org/dc/terms/spatial": [
+                    {
+                        "@value": "WF1-WTG01"
+                    }
+                ],
+                "http://purl.org/dc/terms/temporal": [
+                    {
+                        "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal"
+                    }
+                ],
+                "https://w3id.org/edc/v0.0.1/ns/id": [
+                    {
+                        "@value": "windfarm-WF1-WTG01-2020.csv"
+                    }
+                ]
+            },
+            {
+                "@id": "https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal",
+                "@type": [
+                    "http://purl.org/dc/terms/PeriodOfTime"
+                ],
+                "http://www.w3.org/ns/dcat#endDate": [
+                    {
+                        "@value": "2022-12-31",
+                        "@type": "http://www.w3.org/2001/XMLSchema#date"
+                    }
+                ],
+                "http://www.w3.org/ns/dcat#startDate": [
+                    {
+                        "@value": "2022-01-01",
+                        "@type": "http://www.w3.org/2001/XMLSchema#date"
+                    }
+                ]
+            }
+        ]
+    }
+]

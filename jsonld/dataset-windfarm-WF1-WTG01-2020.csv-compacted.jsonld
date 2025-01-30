@@ -1,0 +1,158 @@
+{
+    "@id": "graph/dataset/windfarm-WF1-WTG01-2020.csv",
+    "@graph": [
+        {
+            "@id": "dataset/windfarm-WF1-WTG01-2020.csv/distribution",
+            "@type": "dcat:Distribution",
+            "dct:format": "text/csv"
+        },
+        {
+            "@id": "dataset/windfarm-WF1-WTG01-2020.csv",
+            "@type": "dcat:Dataset",
+            "http://purl.org/dc/terms/title": "Wind turbine WF1-WTG01 sensor data for 2020 as csv",
+            "dct:creator": "org/MORE",
+            "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+            "dct:publisher": "org/MORE",
+            "dcat:distribution": "dataset/windfarm-WF1-WTG01-2020.csv/distribution",
+            "dcat:inSeries": "dataset/windfarm-WF1-2020-influx",
+            "dcat:keyword": [
+                "Spinner",
+                "Parameter",
+                "Nacelle",
+                "System Logs",
+                "Turbine",
+                "Yaw",
+                "Oil",
+                "Voltage Control Processor",
+                "Phase3",
+                "Alarm",
+                "Production",
+                "Cooling Water",
+                "Rotor",
+                "Wind",
+                "Generator",
+                "Phase1",
+                "Slip Ring",
+                "Controller",
+                "Inverter",
+                "Shaft",
+                "Bearing",
+                "Ambient",
+                "Grid",
+                "High Voltage Transformer",
+                "Pitch",
+                "Busbar",
+                "Service",
+                "Blades",
+                "Phase2",
+                "Gearbox",
+                "WF1-WTG01",
+                "Wind Farm",
+                "Wind Turbine",
+                "Relative",
+                "Total",
+                "Latest",
+                "Accumulated",
+                "Maximum",
+                "Setpoint",
+                "Standard Deviation",
+                "Input dataset",
+                "Estimate",
+                "CSV dataset",
+                "Possible",
+                "Absolute",
+                "Run time",
+                "Limit",
+                "Average",
+                "Minimum",
+                "Unitless",
+                "watt",
+                "Degree",
+                "Revolution per Minute",
+                "degree Celsius",
+                "metre per second",
+                "Hour",
+                "farad",
+                "ampere",
+                "volt",
+                "hertz",
+                "henry",
+                "Volt Ampere Reactive",
+                "Active Power",
+                "Angle",
+                "angular velocity",
+                "electric current",
+                "Voltage",
+                "time",
+                "Temperature",
+                "Capacitance",
+                "power",
+                "frequency",
+                "inductance",
+                "Linear Velocity",
+                "power factor",
+                "reactive power"
+            ],
+            "edc:participantId": "BPNL512R1Q",
+            "dct:conformsTo": "schema/windfarm",
+            "dct:identifier": "windfarm-WF1-WTG01-2020.csv",
+            "dct:type": [
+                "type/csv",
+                "type/input"
+            ],
+            "dct:spatial": "WF1-WTG01",
+            "dct:temporal": "dataset/windfarm-WF1-WTG01-2020.csv/temporal",
+            "edc:id": "windfarm-WF1-WTG01-2020.csv"
+        },
+        {
+            "@id": "dataset/windfarm-WF1-WTG01-2020.csv/temporal",
+            "@type": "dct:PeriodOfTime",
+            "dcat:endDate": "2022-12-31",
+            "dcat:startDate": "2022-01-01"
+        }
+    ],
+    "@context": [
+        "https://w3id.org/dspace/2024/1/context.json",
+        {
+            "@base": "https://dataspace.underpinproject.eu/",
+            "edc": "https://w3id.org/edc/v0.0.1/ns/",
+            "prov": "http://www.w3.org/ns/prov#",
+            "dcat:distribution": {
+                "@type": "@id"
+            },
+            "dcat:endDate": {
+                "@type": "xsd:date"
+            },
+            "dcat:inSeries": {
+                "@type": "@id"
+            },
+            "dcat:startDate": {
+                "@type": "xsd:date"
+            },
+            "dct:conformsTo": {
+                "@type": "@id"
+            },
+            "dct:creator": {
+                "@type": "@id"
+            },
+            "dct:license": {
+                "@type": "@id"
+            },
+            "dct:publisher": {
+                "@type": "@id"
+            },
+            "dct:temporal": {
+                "@type": "@id"
+            },
+            "dct:title": {
+                "@type": "xsd:string"
+            },
+            "dct:type": {
+                "@type": "@id"
+            },
+            "prov:wasDerivedFrom": {
+                "@type": "@id"
+            }
+        }
+    ]
+}
