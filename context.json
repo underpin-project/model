@@ -13,7 +13,7 @@
       "dct:license":         {"@type": "@id"},
       "dct:publisher":       {"@type": "@id"},
       "dct:temporal":        {"@type": "@id"},
-      "dct:title":           {"@type": "xsd:string"},
+      "dct:title":           {"@language": ""},
       "dct:type":            {"@type": "@id"},
       "prov:wasDerivedFrom": {"@type": "@id"}
     }
