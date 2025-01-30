@@ -2,7 +2,20 @@
     "https://w3id.org/dspace/2024/1/context.json",
     {
       "@base": "https://dataspace.underpinproject.eu/",
-      "edc": "https://w3id.org/edc/v0.0.1/ns/"
+      "edc": "https://w3id.org/edc/v0.0.1/ns/",
+      "prov": "http://www.w3.org/ns/prov#",
+      "dcat:distribution":   {"@type": "@id"},
+      "dcat:endDate":        {"@type": "xsd:date"},
+      "dcat:inSeries":       {"@type": "@id"},
+      "dcat:startDate":      {"@type": "xsd:date"},
+      "dct:conformsTo":      {"@type": "@id"},
+      "dct:creator":         {"@type": "@id"},
+      "dct:license":         {"@type": "@id"},
+      "dct:publisher":       {"@type": "@id"},
+      "dct:temporal":        {"@type": "@id"},
+      "dct:title":           {"@type": "xsd:string"},
+      "dct:type":            {"@type": "@id"},
+      "prov:wasDerivedFrom": {"@type": "@id"}
     }
   ]
 }
