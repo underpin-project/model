@@ -10,3 +10,10 @@ where {
   graph ?g {?x a ?type; rdfs:label ?label}
   filter(lang(?label)="en")
 };
+
+# Remove parasitic prefLabel for qudt:Unit and qudt:QuantityKind
+delete {graph ?g {?x skos:prefLabel ?label}}
+where {
+  values ?type {qudt:Unit qudt:QuantityKind}
+  graph ?g {?x a ?type; skos:prefLabel ?label}
+};
