@@ -16,6 +16,114 @@
             "dcat:distribution": "dataset/windfarm-WF1-WTG01-2020.csv/distribution",
             "dcat:inSeries": "dataset/windfarm-WF1-2020-influx",
             "dcat:keyword": [
+                {
+                    "@language": "en",
+                    "@value": "Active Power"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Angle"
+                },
+                {
+                    "@language": "en",
+                    "@value": "angular velocity"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Capacitance"
+                },
+                {
+                    "@language": "en",
+                    "@value": "electric current"
+                },
+                {
+                    "@language": "en",
+                    "@value": "frequency"
+                },
+                {
+                    "@language": "en",
+                    "@value": "inductance"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Linear Velocity"
+                },
+                {
+                    "@language": "en",
+                    "@value": "power"
+                },
+                {
+                    "@language": "en",
+                    "@value": "power factor"
+                },
+                {
+                    "@language": "en",
+                    "@value": "reactive power"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Temperature"
+                },
+                {
+                    "@language": "en",
+                    "@value": "time"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Voltage"
+                },
+                {
+                    "@language": "en",
+                    "@value": "ampere"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Degree"
+                },
+                {
+                    "@language": "en",
+                    "@value": "degree Celsius"
+                },
+                {
+                    "@language": "en",
+                    "@value": "farad"
+                },
+                {
+                    "@language": "en",
+                    "@value": "henry"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Hour"
+                },
+                {
+                    "@language": "en",
+                    "@value": "hertz"
+                },
+                {
+                    "@language": "en",
+                    "@value": "metre per second"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Revolution per Minute"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Unitless"
+                },
+                {
+                    "@language": "en",
+                    "@value": "volt"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Volt Ampere Reactive"
+                },
+                {
+                    "@language": "en",
+                    "@value": "watt"
+                },
                 "Spinner",
                 "Parameter",
                 "Nacelle",
@@ -91,7 +199,71 @@
                 "inductance",
                 "Linear Velocity",
                 "power factor",
-                "reactive power"
+                "reactive power",
+                {
+                    "@language": "en",
+                    "@value": "Input dataset"
+                },
+                {
+                    "@language": "en",
+                    "@value": "CSV dataset"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Absolute"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Accumulated"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Average"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Estimate"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Latest"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Limit"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Maximum"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Minimum"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Possible"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Relative"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Run time"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Setpoint"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Standard Deviation"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Total"
+                }
             ],
             "edc:participantId": "BPNL512R1Q",
             "dct:conformsTo": "schema/windfarm",
@@ -145,7 +317,7 @@
                 "@type": "@id"
             },
             "dct:title": {
-                "@type": "xsd:string"
+                "@language": ""
             },
             "dct:type": {
                 "@type": "@id"

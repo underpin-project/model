@@ -81,8 +81,12 @@ I have shortened it a bit and added comments:
             "dct:publisher": "org/MORE",
             "dcat:distribution": "dataset/windfarm-WF1-WTG01-2020.csv/distribution",
             "dcat:inSeries": "dataset/windfarm-WF1-2020-influx",
-            "dcat:keyword": [ # includes keywords collected from column characteristics
-                "Spinner", "Parameter" ...
+            "dcat:keyword": [ 
+                "Spinner", "Parameter", # ... includes keywords collected from column characteristics
+                { # YACK: QUDT prefLabels have lang tag, so they come out like this:
+                    "@language": "en",
+                    "@value": "Active Power"
+                }
             ],
             "edc:participantId": "BPNL512R1Q",
             "dct:conformsTo": "schema/windfarm",
@@ -112,6 +116,8 @@ Minor defects:
   This is a minor cosmetic defect
 - TODO: `dct:temporal` is not embedded as subnode of Dataset.
   We'll have to use a Frame to specify this
+- `dcat:keyword` has a mixture of plain strings and langStrings (QUDT prefLabels have).
+  TODO: is that a problem?
 - There is a graph `@id`. 
   - This may confuse the dataspace connector and may need to be removed
   - This would be useful for the GraphDB Ingester to know which graph to address.
