@@ -128,27 +128,50 @@ Minor defects:
 
 It has the following differences:
 - `<edc:participantId>` "BPNLY3SEIW.CV064VJ" includes also the connector ID
+  - "participant" means "connector". The first part is only the organization ID
+  - Vlado to change it in gsheet
+- `dct:description` has the same value as `dct:title`
+  - Remove it, no need to duplicate this text
 - has `dcat:version`
 - has `<odrl:Set>` but we don't need it
+  - We should delete it because the node URL is defective.
+  - Ivan to delete `"odrl:hasPolicy"` from JSONLD in the Ingester (https://github.com/underpin-project/dataspace/issues/61) 
+  - Sotiris: we may want to retain it for future use
+  - Vlado: but the URL is unpredictable: 
+    - `crap==:poop` is interpreted as `<https://dataspace.underpinproject.eu/crap==:poop>` 
+    - whereas `crap:poop` is interpreted as `<crap:poop>` which is invalid URL scheme, and GraphDB will reject it unless we have the option "ingest invalid URLs"
+    - `=` is used as a filler char in `base64` encoding, so it may or may not be present in the first part
 
 And the following defects:
-- There is no context, so the following URLs are wrong
-  - `<dcat:Dataset>`
-  - `<edc:id>, <edc:participantId>`
-  - `<odrl:*>`: many, but we don't care about ODRL
-- The following are string but should be URLs:
-  - `dct:conformsTo, dct:creator, dct:identifier, dct:language, dct:publisher`
-  - `dcat:inSeries, prov:wasDerivedFrom`
-  - `<odrl:target>` (twice)
+- The prefix of dataset URLs should be `dataset` not `dataspace`
+- There is no context, so:
+  - The following URLs are wrong
+    - `<dcat:Dataset>, <edc:id>, <edc:participantId>, <odrl:*>` (many), but we don't care about ODRL
+  - The following are string but should be URLs:
+    - `dct:conformsTo, dct:creator, dct:identifier, dct:language, dct:publisher`
+    - `dcat:inSeries, prov:wasDerivedFrom`
+    - `<odrl:target>` (twice)
+  - Ivan to insert a context in the Ingester, as second line in the payload (after the opening bracket) (https://github.com/underpin-project/dataspace/issues/61):
+```
+  "@context": "https://rawgit2.com/underpin-project/model/main/context.json",
+```
 - `edc:id` should be `refinery-compressor-2022-01.csv` and not a full URL
+  - Sotiris: the reason is that `@id` is populated from `edc:id`
+  - Vlado: I'll extend `@base` to `https://dataspace.underpinproject.eu/dataset`, 
+    so you can use the short version in `edc:id`
 - These types are missing ("The `@type` for `temporal` and `distribution` was not accepted so I had to remove it"):
   - `dcat:Distribution`
   - `dct:PeriodOfTime`
-- `dct:description` is used instead of `dct:title` (we should have title first, and description second)
-- Have you added `dct:spatial`? It's only in Windfarm datasets so I can't check
+  - TODO: this will remain open
+- Have you added `dct:spatial`?
+  - It's only in Windfarm datasets so I can't check
+  - Yes but it is not used in refinery data
 - `<odrl:Set>` has bad URL (no base, and value is not suitable for URL), 
   so it gets the local filename as URL (`<file:///d:/Onto/proj/underpin/model/jsonld/dataset-refinery-compressor-2022-01-from-dataspace.jsonld> .`)
   - Same for `<odrl:hasPolicy>`
+  - Will be removed
+
+
 
 ## Conversion with Command-Line Tools
 We can use https://www.npmjs.com/package/jsonld to manipulate JSON at the command line and experiment with different representations.
