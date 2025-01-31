@@ -7,6 +7,9 @@ fields:
   - fieldName: id
     propertyChain: dct:identifier
     analyzed: false # keyword
+  - fieldName: participantId
+    propertyChain: edc:participantId
+    analyzed: false
   - fieldName: title
     propertyChain: dct:title
     analyzed: true
@@ -27,21 +30,9 @@ fields:
   - fieldName: schema
     propertyChain: dct:conformsTo/dct:title
     analyzed: false
-  - fieldName: text
-    propertyChain: >-
-      dct:identifier |
-      dct:title |
-      dct:publisher/schema:name |
-      dct:type/skos:prefLabel |
-      dct:temporal/dcat:startDate |
-      dct:temporal/dcat:endDate |
-      dct:spatial |
-      dct:conformsTo/dct:title |
-      dct:conformsTo/csvw:column/dct:title
-    analyzed: true
   - fieldName: keywords
     propertyChain: dcat:keyword # now collected in RDF, no need for these paths:
-      # | dct:type/skos:prefLabel |
+      # dct:type/skos:prefLabel |
       # dct:spatial |
       # dct:conformsTo/csvw:column/sosa:hasFeatureOfInterest/skos:prefLabel |
       # dct:conformsTo/csvw:column/un:qualifier/skos:prefLabel |
@@ -49,6 +40,31 @@ fields:
       # dct:conformsTo/csvw:column/qudt:hasUnit/skos:prefLabel
     array: true
     analyzed: false
+  - fieldName: text
+    propertyChain: >-
+      dct:identifier |
+      dct:title |
+      dct:publisher/schema:name |
+      dct:temporal/dcat:startDate |
+      dct:temporal/dcat:endDate |
+      dct:conformsTo/dct:title |
+      dct:conformsTo/csvw:column/dct:title |
+      dcat:keyword
+    datatype: native:text
+    nativeSettings:
+      fields:
+        suggest:
+            type: search_as_you_type
+            doc_values: false
+            max_shingle_size: 3
+  - fieldName: text_completion
+    propertyChain: "@text"
+    datatype: native:completion
+    analyze: true
+    nativeSettings:
+      preserve_separators: true
+      preserve_position_increments: true
+      max_input_length: 50    
   - fieldName: column
     propertyChain: dct:conformsTo/csvw:column
     array: true

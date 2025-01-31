@@ -719,6 +719,7 @@ Here are the fields:
 - Individual fields:
   - (builtin) `_id`: URL. This is automatically populated by GraphDB
   - Id (`id`): `dct:identifier`
+  - Connector (`participantId`): `edc:participantId`
   - Title (`title`): `dct:title`
 - Full-text (`text`): `id|title|publisher|types|startDate|endDate|tag|schema|dct:conformsTo/csvw:column/dct:title`
 
@@ -767,14 +768,14 @@ Results:
 Views:
 - Fields to use are shown in backticks
 - Each bullet represents a new line (but we don't want bullets in the actual display)
-- (Optional) Multivalued fields should be sorted alphabetically (I don't know how to do this)
-- The short `id` is a hyperlink that uses the full `_id` and leads to the Full view of the dataset
+- Multivalued fields should be sorted alphabetically
+- The short `id` is a hyperlink that uses the full `_id` and leads to the dataset view in Catalog
 
 We want two views:
 - List view (short):
   - Dataset `[id](_id)` (`title`) by `_publisher_`
   - `_keywords_*`
-- Display view (full): 
+- OBSOLETE: Display view (full): This now jumps to the dataset view in Catalog
   - Dataset `id` (`title`) by `_publisher_`
   - type `_types_`*,
   - start `start`, end `end`,
