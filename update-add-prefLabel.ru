@@ -17,3 +17,11 @@ where {
   values ?type {qudt:Unit qudt:QuantityKind}
   graph ?g {?x a ?type; skos:prefLabel ?label}
 };
+
+# Remove duplicate keywords
+prefix dcat: <http://www.w3.org/ns/dcat#>
+delete {?x dcat:keyword ?bad}
+where {
+  ?x dcat:keyword ?good, ?bad
+  filter(str(?good)=str(?bad) && lang(?good)="en" && lang(?bad)="")
+};
