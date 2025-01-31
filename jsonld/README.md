@@ -141,7 +141,7 @@ And the following defects:
   - `dcat:inSeries, prov:wasDerivedFrom`
   - `<odrl:target>` (twice)
 - `edc:id` should be `refinery-compressor-2022-01.csv` and not a full URL
-- These types are missing:
+- These types are missing ("The `@type` for `temporal` and `distribution` was not accepted so I had to remove it"):
   - `dcat:Distribution`
   - `dct:PeriodOfTime`
 - `dct:description` is used instead of `dct:title` (we should have title first, and description second)
