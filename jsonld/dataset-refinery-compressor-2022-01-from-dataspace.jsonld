@@ -1,0 +1,129 @@
+{
+  "@id": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv",
+  "@type": "dcat:Dataset",
+  "odrl:hasPolicy": {
+    "@id": "Y29udHJhY3QtcmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:aHR0cHM6Ly9kYXRhc3BhY2UudW5kZXJwaW5wcm9qZWN0LmV1L2RhdGFzcGFjZS9yZWZpbmVyeS1jb21wcmVzc29yLTIwMjItMDEuY3N2:MDE5NGI4NjAtNDg3MS03NzQ1LWFjZjItNjIyZDAxZDQzOTY1",
+    "@type": "odrl:Set",
+    "odrl:permission": {
+      "odrl:target": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv",
+      "odrl:action": {
+        "odrl:type": "USE"
+      }
+    },
+    "odrl:prohibition": [],
+    "odrl:obligation": [],
+    "odrl:target": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv"
+  },
+  "dcat:distribution": [],
+  "http://www.w3.org/ns/dcat#keyword": [
+    "angular velocity",
+    "Displacement",
+    "distance",
+    "electric current",
+    "Mass Flow Rate",
+    "pressure",
+    "Temperature",
+    "Differential",
+    "ampere",
+    "degree Celsius",
+    "Kilogram per Hour",
+    "Kilogram Force per Square Centimetre",
+    "Micrometre",
+    "Millimetre",
+    "Revolution per Minute",
+    "Refinery",
+    "Compressor",
+    "Turbine",
+    "Shaft",
+    "Bearing",
+    "Gearbox",
+    "Maximum",
+    "Input dataset",
+    "CSV dataset",
+    "Differential",
+    "Average",
+    "Minimum",
+    "Radial",
+    "Control Oil",
+    "Vibration",
+    "K-5701",
+    "Seal Oil",
+    "Axial",
+    "K-3301 B/KT-3301 B",
+    "Compressed Air",
+    "Primary Vent",
+    "Lube Oil",
+    "Motor",
+    "Journal Pads",
+    "Discharge",
+    "K-2201/KT-2201",
+    "Stator",
+    "Steam Turbine",
+    "K-3201 A/KM-3201 A",
+    "Thrust Bearing",
+    "Inlet",
+    "Journal Bearing",
+    "Outlet",
+    "K-7502/ST-7501",
+    "Blow Off",
+    "Main Pump",
+    "Thrust Pads",
+    "Micrometre",
+    "Millimetre",
+    "Kilogram Force per Square Centimetre",
+    "Revolution per Minute",
+    "degree Celsius",
+    "ampere",
+    "Kilogram per Hour",
+    "pressure",
+    "angular velocity",
+    "electric current",
+    "Temperature",
+    "Displacement",
+    "distance",
+    "Mass Flow Rate",
+    "Input dataset",
+    "CSV dataset",
+    "Average",
+    "Maximum",
+    "Minimum"
+  ],
+  "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyBody": "false",
+  "http://purl.org/dc/terms/identifier": "refinery-compressor-2022-01.csv",
+  "edc:participantId": "BPNLY3SEIW.CV064VJ",
+  "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyPath": "false",
+  "http://purl.org/dc/terms/language": "https://w3id.org/idsa/code/EN",
+  "http://purl.org/dc/terms/description": "Refinery compressor sensor data for 2022-01 as csv",
+  "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyMethod": "false",
+  "http://purl.org/dc/terms/publisher": "https://dataspace.underpinproject.eu/org/MOH",
+  "http://www.w3.org/ns/dcat#version": "1.0",
+  "http://www.w3.org/ns/dcat#distribution": {
+    "@id": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv/distribution",
+    "http://purl.org/dc/terms/format": "text/csv"
+  },
+  "http://www.w3.org/ns/dcat#inSeries": "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-influx",
+  "http://purl.org/dc/terms/creator": "https://dataspace.underpinproject.eu/org/MOH",
+  "http://purl.org/dc/terms/type": [
+    {
+      "@id": "https://dataspace.underpinproject.eu/type/input"
+    },
+    {
+      "@id": "https://dataspace.underpinproject.eu/type/csv"
+    }
+  ],
+  "http://purl.org/dc/terms/title": "Refinery compressor sensor data for 2022-01 as csv",
+  "edc:id": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv",
+  "http://purl.org/dc/terms/conformsTo": "https://dataspace.underpinproject.eu/schema/refinery",
+  "http://purl.org/dc/terms/temporal": {
+    "@id": "https://dataspace.underpinproject.eu/dataspace/refinery-compressor-2022-01.csv/temporal",
+    "http://www.w3.org/ns/dcat#startDate": {
+      "@value": "2022-01-01",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "http://www.w3.org/ns/dcat#endDate": {
+      "@value": "2022-02-01",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    }
+  },
+  "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyQueryParams": "false"
+}

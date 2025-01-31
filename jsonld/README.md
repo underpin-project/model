@@ -122,11 +122,49 @@ Minor defects:
   - This may confuse the dataspace connector and may need to be removed
   - This would be useful for the GraphDB Ingester to know which graph to address.
 
-## Conversion with Command-Line Tool
+## JSON-LD from Dataspace
+- [dataset-refinery-compressor-2022-01-from-dataspace.jsonld](dataset-refinery-compressor-2022-01-from-dataspace.jsonld) is a result from the Federated Catalog, after registering a DataAsset with similar metadata as above
+- [dataset-refinery-compressor-2022-01-from-dataspace.ttl](dataset-refinery-compressor-2022-01-from-dataspace.ttl) is converted to Turtle with prefixes (see end of next section)
+
+It has the following differences:
+- `<edc:participantId>` "BPNLY3SEIW.CV064VJ" includes also the connector ID
+- has `dcat:version`
+- has `<odrl:Set>` but we don't need it
+
+And the following defects:
+- There is no context, so the following URLs are wrong
+  - `<dcat:Dataset>`
+  - `<edc:id>, <edc:participantId>`
+  - `<odrl:*>`: many, but we don't care about ODRL
+- The following are string but should be URLs:
+  - `dct:conformsTo, dct:creator, dct:identifier, dct:language, dct:publisher`
+  - `dcat:inSeries, prov:wasDerivedFrom`
+  - `<odrl:target>` (twice)
+- `edc:id` should be `refinery-compressor-2022-01.csv` and not a full URL
+- These types are missing:
+  - `dcat:Distribution`
+  - `dct:PeriodOfTime`
+- `dct:description` is used instead of `dct:title` (we should have title first, and description second)
+- Have you added `dct:spatial`? It's only in Windfarm datasets so I can't check
+- `<odrl:Set>` has bad URL (no base, and value is not suitable for URL), 
+  so it gets the local filename as URL (`<file:///d:/Onto/proj/underpin/model/jsonld/dataset-refinery-compressor-2022-01-from-dataspace.jsonld> .`)
+  - Same for `<odrl:hasPolicy>`
+
+## Conversion with Command-Line Tools
 We can use https://www.npmjs.com/package/jsonld to manipulate JSON at the command line and experiment with different representations.
 
 Eg both of these produce the same. It differs from the GraphDB result only that it emits a network rather than copied context.
 ```
 jsonld compact -c https://rawgit2.com/underpin-project/model/main/context.json dataset-windfarm-WF1-WTG01-2020.csv-compacted.jsonld
 jsonld compact -c https://rawgit2.com/underpin-project/model/main/context.json dataset-windfarm-WF1-WTG01-2020.csv-expanded.jsonld
+```
+
+These convert JSONLD to RDF: the first to NQuads, the second to Turtle:
+```
+jsonld toRdf -q dataset-refinery-compressor-2022-01-from-dataspace.jsonld
+riot.bat --formatted ttl dataset-refinery-compressor-2022-01-from-dataspace.jsonld
+```
+Neither of these produces prefixed prop URLs, so I prepend `prefixes.ttl` to see the result in a better way:
+```
+riot.bat --formatted ttl dataset-refinery-compressor-2022-01-from-dataspace.jsonld | cat ../prefixes.ttl - | riot.bat --syntax ttl -formatted ttl > dataset-refinery-compressor-2022-01-from-dataspace.ttl
 ```

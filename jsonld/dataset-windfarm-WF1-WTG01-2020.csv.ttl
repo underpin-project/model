@@ -99,11 +99,19 @@
   a dcat:Distribution;
   dcterms:format "text/csv" .
 
-<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv> a dcat:Dataset;
-  dcterms:title "Wind turbine WF1-WTG01 sensor data for 2020 as csv";
+<https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv>
+  a dcat:Dataset;
+  edc:id "windfarm-WF1-WTG01-2020.csv";
+  edc:participantId "BPNL512R1Q";
+  dcterms:conformsTo <https://dataspace.underpinproject.eu/schema/windfarm>;
   dcterms:creator <https://dataspace.underpinproject.eu/org/MORE>;
+  dcterms:identifier "windfarm-WF1-WTG01-2020.csv";
   dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
   dcterms:publisher <https://dataspace.underpinproject.eu/org/MORE>;
+  dcterms:spatial "WF1-WTG01";
+  dcterms:temporal <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal>;
+  dcterms:title "Wind turbine WF1-WTG01 sensor data for 2020 as csv";
+  dcterms:type <https://dataspace.underpinproject.eu/type/csv>, <https://dataspace.underpinproject.eu/type/input>;
   dcat:distribution <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/distribution>;
   dcat:inSeries <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-2020-influx>;
   dcat:keyword "Spinner", "Parameter", "Nacelle", "System Logs", "Turbine", "Yaw", "Oil",
@@ -117,14 +125,7 @@
     "metre per second", "Hour", "farad", "ampere", "volt", "hertz", "henry", "Volt Ampere Reactive",
     "Active Power", "Angle", "angular velocity", "electric current", "Voltage", "time",
     "Temperature", "Capacitance", "power", "frequency", "inductance", "Linear Velocity",
-    "power factor", "reactive power";
-  edc:participantId "BPNL512R1Q";
-  dcterms:conformsTo <https://dataspace.underpinproject.eu/schema/windfarm>;
-  dcterms:identifier "windfarm-WF1-WTG01-2020.csv";
-  dcterms:type <https://dataspace.underpinproject.eu/type/csv>, <https://dataspace.underpinproject.eu/type/input>;
-  dcterms:spatial "WF1-WTG01";
-  dcterms:temporal <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal>;
-  edc:id "windfarm-WF1-WTG01-2020.csv" .
+    "power factor", "reactive power".
 
 <https://dataspace.underpinproject.eu/dataset/windfarm-WF1-WTG01-2020.csv/temporal>
   a dcterms:PeriodOfTime;
