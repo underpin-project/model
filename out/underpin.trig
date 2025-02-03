@@ -77,14 +77,14 @@ un:influxDatatype a owl:DatatypeProperty;
 # Thesauri
 
 ## Dataset type
-<type> a skos:ConceptScheme; skos:prefLabel "Dataset type"@en.
+<type> a skos:ConceptScheme; dct:title "Dataset type"@en.
 <type/input>  a skos:Concept; skos:inScheme <type>; skos:topConceptOf <type>; skos:prefLabel "Input dataset"@en.
 <type/result> a skos:Concept; skos:inScheme <type>; skos:topConceptOf <type>; skos:prefLabel "Result dataset"@en.
 <type/csv>    a skos:Concept; skos:inScheme <type>; skos:topConceptOf <type>; skos:prefLabel "CSV dataset"@en.
 <type/influx> a skos:Concept; skos:inScheme <type>; skos:topConceptOf <type>; skos:prefLabel "Influx dataset"@en.
 
 ## Statistical qualifier
-<qualifier> a skos:ConceptScheme; skos:prefLabel "Qualifier"@en; skos:altLabel "Statistical qualifier"@en, "Value qualifier"@en, "Aggregation rule"@en; skos:definition "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining"@en.
+<qualifier> a skos:ConceptScheme; dct:title "Qualifier"@en; skos:altLabel "Statistical qualifier"@en, "Value qualifier"@en, "Aggregation rule"@en; skos:definition "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining"@en.
 <qualifier/5th_percentile>     a skos:Concept; skos:inScheme <qualifier>; skos:topConceptOf <qualifier>; skos:prefLabel "5th Percentile"@en.
 <qualifier/95th_percentile>    a skos:Concept; skos:inScheme <qualifier>; skos:topConceptOf <qualifier>; skos:prefLabel "95th Percentile"@en.
 <qualifier/Absolute>           a skos:Concept; skos:inScheme <qualifier>; skos:topConceptOf <qualifier>; skos:prefLabel "Absolute"@en.
@@ -108,7 +108,7 @@ un:influxDatatype a owl:DatatypeProperty;
 <qualifier/Total>              a skos:Concept; skos:inScheme <qualifier>; skos:topConceptOf <qualifier>; skos:prefLabel "Total"@en.
 
 ## Anomaly type
-<anomaly> a skos:ConceptScheme; skos:prefLabel "Anomaly type"@en.
+<anomaly> a skos:ConceptScheme; dct:title "Anomaly type"@en.
 <anomaly/alarm> a skos:Concept; skos:inScheme <anomaly>; skos:topConceptOf <anomaly>; skos:prefLabel "Alarm"@en; skos:definition "An alarm is raised because sensor reading was beyond alarm threshold"@en.
 <anomaly/trip>  a skos:Concept; skos:inScheme <anomaly>; skos:topConceptOf <anomaly>; skos:prefLabel "Trip"@en;  skos:definition "A trip is raised because sensor reading was beyond trip threshold"@en.
 
