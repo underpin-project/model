@@ -7,11 +7,11 @@ delete {graph ?g {?x skos:description ?y}}
 insert {graph ?g {?x skos:definition  ?y}}
 where  {graph ?g {?x skos:description ?y}};
 
-# attach lang tag @en to skos:prefLabel, skos:definition, schema:name, dcat:keyword
+# attach lang tag @en to all textual props
 delete {graph ?g {?x ?p ?old}}
 insert {graph ?g {?x ?p ?new}}
 where  {graph ?g {
-  values ?p {skos:prefLabel skos:definition schema:name dcat:keyword}
+  values ?p {skos:prefLabel skos:definition schema:name dcat:keyword dct:title dct:description}
   ?x ?p ?old
   filter(lang(?old)="")
   bind(strlang(?old,"en") as ?new)
