@@ -51,12 +51,12 @@ fields:
       dct:conformsTo/csvw:column/dct:title |
       dcat:keyword
     datatype: native:text
-    nativeSettings:
-      fields:
-        suggest:
-            type: search_as_you_type
-            doc_values: false
-            max_shingle_size: 3
+    # nativeSettings:
+    #   fields:
+    #     suggest:
+    #         type: search_as_you_type
+    #         doc_values: false
+    #         max_shingle_size: 3
   - fieldName: text_completion
     propertyChain: "@text"
     datatype: native:completion

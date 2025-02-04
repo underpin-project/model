@@ -85,15 +85,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$1",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/identifier"
          ]
@@ -159,15 +150,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$2",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/title"
          ]
@@ -175,15 +157,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$3",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/publisher",
             "http://schema.org/name"
@@ -192,15 +165,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$4",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",
             "http://www.w3.org/ns/dcat#startDate"
@@ -209,15 +173,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$5",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/temporal",
             "http://www.w3.org/ns/dcat#endDate"
@@ -226,15 +181,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$6",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
             "http://purl.org/dc/terms/title"
@@ -243,15 +189,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$7",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
             "http://www.w3.org/ns/csvw#column",
@@ -261,15 +198,6 @@ INSERT DATA {
       {
          "datatype" : "native:text",
          "fieldName" : "text$8",
-         "nativeSettings" : {
-            "fields" : {
-               "suggest" : {
-                  "doc_values" : false,
-                  "max_shingle_size" : 3,
-                  "type" : "search_as_you_type"
-               }
-            }
-         },
          "propertyChain" : [
             "http://www.w3.org/ns/dcat#keyword"
          ]
