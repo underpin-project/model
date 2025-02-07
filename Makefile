@@ -1,7 +1,7 @@
 ﻿SCHEMA = schema-windfarm.ttl schema-windfarm-generator2.ttl schema-windfarm-ait.ttl schema-windfarm-result.ttl schema-refinery.ttl schema-refinery-result-anomaly.ttl
 UPDATES = $(patsubst %.ttl, %.ru, $(SCHEMA) dataset.ttl)
 
-all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png elastic-index-datasets.ru elastic-index-catalog.ru
+all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png elastic-index-datasets.ru elastic-index-catalog.ru updates.ru
 
 dataset-extra.ttl: dataset.ttl dataset-extra.txt
 	cat $^ > $@
@@ -25,3 +25,6 @@ elastic-index-datasets.ru: elastic-index.yaml
 	perl -S index-yaml-json-sparql.pl --index=datasets $^ > $@
 elastic-index-catalog.ru: elastic-index.yaml
 	perl -S index-yaml-json-sparql.pl --index=catalog $^ > $@
+
+updates.ru: update-add-prefLabel.ru update-collect-feature-definitions.ru update-collect-keywords.ru update-fix-skos.ru update-participantId.ru
+	cat $^ > $@

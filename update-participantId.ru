@@ -1,4 +1,4 @@
-﻿prefix edc:          <https://w3id.org/edc/v0.0.1/ns/>
+prefix edc:          <https://w3id.org/edc/v0.0.1/ns/>
 
 # Add connector Id (after the dot) to the participantId field of Organization and Dataset
 # Fix (last row in table)
@@ -15,3 +15,4 @@ where {
   }
   graph ?g {?x edc:participantId ?old}
 };
+

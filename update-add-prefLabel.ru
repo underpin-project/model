@@ -25,3 +25,4 @@ where {
   ?x dcat:keyword ?good, ?bad
   filter(str(?good)=str(?bad) && lang(?good)="en" && lang(?bad)="")
 };
+

@@ -1,5 +1,6 @@
-prefix skos: <http://www.w3.org/2004/02/skos/core#>
-prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix skos:   <http://www.w3.org/2004/02/skos/core#>
+prefix dct:    <http://purl.org/dc/terms/>
+prefix dcat:   <http://www.w3.org/ns/dcat#>
 prefix schema: <http://schema.org/>
 
 # use skos:definition not skos:description
@@ -23,3 +24,4 @@ where  {graph ?g {
   ?c skos:inScheme ?s
   filter not exists {?c skos:broader ?d}
 }};
+

@@ -11,3 +11,4 @@ where {
   graph ?g {?x a dcat:Dataset}
   ?x dct:spatial|(dct:type|dct:conformsTo/csvw:column/(un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest))/skos:prefLabel ?keyword
 };
+
