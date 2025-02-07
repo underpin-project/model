@@ -1,21 +1,24 @@
-{  "@context": [
+"@context": [
     "https://w3id.org/dspace/2024/1/context.json",
     {
       "@base": "https://dataspace.underpinproject.eu/dataset/",
       "edc": "https://w3id.org/edc/v0.0.1/ns/",
       "prov": "http://www.w3.org/ns/prov#",
-      "dcat:distribution":   {"@type": "@id"},
-      "dcat:endDate":        {"@type": "xsd:date"},
-      "dcat:inSeries":       {"@type": "@id"},
-      "dcat:startDate":      {"@type": "xsd:date"},
-      "dct:conformsTo":      {"@type": "@id"},
-      "dct:creator":         {"@type": "@id"},
-      "dct:license":         {"@type": "@id"},
-      "dct:publisher":       {"@type": "@id"},
-      "dct:temporal":        {"@type": "@id"},
-      "dct:title":           {"@language": ""},
-      "dct:type":            {"@type": "@id"},
-      "prov:wasDerivedFrom": {"@type": "@id"}
+      "dcat":"http://www.w3.org/ns/dcat#",
+      "dct":"http://purl.org/dc/terms/",
+      "dcat:distribution":                        {"@type": "@id"},  
+      "http://www.w3.org/ns/dcat#distribution":   {"@type": "@id"},
+      "http://www.w3.org/ns/dcat#endDate":        {"@type": "xsd:date"},
+      "http://www.w3.org/ns/dcat#inSeries":       {"@type": "@id"},
+      "http://www.w3.org/ns/dcat#startDate":      {"@type": "xsd:date"},
+      "http://purl.org/dc/terms/conformsTo":      {"@type": "@id"},
+      "http://purl.org/dc/terms/creator":         {"@type": "@id"},
+      "http://purl.org/dc/terms/license":         {"@type": "@id"},
+      "http://purl.org/dc/terms/language":        {"@type": "@id"},
+      "http://purl.org/dc/terms/publisher":       {"@type": "@id"},
+      "http://purl.org/dc/terms/temporal":        {"@type": "@id"},
+      "http://purl.org/dc/terms/title":           {"@language": ""},
+      "http://purl.org/dc/terms/type":            {"@type": "@id"},
+      "http://www.w3.org/ns/prov#wasDerivedFrom": {"@type": "@id"}
     }
   ]
-}
