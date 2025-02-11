@@ -26,6 +26,7 @@ mkdir -p "$OUTPUT_DIR"
 # Loop through the sheets and download each as a CSV file
 
 $ONTOREFINE_CLI delete -u "$ONTOREFINE_URL" "data"
+curl -X POST -H "Content-Type: application/sparql-update" --data "CLEAR ALL" "$GDB_URL"
 
 for SHEET_NAME in "${!SHEETS[@]}"; do
     GID="${SHEETS[$SHEET_NAME]}"
@@ -99,6 +100,7 @@ if [ $? -eq 0 ]; then
   sed '/###/q' prefixes.ttl | cat - tmp.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/schema-dataset.trig
   cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/dataspace.trig
   zip -j "out/dataspace.zip" "out/dataspace.trig"
+  rm dataspace.trig
 
   echo "... Done! Exporting GDB repository!"
 else
