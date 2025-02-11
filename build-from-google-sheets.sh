@@ -96,7 +96,7 @@ fi
 
 curl -X GET -H "Accept:application/x-trig" "$GDB_URL" > tmp.trig
 if [ $? -eq 0 ]; then
-  cat prefixes.ttl tmp.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/schema-dataset.trig
+  sed '/###/q' prefixes.ttl | cat - tmp.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/schema-dataset.trig
   cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/dataspace.trig
   zip -j "out/dataspace.zip" "out/dataspace.trig"
 
