@@ -24,7 +24,6 @@ OUTPUT_DIR="csv"
 mkdir -p "$OUTPUT_DIR"
 
 # Loop through the sheets and download each as a CSV file
-
 $ONTOREFINE_CLI delete -u "$ONTOREFINE_URL" "data"
 curl -X POST -H "Content-Type: application/sparql-update" --data "CLEAR ALL" "$GDB_URL"
 
@@ -78,8 +77,28 @@ for SHEET_NAME in "${!SHEETS[@]}"; do
     fi
 done
 
+# Load reference ontologies
+REF_ONTOLOGY_FOLDER="reference-ontologies"
+
+echo "... Loading reference ontologies from $REF_ONTOLOGY_FOLDER into GraphDB..."
+
+for file in "$REF_ONTOLOGY_FOLDER"/*.ttl; do
+    echo "... Loading $file in GDB"
+
+        curl -X POST -H "Content-Type: text/turtle" \
+            --data-binary "@$file" \
+            "$GDB_URL?context=%3Chttps%3A%2F%2Fdataspace.underpinproject.eu%2Fgraph%2Freference-ontologies%3E"
+
+        if [ $? -eq 0 ]; then
+            echo "... Successfully loaded $file."
+        else
+            echo "FAILED to load $file into GraphDB."
+            break
+        fi
+done
+
 # Execute queries in updates.ru
-QUERY_FILE=updates.ru
+QUERY_FILE=out/updates.ru
 if [ -f "$QUERY_FILE" ]; then
     echo "... Executing query $QUERY_FILE on GraphDB..."
     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/sparql-update" \
@@ -94,13 +113,13 @@ if [ -f "$QUERY_FILE" ]; then
 fi
 
 
-
+#Export gdb repo
 curl -X GET -H "Accept:application/x-trig" "$GDB_URL" > tmp.trig
 if [ $? -eq 0 ]; then
   sed '/###/q' prefixes.ttl | cat - tmp.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/schema-dataset.trig
-  cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/dataspace.trig
-  zip -j "out/dataspace.zip" "out/dataspace.trig"
-  rm out/dataspace.trig
+  cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/catalog.trig
+  zip -j "out/catalog.zip" "out/catalog.trig"
+  rm out/catalog.trig
 
   echo "... Done! Exporting GDB repository!"
 else
