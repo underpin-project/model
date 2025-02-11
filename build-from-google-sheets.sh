@@ -77,21 +77,21 @@ for SHEET_NAME in "${!SHEETS[@]}"; do
     fi
 done
 
-# Execute all update-* queries ending with .ru
-for QUERY_FILE in update-*.ru; do
-    if [ -f "$QUERY_FILE" ]; then
-        echo "... Executing query $QUERY_FILE on GraphDB..."
-        HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/sparql-update" \
-                        --data-binary "@$QUERY_FILE" \
-                        "$GDB_URL")
-        if [ "$HTTP_CODE" -eq 204 ]; then
-            echo "... Query $QUERY_FILE executed successfully."
-        else
-            echo "FAILED to execute query $QUERY_FILE on GraphDB. HTTP CODE $HTTP_CODE"
-            break
-        fi
+# Execute queries in updates.ru
+QUERY_FILE=updates.ru
+if [ -f "$QUERY_FILE" ]; then
+    echo "... Executing query $QUERY_FILE on GraphDB..."
+    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/sparql-update" \
+                    --data-binary "@$QUERY_FILE" \
+                    "$GDB_URL")
+    if [ "$HTTP_CODE" -eq 204 ]; then
+        echo "... Query $QUERY_FILE executed successfully."
+    else
+        echo "FAILED to execute query $QUERY_FILE on GraphDB. HTTP CODE $HTTP_CODE"
+        break
     fi
-done
+fi
+
 
 
 curl -X GET -H "Accept:application/x-trig" "$GDB_URL" > tmp.trig
