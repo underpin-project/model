@@ -100,7 +100,7 @@ if [ $? -eq 0 ]; then
   sed '/###/q' prefixes.ttl | cat - tmp.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/schema-dataset.trig
   cat  ./out/*.trig | $RIOT --base https://dataspace.underpinproject.eu/ --syntax trig --formatted trig > out/dataspace.trig
   zip -j "out/dataspace.zip" "out/dataspace.trig"
-  rm dataspace.trig
+  rm out/dataspace.trig
 
   echo "... Done! Exporting GDB repository!"
 else
