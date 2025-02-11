@@ -353,20 +353,36 @@ This section describes:
 - What are the identifiers, URLs and other "addressing information" of various objects.
   We store such info as semantic metadata.
 
-We use 3 stores and describe the data organization mechanisms they have
-(TODO add references):
+We use 3 stores and describe the data organization mechanisms we use for each store.
+(TODO add references)
 - File store: implemented as Minio/S3, keeps CSV files (individual datasets):
-  - Bucket: file space with distinct access control.
-    Each dataspace participant has its own bucket.
-  - Object: file.
-    Each dataset is
-    - The name could be hierarchical (a subfolder hierarchy), but we don't use this
+  - **Bucket**: file space with distinct access control.
+    - Each dataspace participant&connector (eg Motor Oil is "BPNLY3SEIW.CV064VJ") has its own bucket.
+    - The bucket includes both datasets provided (own) and consumed by the participant
+  - Object: a CSV filename, equal to `dcat:Dataset . dct:identifier`.
+    - Each dataset is a separate object.
+    - Object names are unique **across buckets** (because the original participant&connector is not part of the object name)
+  - TODO: Object names could be hierarchical (a subfolder hierarchy), but we don't use this
 - Time-series database: implemented using Influx
-  - Bucket: distinct access control and disposition policies.
-    A dataspace participant may have one bucket.
-  - Measurement: a table with homogeneous structure.
-    Each dataset is loaded in a distinct measurement.
-- Semantic repository: implemented using GraphDB
+  - **Bucket**: distinct access control and disposition policies.
+    - A dataspace participant&connector may have one bucket.
+  - **Measurement**: a table with homogeneous structure.
+    - Each Measurement is represented by `dcat:DatasetSeries`
+    - CSV dataset with the same structure (spatial and/or or temporal slices) are ingested to the same Measurement, and have relations `dcat:inSeries` to it
+    - The metadata of a `DatasetSeries` and all its slices is **the same**, except:
+      - `dct:identifier`: one has suffix "-influx", the other ".csv"
+      - `dct:spatial` (if present): the Influx dataset has the union of all CSVs
+      - `dct:spatial`: the Influx dataset has the union of all CSVs, 
+        i.e. `I.startDate=min(C.startDate)` and `I.endDate=max(C.endDate)` 
+        where `I` is the Influx dataset series, and `C` ranges over all CSV dataset slices
+      - `dct:title`: one mentions Influx, the other CSV; and the time designation of the Influx dataset is extended appropriately
+- Semantic database: implemented using GraphDB
+  - Repositories:
+    - `vocabulary-hub`: UNDERPIN thesauri and reference ontologies.
+      - Fetched by PoolParty as external data, which is a bit slow (0.5-1s delay). TODO can we speed it up?
+    - `catalog`: includes all table schemas (`csvw:Schema`) and dataset metadata (`dcat:Dataset`)
+    - `dataspace`: will be deleted, issue https://github.com/underpin-project/dataspace/issues/76
+    - `datavault`: might be deleted, issue https://github.com/underpin-project/dataspace/issues/76
 
 ## UNDERPIN Semantic Data Loading
 
