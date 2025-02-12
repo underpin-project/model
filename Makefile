@@ -1,7 +1,8 @@
 ﻿SCHEMA = schema-windfarm.ttl schema-windfarm-generator2.ttl schema-windfarm-ait.ttl schema-windfarm-result.ttl schema-refinery.ttl schema-refinery-result-anomaly.ttl
 UPDATES = $(patsubst %.ttl, %.ru, $(SCHEMA) dataset.ttl)
+GSHEETS = $(patsubst %.ttl, google-sheets/%.csv, $(SCHEMA) dataset.ttl)
 
-all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png out/elastic-index-datasets.ru out/elastic-index-catalog.ru out/updates.ru
+all: prefixes.rq $(SCHEMA) $(UPDATES) $(GSHEETS) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png out/elastic-index-datasets.ru out/elastic-index-catalog.ru out/updates.ru
 
 dataset-extra.ttl: dataset.ttl dataset-extra.txt
 	cat $^ > $@
@@ -11,6 +12,9 @@ prefixes.rq: prefixes.ttl
 
 $(SCHEMA): schema-replace.pl schema-template.txt
 	perl $^
+
+$(GSHEETS): scripts/get-google-sheets.sh google-sheets/config.yaml
+	./scripts/get-google-sheets.sh $(notdir $@)
 
 %.png: %.ttl prefixes.ttl
 	perl -S rdfpuml.pl $*.ttl
