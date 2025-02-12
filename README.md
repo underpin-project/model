@@ -381,7 +381,7 @@ We use 3 stores and describe the data organization mechanisms we use for each st
     - `vocabulary-hub`: UNDERPIN thesauri and reference ontologies.
       - Fetched by PoolParty as external data, which is a bit slow (0.5-1s delay). TODO can we speed it up?
     - `catalog`: includes all table schemas (`csvw:Schema`) and dataset metadata (`dcat:Dataset`)
-    - `dataspace`: will be deleted, issue https://github.com/underpin-project/dataspace/issues/76
+    - `dataspace`: will be deleted, issue https://github.com/underpin-project/dataspace/issues/74
     - `datavault`: might be deleted, issue https://github.com/underpin-project/dataspace/issues/76
 
 ## UNDERPIN Semantic Data Loading
