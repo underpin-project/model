@@ -26,5 +26,5 @@ out/elastic-index-datasets.ru: elastic-index.yaml
 out/elastic-index-catalog.ru: elastic-index.yaml
 	perl -S index-yaml-json-sparql.pl --index=catalog $^ > $@
 
-out/updates.ru: update-add-prefLabel.ru update-collect-feature-definitions.ru update-collect-keywords.ru update-fix-skos.ru update-participantId.ru
-	cat $^ > $@
+out/updates.ru: $(wildcard updates/*.ru)
+	cat $(sort $^) > $@

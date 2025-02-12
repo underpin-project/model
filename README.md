@@ -393,10 +393,10 @@ UNDERPIN metadata consists of the following files in folder [out](out):
 - `schema.trig`: CSVW schemas as per [Table Schema Model](#table-schema-model), each in a separate  `<graph/schema/(schema)`
 
 After loading the data, run the following updates:
-- [update-add-prefLabel.ru](update-add-prefLabel.ru) for `qudt:Unit` and `qudt:QuantityKind`, adds `skos:prefLabel` derived from `rdfs:label@en`
-- [update-collect-feature-definitions.ru](update-collect-feature-definitions.ru): centralizes feature definitions coming from various schemas into the single `<graph/ontology-and-thesauri>`.
+- [update-add-prefLabel.ru](updates/01-add-prefLabel.ru) for `qudt:Unit` and `qudt:QuantityKind`, adds `skos:prefLabel` derived from `rdfs:label@en`
+- [update-collect-feature-definitions.ru](updates/02-collect-feature-definitions.ru): centralizes feature definitions coming from various schemas into the single `<graph/ontology-and-thesauri>`.
   Many features are used across several different schemas: this update eliminates duplicate statements (eg `skos:prefLabel`) living in different graphs.
-- [update-collect-keywords.ru](update-collect-keywords.ru): collects labels of interest (features and a few more facets)  to `dcat:keyword`:
+- [update-collect-keywords.ru](updates/03-collect-keywords.ru): collects labels of interest (features and a few more facets)  to `dcat:keyword`:
   - at the `dcat:Dataset` level:
     - `dct:spatial`
     - `skos:prefLabel` of `dct:type`
