@@ -117,7 +117,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG06-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Cooling Water"@en , "Slip Ring"@en , "Alarm"@en , "Spinner"@en , "Voltage Control Processor"@en , "frequency"@en , "ampere"@en , "power"@en , "Wind Farm"@en , "Temperature"@en , "Phase2"@en , "Wind Turbine"@en , "Hour"@en , "Capacitance"@en , "Linear Velocity"@en , "metre per second"@en , "WF1-WTG06"@en , "Pitch"@en , "Blades"@en , "degree Celsius"@en , "inductance"@en , "Ambient"@en , "System Logs"@en , "Phase3"@en , "Shaft"@en , "Revolution per Minute"@en , "Volt Ampere Reactive"@en , "power factor"@en , "volt"@en , "hertz"@en , "High Voltage Transformer"@en , "Rotor"@en , "farad"@en , "Busbar"@en , "Voltage"@en , "Service"@en , "angular velocity"@en , "Bearing"@en , "electric current"@en , "Gearbox"@en , "Generator"@en , "Controller"@en , "Wind"@en , "Yaw"@en , "Angle"@en , "Unitless"@en , "reactive power"@en , "Parameter"@en , "Degree"@en , "Turbine"@en , "Nacelle"@en , "henry"@en , "time"@en , "watt"@en , "Grid"@en , "Production"@en , "Inverter"@en , "Phase1"@en , "Oil"@en , "Active Power"@en ;
+            dcat:keyword        "Cooling Water"@en , "Slip Ring"@en , "Minimum"@en , "Alarm"@en , "Spinner"@en , "Run time"@en , "Voltage Control Processor"@en , "frequency"@en , "ampere"@en , "power"@en , "Limit"@en , "Wind Farm"@en , "Possible"@en , "Absolute"@en , "Temperature"@en , "Phase2"@en , "Wind Turbine"@en , "Hour"@en , "Capacitance"@en , "Linear Velocity"@en , "metre per second"@en , "Setpoint"@en , "WF1-WTG06"@en , "Pitch"@en , "Latest"@en , "Estimate"@en , "Blades"@en , "degree Celsius"@en , "inductance"@en , "Ambient"@en , "System Logs"@en , "Phase3"@en , "Shaft"@en , "Revolution per Minute"@en , "Volt Ampere Reactive"@en , "power factor"@en , "volt"@en , "CSV dataset"@en , "hertz"@en , "High Voltage Transformer"@en , "Busbar"@en , "Rotor"@en , "farad"@en , "Standard Deviation"@en , "Voltage"@en , "Total"@en , "Service"@en , "angular velocity"@en , "Bearing"@en , "electric current"@en , "Gearbox"@en , "Generator"@en , "Controller"@en , "Wind"@en , "Yaw"@en , "Relative"@en , "Average"@en , "Input dataset"@en , "Angle"@en , "Unitless"@en , "reactive power"@en , "Parameter"@en , "Degree"@en , "Turbine"@en , "Nacelle"@en , "Maximum"@en , "Accumulated"@en , "henry"@en , "time"@en , "watt"@en , "Grid"@en , "Production"@en , "Inverter"@en , "Phase1"@en , "Oil"@en , "Active Power"@en ;
             edc:id              "windfarm-WF1-WTG06-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -143,7 +143,7 @@
             dcterms:title       "Wind turbine WF1-WTG05 predictions for 2019 as influx"@en ;
             dcterms:type        <type/result> , <type/influx> ;
             dcat:distribution   <dataset/windfarm-result-WF1-WTG05-2019-influx/distribution> ;
-            dcat:keyword        "Temperature"@en , "WF1-WTG05"@en , "Wind Farm"@en , "Wind Turbine"@en , "Generator"@en , "degree Celsius"@en , "Predictions"@en , "Bearing"@en ;
+            dcat:keyword        "5th Percentile"@en , "Anomaly"@en , "Temperature"@en , "WF1-WTG05"@en , "Average"@en , "Result dataset"@en , "Wind Farm"@en , "Wind Turbine"@en , "Generator"@en , "degree Celsius"@en , "Residual"@en , "Influx dataset"@en , "Predictions"@en , "Bearing"@en , "95th Percentile"@en , "Predicted"@en ;
             :wasDerivedFrom     <dataset/windfarm-WF1-WTG05-2019-influx> ;
             edc:id              "windfarm-result-WF1-WTG05-2019-influx" ;
             edc:participantId   "BPNLY38WC4.CLEGCS4" .
@@ -173,7 +173,7 @@
             dcterms:type        <type/csv> , <type/result> ;
             dcat:distribution   <dataset/windfarm-result-WF1-WTG05-2019.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-WTG05-2019> ;
-            dcat:keyword        "Inverter"@en , "inductance"@en , "Slip Ring"@en , "henry"@en , "WF1-WTG05"@en , "power"@en , "Grid"@en , "time"@en , "Capacitance"@en , "Yaw"@en , "volt"@en , "Parameter"@en , "hertz"@en , "metre per second"@en , "Cooling Water"@en , "Nacelle"@en , "Blades"@en , "Degree"@en , "Phase2"@en , "Ambient"@en , "Generator"@en , "Service"@en , "Voltage Control Processor"@en , "Wind Farm"@en , "Voltage"@en , "Hour"@en , "Raw data"@en , "Active Power"@en , "Oil"@en , "Angle"@en , "angular velocity"@en , "degree Celsius"@en , "Shaft"@en , "Alarm"@en , "ampere"@en , "Wind"@en , "Gearbox"@en , "Phase1"@en , "Revolution per Minute"@en , "reactive power"@en , "watt"@en , "Bearing"@en , "Temperature"@en , "Volt Ampere Reactive"@en , "Rotor"@en , "electric current"@en , "Spinner"@en , "System Logs"@en , "High Voltage Transformer"@en , "farad"@en , "frequency"@en , "Linear Velocity"@en , "power factor"@en , "Controller"@en , "Production"@en , "Turbine"@en , "Busbar"@en , "Unitless"@en , "Pitch"@en , "Wind Turbine"@en , "Phase3"@en ;
+            dcat:keyword        "Run time"@en , "Inverter"@en , "inductance"@en , "Latest"@en , "Slip Ring"@en , "henry"@en , "Accumulated"@en , "CSV dataset"@en , "Total"@en , "WF1-WTG05"@en , "power"@en , "Grid"@en , "time"@en , "Capacitance"@en , "Yaw"@en , "volt"@en , "Setpoint"@en , "Parameter"@en , "hertz"@en , "metre per second"@en , "Cooling Water"@en , "Nacelle"@en , "Blades"@en , "Absolute"@en , "Degree"@en , "Phase2"@en , "Ambient"@en , "Generator"@en , "Service"@en , "Voltage Control Processor"@en , "Wind Farm"@en , "Result dataset"@en , "Voltage"@en , "Hour"@en , "Raw data"@en , "Active Power"@en , "Oil"@en , "Angle"@en , "angular velocity"@en , "degree Celsius"@en , "Possible"@en , "Estimate"@en , "Shaft"@en , "Maximum"@en , "Limit"@en , "Alarm"@en , "ampere"@en , "Anomaly"@en , "Wind"@en , "Gearbox"@en , "Standard Deviation"@en , "Phase1"@en , "Revolution per Minute"@en , "reactive power"@en , "watt"@en , "Bearing"@en , "Minimum"@en , "Temperature"@en , "Volt Ampere Reactive"@en , "Rotor"@en , "Average"@en , "electric current"@en , "Spinner"@en , "Relative"@en , "System Logs"@en , "High Voltage Transformer"@en , "farad"@en , "frequency"@en , "Linear Velocity"@en , "power factor"@en , "Controller"@en , "Production"@en , "Turbine"@en , "Busbar"@en , "Unitless"@en , "Pitch"@en , "Wind Turbine"@en , "Phase3"@en ;
             :wasDerivedFrom     <dataset/2019> ;
             edc:id              "windfarm-result-WF1-WTG05-2019.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
@@ -196,7 +196,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-06.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "K-7502/ST-7501"@en , "Motor"@en , "Kilogram per Hour"@en , "Inlet"@en , "Thrust Pads"@en , "Temperature"@en , "Radial"@en , "Vibration"@en , "Revolution per Minute"@en , "Primary Vent"@en , "Micrometre"@en , "Outlet"@en , "Lube Oil"@en , "Displacement"@en , "Discharge"@en , "Journal Pads"@en , "K-3301 B/KT-3301 B"@en , "Mass Flow Rate"@en , "pressure"@en , "Blow Off"@en , "electric current"@en , "Control Oil"@en , "Seal Oil"@en , "Gearbox"@en , "Main Pump"@en , "Compressor"@en , "Stator"@en , "Kilogram Force per Square Centimetre"@en , "degree Celsius"@en , "Millimetre"@en , "K-2201/KT-2201"@en , "Turbine"@en , "K-3201 A/KM-3201 A"@en , "Axial"@en , "angular velocity"@en , "Journal Bearing"@en , "Refinery"@en , "Compressed Air"@en , "ampere"@en , "Steam Turbine"@en , "Bearing"@en , "Shaft"@en , "K-5701"@en , "Thrust Bearing"@en , "distance"@en ;
+            dcat:keyword        "CSV dataset"@en , "K-7502/ST-7501"@en , "Input dataset"@en , "Motor"@en , "Kilogram per Hour"@en , "Inlet"@en , "Thrust Pads"@en , "Temperature"@en , "Radial"@en , "Vibration"@en , "Differential"@en , "Revolution per Minute"@en , "Primary Vent"@en , "Micrometre"@en , "Outlet"@en , "Lube Oil"@en , "Displacement"@en , "Discharge"@en , "Journal Pads"@en , "K-3301 B/KT-3301 B"@en , "Mass Flow Rate"@en , "pressure"@en , "Blow Off"@en , "electric current"@en , "Control Oil"@en , "Seal Oil"@en , "Gearbox"@en , "Minimum"@en , "Main Pump"@en , "Maximum"@en , "Compressor"@en , "Stator"@en , "Kilogram Force per Square Centimetre"@en , "degree Celsius"@en , "Millimetre"@en , "K-2201/KT-2201"@en , "Turbine"@en , "K-3201 A/KM-3201 A"@en , "Average"@en , "Axial"@en , "angular velocity"@en , "Journal Bearing"@en , "Refinery"@en , "Compressed Air"@en , "ampere"@en , "Steam Turbine"@en , "Bearing"@en , "Shaft"@en , "K-5701"@en , "Thrust Bearing"@en , "distance"@en ;
             edc:id              "refinery-compressor-2022-06.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -228,7 +228,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG04-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Unitless"@en , "Busbar"@en , "Wind"@en , "Spinner"@en , "ampere"@en , "Slip Ring"@en , "frequency"@en , "Hour"@en , "henry"@en , "Voltage"@en , "Revolution per Minute"@en , "Capacitance"@en , "metre per second"@en , "Phase3"@en , "Inverter"@en , "Blades"@en , "power factor"@en , "Rotor"@en , "System Logs"@en , "inductance"@en , "hertz"@en , "electric current"@en , "time"@en , "Production"@en , "Service"@en , "Ambient"@en , "Phase2"@en , "farad"@en , "Volt Ampere Reactive"@en , "watt"@en , "Nacelle"@en , "Active Power"@en , "Parameter"@en , "Wind Farm"@en , "Linear Velocity"@en , "Angle"@en , "Yaw"@en , "High Voltage Transformer"@en , "angular velocity"@en , "Oil"@en , "Controller"@en , "Alarm"@en , "reactive power"@en , "Turbine"@en , "Bearing"@en , "Shaft"@en , "WF1-WTG04"@en , "Gearbox"@en , "Temperature"@en , "Grid"@en , "Phase1"@en , "Voltage Control Processor"@en , "power"@en , "Wind Turbine"@en , "volt"@en , "Cooling Water"@en , "Pitch"@en , "Degree"@en , "degree Celsius"@en , "Generator"@en ;
+            dcat:keyword        "Unitless"@en , "Busbar"@en , "Maximum"@en , "Estimate"@en , "Input dataset"@en , "Wind"@en , "Spinner"@en , "ampere"@en , "Slip Ring"@en , "frequency"@en , "Hour"@en , "henry"@en , "Voltage"@en , "Revolution per Minute"@en , "Capacitance"@en , "metre per second"@en , "Phase3"@en , "Inverter"@en , "Blades"@en , "power factor"@en , "Limit"@en , "Rotor"@en , "System Logs"@en , "inductance"@en , "hertz"@en , "electric current"@en , "Possible"@en , "Latest"@en , "Minimum"@en , "Absolute"@en , "time"@en , "Average"@en , "Production"@en , "Total"@en , "Service"@en , "Ambient"@en , "Phase2"@en , "farad"@en , "Volt Ampere Reactive"@en , "watt"@en , "Nacelle"@en , "Relative"@en , "Active Power"@en , "Parameter"@en , "Wind Farm"@en , "Linear Velocity"@en , "Angle"@en , "Yaw"@en , "CSV dataset"@en , "High Voltage Transformer"@en , "angular velocity"@en , "Oil"@en , "Controller"@en , "Alarm"@en , "reactive power"@en , "Turbine"@en , "Bearing"@en , "Run time"@en , "Shaft"@en , "WF1-WTG04"@en , "Gearbox"@en , "Temperature"@en , "Standard Deviation"@en , "Grid"@en , "Phase1"@en , "Voltage Control Processor"@en , "power"@en , "Wind Turbine"@en , "volt"@en , "Cooling Water"@en , "Pitch"@en , "Accumulated"@en , "Degree"@en , "degree Celsius"@en , "Setpoint"@en , "Generator"@en ;
             edc:id              "windfarm-WF1-WTG04-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -251,7 +251,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-03.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Turbine"@en , "Gearbox"@en , "Bearing"@en , "Millimetre"@en , "Compressed Air"@en , "Radial"@en , "Journal Pads"@en , "angular velocity"@en , "degree Celsius"@en , "Axial"@en , "Blow Off"@en , "Kilogram Force per Square Centimetre"@en , "ampere"@en , "Vibration"@en , "K-5701"@en , "K-3201 A/KM-3201 A"@en , "K-7502/ST-7501"@en , "Primary Vent"@en , "Shaft"@en , "Journal Bearing"@en , "Seal Oil"@en , "Control Oil"@en , "Micrometre"@en , "Steam Turbine"@en , "Temperature"@en , "Displacement"@en , "K-3301 B/KT-3301 B"@en , "Kilogram per Hour"@en , "Discharge"@en , "pressure"@en , "Mass Flow Rate"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Compressor"@en , "electric current"@en , "Thrust Pads"@en , "Motor"@en , "distance"@en , "Refinery"@en , "Inlet"@en , "Stator"@en , "Lube Oil"@en , "Outlet"@en , "Main Pump"@en , "Revolution per Minute"@en ;
+            dcat:keyword        "Turbine"@en , "Gearbox"@en , "Bearing"@en , "Millimetre"@en , "Differential"@en , "Compressed Air"@en , "Radial"@en , "Journal Pads"@en , "angular velocity"@en , "degree Celsius"@en , "Axial"@en , "Blow Off"@en , "Kilogram Force per Square Centimetre"@en , "ampere"@en , "CSV dataset"@en , "Vibration"@en , "K-5701"@en , "K-3201 A/KM-3201 A"@en , "Primary Vent"@en , "K-7502/ST-7501"@en , "Shaft"@en , "Journal Bearing"@en , "Seal Oil"@en , "Control Oil"@en , "Average"@en , "Micrometre"@en , "Input dataset"@en , "Steam Turbine"@en , "Temperature"@en , "Displacement"@en , "K-3301 B/KT-3301 B"@en , "Kilogram per Hour"@en , "Discharge"@en , "pressure"@en , "Mass Flow Rate"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Compressor"@en , "electric current"@en , "Thrust Pads"@en , "Motor"@en , "distance"@en , "Refinery"@en , "Inlet"@en , "Stator"@en , "Lube Oil"@en , "Minimum"@en , "Outlet"@en , "Maximum"@en , "Main Pump"@en , "Revolution per Minute"@en ;
             edc:id              "refinery-compressor-2022-03.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -278,7 +278,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-07.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "electric current"@en , "Refinery"@en , "Journal Pads"@en , "Lube Oil"@en , "Millimetre"@en , "Discharge"@en , "Journal Bearing"@en , "Inlet"@en , "Micrometre"@en , "Kilogram Force per Square Centimetre"@en , "Vibration"@en , "Turbine"@en , "Motor"@en , "pressure"@en , "ampere"@en , "Control Oil"@en , "Revolution per Minute"@en , "degree Celsius"@en , "Stator"@en , "Seal Oil"@en , "Displacement"@en , "Temperature"@en , "K-2201/KT-2201"@en , "Compressed Air"@en , "Blow Off"@en , "K-5701"@en , "Main Pump"@en , "Thrust Pads"@en , "Bearing"@en , "Axial"@en , "Shaft"@en , "Thrust Bearing"@en , "K-3301 B/KT-3301 B"@en , "Steam Turbine"@en , "Primary Vent"@en , "distance"@en , "Radial"@en , "K-7502/ST-7501"@en , "K-3201 A/KM-3201 A"@en , "angular velocity"@en , "Kilogram per Hour"@en , "Mass Flow Rate"@en , "Outlet"@en , "Gearbox"@en , "Compressor"@en ;
+            dcat:keyword        "electric current"@en , "Refinery"@en , "Minimum"@en , "Journal Pads"@en , "Lube Oil"@en , "Millimetre"@en , "Discharge"@en , "Inlet"@en , "Journal Bearing"@en , "Micrometre"@en , "Kilogram Force per Square Centimetre"@en , "Vibration"@en , "Turbine"@en , "Motor"@en , "pressure"@en , "Maximum"@en , "ampere"@en , "Control Oil"@en , "Revolution per Minute"@en , "degree Celsius"@en , "Stator"@en , "Seal Oil"@en , "Displacement"@en , "Temperature"@en , "K-2201/KT-2201"@en , "Compressed Air"@en , "Blow Off"@en , "K-5701"@en , "Main Pump"@en , "Thrust Pads"@en , "Bearing"@en , "CSV dataset"@en , "Axial"@en , "Input dataset"@en , "Shaft"@en , "Thrust Bearing"@en , "K-3301 B/KT-3301 B"@en , "Steam Turbine"@en , "Primary Vent"@en , "distance"@en , "Radial"@en , "K-7502/ST-7501"@en , "K-3201 A/KM-3201 A"@en , "Differential"@en , "angular velocity"@en , "Kilogram per Hour"@en , "Mass Flow Rate"@en , "Outlet"@en , "Gearbox"@en , "Compressor"@en , "Average"@en ;
             edc:id              "refinery-compressor-2022-07.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -2005,7 +2005,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG02-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Angle"@en , "Phase1"@en , "hertz"@en , "electric current"@en , "Rotor"@en , "Yaw"@en , "Volt Ampere Reactive"@en , "angular velocity"@en , "ampere"@en , "Inverter"@en , "Temperature"@en , "Capacitance"@en , "WF1-WTG02"@en , "metre per second"@en , "Turbine"@en , "Oil"@en , "Cooling Water"@en , "Generator"@en , "inductance"@en , "System Logs"@en , "henry"@en , "Service"@en , "frequency"@en , "Wind Turbine"@en , "Shaft"@en , "Ambient"@en , "Hour"@en , "Parameter"@en , "Active Power"@en , "Voltage Control Processor"@en , "Bearing"@en , "Phase3"@en , "Controller"@en , "Blades"@en , "Alarm"@en , "volt"@en , "Voltage"@en , "Slip Ring"@en , "Unitless"@en , "Revolution per Minute"@en , "degree Celsius"@en , "Busbar"@en , "reactive power"@en , "Pitch"@en , "Wind"@en , "Grid"@en , "Phase2"@en , "Degree"@en , "watt"@en , "High Voltage Transformer"@en , "power"@en , "Spinner"@en , "Production"@en , "power factor"@en , "Wind Farm"@en , "Gearbox"@en , "Linear Velocity"@en , "time"@en , "Nacelle"@en , "farad"@en ;
+            dcat:keyword        "Possible"@en , "Angle"@en , "Phase1"@en , "hertz"@en , "Absolute"@en , "electric current"@en , "Rotor"@en , "Yaw"@en , "Accumulated"@en , "Volt Ampere Reactive"@en , "angular velocity"@en , "ampere"@en , "Inverter"@en , "Temperature"@en , "Capacitance"@en , "WF1-WTG02"@en , "Limit"@en , "metre per second"@en , "Turbine"@en , "Oil"@en , "Cooling Water"@en , "Generator"@en , "inductance"@en , "System Logs"@en , "henry"@en , "Service"@en , "frequency"@en , "Wind Turbine"@en , "Shaft"@en , "Ambient"@en , "Hour"@en , "Parameter"@en , "Active Power"@en , "Voltage Control Processor"@en , "Bearing"@en , "Phase3"@en , "Controller"@en , "Blades"@en , "Alarm"@en , "volt"@en , "Voltage"@en , "Slip Ring"@en , "Run time"@en , "Unitless"@en , "Revolution per Minute"@en , "Relative"@en , "degree Celsius"@en , "Busbar"@en , "reactive power"@en , "Pitch"@en , "Wind"@en , "Standard Deviation"@en , "Grid"@en , "Phase2"@en , "Degree"@en , "watt"@en , "Estimate"@en , "High Voltage Transformer"@en , "Maximum"@en , "Average"@en , "power"@en , "Spinner"@en , "Setpoint"@en , "Minimum"@en , "Production"@en , "Latest"@en , "power factor"@en , "CSV dataset"@en , "Input dataset"@en , "Wind Farm"@en , "Gearbox"@en , "Linear Velocity"@en , "time"@en , "Nacelle"@en , "Total"@en , "farad"@en ;
             edc:id              "windfarm-WF1-WTG02-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -2037,7 +2037,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG09-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Busbar"@en , "reactive power"@en , "Grid"@en , "watt"@en , "Parameter"@en , "Rotor"@en , "Production"@en , "Shaft"@en , "System Logs"@en , "Cooling Water"@en , "frequency"@en , "Voltage Control Processor"@en , "Generator"@en , "Angle"@en , "High Voltage Transformer"@en , "Spinner"@en , "Hour"@en , "degree Celsius"@en , "Wind Turbine"@en , "Controller"@en , "Oil"@en , "Phase1"@en , "ampere"@en , "Alarm"@en , "Slip Ring"@en , "power factor"@en , "hertz"@en , "Temperature"@en , "Blades"@en , "Inverter"@en , "Bearing"@en , "angular velocity"@en , "Revolution per Minute"@en , "Yaw"@en , "inductance"@en , "volt"@en , "Volt Ampere Reactive"@en , "Active Power"@en , "metre per second"@en , "Phase2"@en , "Unitless"@en , "Ambient"@en , "Degree"@en , "Wind"@en , "Nacelle"@en , "time"@en , "Gearbox"@en , "electric current"@en , "Wind Farm"@en , "power"@en , "farad"@en , "Voltage"@en , "Linear Velocity"@en , "henry"@en , "Capacitance"@en , "WF1-WTG09"@en , "Service"@en , "Pitch"@en , "Turbine"@en , "Phase3"@en ;
+            dcat:keyword        "Busbar"@en , "reactive power"@en , "Maximum"@en , "Grid"@en , "watt"@en , "Parameter"@en , "Rotor"@en , "Standard Deviation"@en , "Production"@en , "Shaft"@en , "System Logs"@en , "Cooling Water"@en , "Setpoint"@en , "frequency"@en , "Input dataset"@en , "Voltage Control Processor"@en , "Generator"@en , "Angle"@en , "High Voltage Transformer"@en , "Spinner"@en , "Estimate"@en , "Minimum"@en , "Hour"@en , "degree Celsius"@en , "Wind Turbine"@en , "Controller"@en , "Oil"@en , "Phase1"@en , "Possible"@en , "Latest"@en , "ampere"@en , "Run time"@en , "Alarm"@en , "Slip Ring"@en , "Total"@en , "power factor"@en , "hertz"@en , "Temperature"@en , "Blades"@en , "Inverter"@en , "Absolute"@en , "Bearing"@en , "Accumulated"@en , "angular velocity"@en , "Revolution per Minute"@en , "Yaw"@en , "inductance"@en , "volt"@en , "Volt Ampere Reactive"@en , "Active Power"@en , "CSV dataset"@en , "metre per second"@en , "Average"@en , "Phase2"@en , "Unitless"@en , "Ambient"@en , "Degree"@en , "Limit"@en , "Wind"@en , "Nacelle"@en , "time"@en , "Gearbox"@en , "electric current"@en , "Relative"@en , "Wind Farm"@en , "power"@en , "farad"@en , "Voltage"@en , "Linear Velocity"@en , "henry"@en , "Capacitance"@en , "WF1-WTG09"@en , "Service"@en , "Pitch"@en , "Turbine"@en , "Phase3"@en ;
             edc:id              "windfarm-WF1-WTG09-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -2238,7 +2238,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-12.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Main Pump"@en , "Kilogram per Hour"@en , "Revolution per Minute"@en , "Thrust Pads"@en , "Vibration"@en , "angular velocity"@en , "Micrometre"@en , "Seal Oil"@en , "Turbine"@en , "Discharge"@en , "K-3201 A/KM-3201 A"@en , "Thrust Bearing"@en , "Journal Pads"@en , "K-3301 B/KT-3301 B"@en , "Motor"@en , "Outlet"@en , "Lube Oil"@en , "Compressor"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "K-2201/KT-2201"@en , "Compressed Air"@en , "degree Celsius"@en , "ampere"@en , "distance"@en , "K-5701"@en , "Temperature"@en , "Mass Flow Rate"@en , "K-7502/ST-7501"@en , "Axial"@en , "Control Oil"@en , "Millimetre"@en , "Primary Vent"@en , "Refinery"@en , "Journal Bearing"@en , "Inlet"@en , "Stator"@en , "Displacement"@en , "Shaft"@en , "Steam Turbine"@en , "Radial"@en , "pressure"@en , "Blow Off"@en , "electric current"@en , "Bearing"@en ;
+            dcat:keyword        "Main Pump"@en , "Kilogram per Hour"@en , "Revolution per Minute"@en , "Thrust Pads"@en , "Vibration"@en , "angular velocity"@en , "Minimum"@en , "Micrometre"@en , "Seal Oil"@en , "Turbine"@en , "Discharge"@en , "K-3201 A/KM-3201 A"@en , "Thrust Bearing"@en , "Journal Pads"@en , "K-3301 B/KT-3301 B"@en , "Motor"@en , "Outlet"@en , "Compressor"@en , "Lube Oil"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "K-2201/KT-2201"@en , "Compressed Air"@en , "CSV dataset"@en , "degree Celsius"@en , "ampere"@en , "distance"@en , "K-5701"@en , "Temperature"@en , "Mass Flow Rate"@en , "K-7502/ST-7501"@en , "Axial"@en , "Control Oil"@en , "Millimetre"@en , "Primary Vent"@en , "Refinery"@en , "Journal Bearing"@en , "Maximum"@en , "Inlet"@en , "Average"@en , "Stator"@en , "Displacement"@en , "Shaft"@en , "Steam Turbine"@en , "Radial"@en , "Differential"@en , "pressure"@en , "Blow Off"@en , "electric current"@en , "Input dataset"@en , "Bearing"@en ;
             edc:id              "refinery-compressor-2022-12.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -2269,7 +2269,7 @@
             dcterms:type        <type/result> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-result-future-2022-12.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-result-future-2022-influx> ;
-            dcat:keyword        "Thrust Pads"@en , "Bearing"@en , "K-3201 A/KM-3201 A"@en , "Radial"@en , "Motor"@en , "K-5701"@en , "Turbine"@en , "Inlet"@en , "K-7502/ST-7501"@en , "Thrust Bearing"@en , "Lube Oil"@en , "Displacement"@en , "Shaft"@en , "K-2201/KT-2201"@en , "Control Oil"@en , "Compressor"@en , "Mass Flow Rate"@en , "Axial"@en , "angular velocity"@en , "Journal Bearing"@en , "Refinery"@en , "Vibration"@en , "ampere"@en , "degree Celsius"@en , "Revolution per Minute"@en , "Millimetre"@en , "Steam Turbine"@en , "K-3301 B/KT-3301 B"@en , "Primary Vent"@en , "Temperature"@en , "Blow Off"@en , "Predicted"@en , "distance"@en , "electric current"@en , "Compressed Air"@en , "Kilogram per Hour"@en , "pressure"@en , "Main Pump"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "Micrometre"@en , "Seal Oil"@en , "Stator"@en , "Discharge"@en , "Outlet"@en , "Journal Pads"@en ;
+            dcat:keyword        "Thrust Pads"@en , "Bearing"@en , "K-3201 A/KM-3201 A"@en , "Radial"@en , "Motor"@en , "K-5701"@en , "Turbine"@en , "Inlet"@en , "K-7502/ST-7501"@en , "Thrust Bearing"@en , "Lube Oil"@en , "Result dataset"@en , "Maximum"@en , "Displacement"@en , "Shaft"@en , "K-2201/KT-2201"@en , "Control Oil"@en , "Compressor"@en , "Mass Flow Rate"@en , "Average"@en , "Differential"@en , "Axial"@en , "angular velocity"@en , "Journal Bearing"@en , "Refinery"@en , "Vibration"@en , "ampere"@en , "degree Celsius"@en , "Revolution per Minute"@en , "Millimetre"@en , "Steam Turbine"@en , "Minimum"@en , "K-3301 B/KT-3301 B"@en , "Primary Vent"@en , "Temperature"@en , "Blow Off"@en , "Predicted"@en , "distance"@en , "electric current"@en , "CSV dataset"@en , "Compressed Air"@en , "Kilogram per Hour"@en , "pressure"@en , "Main Pump"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "Micrometre"@en , "Seal Oil"@en , "Stator"@en , "Discharge"@en , "Outlet"@en , "Journal Pads"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-12.csv> ;
             edc:id              "refinery-compressor-result-future-2022-12.csv" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -2298,7 +2298,7 @@
             dcterms:title       "Wind turbine WF1-WTG01 Generator case 2 data for 2022 as csv"@en ;
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-generator2-WF1-WTG01-2022.csv/distribution> ;
-            dcat:keyword        "power"@en , "Temperature"@en , "degree Celsius"@en , "torque"@en , "Generator"@en , "angular acceleration"@en , "Wind Farm"@en , "Kilonewton Metre"@en , "angular velocity"@en , "Drive Train"@en , "Winding"@en , "Kilowatt"@en , "WF1-WTG01"@en , "Disconnect Switch"@en , "Rotor"@en , "Revolution per Minute"@en ;
+            dcat:keyword        "power"@en , "Temperature"@en , "degree Celsius"@en , "torque"@en , "Generator"@en , "angular acceleration"@en , "Wind Farm"@en , "Kilonewton Metre"@en , "angular velocity"@en , "Drive Train"@en , "Winding"@en , "Input dataset"@en , "Demand"@en , "Kilowatt"@en , "WF1-WTG01"@en , "Disconnect Switch"@en , "CSV dataset"@en , "Rotor"@en , "Revolution per Minute"@en ;
             edc:id              "windfarm-generator2-WF1-WTG01-2022.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -2320,7 +2320,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-01.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Turbine"@en , "K-2201/KT-2201"@en , "pressure"@en , "angular velocity"@en , "Thrust Pads"@en , "Axial"@en , "K-3201 A/KM-3201 A"@en , "Micrometre"@en , "Shaft"@en , "Radial"@en , "Displacement"@en , "Journal Pads"@en , "Thrust Bearing"@en , "Kilogram Force per Square Centimetre"@en , "Inlet"@en , "K-5701"@en , "Compressor"@en , "Millimetre"@en , "Motor"@en , "distance"@en , "Primary Vent"@en , "degree Celsius"@en , "Kilogram per Hour"@en , "Main Pump"@en , "Compressed Air"@en , "Stator"@en , "Temperature"@en , "Gearbox"@en , "Steam Turbine"@en , "ampere"@en , "Lube Oil"@en , "Outlet"@en , "Discharge"@en , "Control Oil"@en , "Refinery"@en , "Blow Off"@en , "Vibration"@en , "Journal Bearing"@en , "Revolution per Minute"@en , "Mass Flow Rate"@en , "K-7502/ST-7501"@en , "K-3301 B/KT-3301 B"@en , "electric current"@en , "Bearing"@en , "Seal Oil"@en ;
+            dcat:keyword        "Turbine"@en , "K-2201/KT-2201"@en , "Minimum"@en , "pressure"@en , "angular velocity"@en , "CSV dataset"@en , "Thrust Pads"@en , "Axial"@en , "K-3201 A/KM-3201 A"@en , "Micrometre"@en , "Maximum"@en , "Shaft"@en , "Radial"@en , "Displacement"@en , "Journal Pads"@en , "Thrust Bearing"@en , "Differential"@en , "Kilogram Force per Square Centimetre"@en , "Inlet"@en , "K-5701"@en , "Compressor"@en , "Millimetre"@en , "Primary Vent"@en , "distance"@en , "Motor"@en , "degree Celsius"@en , "Kilogram per Hour"@en , "Main Pump"@en , "Compressed Air"@en , "Stator"@en , "Temperature"@en , "Gearbox"@en , "Steam Turbine"@en , "ampere"@en , "Lube Oil"@en , "Outlet"@en , "Average"@en , "Discharge"@en , "Control Oil"@en , "Refinery"@en , "Blow Off"@en , "Vibration"@en , "Journal Bearing"@en , "Revolution per Minute"@en , "Mass Flow Rate"@en , "Input dataset"@en , "K-7502/ST-7501"@en , "K-3301 B/KT-3301 B"@en , "electric current"@en , "Bearing"@en , "Seal Oil"@en ;
             edc:id              "refinery-compressor-2022-01.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -2357,7 +2357,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG10-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Turbine"@en , "metre per second"@en , "Volt Ampere Reactive"@en , "Linear Velocity"@en , "inductance"@en , "Busbar"@en , "Ambient"@en , "Voltage Control Processor"@en , "Production"@en , "Capacitance"@en , "Controller"@en , "power factor"@en , "Spinner"@en , "Service"@en , "frequency"@en , "Voltage"@en , "Phase3"@en , "farad"@en , "High Voltage Transformer"@en , "degree Celsius"@en , "Alarm"@en , "Active Power"@en , "Inverter"@en , "volt"@en , "Hour"@en , "Shaft"@en , "Rotor"@en , "Grid"@en , "Bearing"@en , "Cooling Water"@en , "Angle"@en , "Wind Turbine"@en , "Gearbox"@en , "henry"@en , "watt"@en , "Pitch"@en , "Revolution per Minute"@en , "Nacelle"@en , "Wind Farm"@en , "angular velocity"@en , "hertz"@en , "Generator"@en , "WF1-WTG10"@en , "Slip Ring"@en , "reactive power"@en , "Parameter"@en , "Blades"@en , "time"@en , "Temperature"@en , "Wind"@en , "power"@en , "electric current"@en , "Phase2"@en , "Phase1"@en , "Unitless"@en , "Oil"@en , "System Logs"@en , "ampere"@en , "Degree"@en , "Yaw"@en ;
+            dcat:keyword        "Turbine"@en , "metre per second"@en , "Input dataset"@en , "CSV dataset"@en , "Volt Ampere Reactive"@en , "Busbar"@en , "Ambient"@en , "Possible"@en , "Linear Velocity"@en , "inductance"@en , "Accumulated"@en , "Limit"@en , "Voltage Control Processor"@en , "Production"@en , "Capacitance"@en , "Controller"@en , "Average"@en , "power factor"@en , "Spinner"@en , "Service"@en , "frequency"@en , "Voltage"@en , "Standard Deviation"@en , "Phase3"@en , "Relative"@en , "farad"@en , "High Voltage Transformer"@en , "degree Celsius"@en , "Estimate"@en , "Alarm"@en , "Active Power"@en , "Inverter"@en , "Total"@en , "volt"@en , "Hour"@en , "Maximum"@en , "Absolute"@en , "Shaft"@en , "Rotor"@en , "Grid"@en , "Bearing"@en , "Cooling Water"@en , "Angle"@en , "Wind Turbine"@en , "Gearbox"@en , "henry"@en , "watt"@en , "Pitch"@en , "Revolution per Minute"@en , "Nacelle"@en , "Wind Farm"@en , "angular velocity"@en , "hertz"@en , "Generator"@en , "WF1-WTG10"@en , "Slip Ring"@en , "Latest"@en , "reactive power"@en , "Parameter"@en , "Blades"@en , "time"@en , "Temperature"@en , "Setpoint"@en , "Wind"@en , "Run time"@en , "power"@en , "Minimum"@en , "electric current"@en , "Phase2"@en , "Phase1"@en , "Unitless"@en , "Oil"@en , "System Logs"@en , "ampere"@en , "Degree"@en , "Yaw"@en ;
             edc:id              "windfarm-WF1-WTG10-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
 }
@@ -2375,7 +2375,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-04.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Blow Off"@en , "pressure"@en , "Primary Vent"@en , "Stator"@en , "Steam Turbine"@en , "Displacement"@en , "Journal Pads"@en , "Outlet"@en , "Refinery"@en , "Axial"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Main Pump"@en , "Radial"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Seal Oil"@en , "Compressed Air"@en , "Revolution per Minute"@en , "Vibration"@en , "Thrust Pads"@en , "Millimetre"@en , "angular velocity"@en , "K-5701"@en , "degree Celsius"@en , "Inlet"@en , "ampere"@en , "Temperature"@en , "Kilogram Force per Square Centimetre"@en , "Micrometre"@en , "Turbine"@en , "Shaft"@en , "electric current"@en , "Control Oil"@en , "K-3301 B/KT-3301 B"@en , "Discharge"@en , "Compressor"@en , "Lube Oil"@en , "Gearbox"@en , "Motor"@en , "Mass Flow Rate"@en , "distance"@en , "K-3201 A/KM-3201 A"@en , "K-7502/ST-7501"@en , "Bearing"@en ;
+            dcat:keyword        "Blow Off"@en , "pressure"@en , "Primary Vent"@en , "Stator"@en , "Steam Turbine"@en , "Displacement"@en , "Journal Pads"@en , "Outlet"@en , "Refinery"@en , "Axial"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Main Pump"@en , "Radial"@en , "Differential"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Input dataset"@en , "Seal Oil"@en , "Compressed Air"@en , "Revolution per Minute"@en , "Vibration"@en , "Thrust Pads"@en , "Millimetre"@en , "angular velocity"@en , "K-5701"@en , "degree Celsius"@en , "Inlet"@en , "ampere"@en , "Temperature"@en , "Kilogram Force per Square Centimetre"@en , "Micrometre"@en , "Turbine"@en , "Shaft"@en , "K-3301 B/KT-3301 B"@en , "Control Oil"@en , "electric current"@en , "CSV dataset"@en , "Discharge"@en , "Average"@en , "Compressor"@en , "Lube Oil"@en , "Gearbox"@en , "Motor"@en , "Mass Flow Rate"@en , "Minimum"@en , "distance"@en , "K-3201 A/KM-3201 A"@en , "K-7502/ST-7501"@en , "Bearing"@en , "Maximum"@en ;
             edc:id              "refinery-compressor-2022-04.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -2406,7 +2406,7 @@
             dcterms:title       "Wind turbine WF1 sensor data for 2020 as influx"@en ;
             dcterms:type        <type/input> , <type/influx> ;
             dcat:distribution   <dataset/windfarm-WF1-2020-influx/distribution> ;
-            dcat:keyword        "Degree"@en , "Controller"@en , "angular velocity"@en , "frequency"@en , "Pitch"@en , "Phase2"@en , "henry"@en , "volt"@en , "Nacelle"@en , "Rotor"@en , "Active Power"@en , "power factor"@en , "Service"@en , "metre per second"@en , "Spinner"@en , "Blades"@en , "Temperature"@en , "Phase3"@en , "Ambient"@en , "System Logs"@en , "Inverter"@en , "Hour"@en , "farad"@en , "Production"@en , "Busbar"@en , "power"@en , "Alarm"@en , "Yaw"@en , "time"@en , "degree Celsius"@en , "Unitless"@en , "Angle"@en , "Turbine"@en , "Revolution per Minute"@en , "reactive power"@en , "Wind Turbine"@en , "Volt Ampere Reactive"@en , "Grid"@en , "Bearing"@en , "Linear Velocity"@en , "ampere"@en , "Slip Ring"@en , "Generator"@en , "Shaft"@en , "Parameter"@en , "Phase1"@en , "Cooling Water"@en , "Wind Farm"@en , "High Voltage Transformer"@en , "Capacitance"@en , "Oil"@en , "Wind"@en , "Voltage"@en , "WF1"@en , "Gearbox"@en , "hertz"@en , "inductance"@en , "Voltage Control Processor"@en , "electric current"@en , "watt"@en ;
+            dcat:keyword        "Estimate"@en , "Degree"@en , "Controller"@en , "angular velocity"@en , "frequency"@en , "Pitch"@en , "Phase2"@en , "Average"@en , "henry"@en , "volt"@en , "Input dataset"@en , "Influx dataset"@en , "Nacelle"@en , "Rotor"@en , "Setpoint"@en , "Active Power"@en , "power factor"@en , "Service"@en , "metre per second"@en , "Spinner"@en , "Relative"@en , "Blades"@en , "Temperature"@en , "Phase3"@en , "Ambient"@en , "Total"@en , "System Logs"@en , "Inverter"@en , "Hour"@en , "farad"@en , "Production"@en , "Busbar"@en , "power"@en , "Alarm"@en , "Yaw"@en , "Absolute"@en , "time"@en , "degree Celsius"@en , "Unitless"@en , "Angle"@en , "Turbine"@en , "Revolution per Minute"@en , "reactive power"@en , "Maximum"@en , "Wind Turbine"@en , "Possible"@en , "Volt Ampere Reactive"@en , "Grid"@en , "Bearing"@en , "Linear Velocity"@en , "ampere"@en , "Minimum"@en , "Slip Ring"@en , "Generator"@en , "Shaft"@en , "Parameter"@en , "Phase1"@en , "Cooling Water"@en , "Wind Farm"@en , "Run time"@en , "Standard Deviation"@en , "High Voltage Transformer"@en , "Limit"@en , "Latest"@en , "Capacitance"@en , "Oil"@en , "Wind"@en , "Voltage"@en , "WF1"@en , "Gearbox"@en , "hertz"@en , "Accumulated"@en , "inductance"@en , "Voltage Control Processor"@en , "electric current"@en , "watt"@en ;
             edc:id              "windfarm-WF1-2020-influx" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -2428,7 +2428,7 @@
             dcterms:title       "Refinery compressor predictions (future) for 2022 as influx"@en ;
             dcterms:type        <type/influx> , <type/result> ;
             dcat:distribution   <dataset/refinery-compressor-result-past-2022-influx/distribution> ;
-            dcat:keyword        "Journal Pads"@en , "Vibration"@en , "K-5701"@en , "K-3201 A/KM-3201 A"@en , "Lube Oil"@en , "Thrust Bearing"@en , "Predicted"@en , "Main Pump"@en , "Micrometre"@en , "Revolution per Minute"@en , "Refinery"@en , "Seal Oil"@en , "Inlet"@en , "Gearbox"@en , "Temperature"@en , "Compressor"@en , "K-2201/KT-2201"@en , "Axial"@en , "Mass Flow Rate"@en , "Radial"@en , "Outlet"@en , "Blow Off"@en , "Thrust Pads"@en , "Journal Bearing"@en , "angular velocity"@en , "K-7502/ST-7501"@en , "Compressed Air"@en , "ampere"@en , "distance"@en , "Kilogram Force per Square Centimetre"@en , "pressure"@en , "Millimetre"@en , "Bearing"@en , "Turbine"@en , "Stator"@en , "Shaft"@en , "electric current"@en , "degree Celsius"@en , "Control Oil"@en , "Discharge"@en , "K-3301 B/KT-3301 B"@en , "Primary Vent"@en , "Kilogram per Hour"@en , "Steam Turbine"@en , "Motor"@en , "Displacement"@en ;
+            dcat:keyword        "Journal Pads"@en , "Influx dataset"@en , "Vibration"@en , "K-5701"@en , "K-3201 A/KM-3201 A"@en , "Lube Oil"@en , "Thrust Bearing"@en , "Predicted"@en , "Main Pump"@en , "Micrometre"@en , "Revolution per Minute"@en , "Differential"@en , "Refinery"@en , "Average"@en , "Seal Oil"@en , "Inlet"@en , "Gearbox"@en , "Maximum"@en , "Temperature"@en , "Compressor"@en , "K-2201/KT-2201"@en , "Axial"@en , "Mass Flow Rate"@en , "Radial"@en , "Outlet"@en , "Blow Off"@en , "Thrust Pads"@en , "Journal Bearing"@en , "angular velocity"@en , "K-7502/ST-7501"@en , "Compressed Air"@en , "ampere"@en , "Result dataset"@en , "distance"@en , "Kilogram Force per Square Centimetre"@en , "pressure"@en , "Millimetre"@en , "Bearing"@en , "Minimum"@en , "Turbine"@en , "Stator"@en , "Shaft"@en , "electric current"@en , "degree Celsius"@en , "Control Oil"@en , "Discharge"@en , "K-3301 B/KT-3301 B"@en , "Primary Vent"@en , "Kilogram per Hour"@en , "Steam Turbine"@en , "Motor"@en , "Displacement"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-influx> ;
             edc:id              "refinery-compressor-result-past-2022-influx" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -2530,7 +2530,10 @@
     qk:ExitPlanePressure
             skos:prefLabel  "Exit Plane Pressure"@en .
     
-    unit:HR  skos:prefLabel  "Hour"@en .
+    unit:HR  rdf:type          skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Hour"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:KiloGM_F-M-PER-CentiM2
             skos:prefLabel  "Kilogram Force Metre per Square Centimetre"@en .
@@ -2556,7 +2559,10 @@
     
     unit:HectoPA  skos:prefLabel  "Hectopascal"@en .
     
-    unit:W  skos:prefLabel  "watt"@en .
+    unit:W  rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "watt"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:NP  skos:prefLabel  "Neper"@en .
     
@@ -2566,12 +2572,22 @@
     unit:OZ-PER-GAL_UK
             skos:prefLabel  "Ounce (avoirdupois) per Gallon (UK)"@en .
     
+    <qualifier/Limit>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Limit"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:Count  skos:prefLabel  "Count"@en .
     
     unit:MegaBYTE  skos:prefLabel  "Mega byte"@en .
     
     qk:AngularVelocity
-            skos:prefLabel  "angular velocity"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "angular velocity"@en ;
+            skos:related       unit:REV-PER-MIN ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:C-PER-M3  skos:prefLabel  "Coulomb per Cubic Metre"@en .
     
@@ -2602,6 +2618,12 @@
     
     qk:SoundParticleDisplacement
             skos:prefLabel  "Sound Particle Displacement"@en .
+    
+    <anomaly/alarm>  rdf:type  skos:Concept ;
+            skos:definition    "An alarm is raised because sensor reading was beyond alarm threshold"@en ;
+            skos:inScheme      <anomaly> ;
+            skos:prefLabel     "Alarm"@en ;
+            skos:topConceptOf  <anomaly> .
     
     qk:StatisticalWeight
             skos:prefLabel  "Statistical Weight"@en .
@@ -2647,7 +2669,11 @@
     
     qk:MassNumber  skos:prefLabel  "Mass Number"@en .
     
-    qk:Frequency  skos:prefLabel  "frequency"@en .
+    qk:Frequency  rdf:type     skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "frequency"@en ;
+            skos:related       unit:HZ ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:PicoMOL-PER-M-W-SEC
             skos:prefLabel  "Picomoles per metre watt second"@en .
@@ -2706,7 +2732,11 @@
     unit:CAL_15_DEG_C
             skos:prefLabel  "Calorie (15 Degrees C)"@en .
     
-    qk:Power  skos:prefLabel  "power"@en .
+    qk:Power  rdf:type         skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "power"@en ;
+            skos:related       unit:W , unit:KiloW ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:BBL_US_DRY  skos:prefLabel  "Dry Barrel (US)"@en .
     
@@ -2721,6 +2751,11 @@
             skos:prefLabel  "Logarithm of Octanol Water Partition Coefficient"@en .
     
     unit:A-PER-RAD  skos:prefLabel  "Ampere per Radian"@en .
+    
+    <org/MORE>  rdf:type       sdo:Organization ;
+            sdo:name           "Motor Oil Renewable Energy S.A. (MORE)"@en ;
+            sdo:url            <https://www.moh.gr/en/company/subsidiaries-affiliates/more-en/> ;
+            edc:participantId  "BPNL512R1Q.C782W3N" .
     
     qk:ThermalUtilizationFactorForFission
             skos:prefLabel  "Thermal Utilization Factor For Fission"@en .
@@ -2895,7 +2930,10 @@
     
     unit:M-K-PER-W  skos:prefLabel  "Metre Kelvin per Watt"@en .
     
-    unit:H  skos:prefLabel  "henry"@en .
+    unit:H  rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "henry"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:J-PER-MOL-K  skos:prefLabel  "Joule per Mole Kelvin"@en .
     
@@ -3053,6 +3091,12 @@
     
     unit:K-PER-MIN  skos:prefLabel  "Kelvin per Minute"@en .
     
+    <qualifier/Maximum>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Maximum"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:GFactorOfNucleus
             skos:prefLabel  "g-Factor of Nucleus"@en .
     
@@ -3102,7 +3146,11 @@
             skos:prefLabel  "Specific Impulse by Mass"@en .
     
     qk:AngularAcceleration
-            skos:prefLabel  "angular acceleration"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "angular acceleration"@en ;
+            skos:related       unit:REV-PER-MIN-SEC ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:DYN-PER-CentiM
             skos:prefLabel  "Dyne per Centimetre"@en .
@@ -3298,6 +3346,23 @@
     
     qk:ExposureRate  skos:prefLabel  "Exposure Rate"@en .
     
+    <qualifier/Minimum>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Minimum"@en ;
+            skos:topConceptOf  <qualifier> .
+    
+    <anomaly/trip>  rdf:type   skos:Concept ;
+            skos:definition    "A trip is raised because sensor reading was beyond trip threshold"@en ;
+            skos:inScheme      <anomaly> ;
+            skos:prefLabel     "Trip"@en ;
+            skos:topConceptOf  <anomaly> .
+    
+    <type/result>  rdf:type    skos:Concept ;
+            skos:inScheme      <type> ;
+            skos:prefLabel     "Result dataset"@en ;
+            skos:topConceptOf  <type> .
+    
     qk:AverageEnergyLossPerElementaryChargeProduced
             skos:prefLabel  "Average Energy Loss per Elementary Charge Produced"@en .
     
@@ -3361,6 +3426,13 @@
     
     qk:VentilationRatePerFloorArea
             skos:prefLabel  "Ventilation Rate per Floor Area"@en .
+    
+    <qualifier/Demand>
+            rdf:type           skos:Concept ;
+            skos:definition    "Consumption of a machine or component"@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Demand"@en ;
+            skos:topConceptOf  <qualifier> .
     
     unit:MilliGM-PER-GM
             skos:prefLabel  "Milligram per Gram"@en .
@@ -3774,7 +3846,11 @@
             skos:prefLabel  "Total Atomic Stopping Power"@en .
     
     qk:ElectricCurrent
-            skos:prefLabel  "electric current"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "electric current"@en ;
+            skos:related       unit:A ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:YD-PER-DEG_F
             skos:prefLabel  "Yard per Degree Fahrenheit"@en .
@@ -3817,7 +3893,10 @@
     
     qk:Depth  skos:prefLabel  "Depth"@en .
     
-    unit:HZ  skos:prefLabel  "hertz"@en .
+    unit:HZ  rdf:type          skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "hertz"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:PINT_UK-PER-SEC
             skos:prefLabel  "Pint (UK) per Second"@en .
@@ -3955,6 +4034,12 @@
     qk:BucklingFactor
             skos:prefLabel  "Buckling Factor"@en .
     
+    <qualifier/5th_percentile>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "5th Percentile"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:RadialDistance
             skos:prefLabel  "Radial Distance"@en .
     
@@ -3988,6 +4073,12 @@
             skos:prefLabel  "Micromoles per square metre day"@en .
     
     unit:Z  skos:prefLabel  "atomic-number"@en .
+    
+    <qualifier/Possible>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Possible"@en ;
+            skos:topConceptOf  <qualifier> .
     
     unit:C-PER-M  skos:prefLabel  "Coulomb per Metre"@en .
     
@@ -4228,7 +4319,11 @@
     unit:FT-LB_F-PER-FT2
             skos:prefLabel  "Foot Pound per Square Foot"@en .
     
-    qk:Time  skos:prefLabel  "time"@en .
+    qk:Time  rdf:type          skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "time"@en ;
+            skos:related       unit:HR ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:J-PER-CentiM2-DAY
             skos:prefLabel  "Joules per square centimetre day"@en .
@@ -4386,7 +4481,10 @@
             skos:prefLabel  "Degree Plato"@en .
     
     unit:KiloGM-PER-HR
-            skos:prefLabel  "Kilogram per Hour"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Kilogram per Hour"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:PERCENT-PER-HR
             skos:prefLabel  "Percent per hour"@en .
@@ -4396,6 +4494,11 @@
     qk:ApparentPower  skos:prefLabel  "apparent power"@en .
     
     unit:PicoC  skos:prefLabel  "PicoCoulomb"@en .
+    
+    <quantityKind>  rdf:type     skos:ConceptScheme ;
+            dcterms:description  "Only those used in UNDERPIN"@en ;
+            dcterms:title        "Quantity Kind"@en ;
+            skos:hasTopConcept   qk:LinearVelocity , qk:ReactivePower , qk:ActivePower , qk:Capacitance , qk:Pressure , qk:Power , qk:Time , qk:Frequency , qk:Temperature , qk:Distance , qk:Inductance , qk:PowerFactor , qk:Voltage , qk:ElectricCurrent , qk:AngularAcceleration , qk:Angle , qk:MassFlowRate , qk:Torque , qk:Displacement , qk:AngularVelocity .
     
     unit:LB-PER-FT-SEC
             skos:prefLabel  "Pound per Foot Second"@en .
@@ -4416,7 +4519,10 @@
     qk:EvaporativeHeatTransferCoefficient
             skos:prefLabel  "Combined Non Evaporative Heat Transfer Coefficient"@en .
     
-    unit:UNITLESS  skos:prefLabel  "Unitless"@en .
+    unit:UNITLESS  rdf:type    skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Unitless"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:A-PER-DEG_C  skos:prefLabel  "Ampere per Degree Celsius"@en .
     
@@ -4503,6 +4609,12 @@
     
     unit:OZ_F-IN  skos:prefLabel  "Imperial Ounce Force Inch"@en .
     
+    <qualifier>  rdf:type       skos:ConceptScheme ;
+            dcterms:title       "Qualifier"@en ;
+            skos:altLabel       "Statistical qualifier"@en , "Value qualifier"@en , "Aggregation rule"@en ;
+            skos:definition     "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining"@en ;
+            skos:hasTopConcept  <qualifier/Maximum> , <qualifier/Runtime> , <qualifier/Differential> , <qualifier/Residual> , <qualifier/95th_percentile> , <qualifier/Latest> , <qualifier/Average> , <qualifier/5th_percentile> , <qualifier/Total> , <qualifier/StandardDeviation> , <qualifier/Predicted> , <qualifier/Demand> , <qualifier/Setpoint> , <qualifier/Possible> , <qualifier/Relative> , <qualifier/Minimum> , <qualifier/Anomaly> , <qualifier/Absolute> , <qualifier/Limit> , <qualifier/Accumulated> , <qualifier/Estimate> .
+    
     unit:LB-PER-FT2  skos:prefLabel  "Pound Mass (avoirdupois) per Square Foot"@en .
     
     unit:V_Stat-CentiM
@@ -4515,7 +4627,18 @@
     unit:TON_UK-PER-YD3
             skos:prefLabel  "Long Ton (UK) per Cubic Yard"@en .
     
+    <qualifier/Differential>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Differential"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:MegaA  skos:prefLabel  "Megaampere"@en .
+    
+    <org/SPH>  rdf:type        sdo:Organization ;
+            sdo:name           "Space Hellas (SPH)"@en ;
+            sdo:url            <https://www.space.gr/> ;
+            edc:participantId  "BPNLOK5DHX.CFXO08H" .
     
     unit:KiloGM-PER-DeciM3
             skos:prefLabel  "Kilogram per Cubic Decimetre"@en .
@@ -4550,7 +4673,10 @@
     qk:PolarMomentOfInertia
             skos:prefLabel  "Polar moment of inertia"@en .
     
-    unit:M-PER-SEC  skos:prefLabel  "metre per second"@en .
+    unit:M-PER-SEC  rdf:type   skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "metre per second"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:MicroCi  skos:prefLabel  "MicroCurie"@en .
     
@@ -4585,6 +4711,18 @@
     
     unit:OZ  skos:prefLabel  "Ounce Mass"@en .
     
+    <org/MOH>  rdf:type        sdo:Organization ;
+            sdo:name           "Motor Oil Hellas (MOH)"@en ;
+            sdo:url            <https://www.moh.gr/en/company/> ;
+            edc:participantId  "BPNLY3SEIW.CV064VJ" .
+    
+    <qualifier/Setpoint>
+            rdf:type           skos:Concept ;
+            skos:definition    "Established target value"@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Setpoint"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:NozzleWallsThrustReaction
             skos:prefLabel  "Nozzle Walls Thrust Reaction"@en .
     
@@ -4607,7 +4745,10 @@
     qk:DragCoefficient
             skos:prefLabel  "Drag Coefficient"@en .
     
-    unit:A  skos:prefLabel  "ampere"@en .
+    unit:A  rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "ampere"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:CentiM3-PER-K
             skos:prefLabel  "Cubic Centimetre per Kelvin"@en .
@@ -4646,7 +4787,10 @@
             skos:prefLabel     "Main Pump"@en ;
             skos:topConceptOf  <feature> .
     
-    <tag>   skos:hasTopConcept  <tag/refinery-compressor/k_5701> , <tag/refinery-compressor/k_2201_kt_2201> , <tag/refinery-compressor/k_3301_b_kt_3301_b> , <tag/refinery-compressor/k_3201_a_km_3201_a> , <tag/refinery-compressor/k_7502_st_7501> .
+    <tag>   rdf:type             skos:ConceptScheme ;
+            dcterms:description  "Concepts representing individual machines or components"@en ;
+            dcterms:title        "Tags"@en ;
+            skos:hasTopConcept   <tag/refinery-compressor/k_5701> , <tag/refinery-compressor/k_2201_kt_2201> , <tag/refinery-compressor/k_3301_b_kt_3301_b> , <tag/refinery-compressor/k_3201_a_km_3201_a> , <tag/refinery-compressor/k_7502_st_7501> .
     
     unit:MilliV-PER-MIN
             skos:prefLabel  "Millivolt per Minute"@en .
@@ -4654,7 +4798,16 @@
     qk:MagneticAreaMoment
             skos:prefLabel  "Magnetic Area Moment"@en .
     
-    qk:PowerFactor  skos:prefLabel  "power factor"@en .
+    qk:PowerFactor  rdf:type   skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "power factor"@en ;
+            skos:related       unit:UNITLESS ;
+            skos:topConceptOf  <quantityKind> .
+    
+    <type/influx>  rdf:type    skos:Concept ;
+            skos:inScheme      <type> ;
+            skos:prefLabel     "Influx dataset"@en ;
+            skos:topConceptOf  <type> .
     
     qk:WarpingMoment  skos:prefLabel  "Warping Moment"@en .
     
@@ -4861,7 +5014,11 @@
     
     qk:ElectricPower  skos:prefLabel  "electric power"@en .
     
-    qk:Pressure  skos:prefLabel  "pressure"@en .
+    qk:Pressure  rdf:type      skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "pressure"@en ;
+            skos:related       unit:KiloGM_F-PER-CentiM2 ;
+            skos:topConceptOf  <quantityKind> .
     
     qk:EinsteinTransitionProbability
             skos:prefLabel  "Einstein Transition Probability"@en .
@@ -4972,7 +5129,11 @@
     unit:MicroGM-PER-M3
             skos:prefLabel  "Microgram per Cubic Metre"@en .
     
-    qk:Temperature  skos:prefLabel  "Temperature"@en .
+    qk:Temperature  rdf:type   skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Temperature"@en ;
+            skos:related       unit:DEG_C ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:NanoS-PER-M  skos:prefLabel  "Nanosiemens per Metre"@en .
     
@@ -5010,7 +5171,10 @@
     unit:MilliGM-PER-CentiM2
             skos:prefLabel  "Milligram per Square Centimetre"@en .
     
-    unit:DEG  skos:prefLabel  "Degree"@en .
+    unit:DEG  rdf:type         skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Degree"@en ;
+            skos:topConceptOf  <unit> .
     
     qk:MassRatio  skos:prefLabel  "Mass Ratio"@en .
     
@@ -5222,7 +5386,10 @@
     qk:LossFactor  skos:prefLabel  "Loss Factor"@en .
     
     unit:V-A_Reactive
-            skos:prefLabel  "Volt Ampere Reactive"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Volt Ampere Reactive"@en ;
+            skos:topConceptOf  <unit> .
     
     qk:IsentropicExponent
             skos:prefLabel  "isentropic exponent"@en .
@@ -5233,7 +5400,8 @@
     qk:IsentropicCompressibility
             skos:prefLabel  "Isentropic Compressibility"@en .
     
-    unit:KiloCAL_TH  skos:prefLabel  "Kilocalorie (thermochemical)"@en .
+    qk:TARGET-BOGIE-MASS
+            skos:prefLabel  "Target Bogie Mass"@en .
     
     qk:MolecularMass  skos:prefLabel  "Molecular Mass"@en .
     
@@ -5242,8 +5410,7 @@
     
     unit:M2-PER-SR  skos:prefLabel  "Square Metre per Steradian"@en .
     
-    qk:TARGET-BOGIE-MASS
-            skos:prefLabel  "Target Bogie Mass"@en .
+    unit:KiloCAL_TH  skos:prefLabel  "Kilocalorie (thermochemical)"@en .
     
     unit:A-PER-GM  skos:prefLabel  "Ampere per Gram"@en .
     
@@ -5268,9 +5435,9 @@
     qk:HeatCapacityRatio
             skos:prefLabel  "Heat Capacity Ratio"@en .
     
-    qk:Height  skos:prefLabel  "height"@en .
-    
     unit:M3-PER-SEC2  skos:prefLabel  "Cubic Metre per Square Second"@en .
+    
+    qk:Height  skos:prefLabel  "height"@en .
     
     unit:BAR-M3-PER-SEC
             skos:prefLabel  "Bar Cubic Metre per Second"@en .
@@ -5281,7 +5448,15 @@
     
     unit:NanoC  skos:prefLabel  "NanoCoulomb"@en .
     
-    unit:MicroM  skos:prefLabel  "Micrometre"@en .
+    unit:MicroM  rdf:type      skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Micrometre"@en ;
+            skos:topConceptOf  <unit> .
+    
+    <org/SWC>  rdf:type        sdo:Organization ;
+            sdo:name           "Semantic Web Company GmbH (SWC)"@en ;
+            sdo:url            <https://semantic-web.com/> ;
+            edc:participantId  "BPNLJ3NRCO.CO52UNS" .
     
     qk:Acceleration  skos:prefLabel  "acceleration"@en .
     
@@ -5474,6 +5649,12 @@
     unit:MilliGM-PER-HR
             skos:prefLabel  "Milligram per Hour"@en .
     
+    <qualifier/StandardDeviation>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Standard Deviation"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:BTU_IT-PER-HR
             skos:prefLabel  "BTU per Hour"@en .
     
@@ -5481,6 +5662,11 @@
     
     qk:MassPerAreaTime
             skos:prefLabel  "Mass per Area Time"@en .
+    
+    <unit>  rdf:type             skos:ConceptScheme ;
+            dcterms:description  "Only those used in UNDERPIN"@en ;
+            dcterms:title        "Unit"@en ;
+            skos:hasTopConcept   unit:DEG , unit:KiloN-M , unit:REV-PER-MIN-SEC , unit:FARAD , unit:V , unit:HZ , unit:HR , unit:REV-PER-MIN , unit:A , unit:KiloW , unit:KiloGM_F-PER-CentiM2 , unit:KiloGM-PER-HR , unit:H , unit:MicroM , unit:V-A_Reactive , unit:M-PER-SEC , unit:UNITLESS , unit:DEG_C , unit:MilliM , unit:W .
     
     unit:MilliBQ-PER-GM
             skos:prefLabel  "Millibecquerels per gram"@en .
@@ -5494,6 +5680,12 @@
     
     qk:ElectricCurrentPerUnitEnergy
             skos:prefLabel  "Electric Current per Unit Energy"@en .
+    
+    <qualifier/Latest>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Latest"@en ;
+            skos:topConceptOf  <qualifier> .
     
     unit:MicroC  skos:prefLabel  "MicroCoulomb"@en .
     
@@ -5610,7 +5802,11 @@
     qk:CurvatureFromRadius
             skos:prefLabel  "Curvature"@en .
     
-    qk:Torque  skos:prefLabel  "torque"@en .
+    qk:Torque  rdf:type        skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "torque"@en ;
+            skos:related       unit:KiloN-M ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:V_Ab-PER-CentiM
             skos:prefLabel  "Abvolt per centimetre"@en .
@@ -5636,7 +5832,11 @@
     unit:OZ_VOL_UK-PER-DAY
             skos:prefLabel  "Ounce (UK Fluid) per Day"@en .
     
-    qk:ReactivePower  skos:prefLabel  "reactive power"@en .
+    qk:ReactivePower  rdf:type  skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "reactive power"@en ;
+            skos:related       unit:V-A_Reactive ;
+            skos:topConceptOf  <quantityKind> .
     
     qk:Wavelength  skos:prefLabel  "wavelength"@en .
     
@@ -5654,6 +5854,13 @@
     
     qk:CONTRACT-END-ITEM-SPECIFICATION-MASS
             skos:prefLabel  "Contract End Item (CEI) Specification Mass."@en .
+    
+    <qualifier/Runtime>
+            rdf:type           skos:Concept ;
+            skos:example       "Grid on hours"@en , "Grid ok hours"@en , "Hour Counters Grid On Average"@en , "Hour Counters Grid Ok Average"@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Run time"@en ;
+            skos:topConceptOf  <qualifier> .
     
     qk:DegreeOfDissociation
             skos:prefLabel  "Degree of Dissociation"@en .
@@ -5695,7 +5902,11 @@
             skos:prefLabel     "Oil"@en ;
             skos:topConceptOf  <feature> .
     
-    qk:Distance  skos:prefLabel  "distance"@en .
+    qk:Distance  rdf:type      skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "distance"@en ;
+            skos:related       unit:MicroM ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:PH  skos:prefLabel  "Acidity"@en .
     
@@ -5710,7 +5921,11 @@
     
     unit:C-M2-PER-V  skos:prefLabel  "coulomb square metre per volt"@en .
     
-    qk:Displacement  skos:prefLabel  "Displacement"@en .
+    qk:Displacement  rdf:type  skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Displacement"@en ;
+            skos:related       unit:MilliM ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:PER-M3-SEC  skos:prefLabel  "Reciprocal Cubic Metre Second"@en .
     
@@ -6000,6 +6215,13 @@
     
     qk:FlashPoint  skos:prefLabel  "Flash Point Temperature"@en .
     
+    <qualifier/Anomaly>
+            rdf:type           skos:Concept ;
+            skos:definition    "Event (anomaly): boolean (presence) or type (eg alarm, trip)"@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Anomaly"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:MagneticFlux  skos:prefLabel  "magnetic flux"@en .
     
     qk:AbsorbedDoseRate
@@ -6035,7 +6257,10 @@
     unit:DEG_F-PER-SEC
             skos:prefLabel  "Degree Fahrenheit per Second"@en .
     
-    unit:FARAD  skos:prefLabel  "farad"@en .
+    unit:FARAD  rdf:type       skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "farad"@en ;
+            skos:topConceptOf  <unit> .
     
     qk:EnergyPerTemperature
             skos:prefLabel  "Energy per temperature"@en .
@@ -6049,6 +6274,8 @@
     
     unit:C-M2  skos:prefLabel  "coulomb square metre"@en .
     
+    unit:PA-M0dot5  skos:prefLabel  "Pascal Square Root Metre"@en .
+    
     <feature/disconnect_switch>
             rdf:type           sosa:FeatureOfInterest , skos:Concept ;
             skos:inScheme      <feature> ;
@@ -6056,8 +6283,6 @@
             skos:topConceptOf  <feature> .
     
     unit:LB-PER-DAY  skos:prefLabel  "Pound (avoirdupois) per Day"@en .
-    
-    unit:PA-M0dot5  skos:prefLabel  "Pascal Square Root Metre"@en .
     
     unit:MilliC-PER-KiloGM
             skos:prefLabel  "Millicoulomb per Kilogram"@en .
@@ -6086,13 +6311,13 @@
     
     qk:Unknown  skos:prefLabel  "Unknown"@en .
     
-    unit:PER-BAR  skos:prefLabel  "Reciprocal Bar"@en .
+    unit:NanoM-PER-MilliM-MegaPA
+            skos:prefLabel  "Nanometer per Millimeter Megapascal"@en .
     
     qk:NozzleThroatDiameter
             skos:prefLabel  "Nozzle Throat Diameter"@en .
     
-    unit:NanoM-PER-MilliM-MegaPA
-            skos:prefLabel  "Nanometer per Millimeter Megapascal"@en .
+    unit:PER-BAR  skos:prefLabel  "Reciprocal Bar"@en .
     
     unit:HectoPA-PER-HR
             skos:prefLabel  "Hectopascals per hour"@en .
@@ -6121,10 +6346,10 @@
     
     unit:L-PER-MOL  skos:prefLabel  "Litre per Mole"@en .
     
-    unit:W-HR-PER-M2  skos:prefLabel  "Watt hour per square metre"@en .
-    
     qk:StaticPressure
             skos:prefLabel  "Static pressure"@en .
+    
+    unit:W-HR-PER-M2  skos:prefLabel  "Watt hour per square metre"@en .
     
     unit:DEG_C-PER-K  skos:prefLabel  "Degree Celsius per Kelvin"@en .
     
@@ -6192,13 +6417,13 @@
     unit:MilliBQ-PER-KiloGM
             skos:prefLabel  "Millibecquerels per kilogram"@en .
     
-    unit:KiloBAR  skos:prefLabel  "Kilobar"@en .
+    qk:SurfaceCoefficientOfHeatTransfer
+            skos:prefLabel  "Surface Coefficient of Heat Transfer"@en .
     
     qk:StandardChemicalPotential
             skos:prefLabel  "Standard Chemical Potential"@en .
     
-    qk:SurfaceCoefficientOfHeatTransfer
-            skos:prefLabel  "Surface Coefficient of Heat Transfer"@en .
+    unit:KiloBAR  skos:prefLabel  "Kilobar"@en .
     
     qk:PressureBurningRateConstant
             skos:prefLabel  "Pressure Burning Rate Constant"@en .
@@ -6252,6 +6477,12 @@
     unit:DEGREE_OECHSLE
             skos:prefLabel  "Degree Oechsle"@en .
     
+    <qualifier/Accumulated>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Accumulated"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:IN3-PER-MIN  skos:prefLabel  "Cubic Inch per Minute"@en .
     
     unit:FT-PER-SEC2  skos:prefLabel  "Foot per Square Second"@en .
@@ -6286,16 +6517,16 @@
     qk:MassOfElectricalPowerSupply
             skos:prefLabel  "Mass Of Electrical Power Supply"@en .
     
+    unit:PicoPA-PER-KiloM
+            skos:prefLabel  "Picopascal per Kilometre"@en .
+    
     unit:EUR-PER-KiloW-HR
             skos:prefLabel  "Euro per kilowatt hour"@en .
     
-    unit:PINT_US-PER-DAY
-            skos:prefLabel  "Pint (US Liquid) per Day"@en .
-    
     unit:ERG  skos:prefLabel  "Erg"@en .
     
-    unit:PicoPA-PER-KiloM
-            skos:prefLabel  "Picopascal per Kilometre"@en .
+    unit:PINT_US-PER-DAY
+            skos:prefLabel  "Pint (US Liquid) per Day"@en .
     
     unit:PER-HR  skos:prefLabel  "Reciprocal Hour"@en .
     
@@ -6502,7 +6733,11 @@
     unit:NanoM-PER-CentiM-MegaPA
             skos:prefLabel  "Nanometer per Centimeter Megapascal"@en .
     
-    qk:MassFlowRate  skos:prefLabel  "Mass Flow Rate"@en .
+    qk:MassFlowRate  rdf:type  skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Mass Flow Rate"@en ;
+            skos:related       unit:KiloGM-PER-HR ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:R_man  skos:prefLabel  "roentgen equivalent man"@en .
     
@@ -6513,7 +6748,10 @@
             skos:prefLabel  "Specific Impulse by Weight"@en .
     
     unit:KiloGM_F-PER-CentiM2
-            skos:prefLabel  "Kilogram Force per Square Centimetre"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Kilogram Force per Square Centimetre"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:NUM-PER-KiloM2
             skos:prefLabel  "Number per square kilometre"@en .
@@ -6555,13 +6793,19 @@
     
     unit:V-PER-K  skos:prefLabel  "Volt per Kelvin"@en .
     
+    qk:TimeTemperature
+            skos:prefLabel  "Time Temperature"@en .
+    
     qk:AtomScatteringFactor
             skos:prefLabel  "Atom Scattering Factor"@en .
     
     unit:J-PER-SEC  skos:prefLabel  "Joule per Second"@en .
     
-    qk:TimeTemperature
-            skos:prefLabel  "Time Temperature"@en .
+    <qualifier/Relative>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Relative"@en ;
+            skos:topConceptOf  <qualifier> .
     
     qk:LengthRatio  skos:prefLabel  "Length Ratio"@en .
     
@@ -6688,6 +6932,12 @@
     
     unit:SCF  skos:prefLabel  "Standard Cubic Foot"@en .
     
+    un:tripHighThreshold
+            rdf:type     owl:DatatypeProperty ;
+            rdfs:domain  csvw:Column ;
+            rdfs:label   "trip High Threshold"@en ;
+            rdfs:range   xsd:decimal .
+    
     qk:EquivalentConcentration
             skos:prefLabel  "Equivalent Concentration"@en .
     
@@ -6723,11 +6973,21 @@
     unit:FT-PER-DEG_F
             skos:prefLabel  "Foot per Degree Fahrenheit"@en .
     
+    un:originalMetadata
+            rdf:type          owl:ObjectProperty ;
+            rdfs:comment      "Envelope for original metadata in a dataspace Catalog Response"@en ;
+            rdfs:isDefinedBy  un: ;
+            rdfs:label        "original metadata"@en .
+    
     unit:KiloEV  skos:prefLabel  "Kilo Electron Volt"@en .
     
     qk:Entropy  skos:prefLabel  "entropy"@en .
     
-    qk:Capacitance  skos:prefLabel  "Capacitance"@en .
+    qk:Capacitance  rdf:type   skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Capacitance"@en ;
+            skos:related       unit:FARAD ;
+            skos:topConceptOf  <quantityKind> .
     
     qk:Duv  skos:prefLabel  "Delta u,v"@en .
     
@@ -6870,6 +7130,10 @@
     
     qk:MortalityRate  skos:prefLabel  "Mortality Rate"@en .
     
+    <anomaly>  rdf:type         skos:ConceptScheme ;
+            dcterms:title       "Anomaly type"@en ;
+            skos:hasTopConcept  <anomaly/trip> , <anomaly/alarm> .
+    
     unit:KiloV-A_Reactive-HR
             skos:prefLabel  "Kilovolt Ampere Reactive Hour"@en .
     
@@ -6958,6 +7222,13 @@
     
     unit:N-PER-RAD  skos:prefLabel  "Newton per radian"@en .
     
+    <qualifier/Predicted>
+            rdf:type           skos:Concept ;
+            skos:definition    "Predicted (forecasted) value"@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Predicted"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:PER-YR  skos:prefLabel  "Reciprocal Year"@en .
     
     unit:MilliGM-PER-M3
@@ -7009,7 +7280,10 @@
     qk:LuminousEnergy
             skos:prefLabel  "Luminous Energy"@en .
     
-    unit:KiloW  skos:prefLabel  "Kilowatt"@en .
+    unit:KiloW  rdf:type       skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Kilowatt"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:KiloGM-PER-M2-SEC2
             skos:prefLabel  "Kilogram per Square Metre Square Second"@en .
@@ -7024,7 +7298,17 @@
     qk:ElectricFieldStrength
             skos:prefLabel  "electric field strength"@en .
     
-    unit:V  skos:prefLabel  "volt"@en .
+    unit:V  rdf:type           skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "volt"@en ;
+            skos:topConceptOf  <unit> .
+    
+    <qualifier/Residual>
+            rdf:type           skos:Concept ;
+            skos:definition    "If prediction is outside of the confidence interval (lower/upper bound: 0.05-0.95 percentile), then the difference between predicted value and the respective bound."@en ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Residual"@en ;
+            skos:topConceptOf  <qualifier> .
     
     qk:RotationalStiffness
             skos:prefLabel  "Rotational Stiffness"@en .
@@ -7075,7 +7359,10 @@
     unit:PlanckCharge
             skos:prefLabel  "Planck Charge"@en .
     
-    unit:REV-PER-MIN  skos:prefLabel  "Revolution per Minute"@en .
+    unit:REV-PER-MIN  rdf:type  skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Revolution per Minute"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:NanoGM-PER-M2-PA-SEC
             skos:prefLabel  "Nanogram per Square Metre Pascal Second"@en .
@@ -7126,6 +7413,12 @@
     
     qk:AcceptorDensity
             skos:prefLabel  "Acceptor Density"@en .
+    
+    <qualifier/Absolute>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Absolute"@en ;
+            skos:topConceptOf  <qualifier> .
     
     unit:KiloR  skos:prefLabel  "Kiloroentgen"@en .
     
@@ -7200,10 +7493,19 @@
     
     unit:Ci  skos:prefLabel  "Curie"@en .
     
+    unit:FUR_Long  skos:prefLabel  "Long Furlong"@en .
+    
     qk:MagneticFluxDensity
             skos:prefLabel  "magnetic flux density"@en .
     
-    unit:FUR_Long  skos:prefLabel  "Long Furlong"@en .
+    un:influxDatatype
+            rdf:type        owl:DatatypeProperty ;
+            rdfs:comment    "Datatype for Influx CSV table annotation"@en ;
+            rdfs:domain     csvw:Column ;
+            rdfs:label      "Influx datatype"@en ;
+            rdfs:range      xsd:string ;
+            rdfs:seeAlso    <https://docs.influxdata.com/influxdb/v2/reference/syntax/annotated-csv/#data-types> ;
+            skos:scopeNote  "We use one of: dateTime:<format>; double; string, tag; ignore (if csvw:suppressOutput is true)"@en .
     
     qk:ElectricChargePerArea
             skos:prefLabel  "Electric charge per area"@en .
@@ -7325,7 +7627,11 @@
     
     qk:MagneticField  skos:prefLabel  "Magnetic Field"@en .
     
-    qk:Angle  skos:prefLabel  "Angle"@en .
+    qk:Angle  rdf:type         skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Angle"@en ;
+            skos:related       unit:DEG ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:MilliN-PER-M
             skos:prefLabel  "Millinewton per Metre"@en .
@@ -7382,7 +7688,11 @@
     unit:CentiM-PER-HR
             skos:prefLabel  "Centimetre per Hour"@en .
     
-    qk:Inductance  skos:prefLabel  "inductance"@en .
+    qk:Inductance  rdf:type    skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "inductance"@en ;
+            skos:related       unit:H ;
+            skos:topConceptOf  <quantityKind> .
     
     <feature/journal_pads>
             rdf:type           sosa:FeatureOfInterest , skos:Concept ;
@@ -7420,6 +7730,12 @@
     unit:MilliL-PER-CentiM2-MIN
             skos:prefLabel  "Millilitre per Square Centimetre Minute"@en .
     
+    <qualifier/Estimate>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Estimate"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:OHM-M  skos:prefLabel  "ohm metre"@en .
     
     qk:Polarizability
@@ -7444,7 +7760,11 @@
             skos:prefLabel     "Production"@en ;
             skos:topConceptOf  <feature> .
     
-    qk:ActivePower  skos:prefLabel  "Active Power"@en .
+    qk:ActivePower  rdf:type   skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Active Power"@en ;
+            skos:related       unit:W ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:MilliGAL  skos:prefLabel  "Milligal"@en .
     
@@ -7464,7 +7784,11 @@
     
     unit:MOL-PER-M2  skos:prefLabel  "Moles per square metre"@en .
     
-    qk:Voltage  skos:prefLabel  "Voltage"@en .
+    qk:Voltage  rdf:type       skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Voltage"@en ;
+            skos:related       unit:V ;
+            skos:topConceptOf  <quantityKind> .
     
     <feature/phase1>  rdf:type  sosa:FeatureOfInterest , skos:Concept ;
             skos:inScheme      <feature> ;
@@ -7493,6 +7817,12 @@
     unit:KiloC  skos:prefLabel  "KiloCoulomb"@en .
     
     qk:Velocity  skos:prefLabel  "velocity"@en .
+    
+    un:qualifier  rdf:type  owl:ObjectProperty ;
+            rdfs:comment  "Qualifier for a sensor value reflecting its level, scope, nature, or method of obtaining"@en ;
+            rdfs:domain   csvw:Column ;
+            rdfs:label    "qualifier"@en ;
+            rdfs:range    skos:Concept .
     
     qk:GrowingDegreeDay_Cereal
             skos:prefLabel  "Growing Degree Days (Cereals)"@en .
@@ -7576,7 +7906,10 @@
     qk:CurrentLinkage
             skos:prefLabel  "Current Linkage"@en .
     
-    unit:MilliM  skos:prefLabel  "Millimetre"@en .
+    unit:MilliM  rdf:type      skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Millimetre"@en ;
+            skos:topConceptOf  <unit> .
     
     unit:PERCENT-PER-M
             skos:prefLabel  "Percent per metre"@en .
@@ -7693,6 +8026,12 @@
     unit:IN_H2O  skos:prefLabel  "Inch of Water"@en .
     
     unit:MegaEV  skos:prefLabel  "Mega Electron Volt"@en .
+    
+    un:tripLowThreshold
+            rdf:type     owl:DatatypeProperty ;
+            rdfs:domain  csvw:Column ;
+            rdfs:label   "trip Low Threshold"@en ;
+            rdfs:range   xsd:decimal .
     
     unit:PER-GigaEV2  skos:prefLabel  "Reciprocal Square Giga Electron Volt Unit"@en .
     
@@ -7835,12 +8174,18 @@
     
     unit:MilliC  skos:prefLabel  "MilliCoulomb"@en .
     
+    qk:SoundEnergyDensity
+            skos:prefLabel  "Sound energy density"@en .
+    
     unit:GM-PER-SEC  skos:prefLabel  "Gram per Second"@en .
     
     unit:GM  skos:prefLabel  "Gram"@en .
     
-    qk:SoundEnergyDensity
-            skos:prefLabel  "Sound energy density"@en .
+    <qualifier/Average>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Average"@en ;
+            skos:topConceptOf  <qualifier> .
     
     unit:TBSP  skos:prefLabel  "Tablespoon"@en .
     
@@ -7858,11 +8203,11 @@
     qk:VolumetricFlux
             skos:prefLabel  "Volumetric Flux"@en .
     
-    qk:CENTER-OF-GRAVITY_Z
-            skos:prefLabel  "Center of Gravity in the Z axis"@en .
-    
     qk:StaticFrictionCoefficient
             skos:prefLabel  "Static Friction Coefficient"@en .
+    
+    qk:CENTER-OF-GRAVITY_Z
+            skos:prefLabel  "Center of Gravity in the Z axis"@en .
     
     unit:M2-HZ  skos:prefLabel  "Square metres Hertz"@en .
     
@@ -7979,7 +8324,10 @@
     
     unit:HART  skos:prefLabel  "Hartley"@en .
     
-    unit:DEG_C  skos:prefLabel  "degree Celsius"@en .
+    unit:DEG_C  rdf:type       skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "degree Celsius"@en ;
+            skos:topConceptOf  <unit> .
     
     qk:MassPerLength  skos:prefLabel  "Mass per Length"@en .
     
@@ -8046,6 +8394,9 @@
     
     unit:LB_F-PER-IN  skos:prefLabel  "Pound Force per Inch"@en .
     
+    un:     rdf:type    owl:Ontology ;
+            rdfs:label  "UNDERPIN ontology"@en .
+    
     unit:KiloGM_F  skos:prefLabel  "Kilogram Force"@en .
     
     qk:HelmholtzEnergy
@@ -8111,6 +8462,17 @@
     qk:Solubility_Water
             skos:prefLabel  "Water Solubility"@en .
     
+    un:alarmLowThreshold
+            rdf:type     owl:DatatypeProperty ;
+            rdfs:domain  csvw:Column ;
+            rdfs:label   "alarm Low Threshold"@en ;
+            rdfs:range   xsd:decimal .
+    
+    <type/input>  rdf:type     skos:Concept ;
+            skos:inScheme      <type> ;
+            skos:prefLabel     "Input dataset"@en ;
+            skos:topConceptOf  <type> .
+    
     unit:MicroN  skos:prefLabel  "Micronewton"@en .
     
     unit:DEG_C2-PER-SEC
@@ -8122,7 +8484,11 @@
             skos:prefLabel  "Electron Density"@en .
     
     qk:LinearVelocity
-            skos:prefLabel  "Linear Velocity"@en .
+            rdf:type           skos:Concept ;
+            skos:inScheme      <quantityKind> ;
+            skos:prefLabel     "Linear Velocity"@en ;
+            skos:related       unit:M-PER-SEC ;
+            skos:topConceptOf  <quantityKind> .
     
     unit:PER-ANGSTROM
             skos:prefLabel  "Reciprocal Angstrom"@en .
@@ -8252,6 +8618,12 @@
     
     qk:Turbidity  skos:prefLabel  "Turbidity"@en .
     
+    <qualifier/95th_percentile>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "95th Percentile"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     qk:MeltingPoint  skos:prefLabel  "Melting Point Temperature"@en .
     
     unit:ExaC  skos:prefLabel  "ExaCoulomb"@en .
@@ -8376,6 +8748,11 @@
     qk:FundamentalReciprocalLatticeVector
             skos:prefLabel  "Fundamental Reciprocal Lattice Vector"@en .
     
+    <org/ARC>  rdf:type        sdo:Organization ;
+            sdo:name           "Athena Research Center (ARC)"@en ;
+            sdo:url            <https://www.athenarc.gr/en/home> ;
+            edc:participantId  "BPNL0C3QGE.CCD3IOO" .
+    
     qk:ElectronAffinity
             skos:prefLabel  "Electron Affinity"@en .
     
@@ -8405,6 +8782,12 @@
     
     unit:S-PER-CentiM
             skos:prefLabel  "Siemens per Centimetre"@en .
+    
+    un:alarmHighThreshold
+            rdf:type     owl:DatatypeProperty ;
+            rdfs:domain  csvw:Column ;
+            rdfs:label   "alarm High Threshold"@en ;
+            rdfs:range   xsd:decimal .
     
     qk:MolecularConcentration
             skos:prefLabel  "Molecular Concentration"@en .
@@ -8444,9 +8827,9 @@
     
     unit:PER-MO  skos:prefLabel  "Reciprocal Month"@en .
     
-    unit:WB-PER-M  skos:prefLabel  "weber per metre"@en .
-    
     qk:Susceptance  skos:prefLabel  "Susceptance"@en .
+    
+    unit:WB-PER-M  skos:prefLabel  "weber per metre"@en .
     
     qk:SpecificHeatsRatio
             skos:prefLabel  "Specific Heats Ratio"@en .
@@ -8735,6 +9118,12 @@
     
     unit:TONNE  skos:prefLabel  "Tonne"@en .
     
+    <qualifier/Total>
+            rdf:type           skos:Concept ;
+            skos:inScheme      <qualifier> ;
+            skos:prefLabel     "Total"@en ;
+            skos:topConceptOf  <qualifier> .
+    
     unit:PPTM  skos:prefLabel  "Parts per Ten Million"@en .
     
     qk:ParticleSourceDensity
@@ -8749,6 +9138,11 @@
     
     qk:WaterVaporDiffusionCoefficient
             skos:prefLabel  "Water vapour diffusion coefficient"@en .
+    
+    <org/AIT>  rdf:type        sdo:Organization ;
+            sdo:name           "AIT Austrian Institute Of Technology"@en ;
+            sdo:url            <https://www.ait.ac.at/en/> ;
+            edc:participantId  "BPNLY38WC4.CLEGCS4" .
     
     unit:CARAT  skos:prefLabel  "Carat"@en .
     
@@ -8907,15 +9301,18 @@
     
     qk:Acidity  skos:prefLabel  "Acidity"@en .
     
-    <feature>  skos:hasTopConcept  <feature/blow_off> , <feature/journal_pads> , <feature/primary_vent> , <feature/shaft> , <feature/compressor> , <feature/alarm> , <feature/inlet> , <feature/disconnect_switch> , <feature/service> , <feature/steam_turbine> , <feature/compressed_air> , <feature/bearing> , <feature/seal_oil> , <feature/discharge> , <feature/high_voltage_transformer> , <feature/wind> , <feature/ambient> , <feature/vibration> , <feature/inverter> , <feature/turbine> , <feature/phase1> , <feature/stator> , <feature/rotor> , <feature/outlet> , <feature/pitch> , <feature/drive_train> , <feature/blades> , <feature/yaw> , <feature/control_oil> , <feature/thrust_bearing> , <feature/spinner> , <feature/radial> , <feature/grid> , <feature/slip_ring> , <feature/oil> , <feature/nacelle> , <feature/winding> , <feature/phase3> , <feature/parameter> , <feature/cooling_water> , <feature/generator> , <feature/gearbox> , <feature/axial> , <feature/phase2> , <feature/voltage_control_processor> , <feature/thrust_pads> , <feature/production> , <feature/journal_bearing> , <feature/controller> , <feature/main_pump> , <feature/system_logs> , <feature/lube_oil> , <feature/busbar> , <feature/motor> .
+    qk:PermeabilityRatio
+            skos:prefLabel  "Permeability Ratio"@en .
     
     qk:Dissipance  skos:prefLabel  "Dissipance"@en .
     
     unit:MilliRAD_R-PER-HR
             skos:prefLabel  "Millirads per hour"@en .
     
-    qk:PermeabilityRatio
-            skos:prefLabel  "Permeability Ratio"@en .
+    <feature>  rdf:type          skos:ConceptScheme ;
+            dcterms:description  "Concepts representing features of interest: parts, part qualifiers, aspects, etc"@en ;
+            dcterms:title        "Features"@en ;
+            skos:hasTopConcept   <feature/blow_off> , <feature/journal_pads> , <feature/primary_vent> , <feature/shaft> , <feature/compressor> , <feature/alarm> , <feature/inlet> , <feature/disconnect_switch> , <feature/service> , <feature/steam_turbine> , <feature/compressed_air> , <feature/bearing> , <feature/seal_oil> , <feature/discharge> , <feature/high_voltage_transformer> , <feature/wind> , <feature/ambient> , <feature/vibration> , <feature/inverter> , <feature/turbine> , <feature/phase1> , <feature/stator> , <feature/rotor> , <feature/outlet> , <feature/pitch> , <feature/drive_train> , <feature/blades> , <feature/yaw> , <feature/control_oil> , <feature/thrust_bearing> , <feature/spinner> , <feature/radial> , <feature/grid> , <feature/slip_ring> , <feature/oil> , <feature/nacelle> , <feature/winding> , <feature/phase3> , <feature/parameter> , <feature/cooling_water> , <feature/generator> , <feature/gearbox> , <feature/axial> , <feature/phase2> , <feature/voltage_control_processor> , <feature/thrust_pads> , <feature/production> , <feature/journal_bearing> , <feature/controller> , <feature/main_pump> , <feature/system_logs> , <feature/lube_oil> , <feature/busbar> , <feature/motor> .
     
     unit:MegaTOE  skos:prefLabel  "Megaton of Oil Equivalent"@en .
     
@@ -9066,7 +9463,10 @@
     
     unit:SHANNON  skos:prefLabel  "Shannon"@en .
     
-    unit:KiloN-M  skos:prefLabel  "Kilonewton Metre"@en .
+    unit:KiloN-M  rdf:type     skos:Concept ;
+            skos:inScheme      <unit> ;
+            skos:prefLabel     "Kilonewton Metre"@en ;
+            skos:topConceptOf  <unit> .
     
     qk:LandeGFactor  skos:prefLabel  "Lande g-Factor"@en .
     
@@ -9134,6 +9534,10 @@
     unit:MI_US  skos:prefLabel  "Mile US Statute"@en .
     
     unit:IU-PER-L  skos:prefLabel  "International Unit per Litre"@en .
+    
+    <type>  rdf:type            skos:ConceptScheme ;
+            dcterms:title       "Dataset type"@en ;
+            skos:hasTopConcept  <type/influx> , <type/csv> , <type/result> , <type/input> .
     
     qk:MolarOpticalRotatoryPower
             skos:prefLabel  "Molar Optical Rotatory Power"@en .
@@ -9206,6 +9610,11 @@
     
     qk:AmountOfSubstanceFraction
             skos:prefLabel  "Fractional Amount of Substance"@en .
+    
+    <type/csv>  rdf:type       skos:Concept ;
+            skos:inScheme      <type> ;
+            skos:prefLabel     "CSV dataset"@en ;
+            skos:topConceptOf  <type> .
     
     qk:MigrationArea  skos:prefLabel  "Migration Area"@en .
     
@@ -9418,6 +9827,19 @@
     
     qk:CombinedNonEvaporativeHeatTransferCoefficient
             skos:prefLabel  "Combined Non Evaporative Heat Transfer Coefficient"@en .
+    
+    unit:REV-PER-MIN-SEC
+            rdf:type                     skos:Concept , qudt:Unit ;
+            rdfs:isDefinedBy             <http://qudt.org/2.1/vocab/unit> ;
+            rdfs:label                   "Revolution per Minute per Second"@en ;
+            qudt:conversionMultiplier    376.9911186 ;
+            qudt:conversionMultiplierSN  3.769911186E2 ;
+            qudt:hasDimensionVector      qkdv:A0E0L0I0M0H0T-2D0 ;
+            qudt:hasQuantityKind         qk:AngularAcceleration ;
+            qudt:symbol                  "rev/min/s" ;
+            qudt:ucumCode                "{#}.min-1.s-1"^^qudt:UCUMcs ;
+            skos:inScheme                <unit> ;
+            skos:topConceptOf            <unit> .
     
     unit:AC  skos:prefLabel  "Acre"@en .
     
@@ -9646,13 +10068,13 @@
     
     unit:CentiM_H2O  skos:prefLabel  "Conventional Centimetre Of Water"@en .
     
+    qk:StructureFactor
+            skos:prefLabel  "Structure Factor"@en .
+    
     unit:MegaW  skos:prefLabel  "MegaW"@en .
     
     unit:MilliM3-PER-KiloGM
             skos:prefLabel  "Cubic Millimetre per Kilogram"@en .
-    
-    qk:StructureFactor
-            skos:prefLabel  "Structure Factor"@en .
     
     unit:CentiN  skos:prefLabel  "CentiNewton"@en .
     
@@ -9686,7 +10108,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-10.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Motor"@en , "Seal Oil"@en , "Axial"@en , "Gearbox"@en , "Displacement"@en , "Compressor"@en , "Lube Oil"@en , "Discharge"@en , "angular velocity"@en , "Journal Bearing"@en , "Outlet"@en , "Kilogram Force per Square Centimetre"@en , "Main Pump"@en , "K-3201 A/KM-3201 A"@en , "electric current"@en , "distance"@en , "Mass Flow Rate"@en , "Inlet"@en , "Refinery"@en , "K-7502/ST-7501"@en , "Stator"@en , "Primary Vent"@en , "Bearing"@en , "Blow Off"@en , "Compressed Air"@en , "K-3301 B/KT-3301 B"@en , "Revolution per Minute"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Radial"@en , "Control Oil"@en , "Steam Turbine"@en , "Vibration"@en , "Thrust Pads"@en , "Temperature"@en , "Millimetre"@en , "Kilogram per Hour"@en , "Journal Pads"@en , "pressure"@en , "degree Celsius"@en , "K-5701"@en , "ampere"@en , "Turbine"@en , "Shaft"@en , "Micrometre"@en ;
+            dcat:keyword        "Motor"@en , "Seal Oil"@en , "Axial"@en , "Gearbox"@en , "Displacement"@en , "Compressor"@en , "Lube Oil"@en , "Discharge"@en , "angular velocity"@en , "Journal Bearing"@en , "Outlet"@en , "Kilogram Force per Square Centimetre"@en , "Main Pump"@en , "Maximum"@en , "Average"@en , "K-3201 A/KM-3201 A"@en , "electric current"@en , "distance"@en , "Mass Flow Rate"@en , "Inlet"@en , "Refinery"@en , "K-7502/ST-7501"@en , "Stator"@en , "Primary Vent"@en , "Differential"@en , "Bearing"@en , "Blow Off"@en , "Compressed Air"@en , "K-3301 B/KT-3301 B"@en , "Revolution per Minute"@en , "CSV dataset"@en , "K-2201/KT-2201"@en , "Thrust Bearing"@en , "Radial"@en , "Control Oil"@en , "Input dataset"@en , "Steam Turbine"@en , "Vibration"@en , "Thrust Pads"@en , "Temperature"@en , "Millimetre"@en , "Kilogram per Hour"@en , "Journal Pads"@en , "pressure"@en , "Minimum"@en , "degree Celsius"@en , "K-5701"@en , "ampere"@en , "Turbine"@en , "Shaft"@en , "Micrometre"@en ;
             edc:id              "refinery-compressor-2022-10.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
 }
@@ -11484,7 +11906,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG07-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Phase2"@en , "Parameter"@en , "Unitless"@en , "Capacitance"@en , "High Voltage Transformer"@en , "watt"@en , "System Logs"@en , "henry"@en , "Grid"@en , "volt"@en , "Nacelle"@en , "Gearbox"@en , "Hour"@en , "Volt Ampere Reactive"@en , "time"@en , "reactive power"@en , "power"@en , "Active Power"@en , "Service"@en , "Alarm"@en , "Revolution per Minute"@en , "Phase3"@en , "Blades"@en , "Wind Turbine"@en , "Voltage"@en , "Angle"@en , "Inverter"@en , "power factor"@en , "Spinner"@en , "Bearing"@en , "Shaft"@en , "Turbine"@en , "Generator"@en , "Slip Ring"@en , "degree Celsius"@en , "Yaw"@en , "inductance"@en , "farad"@en , "angular velocity"@en , "Temperature"@en , "WF1-WTG07"@en , "Rotor"@en , "Phase1"@en , "Degree"@en , "hertz"@en , "Wind Farm"@en , "ampere"@en , "metre per second"@en , "Oil"@en , "Linear Velocity"@en , "Controller"@en , "electric current"@en , "Production"@en , "Voltage Control Processor"@en , "frequency"@en , "Ambient"@en , "Wind"@en , "Pitch"@en , "Busbar"@en , "Cooling Water"@en ;
+            dcat:keyword        "Phase2"@en , "Parameter"@en , "Minimum"@en , "Estimate"@en , "Unitless"@en , "Capacitance"@en , "High Voltage Transformer"@en , "watt"@en , "Setpoint"@en , "System Logs"@en , "henry"@en , "Grid"@en , "volt"@en , "Nacelle"@en , "Gearbox"@en , "Hour"@en , "Accumulated"@en , "Volt Ampere Reactive"@en , "time"@en , "reactive power"@en , "CSV dataset"@en , "power"@en , "Run time"@en , "Maximum"@en , "Active Power"@en , "Service"@en , "Alarm"@en , "Revolution per Minute"@en , "Phase3"@en , "Standard Deviation"@en , "Blades"@en , "Wind Turbine"@en , "Voltage"@en , "Angle"@en , "Inverter"@en , "Spinner"@en , "power factor"@en , "Limit"@en , "Bearing"@en , "Possible"@en , "Shaft"@en , "Turbine"@en , "Generator"@en , "Slip Ring"@en , "Absolute"@en , "degree Celsius"@en , "Total"@en , "Input dataset"@en , "Yaw"@en , "inductance"@en , "farad"@en , "angular velocity"@en , "Temperature"@en , "WF1-WTG07"@en , "Relative"@en , "Rotor"@en , "Phase1"@en , "Degree"@en , "hertz"@en , "Wind Farm"@en , "ampere"@en , "metre per second"@en , "Oil"@en , "Linear Velocity"@en , "Controller"@en , "electric current"@en , "Production"@en , "Voltage Control Processor"@en , "frequency"@en , "Ambient"@en , "Average"@en , "Wind"@en , "Pitch"@en , "Busbar"@en , "Cooling Water"@en , "Latest"@en ;
             edc:id              "windfarm-WF1-WTG07-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -11515,7 +11937,7 @@
             dcterms:title       "Refinery compressor predictions (past) for 2022 as influx"@en ;
             dcterms:type        <type/result> , <type/influx> ;
             dcat:distribution   <dataset/refinery-compressor-result-future-2022-influx/distribution> ;
-            dcat:keyword        "Temperature"@en , "Axial"@en , "Vibration"@en , "Turbine"@en , "K-3201 A/KM-3201 A"@en , "pressure"@en , "Motor"@en , "Journal Bearing"@en , "Discharge"@en , "Journal Pads"@en , "Steam Turbine"@en , "Main Pump"@en , "K-7502/ST-7501"@en , "Kilogram per Hour"@en , "Primary Vent"@en , "Revolution per Minute"@en , "Gearbox"@en , "Seal Oil"@en , "Millimetre"@en , "Shaft"@en , "distance"@en , "K-2201/KT-2201"@en , "Displacement"@en , "angular velocity"@en , "Inlet"@en , "Refinery"@en , "Stator"@en , "Lube Oil"@en , "Compressed Air"@en , "Outlet"@en , "Predicted"@en , "K-3301 B/KT-3301 B"@en , "Radial"@en , "K-5701"@en , "degree Celsius"@en , "Thrust Pads"@en , "Control Oil"@en , "ampere"@en , "Compressor"@en , "Mass Flow Rate"@en , "Thrust Bearing"@en , "Blow Off"@en , "electric current"@en , "Kilogram Force per Square Centimetre"@en , "Bearing"@en , "Micrometre"@en ;
+            dcat:keyword        "Temperature"@en , "Axial"@en , "Vibration"@en , "Turbine"@en , "K-3201 A/KM-3201 A"@en , "pressure"@en , "Motor"@en , "Journal Bearing"@en , "Minimum"@en , "Discharge"@en , "Journal Pads"@en , "Steam Turbine"@en , "Main Pump"@en , "K-7502/ST-7501"@en , "Primary Vent"@en , "Kilogram per Hour"@en , "Revolution per Minute"@en , "Differential"@en , "Gearbox"@en , "Influx dataset"@en , "Seal Oil"@en , "Millimetre"@en , "Shaft"@en , "distance"@en , "K-2201/KT-2201"@en , "Displacement"@en , "Result dataset"@en , "angular velocity"@en , "Inlet"@en , "Refinery"@en , "Stator"@en , "Lube Oil"@en , "Compressed Air"@en , "Outlet"@en , "Predicted"@en , "K-3301 B/KT-3301 B"@en , "Radial"@en , "K-5701"@en , "degree Celsius"@en , "Thrust Pads"@en , "Control Oil"@en , "ampere"@en , "Compressor"@en , "Mass Flow Rate"@en , "Maximum"@en , "Thrust Bearing"@en , "Blow Off"@en , "electric current"@en , "Bearing"@en , "Average"@en , "Kilogram Force per Square Centimetre"@en , "Micrometre"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-influx> ;
             edc:id              "refinery-compressor-result-future-2022-influx" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -11543,7 +11965,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-02.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Temperature"@en , "degree Celsius"@en , "electric current"@en , "Primary Vent"@en , "ampere"@en , "K-7502/ST-7501"@en , "Revolution per Minute"@en , "Blow Off"@en , "K-2201/KT-2201"@en , "Mass Flow Rate"@en , "angular velocity"@en , "Seal Oil"@en , "K-3201 A/KM-3201 A"@en , "Radial"@en , "Axial"@en , "Compressed Air"@en , "Steam Turbine"@en , "Thrust Pads"@en , "Micrometre"@en , "Lube Oil"@en , "pressure"@en , "Kilogram per Hour"@en , "Journal Bearing"@en , "distance"@en , "Vibration"@en , "Thrust Bearing"@en , "Turbine"@en , "Main Pump"@en , "Motor"@en , "Inlet"@en , "Outlet"@en , "Displacement"@en , "Stator"@en , "Bearing"@en , "Compressor"@en , "Shaft"@en , "Journal Pads"@en , "Control Oil"@en , "K-5701"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "Millimetre"@en , "Discharge"@en , "Refinery"@en , "K-3301 B/KT-3301 B"@en ;
+            dcat:keyword        "Differential"@en , "Maximum"@en , "Temperature"@en , "degree Celsius"@en , "electric current"@en , "Primary Vent"@en , "ampere"@en , "K-7502/ST-7501"@en , "Revolution per Minute"@en , "Blow Off"@en , "K-2201/KT-2201"@en , "Input dataset"@en , "Mass Flow Rate"@en , "angular velocity"@en , "Average"@en , "Seal Oil"@en , "Minimum"@en , "K-3201 A/KM-3201 A"@en , "Radial"@en , "Axial"@en , "Compressed Air"@en , "Steam Turbine"@en , "Thrust Pads"@en , "Micrometre"@en , "Lube Oil"@en , "pressure"@en , "Kilogram per Hour"@en , "Journal Bearing"@en , "distance"@en , "Vibration"@en , "Thrust Bearing"@en , "Turbine"@en , "Main Pump"@en , "Motor"@en , "Inlet"@en , "Outlet"@en , "Displacement"@en , "Bearing"@en , "Stator"@en , "Compressor"@en , "Shaft"@en , "Journal Pads"@en , "Control Oil"@en , "K-5701"@en , "CSV dataset"@en , "Gearbox"@en , "Kilogram Force per Square Centimetre"@en , "Millimetre"@en , "Discharge"@en , "Refinery"@en , "K-3301 B/KT-3301 B"@en ;
             edc:id              "refinery-compressor-2022-02.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
 }
@@ -11565,7 +11987,7 @@
             dcterms:title       "Refinery compressor predicted anomalies for 2022 as influx"@en ;
             dcterms:type        <type/result> , <type/influx> ;
             dcat:distribution   <dataset/refinery-compressor-result-anomaly-2022-influx/distribution> ;
-            dcat:keyword        "Compressor"@en , "Anomaly"@en , "Refinery"@en , "Predicted"@en ;
+            dcat:keyword        "Compressor"@en , "Anomaly"@en , "Result dataset"@en , "Refinery"@en , "Influx dataset"@en , "Predicted"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-influx> ;
             edc:id              "refinery-compressor-result-anomaly-2022-influx" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -11588,7 +12010,7 @@
             dcterms:type        <type/result> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-result-anomaly-2022-12.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-result-anomaly-2022-influx> ;
-            dcat:keyword        "Predicted"@en , "Compressor"@en , "Anomaly"@en , "Refinery"@en ;
+            dcat:keyword        "Result dataset"@en , "CSV dataset"@en , "Predicted"@en , "Compressor"@en , "Anomaly"@en , "Refinery"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-12.csv> ;
             edc:id              "refinery-compressor-result-anomaly-2022-12.csv" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -11616,7 +12038,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-05.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Mass Flow Rate"@en , "Control Oil"@en , "Axial"@en , "pressure"@en , "Kilogram Force per Square Centimetre"@en , "Motor"@en , "electric current"@en , "angular velocity"@en , "Lube Oil"@en , "Thrust Bearing"@en , "Journal Pads"@en , "Revolution per Minute"@en , "K-2201/KT-2201"@en , "K-7502/ST-7501"@en , "Compressor"@en , "Turbine"@en , "Thrust Pads"@en , "Compressed Air"@en , "Refinery"@en , "Gearbox"@en , "Micrometre"@en , "Kilogram per Hour"@en , "Shaft"@en , "Journal Bearing"@en , "distance"@en , "Discharge"@en , "Inlet"@en , "Steam Turbine"@en , "ampere"@en , "Main Pump"@en , "Vibration"@en , "Bearing"@en , "Seal Oil"@en , "Primary Vent"@en , "Displacement"@en , "Temperature"@en , "K-5701"@en , "Millimetre"@en , "Radial"@en , "degree Celsius"@en , "K-3301 B/KT-3301 B"@en , "Blow Off"@en , "K-3201 A/KM-3201 A"@en , "Stator"@en , "Outlet"@en ;
+            dcat:keyword        "Mass Flow Rate"@en , "Control Oil"@en , "Axial"@en , "Maximum"@en , "pressure"@en , "Kilogram Force per Square Centimetre"@en , "Motor"@en , "electric current"@en , "angular velocity"@en , "Lube Oil"@en , "Thrust Bearing"@en , "Journal Pads"@en , "Revolution per Minute"@en , "K-2201/KT-2201"@en , "K-7502/ST-7501"@en , "Compressor"@en , "Input dataset"@en , "Minimum"@en , "Turbine"@en , "Thrust Pads"@en , "Compressed Air"@en , "Refinery"@en , "Gearbox"@en , "Micrometre"@en , "Kilogram per Hour"@en , "Differential"@en , "Shaft"@en , "Journal Bearing"@en , "distance"@en , "Discharge"@en , "CSV dataset"@en , "Inlet"@en , "Steam Turbine"@en , "ampere"@en , "Main Pump"@en , "Vibration"@en , "Bearing"@en , "Seal Oil"@en , "Average"@en , "Primary Vent"@en , "Displacement"@en , "Temperature"@en , "K-5701"@en , "Millimetre"@en , "Radial"@en , "degree Celsius"@en , "K-3301 B/KT-3301 B"@en , "Blow Off"@en , "K-3201 A/KM-3201 A"@en , "Stator"@en , "Outlet"@en ;
             edc:id              "refinery-compressor-2022-05.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -11648,7 +12070,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-08.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Revolution per Minute"@en , "ampere"@en , "Vibration"@en , "Kilogram Force per Square Centimetre"@en , "pressure"@en , "Thrust Bearing"@en , "Compressed Air"@en , "Seal Oil"@en , "Motor"@en , "Displacement"@en , "Turbine"@en , "Blow Off"@en , "Control Oil"@en , "Radial"@en , "Discharge"@en , "Journal Pads"@en , "Primary Vent"@en , "Steam Turbine"@en , "K-7502/ST-7501"@en , "Stator"@en , "Shaft"@en , "angular velocity"@en , "degree Celsius"@en , "distance"@en , "Compressor"@en , "K-3201 A/KM-3201 A"@en , "Micrometre"@en , "Lube Oil"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Thrust Pads"@en , "Millimetre"@en , "Main Pump"@en , "Mass Flow Rate"@en , "K-3301 B/KT-3301 B"@en , "Bearing"@en , "Refinery"@en , "K-5701"@en , "Axial"@en , "K-2201/KT-2201"@en , "Gearbox"@en , "Outlet"@en , "Inlet"@en , "Temperature"@en , "electric current"@en ;
+            dcat:keyword        "Revolution per Minute"@en , "ampere"@en , "Vibration"@en , "Kilogram Force per Square Centimetre"@en , "pressure"@en , "Thrust Bearing"@en , "Compressed Air"@en , "Seal Oil"@en , "Motor"@en , "Displacement"@en , "Turbine"@en , "Input dataset"@en , "Blow Off"@en , "Control Oil"@en , "Radial"@en , "Discharge"@en , "Journal Pads"@en , "Primary Vent"@en , "Steam Turbine"@en , "K-7502/ST-7501"@en , "Stator"@en , "Shaft"@en , "angular velocity"@en , "degree Celsius"@en , "distance"@en , "Compressor"@en , "Maximum"@en , "Minimum"@en , "K-3201 A/KM-3201 A"@en , "Micrometre"@en , "Lube Oil"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Thrust Pads"@en , "Millimetre"@en , "Main Pump"@en , "Mass Flow Rate"@en , "K-3301 B/KT-3301 B"@en , "Bearing"@en , "Refinery"@en , "K-5701"@en , "Average"@en , "Axial"@en , "K-2201/KT-2201"@en , "Gearbox"@en , "Outlet"@en , "Inlet"@en , "Temperature"@en , "CSV dataset"@en , "electric current"@en , "Differential"@en ;
             edc:id              "refinery-compressor-2022-08.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -11671,7 +12093,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG05-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "frequency"@en , "Temperature"@en , "electric current"@en , "Ambient"@en , "hertz"@en , "watt"@en , "Angle"@en , "Grid"@en , "System Logs"@en , "Voltage"@en , "ampere"@en , "Rotor"@en , "Alarm"@en , "time"@en , "Inverter"@en , "WF1-WTG05"@en , "Bearing"@en , "volt"@en , "Yaw"@en , "Nacelle"@en , "Spinner"@en , "Phase3"@en , "degree Celsius"@en , "Revolution per Minute"@en , "Wind Turbine"@en , "Controller"@en , "Busbar"@en , "Hour"@en , "Slip Ring"@en , "Generator"@en , "reactive power"@en , "Blades"@en , "Cooling Water"@en , "power"@en , "Wind"@en , "Capacitance"@en , "power factor"@en , "Turbine"@en , "metre per second"@en , "Active Power"@en , "farad"@en , "Phase2"@en , "inductance"@en , "Linear Velocity"@en , "Degree"@en , "Unitless"@en , "Volt Ampere Reactive"@en , "Pitch"@en , "Shaft"@en , "Service"@en , "Production"@en , "Wind Farm"@en , "Gearbox"@en , "Voltage Control Processor"@en , "High Voltage Transformer"@en , "henry"@en , "Oil"@en , "Phase1"@en , "Parameter"@en , "angular velocity"@en ;
+            dcat:keyword        "frequency"@en , "Temperature"@en , "electric current"@en , "Limit"@en , "Setpoint"@en , "Ambient"@en , "hertz"@en , "watt"@en , "Angle"@en , "Grid"@en , "System Logs"@en , "Voltage"@en , "Estimate"@en , "ampere"@en , "Rotor"@en , "Alarm"@en , "Absolute"@en , "time"@en , "Inverter"@en , "WF1-WTG05"@en , "Bearing"@en , "volt"@en , "Yaw"@en , "Nacelle"@en , "Spinner"@en , "Total"@en , "Phase3"@en , "Accumulated"@en , "degree Celsius"@en , "Revolution per Minute"@en , "Average"@en , "Wind Turbine"@en , "Controller"@en , "Busbar"@en , "Hour"@en , "Slip Ring"@en , "Relative"@en , "Generator"@en , "reactive power"@en , "Possible"@en , "Blades"@en , "Cooling Water"@en , "power"@en , "Wind"@en , "Capacitance"@en , "Maximum"@en , "power factor"@en , "Turbine"@en , "metre per second"@en , "Active Power"@en , "Minimum"@en , "farad"@en , "Phase2"@en , "Input dataset"@en , "Run time"@en , "inductance"@en , "Linear Velocity"@en , "Degree"@en , "Unitless"@en , "Volt Ampere Reactive"@en , "Standard Deviation"@en , "Pitch"@en , "Shaft"@en , "Service"@en , "Latest"@en , "Production"@en , "Wind Farm"@en , "CSV dataset"@en , "Gearbox"@en , "Voltage Control Processor"@en , "High Voltage Transformer"@en , "henry"@en , "Oil"@en , "Phase1"@en , "Parameter"@en , "angular velocity"@en ;
             edc:id              "windfarm-WF1-WTG05-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -11707,7 +12129,7 @@
             dcterms:type        <type/csv> , <type/result> ;
             dcat:distribution   <dataset/refinery-compressor-result-past-2022-12.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-result-past-2022-influx> ;
-            dcat:keyword        "Journal Bearing"@en , "K-7502/ST-7501"@en , "K-3301 B/KT-3301 B"@en , "angular velocity"@en , "Axial"@en , "Thrust Pads"@en , "Kilogram per Hour"@en , "Discharge"@en , "pressure"@en , "Motor"@en , "Temperature"@en , "Predicted"@en , "Gearbox"@en , "Mass Flow Rate"@en , "distance"@en , "Compressed Air"@en , "ampere"@en , "K-5701"@en , "K-2201/KT-2201"@en , "Stator"@en , "Turbine"@en , "electric current"@en , "Outlet"@en , "Millimetre"@en , "Bearing"@en , "Primary Vent"@en , "Refinery"@en , "Inlet"@en , "Micrometre"@en , "Shaft"@en , "Revolution per Minute"@en , "Radial"@en , "Compressor"@en , "Journal Pads"@en , "K-3201 A/KM-3201 A"@en , "Vibration"@en , "Steam Turbine"@en , "Blow Off"@en , "Thrust Bearing"@en , "Control Oil"@en , "Kilogram Force per Square Centimetre"@en , "Lube Oil"@en , "Displacement"@en , "Main Pump"@en , "Seal Oil"@en , "degree Celsius"@en ;
+            dcat:keyword        "Journal Bearing"@en , "K-7502/ST-7501"@en , "K-3301 B/KT-3301 B"@en , "angular velocity"@en , "Axial"@en , "CSV dataset"@en , "Thrust Pads"@en , "Kilogram per Hour"@en , "Discharge"@en , "pressure"@en , "Motor"@en , "Temperature"@en , "Predicted"@en , "Gearbox"@en , "Result dataset"@en , "Mass Flow Rate"@en , "distance"@en , "Compressed Air"@en , "ampere"@en , "K-5701"@en , "K-2201/KT-2201"@en , "Stator"@en , "Turbine"@en , "electric current"@en , "Outlet"@en , "Average"@en , "Millimetre"@en , "Bearing"@en , "Primary Vent"@en , "Minimum"@en , "Refinery"@en , "Inlet"@en , "Maximum"@en , "Micrometre"@en , "Shaft"@en , "Revolution per Minute"@en , "Radial"@en , "Compressor"@en , "Journal Pads"@en , "K-3201 A/KM-3201 A"@en , "Vibration"@en , "Steam Turbine"@en , "Blow Off"@en , "Differential"@en , "Thrust Bearing"@en , "Control Oil"@en , "Kilogram Force per Square Centimetre"@en , "Lube Oil"@en , "Displacement"@en , "Main Pump"@en , "Seal Oil"@en , "degree Celsius"@en ;
             :wasDerivedFrom     <dataset/refinery-compressor-2022-12.csv> ;
             edc:id              "refinery-compressor-result-past-2022-12.csv" ;
             edc:participantId   "BPNLOK5DHX.CFXO08H" .
@@ -11726,7 +12148,7 @@
             dcterms:type        <type/csv> , <type/input> ;
             dcat:distribution   <dataset/refinery-compressor-2022-11.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Lube Oil"@en , "Stator"@en , "Motor"@en , "electric current"@en , "Revolution per Minute"@en , "Vibration"@en , "Kilogram per Hour"@en , "Micrometre"@en , "ampere"@en , "Main Pump"@en , "K-7502/ST-7501"@en , "Discharge"@en , "Thrust Pads"@en , "Seal Oil"@en , "K-2201/KT-2201"@en , "Inlet"@en , "pressure"@en , "Refinery"@en , "Primary Vent"@en , "Axial"@en , "Steam Turbine"@en , "Temperature"@en , "Gearbox"@en , "angular velocity"@en , "Compressor"@en , "Radial"@en , "Mass Flow Rate"@en , "Blow Off"@en , "Turbine"@en , "Bearing"@en , "distance"@en , "Shaft"@en , "Millimetre"@en , "Outlet"@en , "Journal Bearing"@en , "K-5701"@en , "Journal Pads"@en , "Thrust Bearing"@en , "K-3301 B/KT-3301 B"@en , "Displacement"@en , "degree Celsius"@en , "Kilogram Force per Square Centimetre"@en , "K-3201 A/KM-3201 A"@en , "Control Oil"@en , "Compressed Air"@en ;
+            dcat:keyword        "Lube Oil"@en , "Stator"@en , "Input dataset"@en , "Motor"@en , "electric current"@en , "CSV dataset"@en , "Revolution per Minute"@en , "Vibration"@en , "Kilogram per Hour"@en , "Micrometre"@en , "ampere"@en , "Main Pump"@en , "K-7502/ST-7501"@en , "Discharge"@en , "Thrust Pads"@en , "Seal Oil"@en , "K-2201/KT-2201"@en , "Inlet"@en , "pressure"@en , "Refinery"@en , "Primary Vent"@en , "Axial"@en , "Steam Turbine"@en , "Temperature"@en , "Gearbox"@en , "angular velocity"@en , "Compressor"@en , "Radial"@en , "Mass Flow Rate"@en , "Blow Off"@en , "Turbine"@en , "Maximum"@en , "Minimum"@en , "Bearing"@en , "distance"@en , "Shaft"@en , "Millimetre"@en , "Outlet"@en , "Journal Bearing"@en , "Differential"@en , "K-5701"@en , "Journal Pads"@en , "Thrust Bearing"@en , "K-3301 B/KT-3301 B"@en , "Displacement"@en , "degree Celsius"@en , "Kilogram Force per Square Centimetre"@en , "K-3201 A/KM-3201 A"@en , "Control Oil"@en , "Compressed Air"@en , "Average"@en ;
             edc:id              "refinery-compressor-2022-11.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
@@ -12878,7 +13300,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG01-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Alarm"@en , "Nacelle"@en , "Degree"@en , "Cooling Water"@en , "degree Celsius"@en , "Slip Ring"@en , "Controller"@en , "Parameter"@en , "Bearing"@en , "High Voltage Transformer"@en , "Shaft"@en , "Wind Farm"@en , "Rotor"@en , "henry"@en , "angular velocity"@en , "Ambient"@en , "Voltage Control Processor"@en , "Inverter"@en , "metre per second"@en , "System Logs"@en , "Hour"@en , "Phase1"@en , "power"@en , "Yaw"@en , "WF1-WTG01"@en , "Busbar"@en , "Phase2"@en , "Linear Velocity"@en , "Pitch"@en , "Oil"@en , "Wind Turbine"@en , "Spinner"@en , "time"@en , "Service"@en , "Turbine"@en , "farad"@en , "Unitless"@en , "power factor"@en , "Production"@en , "Temperature"@en , "Capacitance"@en , "inductance"@en , "Active Power"@en , "Revolution per Minute"@en , "Phase3"@en , "reactive power"@en , "watt"@en , "Angle"@en , "Blades"@en , "frequency"@en , "Generator"@en , "Grid"@en , "volt"@en , "electric current"@en , "Gearbox"@en , "ampere"@en , "Wind"@en , "Voltage"@en , "Volt Ampere Reactive"@en , "hertz"@en ;
+            dcat:keyword        "Alarm"@en , "Minimum"@en , "Nacelle"@en , "Degree"@en , "Latest"@en , "Cooling Water"@en , "degree Celsius"@en , "Average"@en , "Slip Ring"@en , "Controller"@en , "Parameter"@en , "Bearing"@en , "High Voltage Transformer"@en , "Shaft"@en , "Wind Farm"@en , "Total"@en , "Rotor"@en , "henry"@en , "angular velocity"@en , "Ambient"@en , "Voltage Control Processor"@en , "Estimate"@en , "Inverter"@en , "metre per second"@en , "System Logs"@en , "Hour"@en , "Phase1"@en , "Limit"@en , "power"@en , "Yaw"@en , "WF1-WTG01"@en , "Busbar"@en , "Phase2"@en , "Linear Velocity"@en , "Pitch"@en , "Oil"@en , "Wind Turbine"@en , "Accumulated"@en , "Spinner"@en , "time"@en , "Service"@en , "Setpoint"@en , "Turbine"@en , "Standard Deviation"@en , "farad"@en , "Input dataset"@en , "Unitless"@en , "power factor"@en , "Production"@en , "Temperature"@en , "Capacitance"@en , "inductance"@en , "CSV dataset"@en , "Active Power"@en , "Revolution per Minute"@en , "Phase3"@en , "reactive power"@en , "watt"@en , "Angle"@en , "Blades"@en , "Relative"@en , "Absolute"@en , "frequency"@en , "Run time"@en , "Generator"@en , "Grid"@en , "volt"@en , "electric current"@en , "Gearbox"@en , "ampere"@en , "Wind"@en , "Possible"@en , "Voltage"@en , "Volt Ampere Reactive"@en , "Maximum"@en , "hertz"@en ;
             edc:id              "windfarm-WF1-WTG01-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -12911,7 +13333,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG08-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "Grid"@en , "Degree"@en , "Nacelle"@en , "inductance"@en , "electric current"@en , "Temperature"@en , "henry"@en , "Rotor"@en , "Voltage Control Processor"@en , "High Voltage Transformer"@en , "Cooling Water"@en , "Wind"@en , "Revolution per Minute"@en , "Phase1"@en , "Wind Turbine"@en , "volt"@en , "Alarm"@en , "Unitless"@en , "Gearbox"@en , "WF1-WTG08"@en , "Blades"@en , "Busbar"@en , "Hour"@en , "Voltage"@en , "Bearing"@en , "Generator"@en , "Spinner"@en , "degree Celsius"@en , "Service"@en , "Controller"@en , "Phase2"@en , "ampere"@en , "Inverter"@en , "Active Power"@en , "Capacitance"@en , "Angle"@en , "frequency"@en , "Slip Ring"@en , "angular velocity"@en , "hertz"@en , "Ambient"@en , "farad"@en , "watt"@en , "time"@en , "Oil"@en , "Pitch"@en , "Volt Ampere Reactive"@en , "Wind Farm"@en , "Phase3"@en , "System Logs"@en , "metre per second"@en , "Turbine"@en , "reactive power"@en , "Shaft"@en , "Production"@en , "Linear Velocity"@en , "power factor"@en , "Parameter"@en , "Yaw"@en , "power"@en ;
+            dcat:keyword        "Grid"@en , "Degree"@en , "Absolute"@en , "Nacelle"@en , "inductance"@en , "electric current"@en , "Temperature"@en , "henry"@en , "Setpoint"@en , "Rotor"@en , "Voltage Control Processor"@en , "High Voltage Transformer"@en , "Cooling Water"@en , "Wind"@en , "Minimum"@en , "Revolution per Minute"@en , "Limit"@en , "Phase1"@en , "Run time"@en , "CSV dataset"@en , "Wind Turbine"@en , "volt"@en , "Alarm"@en , "Unitless"@en , "Maximum"@en , "Gearbox"@en , "WF1-WTG08"@en , "Blades"@en , "Busbar"@en , "Total"@en , "Hour"@en , "Voltage"@en , "Bearing"@en , "Generator"@en , "Spinner"@en , "degree Celsius"@en , "Service"@en , "Controller"@en , "Input dataset"@en , "Phase2"@en , "ampere"@en , "Inverter"@en , "Active Power"@en , "Capacitance"@en , "Angle"@en , "frequency"@en , "Slip Ring"@en , "angular velocity"@en , "Ambient"@en , "hertz"@en , "Average"@en , "farad"@en , "Accumulated"@en , "Possible"@en , "watt"@en , "Relative"@en , "Standard Deviation"@en , "time"@en , "Oil"@en , "Pitch"@en , "Latest"@en , "Volt Ampere Reactive"@en , "Wind Farm"@en , "Phase3"@en , "Estimate"@en , "System Logs"@en , "metre per second"@en , "Turbine"@en , "reactive power"@en , "Shaft"@en , "Production"@en , "Linear Velocity"@en , "power factor"@en , "Parameter"@en , "Yaw"@en , "power"@en ;
             edc:id              "windfarm-WF1-WTG08-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
 }
@@ -12937,7 +13359,7 @@
             dcterms:title       "Refinery compressor sensor data for 2022 as influx"@en ;
             dcterms:type        <type/input> , <type/influx> ;
             dcat:distribution   <dataset/refinery-compressor-2022-influx/distribution> ;
-            dcat:keyword        "electric current"@en , "Temperature"@en , "Axial"@en , "Primary Vent"@en , "Micrometre"@en , "angular velocity"@en , "Journal Bearing"@en , "Mass Flow Rate"@en , "K-2201/KT-2201"@en , "K-3201 A/KM-3201 A"@en , "K-5701"@en , "Displacement"@en , "Control Oil"@en , "Kilogram per Hour"@en , "Journal Pads"@en , "Thrust Pads"@en , "Motor"@en , "ampere"@en , "K-3301 B/KT-3301 B"@en , "Stator"@en , "Gearbox"@en , "Turbine"@en , "Main Pump"@en , "Steam Turbine"@en , "distance"@en , "Bearing"@en , "pressure"@en , "Radial"@en , "K-7502/ST-7501"@en , "Shaft"@en , "Revolution per Minute"@en , "Refinery"@en , "Millimetre"@en , "Kilogram Force per Square Centimetre"@en , "degree Celsius"@en , "Vibration"@en , "Lube Oil"@en , "Seal Oil"@en , "Inlet"@en , "Outlet"@en , "Compressor"@en , "Discharge"@en , "Blow Off"@en , "Compressed Air"@en , "Thrust Bearing"@en ;
+            dcat:keyword        "Differential"@en , "electric current"@en , "Temperature"@en , "Axial"@en , "Primary Vent"@en , "Micrometre"@en , "angular velocity"@en , "Journal Bearing"@en , "Mass Flow Rate"@en , "K-2201/KT-2201"@en , "K-3201 A/KM-3201 A"@en , "K-5701"@en , "Displacement"@en , "Control Oil"@en , "Kilogram per Hour"@en , "Journal Pads"@en , "Thrust Pads"@en , "Motor"@en , "ampere"@en , "K-3301 B/KT-3301 B"@en , "Stator"@en , "Influx dataset"@en , "Gearbox"@en , "Turbine"@en , "Main Pump"@en , "Steam Turbine"@en , "distance"@en , "Bearing"@en , "pressure"@en , "Radial"@en , "K-7502/ST-7501"@en , "Shaft"@en , "Average"@en , "Revolution per Minute"@en , "Refinery"@en , "Millimetre"@en , "Kilogram Force per Square Centimetre"@en , "degree Celsius"@en , "Vibration"@en , "Lube Oil"@en , "Seal Oil"@en , "Minimum"@en , "Inlet"@en , "Outlet"@en , "Maximum"@en , "Compressor"@en , "Input dataset"@en , "Discharge"@en , "Blow Off"@en , "Compressed Air"@en , "Thrust Bearing"@en ;
             edc:id              "refinery-compressor-2022-influx" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
 }
@@ -12961,7 +13383,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/windfarm-WF1-WTG03-2020.csv/distribution> ;
             dcat:inSeries       <dataset/windfarm-WF1-2020-influx> ;
-            dcat:keyword        "power"@en , "inductance"@en , "Phase3"@en , "Capacitance"@en , "Grid"@en , "Turbine"@en , "Revolution per Minute"@en , "Ambient"@en , "power factor"@en , "watt"@en , "Yaw"@en , "Wind Farm"@en , "Wind"@en , "Generator"@en , "System Logs"@en , "hertz"@en , "WF1-WTG03"@en , "Nacelle"@en , "Volt Ampere Reactive"@en , "Voltage"@en , "High Voltage Transformer"@en , "Inverter"@en , "Phase2"@en , "metre per second"@en , "Parameter"@en , "Alarm"@en , "Gearbox"@en , "henry"@en , "Active Power"@en , "angular velocity"@en , "Slip Ring"@en , "Pitch"@en , "Bearing"@en , "Service"@en , "Busbar"@en , "farad"@en , "Oil"@en , "Controller"@en , "reactive power"@en , "degree Celsius"@en , "Wind Turbine"@en , "Blades"@en , "frequency"@en , "Temperature"@en , "Voltage Control Processor"@en , "time"@en , "Phase1"@en , "Angle"@en , "ampere"@en , "Degree"@en , "Linear Velocity"@en , "Cooling Water"@en , "Spinner"@en , "volt"@en , "Rotor"@en , "Unitless"@en , "Hour"@en , "Shaft"@en , "electric current"@en , "Production"@en ;
+            dcat:keyword        "power"@en , "inductance"@en , "Limit"@en , "Phase3"@en , "Relative"@en , "Absolute"@en , "Capacitance"@en , "Grid"@en , "Turbine"@en , "Revolution per Minute"@en , "Ambient"@en , "power factor"@en , "watt"@en , "Yaw"@en , "Average"@en , "Wind Farm"@en , "Possible"@en , "Wind"@en , "Generator"@en , "System Logs"@en , "hertz"@en , "WF1-WTG03"@en , "Nacelle"@en , "Volt Ampere Reactive"@en , "Voltage"@en , "High Voltage Transformer"@en , "Inverter"@en , "Phase2"@en , "Accumulated"@en , "Parameter"@en , "metre per second"@en , "Setpoint"@en , "Alarm"@en , "Gearbox"@en , "henry"@en , "Active Power"@en , "angular velocity"@en , "Slip Ring"@en , "Total"@en , "Standard Deviation"@en , "Run time"@en , "Pitch"@en , "Estimate"@en , "Bearing"@en , "Service"@en , "Busbar"@en , "CSV dataset"@en , "farad"@en , "Oil"@en , "Controller"@en , "Input dataset"@en , "reactive power"@en , "degree Celsius"@en , "Wind Turbine"@en , "Blades"@en , "frequency"@en , "Temperature"@en , "Maximum"@en , "Latest"@en , "Voltage Control Processor"@en , "time"@en , "Phase1"@en , "Angle"@en , "ampere"@en , "Degree"@en , "Linear Velocity"@en , "Cooling Water"@en , "Minimum"@en , "Spinner"@en , "volt"@en , "Rotor"@en , "Unitless"@en , "Hour"@en , "Shaft"@en , "electric current"@en , "Production"@en ;
             edc:id              "windfarm-WF1-WTG03-2020.csv" ;
             edc:participantId   "BPNL512R1Q.C782W3N" .
     
@@ -12988,7 +13410,7 @@
             dcterms:type        <type/input> , <type/csv> ;
             dcat:distribution   <dataset/refinery-compressor-2022-09.csv/distribution> ;
             dcat:inSeries       <dataset/refinery-compressor-2022-influx> ;
-            dcat:keyword        "Control Oil"@en , "Bearing"@en , "Kilogram Force per Square Centimetre"@en , "electric current"@en , "angular velocity"@en , "Micrometre"@en , "Steam Turbine"@en , "Thrust Bearing"@en , "Journal Pads"@en , "Discharge"@en , "Thrust Pads"@en , "Millimetre"@en , "Refinery"@en , "degree Celsius"@en , "Blow Off"@en , "Primary Vent"@en , "Revolution per Minute"@en , "K-2201/KT-2201"@en , "Turbine"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Motor"@en , "Stator"@en , "K-3301 B/KT-3301 B"@en , "Axial"@en , "Main Pump"@en , "K-3201 A/KM-3201 A"@en , "Compressor"@en , "Radial"@en , "Outlet"@en , "Compressed Air"@en , "distance"@en , "Inlet"@en , "Mass Flow Rate"@en , "Shaft"@en , "pressure"@en , "Seal Oil"@en , "Vibration"@en , "Gearbox"@en , "Lube Oil"@en , "K-7502/ST-7501"@en , "Temperature"@en , "Displacement"@en , "ampere"@en , "K-5701"@en ;
+            dcat:keyword        "Control Oil"@en , "Bearing"@en , "Kilogram Force per Square Centimetre"@en , "electric current"@en , "angular velocity"@en , "Micrometre"@en , "Input dataset"@en , "Steam Turbine"@en , "Thrust Bearing"@en , "Journal Pads"@en , "Discharge"@en , "Thrust Pads"@en , "Millimetre"@en , "Refinery"@en , "degree Celsius"@en , "Blow Off"@en , "Primary Vent"@en , "Revolution per Minute"@en , "K-2201/KT-2201"@en , "Turbine"@en , "Journal Bearing"@en , "Kilogram per Hour"@en , "Motor"@en , "Stator"@en , "K-3301 B/KT-3301 B"@en , "Axial"@en , "Main Pump"@en , "Maximum"@en , "K-3201 A/KM-3201 A"@en , "Compressor"@en , "CSV dataset"@en , "Radial"@en , "Outlet"@en , "Compressed Air"@en , "Minimum"@en , "Differential"@en , "Average"@en , "distance"@en , "Inlet"@en , "Mass Flow Rate"@en , "Shaft"@en , "pressure"@en , "Seal Oil"@en , "Vibration"@en , "Gearbox"@en , "Lube Oil"@en , "K-7502/ST-7501"@en , "Temperature"@en , "Displacement"@en , "ampere"@en , "K-5701"@en ;
             edc:id              "refinery-compressor-2022-09.csv" ;
             edc:participantId   "BPNLY3SEIW.CV064VJ" .
     
