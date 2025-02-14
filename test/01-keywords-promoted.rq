@@ -1,0 +1,7 @@
+#Keyowrds are promoted from taxonomy
+BASE <https://dataspace.underpinproject.eu/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+ask {
+    <dataset/refinery-compressor-2022-10.csv> a dcat:Dataset ;
+    dcat:keyword "Mass Flow Rate"@en
+}

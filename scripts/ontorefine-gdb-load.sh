@@ -9,7 +9,7 @@ fi
 CSV_FILE="$1"
 TRANSFORM_QUERY="$2"
 CONFIG_FILE="ontorefine-gdb-load/config.yaml"
-OUTPUT_DIR="ontorefine-gdb-load"
+OUTPUT_DIR="ontorefine-gdb-load/initial-data"
 LOADED_FILE="$OUTPUT_DIR/$(basename "$CSV_FILE" .csv).loaded"
 
 # Load configurations manually

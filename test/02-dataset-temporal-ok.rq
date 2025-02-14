@@ -1,0 +1,20 @@
+#all datasets have temporal and end after they start
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+select (if(?n_ds=?n_ds_ok,true,false) as ?r) {
+    {
+        select (count(?ds) as ?n_ds) (count(?ds1) as ?n_ds_ok)
+        where {
+            {
+                ?ds a dcat:Dataset .
+            } union
+            {
+                ?ds1 a dcat:Dataset ;
+                dct:temporal ?tp .
+                ?tp dcat:startDate ?start ;
+                dcat:endDate ?end
+                filter(?end >= ?start)
+            }
+        }
+    }
+}
