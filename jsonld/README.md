@@ -1,5 +1,23 @@
 # UNDERPIN JSON-LD Conversion
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
+- [UNDERPIN JSON-LD Conversion](#underpin-json-ld-conversion)
+    - [Intro](#intro)
+    - [JSON-LD Context](#json-ld-context)
+    - [Context Whitelist](#context-whitelist)
+    - [Sample Files](#sample-files)
+    - [JSON-LD From GraphDB](#json-ld-from-graphdb)
+    - [JSON-LD from Dataspace](#json-ld-from-dataspace)
+    - [Conversion with Command-Line Tools](#conversion-with-command-line-tools)
+- [Update Mar 2025](#update-mar-2025)
+    - [Files](#files)
+
+<!-- markdown-toc end -->
+
+
+
+## Intro
 [Dataspace Catalog Response](../dcat/#dataspace-catalog-response) criticizes the JSON metadata payload coming out of the dataspace, 
 and problems related to converting it to RDF.
 
@@ -11,30 +29,7 @@ This discusses proper JSON-LD:
 
 The UNDERPIN JSON-LD [context.json](../context.json) is deployed at
 https://rawgit2.com/underpin-project/model/main/context.json .
-It reuses the DSP context, adds more property definitions, and overrides `dct:title` (DSP specifies `@en` but we don't use any lang tag):
-```json
-{  "@context": [
-    "https://w3id.org/dspace/2024/1/context.json",
-    {
-      "@base": "https://dataspace.underpinproject.eu/",
-      "edc": "https://w3id.org/edc/v0.0.1/ns/",
-      "prov": "http://www.w3.org/ns/prov#",
-      "dcat:distribution":   {"@type": "@id"},
-      "dcat:endDate":        {"@type": "xsd:date"},
-      "dcat:inSeries":       {"@type": "@id"},
-      "dcat:startDate":      {"@type": "xsd:date"},
-      "dct:conformsTo":      {"@type": "@id"},
-      "dct:creator":         {"@type": "@id"},
-      "dct:license":         {"@type": "@id"},
-      "dct:publisher":       {"@type": "@id"},
-      "dct:temporal":        {"@type": "@id"},
-      "dct:title":           {"@language": ""},
-      "dct:type":            {"@type": "@id"},
-      "prov:wasDerivedFrom": {"@type": "@id"}
-    }
-  ]
-}
-```
+It reuses the DSP context and adds more property definitions (unfortunately these need to use full prop URLs since our data also uses full prop URLs)
 
 ## Context Whitelist
 https://github.com/underpin-project/dataspace/issues/59 
@@ -169,8 +164,6 @@ And the following defects:
 - `<odrl:Set>` has bad URL (no base, and value is not suitable for URL), 
   so it gets the local filename as URL (`<file:///d:/Onto/proj/underpin/model/jsonld/dataset-refinery-compressor-2022-01-from-dataspace.jsonld> .`)
   - Same for `<odrl:hasPolicy>`
-  - Will be removed
-
 
 
 ## Conversion with Command-Line Tools
@@ -191,3 +184,49 @@ Neither of these produces prefixed prop URLs, so I prepend `prefixes.ttl` to see
 ```
 riot.bat --formatted ttl dataset-refinery-compressor-2022-01-from-dataspace.jsonld | cat ../prefixes.ttl - | riot.bat --syntax ttl -formatted ttl > dataset-refinery-compressor-2022-01-from-dataspace.ttl
 ```
+
+# Update Mar 2025
+
+## Files
+- `prefixes.ttl`: copied from top folder, puml triples removed. 
+  This is used to prefixize (prettify) turtle files
+- `dspace-context.json`: parent context, downloaded from https://w3id.org/dspace/2024/1/context.json
+- `json-ld-example.jsonld`: downloaded from the dataspace, reduced to 2 datasets and 2 keywords per dataset, reformatted basic JSON structure
+- `json-ld-example1.ttl`: made with this command:
+```
+riot.bat -out ttl json-ld-example.jsonld |cat prefixes.ttl - | riot.bat -syntax ttl -formatted ttl > json-ld-example.ttl
+```
+- `json-ld-example2.ttl`: made with this command:
+```
+jsonld toRdf -q json-ld-example.jsonld|cat prefixes.ttl - | riot.bat -syntax ttl -formatted ttl > json-ld-example2.ttl
+```
+
+Fixes:
+- The basic JSON structure was wrong: the context doesn't apply to all blocks. 
+  See https://w3c.github.io/json-ld-syntax/#example-describing-disconnected-nodes-with-graph for the right structure: 
+  we need to use `@graph` for multiple dataset nodes. This caused basic errors like `<dcat:Dataset>` and `<odrl:policy>` (invalid URL schemes instead of prefixes)
+- Unfortunately the context needs to use full URLs in prop definitions since the data also uses full URLs
+- Removed prefixes that are already defined in the base context (dspace-context.jsonld)
+- Added prefix `dcat-ext: https://semantic.sovity.io/dcat-ext#`
+- Removed `"dct:title": {"@language": ""}` because it caused error `Language tag [] is not well formed`
+
+About the malformed ORDL `@id: Y29udHJhY3QtcmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:cmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:MDE5NThmMmUtMjIwMi03YzgxLTg2OWYtMjdmMjczMTJkODc5`
+- Java program `riot` (from Jena) interprets it as `<>` (i.e. the base with empty local part).
+  This is not ok since different ODRL sets (policies) will be collapsed to the same node
+- JS NPM module `jsonld` (also used on the JSONLD Playground) interprets it as intended, i.e. prepends the base. 
+  Although that's an ugly (and perhaps invalid) URL, at least it will be different 
+- Titanium (rdf4j JSONLD parser): I don't know what it will do. If it discards the local part, the only recourse is rewrite or remove the ugly URL.
+
+Here's the critical part:
+```
+"@type" : "dcat:Dataset",
+"odrl:hasPolicy" : {
+  "@id" : "Y29udHJhY3QtcmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:cmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:MDE5NThmMmUtMjIwMi03YzgxLTg2OWYtMjdmMjczMTJkODc5",
+  "@type" : "odrl:Set",
+  "odrl:permission" : {
+    "odrl:target" : "refinery-compressor-2022-01.csv",
+```
+- Because the policy is embedded in the dataset, you can just remove the faulty `@id` line (then each policy will become a distinct blank node)
+- This matches the [DSP spec](https://docs.internationaldataspaces.org/ids-knowledgebase/dataspace-protocol/catalog/catalog.protocol#id-1.1.1-dataset): "A Dataset must have 1..N `hasPolicy` attributes that contain an ODRL Offer"
+- On the other hand, the reverse link `target` is wrong: "Offers must NOT contain any explicit target attributes".
+  But it does no harm, so you can leave it.

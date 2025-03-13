@@ -1,0 +1,99 @@
+PREFIX csvw:         <http://www.w3.org/ns/csvw#>
+PREFIX dcat:         <http://www.w3.org/ns/dcat#>
+PREFIX dcat-ext:     <https://semantic.sovity.io/dcat-ext#>
+PREFIX dct:          <http://purl.org/dc/terms/>
+PREFIX edc:          <https://w3id.org/edc/v0.0.1/ns/>
+PREFIX odrl:         <http://www.w3.org/ns/odrl/2/>
+PREFIX owl:          <http://www.w3.org/2002/07/owl#>
+PREFIX prov:         <http://www.w3.org/ns/prov#>
+PREFIX puml:         <http://plantuml.com/ontology#>
+PREFIX qb:           <http://purl.org/linked-data/cube#>
+PREFIX qk:           <http://qudt.org/vocab/quantitykind/>
+PREFIX qudt:         <http://qudt.org/schema/qudt/>
+PREFIX rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reliawind:    <https://www.ieawindtask43.org/ontoforge/reliawind-taxonomy-wt-components/>
+PREFIX schema:       <http://schema.org/>
+PREFIX sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
+PREFIX skos:         <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa:         <http://www.w3.org/ns/sosa/>
+PREFIX spif:         <http://spinrdf.org/spif#>
+PREFIX un:           <https://dataspace.underpinproject.eu/ontology/>
+PREFIX unit:         <http://qudt.org/vocab/unit/>
+PREFIX xsd:          <http://www.w3.org/2001/XMLSchema#>
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/temporal>
+        dcat:endDate    "2022-03-01"^^xsd:date;
+        dcat:startDate  "2022-02-01"^^xsd:date .
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/distribution>
+        dct:format  "text/csv" .
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv>
+        rdf:type           dcat:Dataset;
+        dct:conformsTo     <https://dataspace.underpinproject.eu/schema/refinery>;
+        dct:creator        <https://dataspace.underpinproject.eu/org/MOH>;
+        dct:identifier     "refinery-compressor-2022-02.csv";
+        dct:language       <https://w3id.org/idsa/code/EN>;
+        dct:publisher      <https://dataspace.underpinproject.eu/org/MOH>;
+        dct:temporal       <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/temporal>;
+        dct:title          "Refinery compressor sensor data for 2022-02 as csv";
+        dct:type           <https://dataspace.underpinproject.eu/type/input> , <https://dataspace.underpinproject.eu/type/csv>;
+        dcat:distribution  <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/distribution>;
+        dcat:inSeries      <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-influx>;
+        dcat:keyword       "Thrust Pads" , "Main Pump" , "Blow Off" , "K-7502/ST-7501" , "Outlet" , "Journal Bearing" , "Inlet" , "Thrust Bearing" , "K-3201 A/KM-3201 A" , "Steam Turbine" , "Stator" , "K-2201/KT-2201" , "Discharge" , "Journal Pads" , "Motor" , "Lube Oil" , "Primary Vent" , "Compressed Air" , "K-3301 B/KT-3301 B" , "Axial" , "Seal Oil" , "K-5701" , "Vibration" , "Control Oil" , "Radial" , "Minimum" , "Average" , "CSV dataset" , "Input dataset" , "Maximum" , "Gearbox" , "Bearing" , "Shaft" , "Turbine" , "Compressor" , "Refinery" , "Revolution per Minute" , "Millimetre" , "Micrometre" , "Kilogram Force per Square Centimetre" , "Kilogram per Hour" , "degree Celsius" , "ampere" , "Differential" , "Temperature" , "pressure" , "Mass Flow Rate" , "angular velocity" , "Displacement" , "distance" , "electric current";
+        dcat:version       "1.0";
+        odrl:hasPolicy     <https://dataspace.underpinproject.eu/dataset/>;
+        dcat-ext:httpDatasourceHintsProxyBody
+                "false";
+        dcat-ext:httpDatasourceHintsProxyMethod
+                "false";
+        dcat-ext:httpDatasourceHintsProxyPath
+                "false";
+        dcat-ext:httpDatasourceHintsProxyQueryParams
+                "false";
+        edc:id             "refinery-compressor-2022-02.csv";
+        edc:participantId  "BPNLY3SEIW.CV064VJ" .
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/temporal>
+        dcat:endDate    "2022-02-01"^^xsd:date;
+        dcat:startDate  "2022-01-01"^^xsd:date .
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/distribution>
+        dct:format  "text/csv" .
+
+<https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv>
+        rdf:type           dcat:Dataset;
+        dct:conformsTo     <https://dataspace.underpinproject.eu/schema/refinery>;
+        dct:creator        <https://dataspace.underpinproject.eu/org/MOH>;
+        dct:identifier     "refinery-compressor-2022-01.csv";
+        dct:language       <https://w3id.org/idsa/code/EN>;
+        dct:publisher      <https://dataspace.underpinproject.eu/org/MOH>;
+        dct:temporal       <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/temporal>;
+        dct:title          "Refinery compressor sensor data for 2022-01 as csv";
+        dct:type           <https://dataspace.underpinproject.eu/type/input> , <https://dataspace.underpinproject.eu/type/csv>;
+        dcat:distribution  <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/distribution>;
+        dcat:inSeries      <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-influx>;
+        dcat:keyword       "Thrust Pads" , "Main Pump" , "Blow Off" , "K-7502/ST-7501" , "Outlet" , "Journal Bearing" , "Inlet" , "Thrust Bearing" , "K-3201 A/KM-3201 A" , "Steam Turbine" , "Stator" , "K-2201/KT-2201" , "Discharge" , "Journal Pads" , "Motor" , "Lube Oil" , "Primary Vent" , "Compressed Air" , "K-3301 B/KT-3301 B" , "Axial" , "Seal Oil" , "K-5701" , "Vibration" , "Control Oil" , "Radial" , "Minimum" , "Average" , "CSV dataset" , "Input dataset" , "Maximum" , "Gearbox" , "Bearing" , "Shaft" , "Turbine" , "Compressor" , "Refinery" , "Revolution per Minute" , "Millimetre" , "Micrometre" , "Kilogram Force per Square Centimetre" , "Kilogram per Hour" , "degree Celsius" , "ampere" , "Differential" , "Temperature" , "pressure" , "Mass Flow Rate" , "angular velocity" , "Displacement" , "distance" , "electric current";
+        dcat:version       "1.0";
+        odrl:hasPolicy     <https://dataspace.underpinproject.eu/dataset/>;
+        dcat-ext:httpDatasourceHintsProxyBody
+                "false";
+        dcat-ext:httpDatasourceHintsProxyMethod
+                "false";
+        dcat-ext:httpDatasourceHintsProxyPath
+                "false";
+        dcat-ext:httpDatasourceHintsProxyQueryParams
+                "false";
+        edc:id             "refinery-compressor-2022-01.csv";
+        edc:participantId  "BPNLY3SEIW.CV064VJ" .
+
+<https://dataspace.underpinproject.eu/dataset/>
+        rdf:type         odrl:Set;
+        odrl:permission  [ odrl:action  [ odrl:type  "USE" ];
+                           odrl:target  <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv>
+                         ];
+        odrl:permission  [ odrl:action  [ odrl:type  "USE" ];
+                           odrl:target  <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv>
+                         ];
+        odrl:target      <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv> , <https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv> .

@@ -1,0 +1,111 @@
+{
+  "@graph": [
+    {
+      "@id" : "refinery-compressor-2022-01.csv",
+      "@type" : "dcat:Dataset",
+      "odrl:hasPolicy" : {
+        "@id" : "Y29udHJhY3QtcmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:cmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAxLmNzdg==:MDE5NThmMmUtMjIwMi03YzgxLTg2OWYtMjdmMjczMTJkODc5",
+        "@type" : "odrl:Set",
+        "odrl:permission" : {
+          "odrl:target" : "refinery-compressor-2022-01.csv",
+          "odrl:action" : {
+            "odrl:type" : "USE"
+          }
+        },
+        "odrl:prohibition" : [ ],
+        "odrl:obligation" : [ ],
+        "odrl:target" : "refinery-compressor-2022-01.csv"
+      },
+      "dcat:distribution" : [ ],
+      "http://www.w3.org/ns/dcat#keyword" : [ "angular velocity", "Displacement"],
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyBody" : "false",
+      "http://purl.org/dc/terms/identifier" : "refinery-compressor-2022-01.csv",
+      "edc:participantId" : "BPNLY3SEIW.CV064VJ",
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyPath" : "false",
+      "http://purl.org/dc/terms/language" : "https://w3id.org/idsa/code/EN",
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyMethod" : "false",
+      "http://purl.org/dc/terms/publisher" : "https://dataspace.underpinproject.eu/org/MOH",
+      "http://www.w3.org/ns/dcat#version" : "1.0",
+      "http://www.w3.org/ns/dcat#distribution" : {
+        "@id" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/distribution",
+        "http://purl.org/dc/terms/format" : "text/csv"
+      },
+      "http://www.w3.org/ns/dcat#inSeries" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-influx",
+      "http://purl.org/dc/terms/creator" : "https://dataspace.underpinproject.eu/org/MOH",
+      "http://purl.org/dc/terms/type" : [ {
+        "@id" : "https://dataspace.underpinproject.eu/type/input"
+      }, {
+        "@id" : "https://dataspace.underpinproject.eu/type/csv"
+      } ],
+      "http://purl.org/dc/terms/title" : "Refinery compressor sensor data for 2022-01 as csv",
+      "edc:id" : "refinery-compressor-2022-01.csv",
+      "http://purl.org/dc/terms/conformsTo" : "https://dataspace.underpinproject.eu/schema/refinery",
+      "http://purl.org/dc/terms/temporal" : {
+        "@id" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-01.csv/temporal",
+        "http://www.w3.org/ns/dcat#startDate" : {
+          "@value" : "2022-01-01",
+          "@type" : "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "http://www.w3.org/ns/dcat#endDate" : {
+          "@value" : "2022-02-01",
+          "@type" : "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyQueryParams" : "false"
+    },
+    {
+      "@id" : "refinery-compressor-2022-02.csv",
+      "@type" : "dcat:Dataset",
+      "odrl:hasPolicy" : {
+        "@id" : "Y29udHJhY3QtcmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAyLmNzdg==:cmVmaW5lcnktY29tcHJlc3Nvci0yMDIyLTAyLmNzdg==:MDE5NThmMmUtMjIwNC03YzBiLTlkODktMTE3YzM5OTAyNjM0",
+        "@type" : "odrl:Set",
+        "odrl:permission" : {
+          "odrl:target" : "refinery-compressor-2022-02.csv",
+          "odrl:action" : {
+            "odrl:type" : "USE"
+          }
+        },
+        "odrl:prohibition" : [ ],
+        "odrl:obligation" : [ ],
+        "odrl:target" : "refinery-compressor-2022-02.csv"
+      },
+      "dcat:distribution" : [ ],
+      "http://www.w3.org/ns/dcat#keyword" : [ "angular velocity", "Displacement"],
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyBody" : "false",
+      "http://purl.org/dc/terms/identifier" : "refinery-compressor-2022-02.csv",
+      "edc:participantId" : "BPNLY3SEIW.CV064VJ",
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyPath" : "false",
+      "http://purl.org/dc/terms/language" : "https://w3id.org/idsa/code/EN",
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyMethod" : "false",
+      "http://purl.org/dc/terms/publisher" : "https://dataspace.underpinproject.eu/org/MOH",
+      "http://www.w3.org/ns/dcat#version" : "1.0",
+      "http://www.w3.org/ns/dcat#distribution" : {
+        "@id" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/distribution",
+        "http://purl.org/dc/terms/format" : "text/csv"
+      },
+      "http://www.w3.org/ns/dcat#inSeries" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-influx",
+      "http://purl.org/dc/terms/creator" : "https://dataspace.underpinproject.eu/org/MOH",
+      "http://purl.org/dc/terms/type" : [ {
+        "@id" : "https://dataspace.underpinproject.eu/type/input"
+      }, {
+        "@id" : "https://dataspace.underpinproject.eu/type/csv"
+      } ],
+      "http://purl.org/dc/terms/title" : "Refinery compressor sensor data for 2022-02 as csv",
+      "edc:id" : "refinery-compressor-2022-02.csv",
+      "http://purl.org/dc/terms/conformsTo" : "https://dataspace.underpinproject.eu/schema/refinery",
+      "http://purl.org/dc/terms/temporal" : {
+        "@id" : "https://dataspace.underpinproject.eu/dataset/refinery-compressor-2022-02.csv/temporal",
+        "http://www.w3.org/ns/dcat#startDate" : {
+          "@value" : "2022-02-01",
+          "@type" : "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "http://www.w3.org/ns/dcat#endDate" : {
+          "@value" : "2022-03-01",
+          "@type" : "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "https://semantic.sovity.io/dcat-ext#httpDatasourceHintsProxyQueryParams" : "false"
+    }
+  ],
+  "@context" : "https://rawgit2.com/underpin-project/model/main/context.json"
+}
