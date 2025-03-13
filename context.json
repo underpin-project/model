@@ -4,8 +4,11 @@
     {
       "@base":    "https://dataspace.underpinproject.eu/dataset/",
       "edc":      "https://w3id.org/edc/v0.0.1/ns/",
+      "dct":      "http://purl.org/dc/terms/",
+      "dcat":     "http://www.w3.org/ns/dcat#",
       "dcat-ext": "https://semantic.sovity.io/dcat-ext#",
       "prov":     "http://www.w3.org/ns/prov#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
       "dcat:distribution":   {"@type": "@id"},
       "dcat:endDate":        {"@type": "xsd:date"},
       "dcat:inSeries":       {"@type": "@id"},
