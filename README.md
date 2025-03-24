@@ -686,12 +686,38 @@ Grid Production PossibleCapacitive Max. (47)
 
 Explicate it to characteristics like this:
 
-| title (raw name)                             | no | name (cleaned)                              | feature              | statistical qualifier | QUDT quantityKind | QUDT unit |
-|----------------------------------------------|----|---------------------------------------------|----------------------|-----------------------|-------------------|-----------|
-| Ambient WindSpeed Avg. (1)                   |  1 | Ambient Wind Speed Average                  | Wind Speed           | Average               | LinearVelocity    | M-PER-SEC |
-| Generator RPM Avg. (8)                       |  8 | Generator rotational speed                  | Generator            | LinearVelocity        | REV-PER-SEC       |           |
-| Grid InverterPhase1 Temp. Avg. (45)          | 45 | Grid Inverter Phase1 Average Temperature    | Grid Inverter,Phase1 | Average               | Temperature       | DEG-C     |
-| Grid Production PossibleCapacitive Max. (47) | 47 | Grid Production Possible Capacitive Maximum | Grid Production      | Maximum               |                   |           |
+| title (raw name)                             | no | name (cleaned)                              | feature              | statistical qualifier | QUDT quantityKind | QUDT unit   |
+|----------------------------------------------|----|---------------------------------------------|----------------------|-----------------------|-------------------|-------------|
+| Ambient WindSpeed Avg. (1)                   |  1 | Ambient Wind Speed Average                  | Wind Speed           | Average               | LinearVelocity    | M-PER-SEC   |
+| Generator RPM Avg. (8)                       |  8 | Generator rotational speed                  | Generator            |                       | LinearVelocity    | REV-PER-SEC |
+| Grid InverterPhase1 Temp. Avg. (45)          | 45 | Grid Inverter Phase1 Average Temperature    | Grid Inverter,Phase1 | Average               | Temperature       | DEG-C       |
+| Grid Production PossibleCapacitive Max. (47) | 47 | Grid Production Possible Capacitive Maximum | Grid Production      | Maximum               |                   |             |
+```
+
+https://github.com/underpin-project/dataspace/issues/23 (private issue):
+We also considered using LLMs to generate extended concept descriptions, with not just label but also definition and scope notes in regard to monitoring and significance, eg:
+
+```ttl
+un:D_E_BEARING_TEMPERATURE a owl:DatatypeProperty
+  csvw:title "D.E. BEARING TEMPERATURE";
+  rdfs:label "Drive-End Bearing Temperature";
+  rdfs:comment "Temperature of the bearing located on the drive-end (D.E.) of a rotating machine, such as a motor, pump, or turbine";
+  skos:scopeNote "Monitoring: The drive-end is where the motor or shaft connects to the load; excessive heat in this bearing can indicate misalignment, poor lubrication, or wear.";
+  skos:scopeNote "Significance: High bearing temperature can lead to bearing failure, resulting in machine downtime or damage.".
+
+un:ST_TURBINE_SHAFT_RADIAL_VIBRATION a owl:DatatypeProperty;
+  csvw:title "ST. TURBINE SHAFT RADIAL VIBRATION";
+  rdfs:label "Steam Turbine Shaft Radial Vibration";
+  rdfs:comment "Lateral (side-to-side) movement of the turbine shaft as it rotates.";
+  skos:scopeNote "Monitoring: Excessive radial vibration can indicate misalignment, imbalance, or bearing wear.";
+  skos:scopeNote "Significance: High radial vibration can lead to mechanical stress, reduced efficiency, or damage to the shaft and components.".
+
+un:ST_TURBINE_SHAFT_AXIAL_DISPLACEMENT a owl:DatatypeProperty;
+  csvw:title "ST. TURBINE SHAFT AXIAL DISPLACEMENT";
+  rdfs:label "Steam Turbine Shaft Axial Displacement";
+  rdfs:comment "Movement of the turbine shaft along its longitudinal axis (backward and forward).";
+  skos:scopeNote "Monitoring: Excessive axial displacement can signal issues like thrust bearing failure, thermal expansion problems, or misaligned components.";
+  skos:scopeNote "Significance: Maintaining the shaft's position within design limits prevents contact with stationary parts and severe damage.".
 ```
 
 # UNDERPIN Semantic Search
