@@ -327,7 +327,7 @@ The [TechnoPortal](https://technoportal.hevs.ch/ontologies) ontology portal has 
   A wind turbine digital twin ontology developed by Fraunhofer Institute for Wind Energy Systems and Institut für Energietechnik und Thermodynamik at TU Wien.
   Has 39 classes, but only are 9 structural component classes (e.g. Blade, Gearbox, Generator).
 - Wind Energy System graph (WESGRAPH).
-  A top level ontogy and a knowledge base for the wind energy domain.
+  A top level ontology and a knowledge base for the wind energy domain.
   Has 6 classes (Attribute, Model, Object, Phenomenon, Procedure, Variable) and 1085 individuals.
   It is mostly devoted to costs (in particular construction costs), with details like
   Hydraulic Roughness Length, Sieve Size Of Rock, etc.
@@ -356,19 +356,19 @@ This section describes:
 We use 3 stores and describe the data organization mechanisms we use for each store.
 (TODO add references)
 - File store: implemented as Minio/S3, keeps CSV files (individual datasets):
-  - **Bucket**: file space with distinct access control.
-    - Each dataspace participant&connector (eg Motor Oil is "BPNLY3SEIW.CV064VJ") has its own bucket.
-    - The bucket includes both datasets provided (own) and consumed by the participant
+  - **Bucket**: file space with distinct access control. 
+    - Each influx data asset is stored in its own bucket.
+    - Buckets are owned by the organisation responsible for the data
+    - 
   - Object: a CSV filename, equal to `dcat:Dataset . dct:identifier`.
     - Each dataset is a separate object.
     - Object names are unique **across buckets** (because the original participant&connector is not part of the object name)
   - TODO: Object names could be hierarchical (a subfolder hierarchy), but we don't use this
 - Time-series database: implemented using Influx
   - **Bucket**: distinct access control and disposition policies.
-    - A dataspace participant&connector may have one bucket.
-  - **Measurement**: a table with homogeneous structure.
-    - Each Measurement is represented by `dcat:DatasetSeries`
-    - CSV dataset with the same structure (spatial and/or or temporal slices) are ingested to the same Measurement, and have relations `dcat:inSeries` to it
+    - A dataspace participant&connector may have multiple buckets.
+    - Each Bucket is represented by `dcat:DatasetSeries`
+    - CSV dataset with the same structure (spatial and/or or temporal slices) are ingested to the same Bucket, and have relations `dcat:inSeries` to it
     - The metadata of a `DatasetSeries` and all its slices is **the same**, except:
       - `dct:identifier`: one has suffix "-influx", the other ".csv"
       - `dct:spatial` (if present): the Influx dataset has the union of all CSVs
@@ -402,6 +402,135 @@ After loading the data, run the following updates:
     - `skos:prefLabel` of `dct:type`
   - at the `csvw:Column` level (`dct:conformsTo/csvw:column`):
     - `skos:prefLabel` of `un:qualifier|qudt:hasUnit|qudt:hasQuantityKind|sosa:hasFeatureOfInterest`
+
+## Timeseries data loading based on semantic description
+
+We use the [Table Schema Model](#table-schema-model)
+to inform and automate the process of loading timeseries data
+in the Influx timeseries database
+by generating annotations following the [Extended annotated CSV](https://docs.influxdata.com/influxdb/cloud/reference/syntax/annotated-csv/extended/) syntax.
+This provides instructions for Inlfux
+on how to interpret the data
+and convert it to Influx's internal format.
+
+All the information for the annotations comes
+from the semantic descriptions of the datasets
+which is in the `catalog` GDB repository.
+
+The data itself comes from the stored csv files in S3 MinIO.
+
+Two scenarios are supported: 
+Creating of a new Influx data asset and 
+Appending new data to an existing influx data asset
+
+### Creating a new influx asset
+
+A new Influx data asset can be created when:
+- A csv data asset is created in the dataspace
+- The csv file is available in the S3 MInIO
+- the data asset description is complete in GDB
+- the name and id of the new data asset are known
+  - default values are built by appending `-influx` to the csv data asset ID and ` in Influx` to the csv data asset Name
+  - however they should be editable by the user
+
+Metadata creation
+
+A new metadata record is created based on the source dataset 
+[create-influx-dataset.ru](queries/create-influx-dataset.ru)
+
+Uhe influx asset creation process should also 
+create the corresponding bucket in influx and 
+associate it with the organization.
+
+
+### Appending data to a influx dataset
+
+The [Extended annotated CSV](https://docs.influxdata.com/influxdb/cloud/reference/syntax/annotated-csv/extended/) syntax 
+consists of a series of lines with annotations before the actual data, 
+which is in the form of a csv file. 
+
+The annotations are of the following types:
+
+#### #datatype annotation header
+
+The `#datatype ` annotation to specifies the [line protocol element](https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/#elements-of-line-protocol) a column represents. 
+The contents of the annotation depends on the semantic description of the data asset and can be fetched by the following sparql query:
+
+```sparql
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
+BASE <https://dataspace.underpinproject.eu/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+select (concat("#datatype ",(group_concat(?dt;separator=','))) as ?a) where {
+  { select ?dt where {
+    bind(<dataset/windfarm-WF1-WTG01-2020.csv> as ?dataset)
+    ?dataset dct:conformsTo ?schema .
+    ?column a csvw:Column ; ^csvw:column ?schema ; un:influxDatatype ?dt ; dct:identifier ?n.
+  } order by ?n }
+}
+```
+
+Which will produce the annotation header:
+
+```
+#datatype dateTime:1/2/2006 15:04,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,double,ignore,double,double,double,double,ignore,double,ignore,double,double,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore
+```
+
+for the `<dataset/windfarm-WF1-WTG01-2020.csv>` dataset
+n.b that the order of the annotations is dependent on the explicit column index (`dct:identifier`) in the metadata
+
+#### #constants annotation header dataset level
+
+we use constants to provide dataset level annotations,
+and/or colum level constants which apply ot each row
+
+At the dataset level we define the measurement constant,
+which is based on the name of the schema.
+
+This query produces the measurement annotation.
+TODO: this is a bit lame. We need to add a `dct:identifier` property for each schema object
+
+```sparql
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
+BASE <https://dataspace.underpinproject.eu/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+select (concat("#constant measurement,",?schema_str) as ?a) where {
+  bind(<dataset/windfarm-WF1-WTG01-2020.csv> as ?dataset)
+  ?dataset dct:conformsTo ?schema .
+  bind(strafter(str(?schema),"https://dataspace.underpinproject.eu/schema/")  as ?schema_str)
+}
+```
+
+It will produce the annotation header: `#constant measurement,windfarm`
+
+#### #constants annotation header column level
+
+we use constants to also add annotations at the column level. 
+The following query will produce an annotation header adding a `tag` to each individual measurement in the dataset.
+Currently, it considers only the spatial tag (generator id) of the windfarm data
+
+```sparql
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
+BASE <https://dataspace.underpinproject.eu/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+select (concat("#constant tag,spatial,",?spatial) as ?a) where {
+    bind(<dataset/windfarm-WF1-WTG01-2020.csv> as ?dataset)
+    ?dataset dct:spatial ?spatial .
+}
+```
+
+Here is an example influx write call using the influx CLI importing the dataset used in the examples: 
+
+```bash
+influx write \
+  --bucket  MORE \
+  --header "#constant measurement,windfarm" \
+  --header "#constant tag,generator,WF1-WTG10" \
+  --header "#datatype dateTime:1/2/2006 15:04,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,double,ignore,double,double,double,double,ignore,double,ignore,double,double,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore" \
+  --file  windfarm/uc2_data/2020/windfarm-WF1-WTG10-2020.csv
+```
 
 # UNDERPIN Data Model
 UNDERPIN deals with:
@@ -798,4 +927,3 @@ We want two views:
     covering `_tag_`
     conforming to schema `_schema_`,
   - `_keywords_*`
-

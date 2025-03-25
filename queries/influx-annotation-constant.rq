@@ -1,0 +1,9 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
+BASE <https://dataspace.underpinproject.eu/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+select (concat("#constant measurement,",?schema_str) as ?a) where {
+    bind(<dataset/windfarm-WF1-WTG01-2020.csv> as ?dataset)
+    ?dataset dct:conformsTo ?schema .
+    bind(strafter(str(?schema),"https://dataspace.underpinproject.eu/schema/")  as ?schema_str)
+}
