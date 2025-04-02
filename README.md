@@ -454,35 +454,22 @@ The annotations are of the following types:
 #### #datatype annotation header
 
 The `#datatype ` annotation to specifies the [line protocol element](https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/#elements-of-line-protocol) a column represents. 
-The contents of the annotation depends on the semantic description of the data asset and can be fetched by the following sparql query:
+The contents of the annotation depends on the semantic description of the data asset 
+and can be fetched by the SPARQL query  [influx-annotations-datatype.rq](queries/influx-annotations-datatype.rq)
 
-```sparql
-PREFIX dct: <http://purl.org/dc/terms/>
-PREFIX un: <https://dataspace.underpinproject.eu/ontology/>
-BASE <https://dataspace.underpinproject.eu/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-select (concat("#datatype ",(group_concat(?dt;separator=','))) as ?a) where {
-  { select ?dt where {
-    bind(<dataset/windfarm-WF1-WTG01-2020.csv> as ?dataset)
-    ?dataset dct:conformsTo ?schema .
-    ?column a csvw:Column ; ^csvw:column ?schema ; un:influxDatatype ?dt ; dct:identifier ?n.
-  } order by ?n }
-}
-```
-
-Which will produce the annotation header:
+For the `<dataset/windfarm-WF1-WTG01-2020.csv>` dataset
+it will produce the following annotation header:
 
 ```
-#datatype dateTime:1/2/2006 15:04,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,double,ignore,double,double,double,double,ignore,double,ignore,double,double,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,double,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore,double,ignore,ignore,ignore,ignore,ignore,ignore,ignore
+#datatype dateTime:1/2/2006 15:04,ignore,double,ignore,double [...]
 ```
 
-for the `<dataset/windfarm-WF1-WTG01-2020.csv>` dataset
-n.b that the order of the annotations is dependent on the explicit column index (`dct:identifier`) in the metadata
+note that the order of the annotations is dependent on the explicit column index (`dct:identifier`) in the metadata.
 
 #### #constants annotation header dataset level
 
-we use constants to provide dataset level annotations,
-and/or colum level constants which apply ot each row
+We use constants to provide dataset level annotations,
+and/or colum level constants which apply ot each row.
 
 At the dataset level we define the measurement constant,
 which is based on the name of the schema.
