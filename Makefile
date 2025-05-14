@@ -4,7 +4,9 @@ GSHEETS = $(patsubst %.ttl, google-sheets/%.csv, $(SCHEMA) dataset.ttl)
 REFGDB = $(patsubst %.ttl, ontorefine-gdb-load/initial-data/%.loaded, $(SCHEMA) dataset.ttl)
 GDB_URL = http://localhost:7200/repositories/underpin/statements
 
-all: prefixes.rq $(SCHEMA) $(UPDATES) $(GSHEETS) $(REFGDB) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png out/elastic-index-datasets.ru out/elastic-index-catalog.ru out/updates.ru ontorefine-gdb-load/reference-ontologies.loaded ontorefine-gdb-load/initial-data/underpin.loaded ontorefine-gdb-load/update-queries.loaded out/schema-dataset.trig ontorefine-gdb-load/tests.ok
+all: prefixes.rq $(SCHEMA) $(UPDATES) schema-refinery.png dataset.png dataset-relations.png dataset-extra.png out/elastic-index-datasets.ru out/elastic-index-catalog.ru out/updates.ru 
+
+TODO-nikola: $(GSHEETS) $(REFGDB) ontorefine-gdb-load/reference-ontologies.loaded ontorefine-gdb-load/initial-data/underpin.loaded ontorefine-gdb-load/update-queries.loaded out/schema-dataset.trig ontorefine-gdb-load/tests.ok
 
 dataset-extra.ttl: dataset.ttl dataset-extra.txt
 	cat $^ > $@

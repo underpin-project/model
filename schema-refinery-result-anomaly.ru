@@ -2,8 +2,10 @@ base <https://dataspace.underpinproject.eu/>
 prefix un: <https://dataspace.underpinproject.eu/ontology/>
 prefix csvw: <http://www.w3.org/ns/csvw#>
 prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dcat-ext: <https://semantic.sovity.io/dcat-ext#>
 prefix dct: <http://purl.org/dc/terms/>
 prefix edc: <https://w3id.org/edc/v0.0.1/ns/>
+prefix odrl: <http://www.w3.org/ns/odrl/2/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix prov: <http://www.w3.org/ns/prov#>
 prefix puml: <http://plantuml.com/ontology#>
@@ -36,7 +38,7 @@ insert {graph ?graph_schema_refinery_result_anomaly_URL {
     csvw:name ?name;
     un:influxDatatype ?influxDatatype;
     csvw:suppressOutput ?suppressOutput_xsd_boolean;
-    csvw:datatype ?schema_refinery_result_anomaly_n_dtBase_URL, ?datatype;
+    csvw:datatype ?schema_refinery_result_anomaly_n_dtBase_URL, ?xsd_datatype_URL;
     sosa:hasFeatureOfInterest ?feature_features_SPLIT_URLIFY_URL;
     un:qualifier ?qualifier_statisticalQualifiers_SPLIT_URL;
     qudt:hasQuantityKind ?qk_quantityKind_URL;
@@ -46,7 +48,7 @@ insert {graph ?graph_schema_refinery_result_anomaly_URL {
     skos:inScheme <feature>;
     skos:prefLabel ?features_SPLIT.
   ?schema_refinery_result_anomaly_n_dtBase_URL a csvw:Datatype;
-    csvw:base ?dtBase;
+    csvw:base ?xsd_dtBase_URL;
     csvw:format ?format.
 }}
 where {
@@ -58,7 +60,6 @@ where {
     bind(?c_influxDatatype as ?influxDatatype)
     bind(?c_suppressOutput as ?suppressOutput)
     bind(?c_dtBase as ?dtBase)
-    bind(?c_datatype as ?datatype)
     bind(?c_features as ?features)
     bind(?c_statisticalQualifiers as ?statisticalQualifiers)
     bind(?c_comment as ?comment)
@@ -67,6 +68,8 @@ where {
     bind(strdt(?n,xsd:integer) as ?n_xsd_integer)
     bind(strdt(?suppressOutput,xsd:boolean) as ?suppressOutput_xsd_boolean)
     bind(iri(concat("schema/refinery-result-anomaly/",?n,"/",?dtBase)) as ?schema_refinery_result_anomaly_n_dtBase_URL)
+    bind(?c_datatype as ?datatype)
+    bind(iri(concat(str(xsd:),?datatype)) as ?xsd_datatype_URL)
     ?features_SPLIT spif:split (?features ", ?").
     bind(lcase(replace(replace(replace(?features_SPLIT, "[^\\p{L}0-9]", "_"), "_+", "_"), "^_|_$", "")) as ?features_SPLIT_URLIFY)
     bind(iri(concat("feature/",?features_SPLIT_URLIFY)) as ?feature_features_SPLIT_URLIFY_URL)
@@ -76,5 +79,6 @@ where {
     bind(iri(concat(str(qk:),?quantityKind)) as ?qk_quantityKind_URL)
     bind(?c_unit as ?unit)
     bind(iri(concat(str(unit:),?unit)) as ?unit_unit_URL)
+    bind(iri(concat(str(xsd:),?dtBase)) as ?xsd_dtBase_URL)
   }
 };

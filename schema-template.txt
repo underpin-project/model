@@ -10,7 +10,7 @@
   csvw:name "(name)";
   un:influxDatatype "(influxDatatype)";
   csvw:suppressOutput "(suppressOutput)"^^xsd:boolean;
-  csvw:datatype <schema/$ID/(n)/(dtBase)>, "(datatype)";
+  csvw:datatype <schema/$ID/(n)/(dtBase)>, xsd:\(datatype\);
   sosa:hasFeatureOfInterest <feature/URLIFY(SPLIT(features))>;
   un:qualifier <qualifier/SPLIT(statisticalQualifiers)>;
   qudt:hasQuantityKind qk:\(quantityKind\);
@@ -22,6 +22,6 @@
   skos:prefLabel "SPLIT(features)".
 
 <schema/$ID/(n)/(dtBase)> a csvw:Datatype;
-  csvw:base "(dtBase)";
+  csvw:base xsd:\(dtBase\);
   csvw:format "(format)".
 
