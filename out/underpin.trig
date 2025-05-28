@@ -29,6 +29,13 @@ un:originalMetadata a owl:ObjectProperty;
   rdfs:label "original metadata"@en;
   rdfs:comment "Envelope for original metadata in a dataspace Catalog Response"@en.
 
+un:allowedParticipantId a owl:DatatypeProperty;
+  rdfs:label "allowed participant id";
+  rdfs:comment """Multiple participants who are allowed to see this dataset, in the format <participantId>.<connectorId>.
+This is the same format used in edc:participantId, which is the dataset owner (provider)""";
+  rdfs:domain dcat:Dataset;
+  rdfs:range xsd:string;
+
 un:qualifier a owl:ObjectProperty;
   rdfs:label "qualifier"@en;
   rdfs:domain csvw:Column;
