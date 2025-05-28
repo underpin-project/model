@@ -562,6 +562,7 @@ Its semantic model is structured at roughly these levels:
   - These have clean RDF property URLs and can be reused in a wider context.
 
 ## UNDERPIN Prefixes
+
 | prefix        | namespace                                                                 | comment                                                 |
 |---------------|---------------------------------------------------------------------------|---------------------------------------------------------|
 | base          | https://dataspace.underpinproject.eu/                                     | Underpin instances: metadata of datasets, distributions |
@@ -619,6 +620,7 @@ qk:ElectricCurrent a skos:Concept; skos:inScheme <quantityKind>; skos:related un
 unit:A a skos:Concept; skos:inScheme <unit>.
 ```
 The current list is as follows:
+
 | quantityKind             | unit                        | comment                                                        |
 |--------------------------|-----------------------------|----------------------------------------------------------------|
 | `qk:ActivePower`         | `unit:W`                    |                                                                |
