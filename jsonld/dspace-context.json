@@ -15,11 +15,11 @@
     "dct:description": { "@container": "@set" },
     "dct:issued": { "@type": "xsd:dateTime" },
     "dct:modified": { "@type": "xsd:dateTime" },
+    "dct:conformsTo": { "@type": "@id" },
 
     "dcat:byteSize": { "@type": "xsd:decimal" },
     "dcat:distribution": { "@container": "@set" },
     "dcat:theme": { "@type": "@id" },
-    "dcat:conformsTo": { "@type": "@id" },
     "dcat:dataset": { "@container": "@set" },
     "dcat:endpointURL": { "@type": "xsd:anyURI" },
     "dcat:endpointDescription": { "@type": "xsd:anyURI" },
