@@ -507,6 +507,10 @@ PREFIX odrl:       <http://www.w3.org/ns/odrl/2/>
         edc:id                  "12345" .
 ```
 
+Note: the newest version of EDC (deployed by UNDERPIN around Jul 2025) 
+uses the prop `dspace:participantId` instead of `edc:participantId`.
+This is not reflected above.
+
 ## Real Response Problems
 The real response has even more problems than the canned response:
 - Lacks `dcat:Distribution` (maybe the way we tried to add it was wrong)

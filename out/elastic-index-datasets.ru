@@ -16,7 +16,7 @@ INSERT DATA {
       },
       {
          "analyzed" : false,
-         "fieldName" : "participantId",
+         "fieldName" : "participantId$1",
          "propertyChain" : [
             "https://w3id.org/edc/v0.0.1/ns/participantId"
          ]
@@ -145,6 +145,13 @@ INSERT DATA {
          "propertyChain" : [
             "http://purl.org/dc/terms/conformsTo",
             "http://www.w3.org/ns/csvw#column"
+         ]
+      },
+      {
+         "analyzed" : false,
+         "fieldName" : "participantId$2",
+         "propertyChain" : [
+            "https://w3id.org/dspace/2024/1/participantId"
          ]
       },
       {

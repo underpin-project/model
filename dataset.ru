@@ -4,6 +4,7 @@ prefix csvw: <http://www.w3.org/ns/csvw#>
 prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix dcat-ext: <https://semantic.sovity.io/dcat-ext#>
 prefix dct: <http://purl.org/dc/terms/>
+prefix dspace: <https://w3id.org/dspace/2024/1/>
 prefix edc: <https://w3id.org/edc/v0.0.1/ns/>
 prefix odrl: <http://www.w3.org/ns/odrl/2/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
@@ -41,7 +42,7 @@ insert {graph ?graph_dataset_dataset_URL {
     dct:conformsTo ?schema_schema_URL;
     dct:creator ?org_org_URL;
     dct:publisher ?org_org_URL;
-    edc:participantId ?participantId;
+    dspace:participantId ?participantId;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     dct:spatial ?tag;
     dct:temporal ?dataset_dataset_temporal_URL;

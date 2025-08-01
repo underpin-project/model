@@ -4,6 +4,7 @@ prefix csvw:         <http://www.w3.org/ns/csvw#>
 prefix dcat:         <http://www.w3.org/ns/dcat#>
 prefix dcat-ext:     <https://semantic.sovity.io/dcat-ext#>
 prefix dct:          <http://purl.org/dc/terms/>
+prefix dspace:       <https://w3id.org/dspace/2024/1/>
 prefix edc:          <https://w3id.org/edc/v0.0.1/ns/>
 prefix odrl:         <http://www.w3.org/ns/odrl/2/>
 prefix owl:          <http://www.w3.org/2002/07/owl#>

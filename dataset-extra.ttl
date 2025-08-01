@@ -12,7 +12,7 @@
   dct:conformsTo <schema/(schema)>;
   dct:creator <org/(org)>;
   dct:publisher <org/(org)>;
-  edc:participantId "(participantId)";
+  dspace:participantId "(participantId)";
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
   dct:spatial "(tag)";
   dct:temporal <dataset/(dataset)/temporal>;

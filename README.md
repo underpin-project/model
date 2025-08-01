@@ -23,6 +23,12 @@ UNDERPIN is a manufacturing dataspace that covers sensor data and predictive mai
     - [Wind Turbine Ontologies](#wind-turbine-ontologies)
 - [UNDERPIN Data Organization](#underpin-data-organization)
     - [UNDERPIN Semantic Data Loading](#underpin-semantic-data-loading)
+    - [Timeseries data loading based on semantic description](#timeseries-data-loading-based-on-semantic-description)
+        - [Creating a new influx asset](#creating-a-new-influx-asset)
+        - [Appending data to a influx dataset](#appending-data-to-a-influx-dataset)
+            - [#datatype annotation header](#datatype-annotation-header)
+            - [#constants annotation header dataset level](#constants-annotation-header-dataset-level)
+            - [#constants annotation header column level](#constants-annotation-header-column-level)
 - [UNDERPIN Data Model](#underpin-data-model)
     - [UNDERPIN Prefixes](#underpin-prefixes)
     - [UNDERPIN Thesauri](#underpin-thesauri)
@@ -656,7 +662,7 @@ Its columns and their mapping are described below.
 - `org`: URL pointing to a pre-registered `schema:Organization` eg `<org/MOH>`.
   Mapped to `dct:creator, dct:publisher`. This deviates from DSP which uses a string (mere name)
 - `participantId`: dataspace participant id, eg "BPNLY3SEIW". 
-  Mapped to `edc:participantId`
+  Mapped to `dspace:participantId` (was `edc:participantId`)
 - `title`: detailed name/description, eg 
   "Wind turbine WF1-WTG01 sensor data for 2022 as csv" or
   "Refinery compressor sensor data for 2022 as influx".
@@ -879,7 +885,7 @@ Here are the fields:
 - Individual fields:
   - (builtin) `_id`: URL. This is automatically populated by GraphDB
   - Id (`id`): `dct:identifier`
-  - Connector (`participantId`): `edc:participantId`
+  - Connector (`participantId`): `dspace:participantId|edc:participantId`
   - Title (`title`): `dct:title`
 - Full-text (`text`): `id|title|publisher|types|startDate|endDate|tag|schema|dct:conformsTo/csvw:column/dct:title`
 

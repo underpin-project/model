@@ -1,5 +1,5 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX edc: <https://w3id.org/edc/v0.0.1/ns/>
+PREFIX dspace: <https://w3id.org/dspace/2024/1/>
 PREFIX dct: <http://purl.org/dc/terms/>
 BASE <https://dataspace.underpinproject.eu/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
@@ -12,7 +12,7 @@ construct {
         dcat:distribution ?influx_distribution_uri ;
         dct:conformsTo ?schema ;
         dct:title ?influx_title ;
-        edc:participantId ?participantId ;
+        dspace:participantId ?participantId ;
         dcat:keyword ?keyword ;
     .
     ?influx_spatial_uri ?spatial_p ?spatial_o .
@@ -34,7 +34,7 @@ where {
     dct:title ?s_title ;
     dct:publisher ?pub ;
     dct:conformsTo ?schema ;
-    edc:participantId ?participantId ;
+    dspace:participantId ?participantId ;
     .
     bind(if(bound(?influx_id_user),?influx_id_user,replace(?s_id,'.csv','-influx')) as ?influx_id)
     bind(uri(concat('dataset/',str(?influx_id))) as ?influx_uri)

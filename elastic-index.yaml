@@ -8,7 +8,7 @@ fields:
     propertyChain: dct:identifier
     analyzed: false # keyword
   - fieldName: participantId
-    propertyChain: edc:participantId
+    propertyChain: edc:participantId|dspace:participantId
     analyzed: false
   - fieldName: title
     propertyChain: dct:title
