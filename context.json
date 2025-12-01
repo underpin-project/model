@@ -7,7 +7,7 @@
       "dcat-ext": "https://semantic.sovity.io/dcat-ext#",
       "xsd":      "http://www.w3.org/2001/XMLSchema#",
       "un":       "https://dataspace.underpinproject.eu/ontology/",
-      "id":       "dct:id",
+      "id":       "dct:identifier",
       "http://www.w3.org/ns/dcat#distribution":   {"@type": "@id"},
       "http://www.w3.org/ns/dcat#endDate":        {"@type": "xsd:date"},
       "http://www.w3.org/ns/dcat#inSeries":       {"@type": "@id"},
