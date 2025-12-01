@@ -1,6 +1,6 @@
 {
 "@context": [
-    "https://w3id.org/dspace/2024/1/context.json",
+    "https://w3id.org/dspace/v0.8/context.json",
     {
       "@base":    "https://dataspace.underpinproject.eu/dataset/",
       "edc":      "https://w3id.org/edc/v0.0.1/ns/",
