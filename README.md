@@ -311,32 +311,54 @@ The [Open Energy Ontology](https://openenergyplatform.org/viewer/oeo/)
 - And even `OEOX_00010002` wind turbine space requirement
 - However, it doesn't go into components, e.g. gearbox, bearing.
 
-
 [Linked Open Vocabularies](https://lov.linkeddata.es/dataset/lov/terms?q=%22wind%20turbine%22) seems to have 1 ontology about wind farms:
 - [Wind Farm Ontology](https://w3id.org/wfont) (WFOnt), derived from SANDIA Report SAND2009-1171 and the DAEKIN project.
   It has 52 classes (though some should be individuals, eg Unclassified Wear Level), including structural parts and wear types.
 
-The [TechnoPortal](https://technoportal.hevs.ch/ontologies) ontology portal has 5 ontologies/taxonomies related to wind turbines:
-- [RELIEATAX](https://technoportal.hevs.ch/ontologies/RELIEATAX/): RELIAWIND Wind Turbine Component Taxonomy.
+The [TechnoPortal](https://technoportal.hevs.ch/ontologies) ontology portal had 6 ontologies/taxonomies related to wind turbines (Oct 2025):
+- [RELIEATAX](https://technoportal.hevs.ch/ontologies/RELIEATAX/): **RELIAWIND Wind Turbine Component Taxonomy**.
   A taxonomical organization of wind turbine compenents used within the RELIAWIND project.
   Has 334 concepts.
-- FMECA Ontology for Wind Turbines (FMECA4WT).
+- **FMECA Ontology for Wind Turbines (FMECA4WT)**.
   Failure Mode, Effects and Criticality Analysis (FMECA) Ontology for wind turbines.
   Has 16 classes.
-- Wind Turbine Status Alarms and Error Codes (WTSC).
+- **Wind Turbine Status Alarms and Error Codes (WTSC)**.
   Status, Alarms and Error Codes used by vairous Wind Turbine OEMs in thier SCADA Systems.
   Has 8 classes and 43 instances.
-- Wind turbine blade damage ontology (BDO).
+- **Wind turbine blade damage ontology (BDO)**.
   Blade damage ontology based on white paper by EPRI.
   Has 4 classes and 61 instances.
-- DigiWind (DIGIWIND)
+- **DigiWind**.
   A wind turbine digital twin ontology developed by Fraunhofer Institute for Wind Energy Systems and Institut für Energietechnik und Thermodynamik at TU Wien.
-  Has 39 classes, but only are 9 structural component classes (e.g. Blade, Gearbox, Generator).
-- Wind Energy System graph (WESGRAPH).
+  Has 39 classes, but only 9 are structural component classes (e.g. Blade, Gearbox, Generator).
+- **Wind Energy System graph (WESGRAPH)**.
   A top level ontology and a knowledge base for the wind energy domain.
   Has 6 classes (Attribute, Model, Object, Phenomenon, Procedure, Variable) and 1085 individuals.
   It is mostly devoted to costs (in particular construction costs), with details like
   Hydraulic Roughness Length, Sieve Size Of Rock, etc.
+
+Update Oct 2026: now TechnoPortal has 13 wind ontologies. The following have been added:
+- **Wind Energy Project Process and Life-cycle Phase Taxonomy (WINDPROFILE)**.
+  Project life-cycle phases using the SKOS data model.
+  Has 36 concepts.
+- **Wind Energy Ontology (WEO)**.
+  Has 47 classes.
+- **Wind Energy Activities (WEAVE)**.
+  A classification of activities in which data are produced.
+  Has 19 concepts.
+- **Wind Europe Data Categories and Classes (WEDCC)**
+  A data classification scheme addressing the major types of data used in the wind energy sector.
+  Has 24 concepts.
+- **Wind Life-cycle Phase**.
+  SKOS Taxonomy of wind power plant life-cycle phases according to DIN SPEC 91303 (retired)
+- **Meteo-Ontology for Renewables (METEONTO)**
+  Meteorological Ontology, along with various types of sensors used to measure environmental parameters.
+  Useful for forecasting renewable energy (solar and wind).
+  Has 50 classes and 208 instances.
+- **OntoWind (ONTOWIND)**.
+  Wind Energy Domain Ontology, including climate factors and predictions.
+  Has 93 classes, 13 object props, 28 data props, 11 annotation props, and 25 individuals
+
 
 Of these, RELIAWIND is most suitable to be reused by UNDERPIN.
 - The namespace is `reliawind: https://www.ieawindtask43.org/ontoforge/reliawind-taxonomy-wt-components/`
